@@ -1,1 +1,6 @@
 C:\Users\foxxravin\Anaconda3\pythonw.exe C:\Users\foxxravin\Anaconda3\cwp.py C:\Users\foxxravin\Anaconda3 C:\Users\foxxravin\Anaconda3\pythonw.exe C:\Users\foxxravin\Anaconda3\Scripts\anaconda-navigator-script.py
+
+
+
+
+C:\Users\foxxravin\Anaconda3\python.exe C:\Users\foxxravin\Anaconda3\cwp.py C:\Users\foxxravin\Anaconda3 C:\Users\foxxravin\Anaconda3\python.exe C:\Users\foxxravin\Anaconda3\Scripts\jupyter-notebook-script.py %USERPROFILE%
