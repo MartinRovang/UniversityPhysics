@@ -1,0 +1,1 @@
+C:\Users\foxxravin\Anaconda3\pythonw.exe C:\Users\foxxravin\Anaconda3\cwp.py C:\Users\foxxravin\Anaconda3 C:\Users\foxxravin\Anaconda3\pythonw.exe C:\Users\foxxravin\Anaconda3\Scripts\anaconda-navigator-script.py
