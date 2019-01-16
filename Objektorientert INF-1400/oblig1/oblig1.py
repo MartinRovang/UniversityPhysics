@@ -318,7 +318,8 @@ class Game(object):
         
     
     def Gameloop(self):
-        """The game loop method, this is looped to hold the window open and runs the game in general"""
+        """The game loop method, this is looped to hold the game window open and runs the game in general"""
+
         # Starts menu and gets the level(self.amount)
         self.game_menu()
         # Starts the initate bricks function to create bricks with the given amount which is chosen in the menu
@@ -332,7 +333,7 @@ class Game(object):
         while self.Game_status == 'Ongoing':
 
             # Controls the platform
-            if player_ball.x > player.x and player_ball.x < (player.x+player.width) and (player_ball.y+player_ball.radius) > (player.y-player.height) and (player_ball.y+player_ball.radius) < (player.y+player.height):
+            if player_ball.x > player.x and player_ball.x < (player.x+player.width) and (player_ball.y+player_ball.radius) > (player.y) and (player_ball.y+player_ball.radius) < (player.y+player.height):
                 player_ball.y -= 10
                 player_ball.vely *= -1
 
@@ -455,7 +456,11 @@ pygame.mixer.music.play(loops = 10, start = 40)
 
 # Initiate clock object
 clock = pygame.time.Clock()
-    
+
+
+# Make game object
 start_game = Game()
+
+# Initiates the gameloop
 start_game.Gameloop()
 
