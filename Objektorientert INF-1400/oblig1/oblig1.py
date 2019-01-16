@@ -1,148 +1,92 @@
 from os import environ
 import pygame
 import numpy as np
-from time import sleep
 import csv
 
-# import cProfile
-# pr = cProfile.Profile()
-# pr.disable()
-# pr.print_stats(sort='time')
 
-
+# input nickname for the highscore
 nickname = input('What is your nickname? This is for the highscore : ')
 
+# Reads the highscore file and evaluates the dictionary to retrieve highscores
 with open('highscore.txt','r') as csvfile:
     highscore = eval(csvfile.read())
 
+# If nickname exits do not overwrite the their score
 if nickname not in highscore:
     highscore[nickname] = 0
+    # Writes in the new nickname
+    with open('highscore.txt','w') as csvfile:
+        csvfile.write('%s'%highscore)
 else:
     print('Nickname already exist')
 
-with open('highscore.txt','w') as csvfile:
-    csvfile.write('%s'%highscore)
 
 
-
-# Set gamescreen size
-width_screen = 800
-height_screen = 800
-
-SCREENSIZE = (width_screen, height_screen)
-
-# Set gamescreen to middle
-environ['SDL_VIDEO_CENTERED'] = '1'
-# Initialize pygame
-pygame.init()
-
-# set the pygame window name 
-pygame.display.set_caption('Breakout') 
-
-# Set screen object
-screen = pygame.display.set_mode(SCREENSIZE)
-
-pygame.font.init() # module for adding text
-win_text = pygame.font.SysFont('Comic Sans MS', 30)
-
-
-# hoversound = pygame.mixer.Sound('hover.ogg')
-
-# Load background music
-pygame.mixer.music.load('lannis.ogg')
-pygame.mixer.music.play(loops = 10, start = 40)
-
-
-# Initiate clock object
-clock = pygame.time.Clock()
-
-# Set speed of ball
-ballspeed = 14
 
 class Ball(object):
-    """
-    Summary:
-    ----------------------------------------
-    This class contains the structure of the ball object/s created.
-    ------------------------------------------------
-    Attributes:
-    ------------------------------------------------
-    self.x is the x position on the screen
-    self.y is the y position on the screen
-    self.velx is the velocity in the x direction
-    self.vely is the velocity in the y direction
-    self.radius is the radius of the ball
-    -----------------------------------------
-    Methods:
-    -------------------------------------
-    Update:
-    ---
-    Updates the position of the ball by how much velocity the ball has. 
-    It also checks if it is close to border, if it is close enough it will bounce away in the same angle.
-    ---
-    Reset:
-    ---
-    Resets the ball position to original position.
-    """
-
+    """This class contains the structure of the ball object/s created."""
 
     def __init__(self):
+        """
+        self.x is the x position on the screen
+        self.y is the y position on the screen
+        self.velx is the velocity in the x direction
+        self.vely is the velocity in the y direction
+        self.radius is the radius of the ball
+        """
         self.x = 250
         self.y = 250
         self.velx = 0
-        self.vely = ballspeed
+        self.vely = 14
         self.radius = 5
-    def Update(self):
+        self.magnitude = 14
+    def update(self):
+        """
+        Updates the position of the ball by how much velocity the ball has. 
+        It also checks if it is close to border, if it is close enough it will bounce away in the same angle.
+        """
+        # Bounce ball if ball hits the sides of the gaming screen
         if self.x < 0+self.radius or self.x > width_screen-self.radius:
             self.velx *= -1
 
+        # Bounce ball if ball hits the top of the gaming screen
         if self.y < 0+self.radius:
             self.vely *= -1
 
+        # Lose if ball gets below the gaming screen
         if self.y > height_screen:
             start_game.Game_status = 'lost'
         
-        self.x += self.velx
-        self.y += self.vely
+
+        # Normalize the speed and scale with magnitude in order to maintain the speed at the magnitude
+        self.x += self.magnitude*self.velx/np.sqrt(self.velx**2+self.vely**2)
+        self.y += self.magnitude*self.vely/np.sqrt(self.velx**2+self.vely**2)
+
         
         pygame.draw.circle(screen, (100,100,100), (int(self.x), int(self.y)), self.radius)
 
     def reset_ball(self):
+        """Resets the ball position to original position."""
         self.x = 250
         self.y = 250
         self.velx = 0
-        self.vely = ballspeed
-        self.radius = 5
+        self.vely = 14
         
 
-        
-
+    
 
 class Bricks(object):
 
-    """
-    Summary:
-    ----------------------------------------
-    This class contains the structure of the bricks objects to be destroyed by the player
-    ------------------------------------------------
-    Attributes:
-    ------------------------------------------------
-    self.x is the x position on the screen
-    self.y is the y position on the screen
-    self.height is the height of the rectangle
-    self.width is the width of the rectangle
-    self.health is the health of the bricks which defines how many hits needed to destroy the bricks
-    
-    Colors are also defined here to easily give the bricks different colors
-    -----------------------------------------
-    Methods:
-    -------------------------------------
-    Update:
-    ---
-    Gives the color to the bricks according to their current health
-    """
+    """This class contains the structure of the bricks objects to be destroyed by the player"""
 
     def __init__(self, x, y, health = 1):
+        """        
+        self.x is the x position on the screen
+        self.y is the y position on the screen
+        self.height is the height of the rectangle
+        self.width is the width of the rectangle
+        self.health is the health of the bricks which defines how many hits needed to destroy the bricks
+        """
         self.x = x
         self.y = y
         self.height = 25
@@ -157,7 +101,8 @@ class Bricks(object):
         self.BLUE =  (  0,   0, 255)
         self.GREY = (240,248,255)
     
-    def Update(self):
+    def update(self):
+        
         """Method whichs assigns the colors of the bricks"""
         if self.health == 1:
             pygame.draw.rect(screen, self.GREY, (self.x, self.y, self.width, self.height))
@@ -171,48 +116,49 @@ class Bricks(object):
 
 
 
+
+
+
+
 class Player(object):
-    """
-    Summary:
-    ----------------------------------------
-    This class contains the structure of the player objects / platform
-    ------------------------------------------------
-    Attributes:
-    ------------------------------------------------
-    self.x is the x position on the screen
-    self.y is the y position on the screen
-    self.height is the height of the rectangle
-    self.width is the width of the rectangle
-    -----------------------------------------
-    Methods:
-    -------------------------------------
-    Update:
-    ---
-    Updates the position of the platform
-    """
+    """This class contains the structure of the player objects / platform """
 
     def __init__(self):
+        """
+        self.x is the x position on the screen
+        self.y is the y position on the screen
+        self.height is the height of the rectangle
+        self.width is the width of the rectangle
+        """
         self.x = 200
         self.y = 700
         self.height = 25
         self.width = 150
 
-    def Update(self):
+    def update(self):
+        """Updates the position of the platform"""
         pygame.draw.rect(screen, (200,200,200), (self.x, self.y, self.width, self.height))
     
 
 
 
 class Game(object):
+    """To create one instance of the game"""
     def __init__(self):
+        """
+        self.player is a player object, in this case the game is hardcoded for just one player
+        self.player_ball is the ball object
+        self.bricks_list is the list which will contain all the bricks to be destroyed by the player
+        self.points is the amount of points the player has
+        self.amount is the the lvl/hp of bricks (amount of times to be hit before destroyed)
+        self.Game_status is 'Ongoing' if the game is active, 'lost' if players loses and 'win' if player won
+        """
         self.player = Player()
         self.player_ball = Ball()
         self.bricks_list = []
         self.points = 0
         self.amount = 0
         self.Game_status = 'Ongoing'
-        self.timer = pygame.time.get_ticks()
-        self.hoverlock = 0
 
         # Colors
         self.RED =   (255,   0,   0)
@@ -222,18 +168,19 @@ class Game(object):
         self.GREY = (240,248,255)
 
 
+    # The events loop method
     def Events(self):
+        """Checks for events and if pressed the X in the corner the program will quit"""
         # Closing the game
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 exit()
 
-
-        time_passed = clock.tick(60) # limit to 30FPS 
+        # Limit to 60FPS this is to contain the speed of the ball on all computers (unless their FPS will stagnate below 60)
+        time_passed = clock.tick(60)
 
         # Controls
         keys = pygame.key.get_pressed()
-
         if keys[pygame.K_LEFT]:
             if self.player.x > 0:
                 self.player.x -= 10
@@ -243,39 +190,52 @@ class Game(object):
                 self.player.x += 10
 
 
-    def Initate_bricks(self, rows):
+    def Initiate_Bricks(self, rows):
+        """Puts the bricks out in the game"""
         for j in range(rows):
             for i in range(13):
                 self.bricks_list.append(Bricks(i*50 + i*10+10, (j+1)*50+50 , j+1))
 
+    
+    def hit_detection(self, x, y, r, bricks):
+        """Method for hit detection with the ball and bricks"""
+        hit =  (x+r) > bricks.x and (x-r) < bricks.x+bricks.width\
+             and (y < bricks.y+bricks.height) and (y+r) > bricks.y
+        return hit
 
-    def Update_bricks(self):
+
+    def update_bricks(self):
+        """Checks if ball hits the bricks, if bricks are hit they lose 1 hp and reflect the ball"""
         bricks_list = self.bricks_list
         for bricks in bricks_list:
-            if (self.player_ball.x+self.player_ball.radius) > bricks.x and (self.player_ball.x-self.player_ball.radius) < bricks.x+bricks.width\
-             and (self.player_ball.y < bricks.y+bricks.height) and (self.player_ball.y+self.player_ball.radius) > bricks.y:
+            hit = self.hit_detection(self.player_ball.x, self.player_ball.y, self.player_ball.radius, bricks)
+
+            if hit:
                 self.player_ball.velx *= -1
                 self.player_ball.vely *= -1
-                # Bumb the ball a bit away such that the if test only happens once per hit (sign to bumb it away according to hit direction)
+                # Bump the ball a bit away such that the if test only happens once per hit (sign to bumb it away according to hit direction)
                 self.player_ball.y += np.sign(self.player_ball.vely)*10
                 bricks.health -= 1
                 self.points += 1
 
             if bricks.health <= 0:
                 bricks_list.remove(bricks)
-
-            bricks.Update()
-
+            
+            # Update to change the color when hp is lost.
+            bricks.update()
+            
+            # If the amount of bricks left is zero player will win
             if len(bricks_list) == 0:
                 self.Game_status = 'won'
 
 
     def reset_bricks(self):
+        """Resets bricks/ empties the bricks list"""
         self.bricks_list = []
 
     
     def game_menu(self):
-
+        """The menu with levels and highscore"""
         # Load menu images
         menu_background = pygame.image.load('menu.png')
         menu_hover1 = pygame.image.load('menu_hover1.png')
@@ -321,6 +281,7 @@ class Game(object):
                         # Allow for exiting program without crashing
                         self.Events()
 
+                        # Highscore text
                         screen.fill((0,0,0))
                         wintext = win_text.render('{}  {}      {}'.format('Place' ,'Nickname', 'Score'), False, self.GREY)
                         screen.blit(wintext,(150,10))
@@ -357,36 +318,47 @@ class Game(object):
         
     
     def Gameloop(self):
-        
+        """The game loop method, this is looped to hold the window open and runs the game in general"""
         # Starts menu and gets the level(self.amount)
         self.game_menu()
-        self.Initate_bricks(self.amount)
+        # Starts the initate bricks function to create bricks with the given amount which is chosen in the menu
+        self.Initiate_Bricks(self.amount)
         player = self.player
         player_ball = self.player_ball
-        theta = np.linspace(np.pi, 0 , player.width)
         # Coordinate change for where ball hit on the circle and add the corresponding x velocity according to angle
+        theta = np.linspace(np.pi, 0 , player.width)
         radius_player = player.width/2
+        # Loops while the game is ongoing
         while self.Game_status == 'Ongoing':
-            
+
+            # Controls the platform
             if player_ball.x > player.x and player_ball.x < (player.x+player.width) and (player_ball.y+player_ball.radius) > (player.y-player.height) and (player_ball.y+player_ball.radius) < (player.y+player.height):
                 player_ball.y -= 10
                 player_ball.vely *= -1
 
                 ball_hit = (player_ball.x-player.x)
                 # Set angle by the speed of the ball in x direction by where on the platform it hits (middle = 0 x speed)
-                player_ball.velx = 10*np.cos(theta[int(ball_hit)])
+                player_ball.velx = 14*np.cos(theta[int(ball_hit)])
 
                 
-        
+            #Fills the screen with black to remove the old position of the drawn objects
             screen.fill((0,0,0))
-            player.Update()
-            player_ball.Update()
-            self.Update_bricks()
+            
+            # Update functions for updating positions etc for all the objects in the game
+            player.update()
+            player_ball.update()
+            self.update_bricks()
+
+            # Keeps the events loop going
             self.Events()
 
+            # Text that shows how much points the player currently has
             point_text = win_text.render('Points: %d'%self.points, False, (100, 100, 100))
+
+            # Prints text on screen with position x = 30 and y = 50
             screen.blit(point_text,(30,50))
 
+            # Updates the screen
             pygame.display.update()
         
         # If win
@@ -402,7 +374,7 @@ class Game(object):
             wintext = win_text.render('YOU WON!!', False, (100, 100, 100))
             screen.blit(wintext,(int(width_screen/2),int(height_screen/2)))
 
-            # Exit win screen button
+            # Exit win screen button when hovered over button it turns red.
             if mousepos_x > 600 and mousepos_x < 663 and mousepos_y > 705 and mousepos_y < 737:
                 exit_button = win_text.render('Exit', False, self.RED)
                 screen.blit(exit_button,(600,700))
@@ -414,9 +386,11 @@ class Game(object):
                     start_game.Gameloop()
                 
             else:
+                # If not hovering over show white colored exit button.
                 exit_button = win_text.render('Exit', False, self.GREY)
                 screen.blit(exit_button,(600,700))
 
+            # Updates the screen
             pygame.display.update()
 
         # If lost
@@ -448,14 +422,39 @@ class Game(object):
                 exit_button = win_text.render('Exit', False, self.GREY)
                 screen.blit(exit_button,(600,700))
 
+            # Update screen
             pygame.display.update()
 
 
             
 
+# Set gamescreen size
+width_screen = 800
+height_screen = 800
+
+SCREENSIZE = (width_screen, height_screen)
+
+# Set gamescreen to middle
+environ['SDL_VIDEO_CENTERED'] = '1'
+# Initialize pygame
+pygame.init()
+
+# set the pygame window name 
+pygame.display.set_caption('Breakout') 
+
+# Set screen object
+screen = pygame.display.set_mode(SCREENSIZE)
+
+pygame.font.init() # module for adding text
+win_text = pygame.font.SysFont('Comic Sans MS', 30)
+
+# Load background music
+pygame.mixer.music.load('lannis.ogg')
+pygame.mixer.music.play(loops = 10, start = 40)
 
 
-
+# Initiate clock object
+clock = pygame.time.Clock()
     
 start_game = Game()
 start_game.Gameloop()
