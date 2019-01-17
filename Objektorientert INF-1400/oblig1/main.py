@@ -2,145 +2,13 @@ from os import environ
 import pygame
 import numpy as np
 import csv
+from Files.initiate import nickname, highscore
+from Files.Objects import Ball, Player, Bricks
+from Files.config import *
 
 
-# input nickname for the highscore
-nickname = input('What is your nickname? This is for the highscore : ')
-
-# Reads the highscore file and evaluates the dictionary to retrieve highscores
-with open('highscore.txt','r') as csvfile:
-    highscore = eval(csvfile.read())
-
-# If nickname exits do not overwrite the their score
-if nickname not in highscore:
-    highscore[nickname] = 0
-    # Writes in the new nickname
-    with open('highscore.txt','w') as csvfile:
-        csvfile.write('%s'%highscore)
-else:
-    print('Nickname already exist')
-
-
-
-
-class Ball(object):
-    """This class contains the structure of the ball object/s created."""
-
-    def __init__(self):
-        """
-        self.x is the x position on the screen
-        self.y is the y position on the screen
-        self.velx is the velocity in the x direction
-        self.vely is the velocity in the y direction
-        self.radius is the radius of the ball
-        """
-        self.x = 250
-        self.y = 250
-        self.velx = 0
-        self.vely = 14
-        self.radius = 5
-        self.magnitude = 14
-    def update(self):
-        """
-        Updates the position of the ball by how much velocity the ball has. 
-        It also checks if it is close to border, if it is close enough it will bounce away in the same angle.
-        """
-        # Bounce ball if ball hits the sides of the gaming screen
-        if self.x < 0+self.radius or self.x > width_screen-self.radius:
-            self.velx *= -1
-
-        # Bounce ball if ball hits the top of the gaming screen
-        if self.y < 0+self.radius:
-            self.vely *= -1
-
-        # Lose if ball gets below the gaming screen
-        if self.y > height_screen:
-            start_game.Game_status = 'lost'
-        
-
-        # Normalize the speed and scale with magnitude in order to maintain the speed at the magnitude
-        self.x += self.magnitude*self.velx/np.sqrt(self.velx**2+self.vely**2)
-        self.y += self.magnitude*self.vely/np.sqrt(self.velx**2+self.vely**2)
-
-        
-        pygame.draw.circle(screen, (100,100,100), (int(self.x), int(self.y)), self.radius)
-
-    def reset_ball(self):
-        """Resets the ball position to original position."""
-        self.x = 250
-        self.y = 250
-        self.velx = 0
-        self.vely = 14
-        
 
     
-
-class Bricks(object):
-
-    """This class contains the structure of the bricks objects to be destroyed by the player"""
-
-    def __init__(self, x, y, health = 1):
-        """        
-        self.x is the x position on the screen
-        self.y is the y position on the screen
-        self.height is the height of the rectangle
-        self.width is the width of the rectangle
-        self.health is the health of the bricks which defines how many hits needed to destroy the bricks
-        """
-        self.x = x
-        self.y = y
-        self.height = 25
-        self.width = 50
-        self.health = health
-
-        # Colors
-        #--------------------------------------
-        self.RED =   (255,   0,   0)
-        self.GREEN = (  0, 255,   0)
-        self.WHITE = (255, 255, 255)
-        self.BLUE =  (  0,   0, 255)
-        self.GREY = (240,248,255)
-    
-    def update(self):
-        
-        """Method whichs assigns the colors of the bricks"""
-        if self.health == 1:
-            pygame.draw.rect(screen, self.GREY, (self.x, self.y, self.width, self.height))
-        if self.health == 2:
-            pygame.draw.rect(screen, self.RED, (self.x, self.y, self.width, self.height))
-        if self.health == 3:
-            pygame.draw.rect(screen, self.GREEN, (self.x, self.y, self.width, self.height))
-        if self.health == 4:
-            pygame.draw.rect(screen, self.BLUE, (self.x, self.y, self.width, self.height))
-
-
-
-
-
-
-
-
-class Player(object):
-    """This class contains the structure of the player objects / platform """
-
-    def __init__(self):
-        """
-        self.x is the x position on the screen
-        self.y is the y position on the screen
-        self.height is the height of the rectangle
-        self.width is the width of the rectangle
-        """
-        self.x = 200
-        self.y = 700
-        self.height = 25
-        self.width = 150
-
-    def update(self):
-        """Updates the position of the platform"""
-        pygame.draw.rect(screen, (200,200,200), (self.x, self.y, self.width, self.height))
-    
-
-
 
 class Game(object):
     """To create one instance of the game"""
@@ -151,21 +19,12 @@ class Game(object):
         self.bricks_list is the list which will contain all the bricks to be destroyed by the player
         self.points is the amount of points the player has
         self.amount is the the lvl/hp of bricks (amount of times to be hit before destroyed)
-        self.Game_status is 'Ongoing' if the game is active, 'lost' if players loses and 'win' if player won
         """
         self.player = Player()
         self.player_ball = Ball()
         self.bricks_list = []
         self.points = 0
         self.amount = 0
-        self.Game_status = 'Ongoing'
-
-        # Colors
-        self.RED =   (255,   0,   0)
-        self.GREEN = (  0, 255,   0)
-        self.WHITE = (255, 255, 255)
-        self.BLUE =  (  0,   0, 255)
-        self.GREY = (240,248,255)
 
 
     # The events loop method
@@ -206,6 +65,7 @@ class Game(object):
 
     def update_bricks(self):
         """Checks if ball hits the bricks, if bricks are hit they lose 1 hp and reflect the ball"""
+
         bricks_list = self.bricks_list
         for bricks in bricks_list:
             hit = self.hit_detection(self.player_ball.x, self.player_ball.y, self.player_ball.radius, bricks)
@@ -226,7 +86,7 @@ class Game(object):
             
             # If the amount of bricks left is zero player will win
             if len(bricks_list) == 0:
-                self.Game_status = 'won'
+                self.player_ball.GAME_STATUS = 'won'
 
 
     def reset_bricks(self):
@@ -283,23 +143,23 @@ class Game(object):
 
                         # Highscore text
                         screen.fill((0,0,0))
-                        wintext = win_text.render('{}  {}      {}'.format('Place' ,'Nickname', 'Score'), False, self.GREY)
+                        wintext = win_text.render('{}  {}      {}'.format('Place' ,'Nickname', 'Score'), False, GREY)
                         screen.blit(wintext,(150,10))
 
                         # Exit highscore button
                         if mousepos_x > 600 and mousepos_x < 663 and mousepos_y > 55 and mousepos_y < 86:
-                            exit_button = win_text.render('Exit', False, self.RED)
+                            exit_button = win_text.render('Exit', False, RED)
                             screen.blit(exit_button,(600,50))
                             if pygame.mouse.get_pressed()[0] == 1:
                                 break
                             
                         else:
-                            exit_button = win_text.render('Exit', False, self.GREY)
+                            exit_button = win_text.render('Exit', False, GREY)
                             screen.blit(exit_button,(600,50))
 
                         # Sort for highest score and print on screen, the highscore is a type dict.
                         for i, nicknames in enumerate(sorted(highscore, key=highscore.get, reverse=True)):
-                            wintext = win_text.render('{}. {}      {}'.format(i+1 ,nicknames, highscore[nicknames]), False, (100, 100, 100))
+                            wintext = win_text.render('{}. {}      {}'.format(i+1 ,nicknames, highscore[nicknames]), False, GREY)
                             screen.blit(wintext,(200,50+i*50))
 
                             # Only print top 10
@@ -330,7 +190,7 @@ class Game(object):
         theta = np.linspace(np.pi, 0 , player.width)
         radius_player = player.width/2
         # Loops while the game is ongoing
-        while self.Game_status == 'Ongoing':
+        while self.player_ball.GAME_STATUS == 'Ongoing':
 
             # Controls the platform
             if player_ball.x > player.x and player_ball.x < (player.x+player.width) and (player_ball.y+player_ball.radius) > (player.y) and (player_ball.y+player_ball.radius) < (player.y+player.height):
@@ -354,7 +214,7 @@ class Game(object):
             self.Events()
 
             # Text that shows how much points the player currently has
-            point_text = win_text.render('Points: %d'%self.points, False, (100, 100, 100))
+            point_text = win_text.render('Points: %d'%self.points, False, GREY)
 
             # Prints text on screen with position x = 30 and y = 50
             screen.blit(point_text,(30,50))
@@ -363,7 +223,7 @@ class Game(object):
             pygame.display.update()
         
         # If win
-        while self.Game_status == 'won':
+        while self.player_ball.GAME_STATUS == 'won':
             # Get mouse position
             mousepos_x, mousepos_y = pygame.mouse.get_pos()
             # Save points to highscore if higher then before
@@ -373,29 +233,29 @@ class Game(object):
                     csvfile.write('%s'%highscore)
             self.Events()
             wintext = win_text.render('YOU WON!!', False, (100, 100, 100))
-            screen.blit(wintext,(int(width_screen/2),int(height_screen/2)))
+            screen.blit(wintext,(int(WIDTH_SCREEN/2),int(HEIGHT_SCREEN/2)))
 
             # Exit win screen button when hovered over button it turns red.
             if mousepos_x > 600 and mousepos_x < 663 and mousepos_y > 705 and mousepos_y < 737:
-                exit_button = win_text.render('Exit', False, self.RED)
+                exit_button = win_text.render('Exit', False, RED)
                 screen.blit(exit_button,(600,700))
                 if pygame.mouse.get_pressed()[0] == 1:
                     # Start gameloop again
-                    self.Game_status = 'Ongoing'
+                    self.player_ball.GAME_STATUS = 'Ongoing'
                     player_ball.reset_ball()
                     self.reset_bricks()
                     start_game.Gameloop()
                 
             else:
                 # If not hovering over show white colored exit button.
-                exit_button = win_text.render('Exit', False, self.GREY)
+                exit_button = win_text.render('Exit', False, GREY)
                 screen.blit(exit_button,(600,700))
 
             # Updates the screen
             pygame.display.update()
 
         # If lost
-        while self.Game_status == 'lost':
+        while self.player_ball.GAME_STATUS == 'lost':
             # Get mouse position
             mousepos_x, mousepos_y = pygame.mouse.get_pos()
             # Save points to highscore if higher then before
@@ -406,21 +266,21 @@ class Game(object):
 
             self.Events()
             wintext = win_text.render('YOU LOST!!', False, (100, 100, 100))
-            screen.blit(wintext,(int(width_screen/2),int(height_screen/2)))
+            screen.blit(wintext,(int(WIDTH_SCREEN/2),int(HEIGHT_SCREEN/2)))
 
             # Exit lost screen button
             if mousepos_x > 600 and mousepos_x < 663 and mousepos_y > 705 and mousepos_y < 737:
-                exit_button = win_text.render('Exit', False, self.RED)
+                exit_button = win_text.render('Exit', False, RED)
                 screen.blit(exit_button,(600,700))
                 if pygame.mouse.get_pressed()[0] == 1:
                     # Start gameloop again
-                    self.Game_status = 'Ongoing'
+                    self.player_ball.GAME_STATUS = 'Ongoing'
                     player_ball.reset_ball()
                     self.reset_bricks()
                     start_game.Gameloop()
                 
             else:
-                exit_button = win_text.render('Exit', False, self.GREY)
+                exit_button = win_text.render('Exit', False, GREY)
                 screen.blit(exit_button,(600,700))
 
             # Update screen
@@ -428,35 +288,6 @@ class Game(object):
 
 
             
-
-# Set gamescreen size
-width_screen = 800
-height_screen = 800
-
-SCREENSIZE = (width_screen, height_screen)
-
-# Set gamescreen to middle
-environ['SDL_VIDEO_CENTERED'] = '1'
-# Initialize pygame
-pygame.init()
-
-# set the pygame window name 
-pygame.display.set_caption('Breakout') 
-
-# Set screen object
-screen = pygame.display.set_mode(SCREENSIZE)
-
-pygame.font.init() # module for adding text
-win_text = pygame.font.SysFont('Comic Sans MS', 30)
-
-# Load background music
-pygame.mixer.music.load('lannis.ogg')
-pygame.mixer.music.play(loops = 10, start = 40)
-
-
-# Initiate clock object
-clock = pygame.time.Clock()
-
 
 # Make game object
 start_game = Game()
