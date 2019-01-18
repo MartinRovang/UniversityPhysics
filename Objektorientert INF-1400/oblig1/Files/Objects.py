@@ -14,14 +14,16 @@ class Ball(object):
         self.velx is the velocity in the x direction
         self.vely is the velocity in the y direction
         self.radius is the radius of the ball
+        self.magnitude is the total speed the ball always will have
+        self.game_status is the current state of the game (this chooses which menu to be shown/ or if it is active play)
         """
         self.x = 250
         self.y = 250
         self.velx = 0
-        self.vely = 14
+        self.vely = 6
         self.radius = 5
-        self.magnitude = 14
-        self.GAME_STATUS = 'Ongoing'
+        self.magnitude = 100
+        self.game_status = 'Ongoing'
 
     def update(self):
         """
@@ -38,12 +40,12 @@ class Ball(object):
 
         # Lose if ball gets below the gaming screen
         if self.y > HEIGHT_SCREEN:
-            self.GAME_STATUS = 'lost'
+            self.game_status = 'lost'
         
 
         # Normalize the speed and scale with magnitude in order to maintain the speed at the magnitude
-        self.x += self.magnitude*self.velx/np.sqrt(self.velx**2+self.vely**2)
-        self.y += self.magnitude*self.vely/np.sqrt(self.velx**2+self.vely**2)
+        self.x += self.magnitude*self.velx/np.sqrt(self.velx**2+self.vely**2)*TIME_PASSED_SECONDS
+        self.y += self.magnitude*self.vely/np.sqrt(self.velx**2+self.vely**2)*TIME_PASSED_SECONDS
 
         
         pygame.draw.circle(screen, WHITE, (int(self.x), int(self.y)), self.radius)

@@ -1,68 +1,60 @@
 from os import environ
 import pygame
 import numpy as np
-from time import sleep
-import csv
-
-# Set gamescreen size
-width_screen = 800
-height_screen = 800
-
-SCREENSIZE = (width_screen, height_screen)
-
-# Set gamescreen to middle
-environ['SDL_VIDEO_CENTERED'] = '1'
-# Initialize pygame
-pygame.init()
-
-# Set screen object
-screen = pygame.display.set_mode(SCREENSIZE)
+import math
+from Files import Boid, Obstacle
+from Files.config import *
 
 
 
-class boink(object):
+def sim_loop():
+    # Initiate boids list to containt the boids
+    boids_list = []
+    obstacle_list = []
+    while True:
 
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-        self.velx = 1
-        self.vely = 0.5
-        #self.img = pygame.draw.rect(screen,(100,100,100), (20,20,20,20))
+        
+        # Get mouse position
+        x, y = pygame.mouse.get_pos()
 
-    def Update(self, groups):
-        # groups = {0:[mean distance x,mean distance y, mean vel x, mean vel y, [bird1, bird2....]]}
-        distance = 0
-        for murder in groups:
-            if distance < (np.sqrt(groups[murder][0]**2+groups[murder][1]**2)-np.sqrt(self.x**2 + self.y**2)):
-                distance = (np.sqrt(groups[murder][0]**2+groups[murder][1]**2)-np.sqrt(self.x**2 + self.y**2))
-                group_assigned = murder
-            if self in groups[murder][4]:
-                groups[murder][4].remove(self)
+        #Checks for events and if pressed the X in the corner the program will quit
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                exit()
 
-        groups[murder][4].append(self)
-        self.velx = groups[group_assigned][2]
-        self.vely = groups[group_assigned][3]
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_a:
+                    obstacle_list.append(Obstacle(x, y))
+                
+            
+        # Make boids
+        if pygame.mouse.get_pressed()[0] == 1:
+            boids_list.append(Boid(x, y))
+        
 
-        self.x += self.velx
-        self.y += self.vely
-
-        pygame.draw.rect(screen,(100,100,100), (self.x,self.y,20,20))
-
-
+        # Screen updates
+        SCREEN.fill((0,0,0))
 
 
 
-
-
-class simulation(object):
     
-    def __init__(self):
-        self.groups = {}
+        for i in boids_list:
+            i.noisy_movement()
+            i.avoid_crash(boids_list)
+            i.flocking(boids_list)
+            i.crash_wall_check()
+            i.avoid_obstacles(obstacle_list)
+            i.draw()
+
+        for i in obstacle_list:
+            i.draw()
+        
+        pygame.display.update()
 
 
 
 
 
 
-
-while True:
+if __name__ == "__main__":
+    sim_loop()

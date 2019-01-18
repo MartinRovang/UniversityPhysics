@@ -35,21 +35,18 @@ class Game(object):
             if event.type == pygame.QUIT:
                 exit()
 
-        # Limit to 60FPS this is to contain the speed of the ball on all computers (unless their FPS will stagnate below 60)
-        time_passed = clock.tick(60)
-
         # Controls
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             if self.player.x > 0:
-                self.player.x -= 10
+                self.player.x -= 60*TIME_PASSED_SECONDS
 
         if keys[pygame.K_RIGHT]:
             if self.player.x < (800-self.player.width):
-                self.player.x += 10
+                self.player.x += 60*TIME_PASSED_SECONDS
 
 
-    def Initiate_Bricks(self, rows):
+    def initiate_Bricks(self, rows):
         """Puts the bricks out in the game"""
         for j in range(rows):
             for i in range(13):
@@ -86,7 +83,7 @@ class Game(object):
             
             # If the amount of bricks left is zero player will win
             if len(bricks_list) == 0:
-                self.player_ball.GAME_STATUS = 'won'
+                self.player_ball.game_status = 'won'
 
 
     def reset_bricks(self):
@@ -183,16 +180,16 @@ class Game(object):
         # Starts menu and gets the level(self.amount)
         self.game_menu()
         # Starts the initate bricks function to create bricks with the given amount which is chosen in the menu
-        self.Initiate_Bricks(self.amount)
+        self.initiate_Bricks(self.amount)
         player = self.player
         player_ball = self.player_ball
         # Coordinate change for where ball hit on the circle and add the corresponding x velocity according to angle
         theta = np.linspace(np.pi, 0 , player.width)
         radius_player = player.width/2
         # Loops while the game is ongoing
-        while self.player_ball.GAME_STATUS == 'Ongoing':
+        while self.player_ball.game_status == 'Ongoing':
 
-            # Controls the platform
+            # Bounce ball when hitting the platform
             if player_ball.x > player.x and player_ball.x < (player.x+player.width) and (player_ball.y+player_ball.radius) > (player.y) and (player_ball.y+player_ball.radius) < (player.y+player.height):
                 player_ball.y -= 10
                 player_ball.vely *= -1
@@ -223,7 +220,7 @@ class Game(object):
             pygame.display.update()
         
         # If win
-        while self.player_ball.GAME_STATUS == 'won':
+        while self.player_ball.game_status == 'won':
             # Get mouse position
             mousepos_x, mousepos_y = pygame.mouse.get_pos()
             # Save points to highscore if higher then before
@@ -241,7 +238,7 @@ class Game(object):
                 screen.blit(exit_button,(600,700))
                 if pygame.mouse.get_pressed()[0] == 1:
                     # Start gameloop again
-                    self.player_ball.GAME_STATUS = 'Ongoing'
+                    self.player_ball.game_status = 'Ongoing'
                     player_ball.reset_ball()
                     self.reset_bricks()
                     start_game.Gameloop()
@@ -255,7 +252,7 @@ class Game(object):
             pygame.display.update()
 
         # If lost
-        while self.player_ball.GAME_STATUS == 'lost':
+        while self.player_ball.game_status == 'lost':
             # Get mouse position
             mousepos_x, mousepos_y = pygame.mouse.get_pos()
             # Save points to highscore if higher then before
@@ -274,7 +271,7 @@ class Game(object):
                 screen.blit(exit_button,(600,700))
                 if pygame.mouse.get_pressed()[0] == 1:
                     # Start gameloop again
-                    self.player_ball.GAME_STATUS = 'Ongoing'
+                    self.player_ball.game_status = 'Ongoing'
                     player_ball.reset_ball()
                     self.reset_bricks()
                     start_game.Gameloop()
