@@ -71,11 +71,7 @@ class Boid(MovingObject):
             self.vely = vely/len(flock)
 
 
-
-
-    
-    def avoid_crash(self, boids, TIME_PASSED_SECONDS):
-        #pass
+    def avoid_crash(self, boids):
         for boid in boids:
             if boid != self:
                 distance = sqrt((boid.x-self.x)**2 + (boid.y-self.y)**2)
@@ -83,8 +79,9 @@ class Boid(MovingObject):
                     boid.velx = (boid.x - self.x) 
                     boid.vely = (boid.y - self.y)
                 if distance < 1:
-                    boid.velx += 10
-                    boid.vely += 10
+                    boid.velx += (self.x - boid.x) 
+                    boid.vely += (self.y - boid.y)
+
 
 
     def draw(self):
@@ -92,16 +89,12 @@ class Boid(MovingObject):
 
 
     
-    def avoid_hawk(self):
-        pass
-
-
-
-
-                
-            
-
-
+    def avoid_hawk(self, hawks):
+        for hawk in hawks:
+            distance = sqrt((hawk.x-self.x)**2 + (hawk.y-self.y)**2)
+            if distance < HAWK_TRIGGER_BOID_DISTANCE + hawk.HAWK_RADIUS:
+                self.velx = (hawk.velx-self.velx)*0.80 + random.gauss(BOID_MEAN_NOISY_X_ALERTED, BOID_VARIANCE_NOISY_X_ALERTED)
+                self.vely = (hawk.vely-self.vely)*0.80 + random.gauss(BOID_MEAN_NOISY_Y_ALERTED, BOID_VARIANCE_NOISY_Y_ALERTED)
 
 
     

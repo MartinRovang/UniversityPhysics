@@ -9,8 +9,8 @@ class MovingObject(object):
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.velx = random.randint(-100,100)
-        self.vely = random.randint(-20,10)
+        self.velx = 1
+        self.vely = 1
 
     def move(self, TIME_PASSED_SECONDS):
         self.x += self.velx*TIME_PASSED_SECONDS*MOVEMENT_MAGNITUDE
