@@ -1,5 +1,6 @@
-import pygame
 
+import pygame
+import numpy as np
 
 
 # SCREEN
@@ -11,7 +12,7 @@ SCREENSIZE = (WIDTH_SCREEN, HEIGHT_SCREEN)
 # Initialize pygame
 pygame.init()
 # Set the pygame window name 
-pygame.display.set_caption('Boids Sim') 
+pygame.display.set_caption('Breakout') 
 # Set screen object
 SCREEN = pygame.display.set_mode(SCREENSIZE)
 
@@ -37,25 +38,29 @@ clock = pygame.time.Clock() # Initiate clock object
 
 
 
-#BOIDS SETTINGS
-#############################
-BOID_DISTANCE_FLOCKING_RADIUS = 50
-BOID_VARIANCE_NOISY_X = 1
-BOID_VARIANCE_NOISY_Y = 1
-BOID_MEAN_NOISY_X = 0
-BOID_MEAN_NOISY_Y = 0
-BOIDS_AVOID_CRASH_DISTANCE = 15
-MOVEMENT_MAGNITUDE = 5
+theta  = 0
+
+while True:
+
+    
+    # Get mouse position
+    x, y = pygame.mouse.get_pos()
+
+    #Checks for events and if pressed the X in the corner the program will quit
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            exit()
+    
+
+    theta += 0.01
+
+    X = np.array([[100], [100], [0]])
+    ROTMAT = np.array([[np.cos(theta),-np.sin(theta), 0], [np.sin(theta), np.cos(theta), 0], [0 , 0 ,1]])
+    TRANSMAT = np.array([[1, 0, x], [0, 1, y], [0 , 0 , 1]])
+
+    Y = ROTMAT@X
 
 
-
-#MOVING OBJECT SETTINGS
-################################
-MOVING_OBJECT_RADIUS = 2
-
-
-#OBSTACLE SETTTINGS
-#############################
-OBSTACLE_WIDTH = 40
-OBSTACLE_HEIGHT = 40
-OBSTACLE_BORDER_THICKNESS = 0 # 0 to fill it
+    SCREEN.fill((0, 0, 0))
+    pygame.draw.circle(SCREEN, RED, (Y[0]+x, Y[1]+y), 5,0)
+    pygame.display.update()

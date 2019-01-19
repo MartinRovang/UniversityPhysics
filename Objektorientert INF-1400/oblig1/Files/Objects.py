@@ -17,12 +17,12 @@ class Ball(object):
         self.magnitude is the total speed the ball always will have
         self.game_status is the current state of the game (this chooses which menu to be shown/ or if it is active play)
         """
-        self.x = 250
-        self.y = 250
+        self.x = BALL_START_POS_X
+        self.y = BALL_START_POS_Y
         self.velx = 0
         self.vely = 6
         self.radius = 5
-        self.magnitude = 100
+        self.magnitude = BALL_SPEED
         self.game_status = 'Ongoing'
 
     def update(self):
@@ -51,7 +51,7 @@ class Ball(object):
         pygame.draw.circle(screen, WHITE, (int(self.x), int(self.y)), self.radius)
 
     def reset_ball(self):
-        """Resets the ball position to original position."""
+        """Resets the ball to original position."""
         self.x = 250
         self.y = 250
         self.velx = 0
@@ -83,6 +83,14 @@ class Player(object):
     def update(self):
         """Updates the position of the platform"""
         pygame.draw.rect(screen, GREY, (self.x, self.y, self.width, self.height))
+
+
+
+    def reset_player(self):
+        """Resets the platform to original position."""
+        self.x = 200
+        self.y = 700
+
 
 
 

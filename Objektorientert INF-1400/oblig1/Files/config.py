@@ -37,7 +37,21 @@ GREY = (240,248,255)
 
 # Timer
 clock = pygame.time.Clock() # Initiate clock object
-# Limit to 60FPS this is to contain the speed of the ball on all computers (unless their FPS will stagnate below 60)
 TIME_PASSED = clock.tick(60)
-# Time in seconds
 TIME_PASSED_SECONDS = TIME_PASSED/1000.0
+
+
+
+
+# BALL SETTINGS
+##########################################
+BALL_SPEED = 900
+BALL_START_POS_X = 250
+BALL_START_POS_Y = 250
+
+
+
+
+# PLATFORM SETTINGS
+#########################################
+PLATFORM_SPEED = 500

@@ -39,11 +39,11 @@ class Game(object):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             if self.player.x > 0:
-                self.player.x -= 60*TIME_PASSED_SECONDS
+                self.player.x -= PLATFORM_SPEED*TIME_PASSED_SECONDS
 
         if keys[pygame.K_RIGHT]:
             if self.player.x < (800-self.player.width):
-                self.player.x += 60*TIME_PASSED_SECONDS
+                self.player.x += PLATFORM_SPEED*TIME_PASSED_SECONDS
 
 
     def initiate_Bricks(self, rows):
@@ -188,6 +188,8 @@ class Game(object):
         radius_player = player.width/2
         # Loops while the game is ongoing
         while self.player_ball.game_status == 'Ongoing':
+            TIME_PASSED = clock.tick(60)
+            TIME_PASSED_SECONDS = TIME_PASSED/1000.0
 
             # Bounce ball when hitting the platform
             if player_ball.x > player.x and player_ball.x < (player.x+player.width) and (player_ball.y+player_ball.radius) > (player.y) and (player_ball.y+player_ball.radius) < (player.y+player.height):
@@ -240,6 +242,7 @@ class Game(object):
                     # Start gameloop again
                     self.player_ball.game_status = 'Ongoing'
                     player_ball.reset_ball()
+                    player.reset_player()
                     self.reset_bricks()
                     start_game.Gameloop()
                 
@@ -273,6 +276,7 @@ class Game(object):
                     # Start gameloop again
                     self.player_ball.game_status = 'Ongoing'
                     player_ball.reset_ball()
+                    player.reset_player()
                     self.reset_bricks()
                     start_game.Gameloop()
                 

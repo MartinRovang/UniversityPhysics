@@ -14,4 +14,4 @@ class Obstacle(object):
 
     def draw(self):
  
-        pygame.draw.rect(SCREEN, BLUE, [int(self.x), int(self.y), OBSTACLE_WIDTH, OBSTACLE_HEIGHT], 1)
+        pygame.draw.rect(SCREEN, BLUE, [int(self.x), int(self.y), OBSTACLE_WIDTH, OBSTACLE_HEIGHT], OBSTACLE_BORDER_THICKNESS)
