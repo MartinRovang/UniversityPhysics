@@ -54,13 +54,12 @@ while True:
 
     theta += 0.01
 
-    X = np.array([[100], [100], [0]])
+    X = np.array([[100], [100], [1]])
     ROTMAT = np.array([[np.cos(theta),-np.sin(theta), 0], [np.sin(theta), np.cos(theta), 0], [0 , 0 ,1]])
     TRANSMAT = np.array([[1, 0, x], [0, 1, y], [0 , 0 , 1]])
 
-    Y = ROTMAT@X
-
+    Y = TRANSMAT@ROTMAT@X
 
     SCREEN.fill((0, 0, 0))
-    pygame.draw.circle(SCREEN, RED, (Y[0]+x, Y[1]+y), 5,0)
+    pygame.draw.circle(SCREEN, RED, (int(Y[0,0]), int(Y[1,0])), 5,0)
     pygame.display.update()

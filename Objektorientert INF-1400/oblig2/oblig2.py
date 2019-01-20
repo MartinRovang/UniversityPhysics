@@ -45,20 +45,20 @@ def sim_loop():
         
         # Remove old drawings / fill with black
         SCREEN.fill((0,0,0))
-
         # Make all actions
         for i in boids_list:
             i.noisy_movement(TIME_PASSED_SECONDS)
             i.avoid_hawk(hawk_list)
             i.move(TIME_PASSED_SECONDS)
-            i.avoid_crash(boids_list)
             i.flocking(boids_list)
+            i.avoid_crash(boids_list)
             i.match_speed(boids_list)
             i.crash_wall_check(TIME_PASSED_SECONDS)
-            i.avoid_obstacles(obstacle_list)
             i.draw()
 
         for i in obstacle_list:
+            i.avoid_obstacles(boids_list)
+            i.avoid_obstacles(hawk_list)
             i.draw()
 
         for i in hawk_list:
@@ -67,7 +67,6 @@ def sim_loop():
             i.flocking(hawk_list)
             i.match_speed(hawk_list)
             i.crash_wall_check(TIME_PASSED_SECONDS)
-            i.avoid_obstacles(obstacle_list)
             i.attack(boids_list)
             i.avoid_crash(hawk_list)
             i.draw()

@@ -10,12 +10,17 @@ class Boid(MovingObject):
         super().__init__(x, y)
         self.flocked = 0
         self.flock = []
+        self.radius = BOID_RADIUS
 
     def noisy_movement(self, TIME_PASSED_SECONDS):
         if self.flocked == 0:
             #Make white noise movement
             self.velx += random.gauss(BOID_MEAN_NOISY_X, BOID_VARIANCE_NOISY_X)
             self.vely += random.gauss(BOID_MEAN_NOISY_Y, BOID_VARIANCE_NOISY_Y)
+            if abs(self.velx) > MAX_NOISE_SPEED_X:
+                self.velx = MAX_NOISE_SPEED_X
+            if abs(self.vely) > MAX_NOISE_SPEED_Y:
+                self.vely = MAX_NOISE_SPEED_Y
 
 
     def flocking(self, boids): 
@@ -75,7 +80,7 @@ class Boid(MovingObject):
         for boid in boids:
             if boid != self:
                 distance = sqrt((boid.x-self.x)**2 + (boid.y-self.y)**2)
-                if distance < BOIDS_AVOID_CRASH_DISTANCE:
+                if distance < BOIDS_AVOID_CRASH_DISTANCE + boid.radius:
                     boid.velx = (boid.x - self.x) 
                     boid.vely = (boid.y - self.y)
                 if distance < 1:
@@ -92,9 +97,9 @@ class Boid(MovingObject):
     def avoid_hawk(self, hawks):
         for hawk in hawks:
             distance = sqrt((hawk.x-self.x)**2 + (hawk.y-self.y)**2)
-            if distance < HAWK_TRIGGER_BOID_DISTANCE + hawk.HAWK_RADIUS:
-                self.velx = (hawk.velx-self.velx)*0.80 + random.gauss(BOID_MEAN_NOISY_X_ALERTED, BOID_VARIANCE_NOISY_X_ALERTED)
-                self.vely = (hawk.vely-self.vely)*0.80 + random.gauss(BOID_MEAN_NOISY_Y_ALERTED, BOID_VARIANCE_NOISY_Y_ALERTED)
+            if distance < HAWK_TRIGGER_BOID_DISTANCE + hawk.radius:
+                self.velx = (hawk.velx-self.velx)*0.80
+                self.vely = (hawk.vely-self.vely)*0.80
 
 
     
