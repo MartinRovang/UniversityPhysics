@@ -5,6 +5,40 @@ from Files.GenObjects import MovingObject
 import random
 
 class Boid(MovingObject):
+    """
+    Summary:
+        Inherits from MovingObject, this class makes the boids object
+        
+    Args:
+    x: x-position.
+
+    y: y-position.   
+
+    Methods:
+    move(TIME_PASSED_SECONDS): Places the moving object according to its speed and magnitude.
+
+    get_pos: Returns the position (x, y).
+
+    set_pos(x,y): Sets the position to (x, y).
+
+    set_vel(velx,vely): Sets the velocity to (velx, vely).
+
+    get_vel: Returns the velocity (velx, vely).
+
+    crash_wall_check(TIME_PASSED_SECONDS, wall_lock): Checks if the object is colliding with the walls of the screen, and bounce them off if wall_lock == 1 else they go to the other side.
+
+    noisy_movement(TIME_PASSED_SECONDS): Makes the noisy movement to the boid.
+
+    flocking(boids): Takes the list of boids and makes the boids flock together to their percieved center.
+
+    match_speed(boids): Takes the list of boids and sets the avarage heading of the flock.
+
+    avoid_crash(boids): Takes the list of boids and makes them avoid eachother.
+
+    avoid_hawk(hawks): Takes the list of hawks and makes the boids avoid the hawks.
+
+    draw: draws the obstacle object on the screen
+    """
 
     def __init__(self, x , y):
         super().__init__(x, y)
@@ -86,7 +120,7 @@ class Boid(MovingObject):
                 if distance < 1:
                     boid.velx += (self.x - boid.x) 
                     boid.vely += (self.y - boid.y)
-
+                    
 
 
     def draw(self):
@@ -98,8 +132,10 @@ class Boid(MovingObject):
         for hawk in hawks:
             distance = sqrt((hawk.x-self.x)**2 + (hawk.y-self.y)**2)
             if distance < HAWK_TRIGGER_BOID_DISTANCE + hawk.radius:
-                self.velx = (hawk.velx-self.velx)*0.80
-                self.vely = (hawk.vely-self.vely)*0.80
+                # self.velx = (hawk.velx-self.velx)
+                # self.vely = (hawk.vely-self.vely)
+                self.vely += ((hawk.vely + self.vely) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
+                self.velx += ((hawk.velx + self.velx) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
 
 
     

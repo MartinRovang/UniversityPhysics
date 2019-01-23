@@ -8,6 +8,23 @@ import numpy as np
 
 
 class Obstacle(object):
+    """
+    Summary:
+        When called creates an obstacle object.
+
+    Args:
+    x: x-position.
+
+    y: y-position.
+
+    Methods:
+    draw: Draws the obstacle object on the screen.
+
+    avoid_obstacles(moving_objects): Takes a list and sends the objects away from the obstacle border.
+
+    """
+
+
     def __init__(self, x, y):
         self.x = x
         self.y = y

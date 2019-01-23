@@ -21,7 +21,7 @@ class Ball(object):
         self.y = BALL_START_POS_Y
         self.velx = 0
         self.vely = 6
-        self.radius = 5
+        self.radius = BALL_RADIUS
         self.magnitude = BALL_SPEED
         self.game_status = 'Ongoing'
 
@@ -52,10 +52,10 @@ class Ball(object):
 
     def reset_ball(self):
         """Resets the ball to original position."""
-        self.x = 250
-        self.y = 250
+        self.x = BALL_START_POS_X
+        self.y = BALL_START_POS_Y
         self.velx = 0
-        self.vely = 14
+        self.vely = 6
 
 
 

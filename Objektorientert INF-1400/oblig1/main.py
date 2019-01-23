@@ -1,10 +1,10 @@
 from os import environ
 import pygame
 import numpy as np
-import csv
-from Files.initiate import nickname, highscore
-from Files.Objects import Ball, Player, Bricks
+from Files import Ball, Player, Bricks, createuser
 from Files.config import *
+
+
 
 
 
@@ -14,11 +14,16 @@ class Game(object):
     """To create one instance of the game"""
     def __init__(self):
         """
-        self.player is a player object, in this case the game is hardcoded for just one player
-        self.player_ball is the ball object
-        self.bricks_list is the list which will contain all the bricks to be destroyed by the player
-        self.points is the amount of points the player has
-        self.amount is the the lvl/hp of bricks (amount of times to be hit before destroyed)
+        *self.player is a player object, in this case the game is hardcoded for just one player
+
+        *self.player_ball is the ball object
+
+        *self.bricks_list is the list which will contain all the bricks to be destroyed by the player
+
+        *self.points is the amount of points the player has
+
+        *self.amount is the the lvl/hp of bricks (amount of times to be hit before destroyed)
+
         """
         self.player = Player()
         self.player_ball = Ball()
@@ -49,8 +54,8 @@ class Game(object):
     def initiate_Bricks(self, rows):
         """Puts the bricks out in the game"""
         for j in range(rows):
-            for i in range(13):
-                self.bricks_list.append(Bricks(i*50 + i*10+10, (j+1)*50+50 , j+1))
+            for i in range(NUMBER_OF_BLOCK_HORIZONTAL):
+                self.bricks_list.append(Bricks(i*XDISTANCE_BETWEEN_BLOCKS + i+XSHIFT_BLOCKS, (j+1)*YDISTANCE_BETWEEN_BLOCKS+YSHIFT_BLOCKS , j+1))
 
     
     def hit_detection(self, x, y, r, bricks):
@@ -75,6 +80,7 @@ class Game(object):
                 bricks.health -= 1
                 self.points += 1
 
+            # Remove bricks when health is below 0
             if bricks.health <= 0:
                 bricks_list.remove(bricks)
             
@@ -87,7 +93,7 @@ class Game(object):
 
 
     def reset_bricks(self):
-        """Resets bricks/ empties the bricks list"""
+        """Resets bricks/empties the bricks list"""
         self.bricks_list = []
 
     
@@ -113,17 +119,17 @@ class Game(object):
                 if mousepos_y > 175 and mousepos_y < 218:
                     screen.blit(menu_hover1, (0,0))
                     if pygame.mouse.get_pressed()[0] == 1:
-                        self.amount = 1
+                        self.amount = 2
                         break
                 if mousepos_y > 333 and mousepos_y < 374:
                     screen.blit(menu_hover2, (0,0))
                     if pygame.mouse.get_pressed()[0] == 1:
-                        self.amount = 2
+                        self.amount = 3
                         break
                 if mousepos_y > 487 and mousepos_y < 529:
                     screen.blit(menu_hover3, (0,0))
                     if pygame.mouse.get_pressed()[0] == 1:
-                        self.amount = 3
+                        self.amount = 4
                         break
 
             # Open highscore menu
@@ -156,11 +162,15 @@ class Game(object):
 
                         # Sort for highest score and print on screen, the highscore is a type dict.
                         for i, nicknames in enumerate(sorted(highscore, key=highscore.get, reverse=True)):
-                            wintext = win_text.render('{}. {}      {}'.format(i+1 ,nicknames, highscore[nicknames]), False, GREY)
+                            # Highlight your nickname with RED color 
+                            if nicknames == nickname:
+                                wintext = win_text.render('{}. {}      {}'.format(i+1 ,nicknames, highscore[nicknames]), False, RED)
+                            else:
+                                wintext = win_text.render('{}. {}      {}'.format(i+1 ,nicknames, highscore[nicknames]), False, GREY)
                             screen.blit(wintext,(200,50+i*50))
 
                             # Only print top 10
-                            if i > 9:
+                            if i+1 > 9:
                                 break
                         pygame.display.update()
             
@@ -187,6 +197,7 @@ class Game(object):
         theta = np.linspace(np.pi, 0 , player.width)
         radius_player = player.width/2
         # Loops while the game is ongoing
+
         while self.player_ball.game_status == 'Ongoing':
             TIME_PASSED = clock.tick(60)
             TIME_PASSED_SECONDS = TIME_PASSED/1000.0
@@ -288,7 +299,10 @@ class Game(object):
             pygame.display.update()
 
 
-            
+
+
+nickname, highscore = createuser()
+
 
 # Make game object
 start_game = Game()

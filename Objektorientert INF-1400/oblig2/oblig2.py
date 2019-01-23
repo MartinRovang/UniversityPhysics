@@ -8,10 +8,13 @@ from Files.config import *
 
 
 def sim_loop():
+    """This is the gameloop and will run until you exit the program"""
+
     # Initiate boids list to containt the boids
     boids_list = []
     hawk_list = []
     obstacle_list = []
+    wall_lock = 0
     while True:
 
         
@@ -32,6 +35,15 @@ def sim_loop():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_c:
                     hawk_list.append(Hawk(x, y))
+            
+            # Disable/enable walls
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_x:
+                    if wall_lock == 0:
+                        wall_lock = 1
+                    else:
+                        wall_lock = 0
+
 
         # Limit to 60FPS this is to contain the speed of the ball on all computers (unless their FPS will stagnate below 60)
         TIME_PASSED = clock.tick(60)
@@ -53,7 +65,7 @@ def sim_loop():
             i.flocking(boids_list)
             i.avoid_crash(boids_list)
             i.match_speed(boids_list)
-            i.crash_wall_check(TIME_PASSED_SECONDS)
+            i.crash_wall_check(TIME_PASSED_SECONDS , wall_lock)
             i.draw()
 
         for i in obstacle_list:
@@ -66,11 +78,15 @@ def sim_loop():
             i.move(TIME_PASSED_SECONDS)
             i.flocking(hawk_list)
             i.match_speed(hawk_list)
-            i.crash_wall_check(TIME_PASSED_SECONDS)
+            i.crash_wall_check(TIME_PASSED_SECONDS, wall_lock)
             i.attack(boids_list)
             i.avoid_crash(hawk_list)
             i.draw()
-        
+
+        # render text if walls are disabled
+        if wall_lock == 1:
+            wall_text = win_text.render('Walls disabled', False, RED)
+            SCREEN.blit(wall_text,(0,700))
         # Draw new placements
         pygame.display.update()
 
