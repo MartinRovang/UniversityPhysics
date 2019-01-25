@@ -115,11 +115,11 @@ class Boid(MovingObject):
             if boid != self:
                 distance = sqrt((boid.x-self.x)**2 + (boid.y-self.y)**2)
                 if distance < BOIDS_AVOID_CRASH_DISTANCE + boid.radius:
-                    boid.velx = (boid.x - self.x) 
+                    boid.velx = (boid.x - self.x)
                     boid.vely = (boid.y - self.y)
                 if distance < 1:
-                    boid.velx += (self.x - boid.x) 
-                    boid.vely += (self.y - boid.y)
+                    boid.velx = (self.x - boid.x) 
+                    boid.vely = (self.y - boid.y)
                     
 
 
@@ -132,8 +132,6 @@ class Boid(MovingObject):
         for hawk in hawks:
             distance = sqrt((hawk.x-self.x)**2 + (hawk.y-self.y)**2)
             if distance < HAWK_TRIGGER_BOID_DISTANCE + hawk.radius:
-                # self.velx = (hawk.velx-self.velx)
-                # self.vely = (hawk.vely-self.vely)
                 self.vely += ((hawk.vely + self.vely) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
                 self.velx += ((hawk.velx + self.velx) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
 

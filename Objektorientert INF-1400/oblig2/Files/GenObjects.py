@@ -2,7 +2,7 @@ import pygame
 from math import cos, sin, radians
 import random
 from Files.config import *
-
+import numpy as np
 
 class MovingObject(object):
 
@@ -40,8 +40,8 @@ class MovingObject(object):
         self.radius = MOVING_OBJECT_RADIUS
 
     def move(self, TIME_PASSED_SECONDS):
-        self.x += self.velx*TIME_PASSED_SECONDS*MOVEMENT_MAGNITUDE
-        self.y += self.vely*TIME_PASSED_SECONDS*MOVEMENT_MAGNITUDE
+        self.x += (self.velx/np.sqrt(self.velx**2+self.vely**2))*TIME_PASSED_SECONDS*MOVEMENT_MAGNITUDE
+        self.y += (self.vely/np.sqrt(self.velx**2+self.vely**2))*TIME_PASSED_SECONDS*MOVEMENT_MAGNITUDE
 
 
 
