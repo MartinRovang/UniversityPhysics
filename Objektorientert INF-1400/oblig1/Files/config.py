@@ -1,5 +1,4 @@
 import pygame
-import pygame.display
 
 
 # SCREEN
@@ -20,15 +19,11 @@ pygame.font.init() # module for adding text
 win_text = pygame.font.SysFont('Comic Sans MS', 30)
 
 
-# General settings
-###############################################################
-# Load background music
-pygame.mixer.music.load('lannis.ogg')
-pygame.mixer.music.play(loops = 10, start = 40)
+# GENERAL SETTINGS
+###########################################
 
 
 # COLORS
-#--------------------------------------
 RED =   (255,   0,   0)
 GREEN = (  0, 255,   0)
 WHITE = (255, 255, 255)
@@ -56,6 +51,7 @@ BALL_RADIUS = 5
 # PLATFORM SETTINGS
 #########################################
 PLATFORM_SPEED = 500
+ANGLE_MAGNITUDE = 10
 
 
 # BRICKS SETTINGS
@@ -65,3 +61,4 @@ XSHIFT_BLOCKS = 10
 XDISTANCE_BETWEEN_BLOCKS = 50
 NUMBER_OF_BLOCK_HORIZONTAL = 15
 YSHIFT_BLOCKS = 37
+

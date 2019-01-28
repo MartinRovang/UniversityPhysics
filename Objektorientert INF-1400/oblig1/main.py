@@ -1,12 +1,12 @@
-from os import environ
 import pygame
 import numpy as np
-from Files import Ball, Player, Bricks, createuser
+from Files.user import createuser
+
+#get nickname and highscore to be able to write to file
+nickname, highscore = createuser()
+
+from Files.Objects import Ball, Player, Bricks
 from Files.config import *
-
-
-
-
 
     
 
@@ -22,7 +22,8 @@ class Game(object):
 
         *self.points is the amount of points the player has
 
-        *self.amount is the the lvl/hp of bricks (amount of times to be hit before destroyed)
+        *self.amount is the the lvl/hp of bricks (amount of times to be hit before destroyed), this is
+        selected in the menu
 
         """
         self.player = Player()
@@ -51,11 +52,14 @@ class Game(object):
                 self.player.x += PLATFORM_SPEED*TIME_PASSED_SECONDS
 
 
-    def initiate_Bricks(self, rows):
+    def initiate_bricks(self, rows):
         """Puts the bricks out in the game"""
         for j in range(rows):
             for i in range(NUMBER_OF_BLOCK_HORIZONTAL):
-                self.bricks_list.append(Bricks(i*XDISTANCE_BETWEEN_BLOCKS + i+XSHIFT_BLOCKS, (j+1)*YDISTANCE_BETWEEN_BLOCKS+YSHIFT_BLOCKS , j+1))
+                self.bricks_list.append(
+                Bricks(i*XDISTANCE_BETWEEN_BLOCKS + i+XSHIFT_BLOCKS,
+                 (j+1)*YDISTANCE_BETWEEN_BLOCKS+YSHIFT_BLOCKS , j+1)
+                 )
 
     
     def hit_detection(self, x, y, r, bricks):
@@ -107,6 +111,11 @@ class Game(object):
         menu_hover4 = pygame.image.load('menu_hover4.png')
         # Reset points
         self.points = 0
+
+        # Play menu music
+        pygame.mixer.music.load('lannis.ogg')
+        pygame.mixer.music.play(loops = 10, start = 40)
+
         while True:
             # Run events to avoid crashing when exiting
             self.Events()
@@ -190,26 +199,35 @@ class Game(object):
         # Starts menu and gets the level(self.amount)
         self.game_menu()
         # Starts the initate bricks function to create bricks with the given amount which is chosen in the menu
-        self.initiate_Bricks(self.amount)
+        self.initiate_bricks(self.amount)
         player = self.player
         player_ball = self.player_ball
         # Coordinate change for where ball hit on the circle and add the corresponding x velocity according to angle
         theta = np.linspace(np.pi, 0 , player.width)
         radius_player = player.width/2
-        # Loops while the game is ongoing
 
+        # Play game music
+        pygame.mixer.music.load('rains.ogg')
+        pygame.mixer.music.play(loops = 10, start = 60+23)
+
+
+        # Loops while the game is ongoing
         while self.player_ball.game_status == 'Ongoing':
+            
+            # Set FPS lock
             TIME_PASSED = clock.tick(60)
             TIME_PASSED_SECONDS = TIME_PASSED/1000.0
 
             # Bounce ball when hitting the platform
-            if player_ball.x > player.x and player_ball.x < (player.x+player.width) and (player_ball.y+player_ball.radius) > (player.y) and (player_ball.y+player_ball.radius) < (player.y+player.height):
+            if player_ball.x > player.x and player_ball.x < (player.x + player.width) \
+            and (player_ball.y + player_ball.radius) > (player.y)\
+             and (player_ball.y + player_ball.radius) < (player.y + player.height):
                 player_ball.y -= 10
                 player_ball.vely *= -1
 
                 ball_hit = (player_ball.x-player.x)
                 # Set angle by the speed of the ball in x direction by where on the platform it hits (middle = 0 x speed)
-                player_ball.velx = 14*np.cos(theta[int(ball_hit)])
+                player_ball.velx = ANGLE_MAGNITUDE*np.cos(theta[int(ball_hit)])
 
                 
             #Fills the screen with black to remove the old position of the drawn objects
@@ -301,7 +319,6 @@ class Game(object):
 
 
 
-nickname, highscore = createuser()
 
 
 # Make game object

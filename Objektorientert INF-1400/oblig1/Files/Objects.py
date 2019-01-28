@@ -44,8 +44,8 @@ class Ball(object):
         
 
         # Normalize the speed and scale with magnitude in order to maintain the speed at the magnitude
-        self.x += self.magnitude*self.velx/np.sqrt(self.velx**2+self.vely**2)*TIME_PASSED_SECONDS
-        self.y += self.magnitude*self.vely/np.sqrt(self.velx**2+self.vely**2)*TIME_PASSED_SECONDS
+        self.x += (self.magnitude*self.velx/np.sqrt(self.velx**2+self.vely**2))*TIME_PASSED_SECONDS
+        self.y += (self.magnitude*self.vely/np.sqrt(self.velx**2+self.vely**2))*TIME_PASSED_SECONDS
 
         
         pygame.draw.circle(screen, WHITE, (int(self.x), int(self.y)), self.radius)
