@@ -20,12 +20,12 @@ class Ball(object):
         self.x = BALL_START_POS_X
         self.y = BALL_START_POS_Y
         self.velx = 0
-        self.vely = 6
+        self.vely = 1
         self.radius = BALL_RADIUS
         self.magnitude = BALL_SPEED
         self.game_status = 'Ongoing'
 
-    def update(self):
+    def update(self,TIME_PASSED_SECONDS):
         """
         Updates the position of the ball by how much velocity the ball has. 
         It also checks if it is close to border, if it is close enough it will bounce away in the same angle.
@@ -44,9 +44,12 @@ class Ball(object):
         
 
         # Normalize the speed and scale with magnitude in order to maintain the speed at the magnitude
-        self.x += (self.magnitude*self.velx/np.sqrt(self.velx**2+self.vely**2))*TIME_PASSED_SECONDS
-        self.y += (self.magnitude*self.vely/np.sqrt(self.velx**2+self.vely**2))*TIME_PASSED_SECONDS
-
+        velx = (self.magnitude*self.velx/np.sqrt(self.velx**2+self.vely**2))
+        vely = (self.magnitude*self.vely/np.sqrt(self.velx**2+self.vely**2))
+        if TIME_PASSED_SECONDS > 1:
+            TIME_PASSED_SECONDS = 0.017
+        self.x += velx*TIME_PASSED_SECONDS
+        self.y += vely*TIME_PASSED_SECONDS
         
         pygame.draw.circle(screen, WHITE, (int(self.x), int(self.y)), self.radius)
 
@@ -55,7 +58,7 @@ class Ball(object):
         self.x = BALL_START_POS_X
         self.y = BALL_START_POS_Y
         self.velx = 0
-        self.vely = 6
+        self.vely = 1
 
 
 

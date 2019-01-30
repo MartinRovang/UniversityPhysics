@@ -96,4 +96,8 @@ def sim_loop():
 
 
 if __name__ == "__main__":
+    # Initialize pygame
+    pygame.init()
+    # Set the pygame window name 
+    pygame.display.set_caption('Boids Sim') 
     sim_loop()

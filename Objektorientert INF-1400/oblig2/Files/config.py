@@ -8,10 +8,6 @@ import pygame
 WIDTH_SCREEN = 800
 HEIGHT_SCREEN = 800
 SCREENSIZE = (WIDTH_SCREEN, HEIGHT_SCREEN)
-# Initialize pygame
-pygame.init()
-# Set the pygame window name 
-pygame.display.set_caption('Boids Sim') 
 # Set screen object
 SCREEN = pygame.display.set_mode(SCREENSIZE)
 

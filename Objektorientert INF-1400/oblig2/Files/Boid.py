@@ -82,14 +82,10 @@ class Boid(MovingObject):
                     y -= boid.y
 
                     i -= 1
-        try:
+
+        if i > 0:
             mean_pos_x = (x/i) - self.x
             mean_pos_y = (y/i) - self.y
-
-        except ZeroDivisionError:
-            pass
-        
-        if i > 0:
             self.flocked = 1
             self.velx = mean_pos_x
             self.vely = mean_pos_y
@@ -124,7 +120,12 @@ class Boid(MovingObject):
 
 
     def draw(self):
-        pygame.draw.circle(SCREEN, GREY, [int(self.x), int(self.y)], MOVING_OBJECT_RADIUS)
+        
+        try:
+            pygame.draw.circle(SCREEN, GREY, [int(self.x), int(self.y)], MOVING_OBJECT_RADIUS)
+        except:
+            self.x, self.y = (20,20)
+            print('Error in coordinates, pushing boid back to (20,20)')
 
 
     
@@ -132,9 +133,8 @@ class Boid(MovingObject):
         for hawk in hawks:
             distance = sqrt((hawk.x-self.x)**2 + (hawk.y-self.y)**2)
             if distance < HAWK_TRIGGER_BOID_DISTANCE + hawk.radius:
-                self.vely += ((hawk.vely + self.vely) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
-                self.velx += ((hawk.velx + self.velx) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
-
+                self.vely = ((hawk.vely - self.vely) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
+                self.velx = ((hawk.velx - self.velx) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
 
     
         

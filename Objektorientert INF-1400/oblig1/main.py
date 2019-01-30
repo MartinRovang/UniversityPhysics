@@ -10,6 +10,7 @@ from Files.config import *
 
     
 
+
 class Game(object):
     """To create one instance of the game"""
     def __init__(self):
@@ -31,10 +32,11 @@ class Game(object):
         self.bricks_list = []
         self.points = 0
         self.amount = 0
+        self.timer = 0
 
 
     # The events loop method
-    def Events(self):
+    def Events(self, TIME_PASSED_SECONDS):
         """Checks for events and if pressed the X in the corner the program will quit"""
         # Closing the game
         for event in pygame.event.get():
@@ -77,7 +79,7 @@ class Game(object):
             hit = self.hit_detection(self.player_ball.x, self.player_ball.y, self.player_ball.radius, bricks)
 
             if hit:
-                self.player_ball.velx *= -1
+                #self.player_ball.velx *= -1
                 self.player_ball.vely *= -1
                 # Bump the ball a bit away such that the if test only happens once per hit (sign to bumb it away according to hit direction)
                 self.player_ball.y += np.sign(self.player_ball.vely)*10
@@ -118,7 +120,7 @@ class Game(object):
 
         while True:
             # Run events to avoid crashing when exiting
-            self.Events()
+            self.Events(self.timer)
 
             # Get mouse position
             mousepos_x, mousepos_y = pygame.mouse.get_pos()
@@ -151,7 +153,7 @@ class Game(object):
                     while True:
                         mousepos_x, mousepos_y = pygame.mouse.get_pos()
                         # Allow for exiting program without crashing
-                        self.Events()
+                        self.Events(self.timer)
 
                         # Highscore text
                         screen.fill((0,0,0))
@@ -210,6 +212,7 @@ class Game(object):
         pygame.mixer.music.load('rains.ogg')
         pygame.mixer.music.play(loops = 10, start = 60+23)
 
+    
 
         # Loops while the game is ongoing
         while self.player_ball.game_status == 'Ongoing':
@@ -217,6 +220,7 @@ class Game(object):
             # Set FPS lock
             TIME_PASSED = clock.tick(60)
             TIME_PASSED_SECONDS = TIME_PASSED/1000.0
+            self.timer = TIME_PASSED_SECONDS
 
             # Bounce ball when hitting the platform
             if player_ball.x > player.x and player_ball.x < (player.x + player.width) \
@@ -235,11 +239,11 @@ class Game(object):
             
             # Update functions for updating positions etc for all the objects in the game
             player.update()
-            player_ball.update()
+            player_ball.update(self.timer)
             self.update_bricks()
 
             # Keeps the events loop going
-            self.Events()
+            self.Events(self.timer)
 
             # Text that shows how much points the player currently has
             point_text = win_text.render('Points: %d'%self.points, False, GREY)
@@ -259,7 +263,7 @@ class Game(object):
                 highscore[nickname] = self.points
                 with open('highscore.txt','w') as csvfile:
                     csvfile.write('%s'%highscore)
-            self.Events()
+            self.Events(self.timer)
             wintext = win_text.render('YOU WON!!', False, (100, 100, 100))
             screen.blit(wintext,(int(WIDTH_SCREEN/2),int(HEIGHT_SCREEN/2)))
 
@@ -293,7 +297,7 @@ class Game(object):
                 with open('highscore.txt','w') as csvfile:
                     csvfile.write('%s'%highscore)
 
-            self.Events()
+            self.Events(self.timer)
             wintext = win_text.render('YOU LOST!!', False, (100, 100, 100))
             screen.blit(wintext,(int(WIDTH_SCREEN/2),int(HEIGHT_SCREEN/2)))
 
@@ -316,6 +320,19 @@ class Game(object):
             # Update screen
             pygame.display.update()
 
+
+
+
+# Initialize pygame
+pygame.init()
+# set the pygame window name 
+pygame.display.set_caption('Breakout') 
+# Set screen object
+
+# FONTS
+###########################################
+pygame.font.init() # module for adding text
+win_text = pygame.font.SysFont('Comic Sans MS', 30)
 
 
 

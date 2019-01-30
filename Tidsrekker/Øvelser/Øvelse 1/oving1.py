@@ -142,7 +142,7 @@ x = np.zeros(100)
 for i in range(3, 100):
     x[i] = -0.9*x[i-2] + w_noise[i]
 # Moving avarage
-v = [((x[i]+x[i-1] + x[i-2] + x[i-3])/4) for i in range(3, 100)]
+v = [((x[i]+x[i-1] + x[i-2] + x[i-3])/4) for i in range(2, 100)]
 plt.figure(figsize = (20,10))
 plt.plot(x)
 plt.plot(v, '--', label = 'MA')
@@ -160,7 +160,7 @@ t = np.linspace(0,100,100)
 x = np.cos(2*np.pi*t/4)
 
 # Moving avarage
-v = np.array([((x[i]+x[i-1] + x[i-2] + x[i - 3])/4) for i in range(3, 100)])
+v = np.array([((x[i]+x[i-1] + x[i-2] + x[i - 3])/4) for i in range(2, 100)])
 plt.figure(figsize = (20,10))
 plt.plot(x)
 plt.plot(v, '--', label = 'MA')
