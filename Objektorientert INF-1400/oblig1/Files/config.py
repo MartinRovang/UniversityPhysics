@@ -43,7 +43,7 @@ BALL_RADIUS = 5
 
 # PLATFORM SETTINGS
 #########################################
-PLATFORM_SPEED = 500
+PLATFORM_SPEED = 700
 ANGLE_MAGNITUDE = 2
 
 

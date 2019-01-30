@@ -143,3 +143,43 @@ plt.show()
 
 
 #%%
+#2a
+import numpy as np
+from statsmodels.tsa.stattools import acf,acovf
+n = 500
+
+w = np.random.normal(0,1,n)
+
+x = np.zeros(n)
+
+for i in range(1,n):
+    x[i] = (1/2)*(w[i-1] + w[i])
+
+plt.plot(x)
+plt.show()
+
+plt.stem(acovf(x))
+plt.show()
+
+plt.stem(acf(x))
+plt.show()
+
+
+# The more n, the closer to theoretical values
+#%%
+np.random.seed(100)
+
+n = 1000
+w = np.random.normal(0,1,n)
+x = np.cumsum(w)
+
+plt.plot(x)
+plt.show()
+
+plt.stem(acovf(x))
+plt.show()
+
+plt.stem(acf(x))
+plt.show()
+
+#%%

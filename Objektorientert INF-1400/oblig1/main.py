@@ -71,32 +71,6 @@ class Game(object):
         return hit
 
 
-    def update_bricks(self):
-        """Checks if ball hits the bricks, if bricks are hit they lose 1 hp and reflect the ball"""
-
-        bricks_list = self.bricks_list
-        for bricks in bricks_list:
-            hit = self.hit_detection(self.player_ball.x, self.player_ball.y, self.player_ball.radius, bricks)
-
-            if hit:
-                #self.player_ball.velx *= -1
-                self.player_ball.vely *= -1
-                # Bump the ball a bit away such that the if test only happens once per hit (sign to bumb it away according to hit direction)
-                self.player_ball.y += np.sign(self.player_ball.vely)*10
-                bricks.health -= 1
-                self.points += 1
-
-            # Remove bricks when health is below 0
-            if bricks.health <= 0:
-                bricks_list.remove(bricks)
-            
-            # Update to change the color when hp is lost.
-            bricks.update()
-            
-            # If the amount of bricks left is zero player will win
-            if len(bricks_list) == 0:
-                self.player_ball.game_status = 'won'
-
 
     def reset_bricks(self):
         """Resets bricks/empties the bricks list"""
