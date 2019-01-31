@@ -4,7 +4,15 @@ from math import sqrt, cos
 import numpy as np
 
 class Ball():
+    """This class contains the structure of the ball object/s created."""
     def __init__(self):
+        """
+        self.x is the x position on the screen
+        self.y is the y position on the screen
+        self.velx is the velocity in the x direction
+        self.vely is the velocity in the y direction
+        self.radius is the radius of the ball
+        """
         self.x = BALL_START_POS_X
         self.y = BALL_START_POS_Y
         self.velx = BALL_START_VELX
@@ -13,26 +21,31 @@ class Ball():
 
 
     def move(self, TIME_PASSED_SECONDS):
+        """Moves the ball on the screen by the given ball speed, see config."""
         self.x += self.velx/(sqrt(self.velx**2 + self.vely**2))*TIME_PASSED_SECONDS*BALL_SPEED
         self.y += self.vely/(sqrt(self.velx**2 + self.vely**2))*TIME_PASSED_SECONDS*BALL_SPEED
 
 
     def check_wall_collisions(self):
+        """Check if the ball collides with the walls, if the ball is lost below the screen the method return True."""
         # Bounce ball if ball hits the sides of the gaming screen
         if (self.x < 0 + self.radius) or self.x > (WIDTH_SCREEN - self.radius):
             self.velx *= -1
+            return False
 
         # Bounce ball if ball hits the top of the gaming screen
         if self.y < 0 + self.radius:
             self.vely *= -1
+            return False
 
         # Lose if ball gets below the gaming screen
         if self.y > HEIGHT_SCREEN:
-            print('YOU LOST')
+            return True
 
     
 
     def check_platform_collision(self, platform):
+        """Checks if the ball collides with the platform and bounces the ball back"""
         # Coordinate change for where ball hit on the circle and add the corresponding x velocity according to angle
         theta = np.linspace(np.pi, 0 , platform.width)
         radius_player = platform.width/2
@@ -50,6 +63,7 @@ class Ball():
 
 
     def draw(self):
+        """Draw the ball on the screen"""
         pygame.draw.circle(SCREEN, GRAY, (int(self.x), int(self.y)), self.radius)
 
 
@@ -57,7 +71,15 @@ class Ball():
 
 
 class Platform():
+    """This class contains the structure of the player objects / platform """
+
     def __init__(self):
+        """
+        self.x is the x position on the screen
+        self.y is the y position on the screen
+        self.height is the height of the rectangle
+        self.width is the width of the rectangle
+        """
         self.x = PLATFORM_START_POS_X
         self.y = PLATFORM_START_POS_Y
         self.width = PLATFORM_WIDTH
@@ -66,6 +88,8 @@ class Platform():
 
 
     def move(self,TIME_PASSED_SECONDS):
+        """Moves the platform"""
+
         # Closing the game
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -82,16 +106,24 @@ class Platform():
                 self.x += PLATFORM_SPEED*TIME_PASSED_SECONDS
 
     def draw(self):
+        """Draw the platform on the screen"""
         pygame.draw.rect(SCREEN, GRAY, (self.x, self.y, self.width, self.height))
 
 
 
 
 class Bricks():
-
+    """This class contains the structure of the bricks objects to be destroyed by the player"""
     bricks_list = []
 
     def __init__(self,x ,y):
+        """        
+        self.x is the x position on the screen
+        self.y is the y position on the screen
+        self.height is the height of the rectangle
+        self.width is the width of the rectangle
+        self.health is the health of the bricks which defines how many hits needed to destroy the bricks
+        """
         self.x = x
         self.y = y
         self.height = BRICKS_HEIGHT
@@ -99,16 +131,17 @@ class Bricks():
         self.health = 1
 
 
-    @classmethod
-    def hit_detection(self, x, y, r, bricks):
+    @staticmethod
+    def hit_detection(x, y, r, bricks):
         """Method for hit detection with the ball and bricks"""
         hit =  (x+r) > bricks.x and (x-r) < bricks.x+bricks.width\
              and (y < bricks.y+bricks.height) and (y+r) > bricks.y
         return hit
 
 
-    @classmethod
-    def update_bricks(self, Ball):
+
+    @staticmethod
+    def update_bricks(Ball):
         """Checks if ball hits the bricks, if bricks are hit they lose 1 hp and reflect the ball"""
 
         bricks_list = Bricks.bricks_list
@@ -127,14 +160,10 @@ class Bricks():
             if bricks.health <= 0:
                 bricks_list.remove(bricks)
 
-            
-            # If the amount of bricks left is zero player will win
-            if len(bricks_list) == 0:
-                print('PLAYER WON')
 
 
-    @classmethod
-    def initiate_bricks(self, rows):
+    @staticmethod
+    def initiate_bricks(rows):
         """Puts the bricks out in the game"""
         bricks_list = Bricks.bricks_list
         for j in range(rows):
@@ -146,6 +175,7 @@ class Bricks():
         
 
     def draw(self):
+        """Method to draw the bricks"""
         pygame.draw.rect(SCREEN, GRAY, (self.x, self.y, self.width, self.height))
 
 

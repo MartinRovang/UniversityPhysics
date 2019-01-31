@@ -1,3 +1,16 @@
+#################################################
+#
+#
+#       CONFIG FILE FOR BREAKOUT-CLONE
+#            MANDATORY ASSIGNMENT 1
+#             MARTIN SORIA RØVANG
+#
+##################################################
+
+
+
+
+
 import pygame
 
 
