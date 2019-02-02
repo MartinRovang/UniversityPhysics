@@ -18,8 +18,6 @@ import pygame
 
 # GENERAL SETTINGS
 ###########################################
-
-
 # COLORS
 RED =   (255,   0,   0)
 GREEN = (  0, 255,   0)
@@ -41,7 +39,7 @@ SCREEN = pygame.display.set_mode(SCREENSIZE)
 
 # BALL SETTINGS
 ##########################################
-BALL_SPEED = 600
+BALL_SPEED = 18
 BALL_START_POS_X = 250
 BALL_START_POS_Y = 350
 BALL_START_VELY = 10
@@ -64,7 +62,7 @@ AMOUNT_OF_BRICKS = 3
 
 # PLATFORM SETTINGS
 ##########################################
-PLATFORM_SPEED = 350
+PLATFORM_SPEED = 14
 PLATFORM_START_POS_X = 200
 PLATFORM_START_POS_Y = 700
 PLATFORM_WIDTH = 100

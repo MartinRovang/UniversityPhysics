@@ -20,10 +20,10 @@ class Ball():
         self.radius = BALL_RADIUS
 
 
-    def move(self, TIME_PASSED_SECONDS):
+    def move(self):
         """Moves the ball on the screen by the given ball speed, see config."""
-        self.x += self.velx/(sqrt(self.velx**2 + self.vely**2))*TIME_PASSED_SECONDS*BALL_SPEED
-        self.y += self.vely/(sqrt(self.velx**2 + self.vely**2))*TIME_PASSED_SECONDS*BALL_SPEED
+        self.x += self.velx/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED
+        self.y += self.vely/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED
 
 
     def check_wall_collisions(self):
@@ -87,7 +87,7 @@ class Platform():
 
 
 
-    def move(self,TIME_PASSED_SECONDS):
+    def move(self):
         """Moves the platform"""
 
         # Closing the game
@@ -99,11 +99,11 @@ class Platform():
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             if self.x > 0:
-                self.x -= PLATFORM_SPEED*TIME_PASSED_SECONDS
+                self.x -= PLATFORM_SPEED
 
         if keys[pygame.K_RIGHT]:
             if self.x < (WIDTH_SCREEN-self.width):
-                self.x += PLATFORM_SPEED*TIME_PASSED_SECONDS
+                self.x += PLATFORM_SPEED
 
     def draw(self):
         """Draw the platform on the screen"""
@@ -132,10 +132,10 @@ class Bricks():
 
 
     @staticmethod
-    def hit_detection(x, y, r, bricks):
+    def hit_detection(Ball, bricks):
         """Method for hit detection with the ball and bricks"""
-        hit =  (x+r) > bricks.x and (x-r) < bricks.x+bricks.width\
-             and (y < bricks.y+bricks.height) and (y+r) > bricks.y
+        hit =  (Ball.x+Ball.radius) > bricks.x and (Ball.x-Ball.radius) < bricks.x+bricks.width\
+             and (Ball.y < bricks.y+bricks.height) and (Ball.y+Ball.radius) > bricks.y
         return hit
 
 
@@ -147,10 +147,9 @@ class Bricks():
         bricks_list = Bricks.bricks_list
 
         for bricks in bricks_list:
-            hit = Bricks.hit_detection(Ball.x, Ball.y, Ball.radius, bricks)
+            hit = Bricks.hit_detection(Ball, bricks)
 
             if hit:
-                #self.player_ball.velx *= -1
                 Ball.vely *= -1
                 # Bump the ball a bit away such that the if test only happens once per hit (sign to bumb it away according to hit direction)
                 Ball.y += np.sign(Ball.vely)*10
