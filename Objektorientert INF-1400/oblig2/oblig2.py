@@ -15,9 +15,8 @@ def sim_loop():
     hawk_list = []
     obstacle_list = []
     wall_lock = 0
+    
     while True:
-
-        
         # Get mouse position
         x, y = pygame.mouse.get_pos()
 
@@ -59,13 +58,13 @@ def sim_loop():
         SCREEN.fill((0,0,0))
         # Make all actions
         for i in boids_list:
-            i.noisy_movement(TIME_PASSED_SECONDS)
+            i.noisy_movement()
             i.avoid_hawk(hawk_list)
-            i.move(TIME_PASSED_SECONDS)
+            i.move()
             i.flocking(boids_list)
             i.avoid_crash(boids_list)
             i.match_speed(boids_list)
-            i.crash_wall_check(TIME_PASSED_SECONDS , wall_lock)
+            i.crash_wall_check(wall_lock)
             i.draw()
 
         for i in obstacle_list:
@@ -74,11 +73,11 @@ def sim_loop():
             i.draw()
 
         for i in hawk_list:
-            i.noisy_movement(TIME_PASSED_SECONDS)
-            i.move(TIME_PASSED_SECONDS)
+            i.noisy_movement()
+            i.move()
             i.flocking(hawk_list)
             i.match_speed(hawk_list)
-            i.crash_wall_check(TIME_PASSED_SECONDS, wall_lock)
+            i.crash_wall_check(wall_lock)
             i.attack(boids_list)
             i.avoid_crash(hawk_list)
             i.draw()
@@ -96,8 +95,4 @@ def sim_loop():
 
 
 if __name__ == "__main__":
-    # Initialize pygame
-    pygame.init()
-    # Set the pygame window name 
-    pygame.display.set_caption('Boids Sim') 
     sim_loop()

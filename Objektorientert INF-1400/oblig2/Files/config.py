@@ -8,6 +8,10 @@ import pygame
 WIDTH_SCREEN = 800
 HEIGHT_SCREEN = 800
 SCREENSIZE = (WIDTH_SCREEN, HEIGHT_SCREEN)
+# Initialize pygame
+pygame.init()
+# Set the pygame window name 
+pygame.display.set_caption('Boids Sim') 
 # Set screen object
 SCREEN = pygame.display.set_mode(SCREENSIZE)
 
@@ -35,7 +39,7 @@ clock = pygame.time.Clock() # Initiate clock object
 
 #BOIDS SETTINGS
 #############################
-BOID_DISTANCE_FLOCKING_RADIUS = 30
+BOID_DISTANCE_FLOCKING_RADIUS = 50
 BOID_VARIANCE_NOISY_X = 1
 BOID_VARIANCE_NOISY_Y = 1
 BOID_VARIANCE_NOISY_X_ALERTED = 2
@@ -51,7 +55,7 @@ BOID_AVOID_HAWK_MAGNITUDE = 3
 
 #MOVING OBJECT SETTINGS
 ################################
-MOVEMENT_MAGNITUDE = 120
+MOVEMENT_MAGNITUDE = 2
 MOVING_OBJECT_RADIUS = 2
 MAX_NOISE_SPEED_X = 25
 MAX_NOISE_SPEED_Y = 25

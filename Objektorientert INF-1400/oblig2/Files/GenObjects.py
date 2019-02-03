@@ -39,28 +39,12 @@ class MovingObject(object):
         self.vely = 1
         self.radius = MOVING_OBJECT_RADIUS
 
-    def move(self, TIME_PASSED_SECONDS):
-        self.x += (self.velx/np.sqrt(self.velx**2+self.vely**2))*TIME_PASSED_SECONDS*MOVEMENT_MAGNITUDE
-        self.y += (self.vely/np.sqrt(self.velx**2+self.vely**2))*TIME_PASSED_SECONDS*MOVEMENT_MAGNITUDE
+    def move(self):
+        self.x += (self.velx/np.sqrt(self.velx**2+self.vely**2))*MOVEMENT_MAGNITUDE
+        self.y += (self.vely/np.sqrt(self.velx**2+self.vely**2))*MOVEMENT_MAGNITUDE
 
 
-
-    def get_pos(self):
-        return self.x, self.y
-
-    def set_pos(self, x, y):
-        self.x = x
-        self.y = y  
-
-    def set_vel(self, velx, vely):
-        self.velx = velx
-        self.vely = vely    
-
-    def get_vel(self):
-        return self.velx, self.vely
-
-
-    def crash_wall_check(self, TIME_PASSED_SECONDS, wall_lock):
+    def crash_wall_check(self, wall_lock):
         if wall_lock == 1:
             if self.x - self.radius < 0:
                 self.x = 0 - self.radius + WIDTH_SCREEN
