@@ -39,7 +39,7 @@ SCREEN = pygame.display.set_mode(SCREENSIZE)
 
 # BALL SETTINGS
 ##########################################
-BALL_SPEED = 18
+BALL_SPEED = 13
 BALL_START_POS_X = 250
 BALL_START_POS_Y = 350
 BALL_START_VELY = 10

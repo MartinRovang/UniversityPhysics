@@ -168,7 +168,7 @@ class Bricks():
         for j in range(rows):
             for i in range(NUMBER_OF_BLOCK_HORIZONTAL):
                 bricks_list.append(
-                Bricks(i*XDISTANCE_BETWEEN_BLOCKS + i+XSHIFT_BLOCKS,
+                Bricks(i*XDISTANCE_BETWEEN_BLOCKS + i + XSHIFT_BLOCKS,
                     (j+1)*YDISTANCE_BETWEEN_BLOCKS + YSHIFT_BLOCKS)
                     )
         
