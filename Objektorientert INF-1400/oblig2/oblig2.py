@@ -7,7 +7,7 @@ from Files.config import *
 
 
 
-def sim_loop():
+def simloop():
     """This is the gameloop and will run until you exit the program"""
 
     # Initiate boids list to containt the boids
@@ -60,7 +60,7 @@ def sim_loop():
         for i in boids_list:
             i.noisy_movement()
             i.avoid_hawk(hawk_list)
-            i.move()
+            i.move(TIME_PASSED_SECONDS)
             i.flocking(boids_list)
             i.avoid_crash(boids_list)
             i.match_speed(boids_list)
@@ -74,7 +74,7 @@ def sim_loop():
 
         for i in hawk_list:
             i.noisy_movement()
-            i.move()
+            i.move(TIME_PASSED_SECONDS)
             i.flocking(hawk_list)
             i.match_speed(hawk_list)
             i.crash_wall_check(wall_lock)
@@ -95,4 +95,4 @@ def sim_loop():
 
 
 if __name__ == "__main__":
-    sim_loop()
+    simloop()

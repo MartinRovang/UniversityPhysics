@@ -39,9 +39,9 @@ class MovingObject(object):
         self.vely = 1
         self.radius = MOVING_OBJECT_RADIUS
 
-    def move(self):
-        self.x += (self.velx/np.sqrt(self.velx**2+self.vely**2))*MOVEMENT_MAGNITUDE
-        self.y += (self.vely/np.sqrt(self.velx**2+self.vely**2))*MOVEMENT_MAGNITUDE
+    def move(self, TIME_PASSED_SECONDS):
+        self.x += (self.velx/np.sqrt(self.velx**2+self.vely**2))*MOVEMENT_MAGNITUDE*TIME_PASSED_SECONDS
+        self.y += (self.vely/np.sqrt(self.velx**2+self.vely**2))*MOVEMENT_MAGNITUDE*TIME_PASSED_SECONDS
 
 
     def crash_wall_check(self, wall_lock):

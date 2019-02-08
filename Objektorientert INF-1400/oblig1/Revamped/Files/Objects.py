@@ -20,10 +20,10 @@ class Ball():
         self.radius = BALL_RADIUS
 
 
-    def move(self):
+    def move(self, TIME_PASSED_SECONDS):
         """Moves the ball on the screen by the given ball speed, see config."""
-        self.x += self.velx/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED
-        self.y += self.vely/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED
+        self.x += self.velx/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED*TIME_PASSED_SECONDS
+        self.y += self.vely/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED*TIME_PASSED_SECONDS
 
 
     def check_wall_collisions(self):
@@ -87,7 +87,7 @@ class Platform():
 
 
 
-    def move(self):
+    def move(self, TIME_PASSED_SECONDS):
         """Moves the platform"""
 
         # Closing the game
@@ -99,11 +99,11 @@ class Platform():
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             if self.x > 0:
-                self.x -= PLATFORM_SPEED
+                self.x -= PLATFORM_SPEED*TIME_PASSED_SECONDS
 
         if keys[pygame.K_RIGHT]:
             if self.x < (WIDTH_SCREEN-self.width):
-                self.x += PLATFORM_SPEED
+                self.x += PLATFORM_SPEED*TIME_PASSED_SECONDS
 
     def draw(self):
         """Draw the platform on the screen"""

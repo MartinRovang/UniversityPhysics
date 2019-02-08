@@ -39,7 +39,7 @@ SCREEN = pygame.display.set_mode(SCREENSIZE)
 
 # BALL SETTINGS
 ##########################################
-BALL_SPEED = 13
+BALL_SPEED = 800
 BALL_START_POS_X = 250
 BALL_START_POS_Y = 350
 BALL_START_VELY = 10
@@ -62,7 +62,7 @@ AMOUNT_OF_BRICKS = 3
 
 # PLATFORM SETTINGS
 ##########################################
-PLATFORM_SPEED = 14
+PLATFORM_SPEED = 600
 PLATFORM_START_POS_X = 200
 PLATFORM_START_POS_Y = 700
 PLATFORM_WIDTH = 100

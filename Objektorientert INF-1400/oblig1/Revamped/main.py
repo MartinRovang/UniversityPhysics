@@ -83,8 +83,8 @@ class Game(object):
             # Time in seconds
             TIME_PASSED_SECONDS = TIME_PASSED/1000.0
 
-            Game_ball.move()
-            Player.move()
+            Game_ball.move(TIME_PASSED_SECONDS)
+            Player.move(TIME_PASSED_SECONDS)
             Game_ball.check_platform_collision(Player)
             Lost_check = Game_ball.check_wall_collisions()
             Bricks.update_bricks(Game_ball)
