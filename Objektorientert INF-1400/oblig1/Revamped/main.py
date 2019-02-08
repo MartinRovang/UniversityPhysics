@@ -30,7 +30,7 @@ class Game(object):
 
 
 
-    def FPS_CHECK(self, time1, frames, lastframe):
+    def fps_check(self, time1, frames, lastframe):
         """Finds the FPS, returns time, current frame and last FPS frame"""
         time2 = time.clock()
         # If one second has passed return new FPS.
@@ -97,7 +97,7 @@ class Game(object):
                 bricks.draw()
 
             # FPS logic
-            time1, frames, lastframe = self.FPS_CHECK(time1, frames, lastframe)
+            time1, frames, lastframe = self.fps_check(time1, frames, lastframe)
             Game_ball.draw()
             Player.draw()
             frames_text = win_text.render('FPS: %s'%lastframe, False, GRAY)
