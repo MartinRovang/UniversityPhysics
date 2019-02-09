@@ -4,7 +4,18 @@ from math import sqrt, cos
 import numpy as np
 
 class Ball():
-    """This class contains the structure of the ball object/s created."""
+    """
+    This class contains the structure of the ball object/s created.\n
+
+    Methods:\n
+        move(TIME_PASSED_SECONDS): Moves the object according to speed\n
+
+        check_wall_collisions(): Checks if the object collides with wall\n
+
+        check_platform_collision(platform): Chekcs if the object collides with platform\n
+
+        draw(self): Draws the object on screen
+    """
     def __init__(self):
         """
         self.x is the x position on the screen
@@ -45,7 +56,10 @@ class Ball():
     
 
     def check_platform_collision(self, platform):
-        """Checks if the ball collides with the platform and bounces the ball back"""
+        """
+        Checks if the ball collides with the platform and bounces the ball back\n
+        platform -> Object.
+        """
         # Coordinate change for where ball hit on the circle and add the corresponding x velocity according to angle
         theta = np.linspace(np.pi, 0 , platform.width)
         radius_player = platform.width/2
@@ -113,7 +127,27 @@ class Platform():
 
 
 class Bricks():
-    """This class contains the structure of the bricks objects to be destroyed by the player"""
+    """
+    This class contains the structure of the bricks objects to be destroyed by the player\n
+    
+    Contains class attribute -> bricks_list -> list\n
+
+    Methods:\n
+    
+    @staticmethod
+    hit_detection(Ball, bricks): Checks if ball collides with bricks\n
+    
+    @staticmethod
+    update_bricks(Ball): Checks if ball hits the bricks, if bricks are hit they lose 1 hp and reflect the ball\n
+
+    @staticmethod
+    initiate_bricks(rows): Puts the bricks out in the game\n
+    
+    draw(self): Draws the object on screen
+    """
+    
+
+    
     bricks_list = []
 
     def __init__(self,x ,y):
