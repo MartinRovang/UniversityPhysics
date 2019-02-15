@@ -19,8 +19,13 @@ import time
 
 class Game(object):
     """
-        Contains the game and the gameloop, run object.gameloop() to start game.
+        Contains the game and the gameloop
     """
+    def __init__(self):
+        self.gameloop()
+
+
+
     def Event(self):
         """Runs the event so that you can press the X in the window and close the game."""
         # Closing the game
@@ -130,4 +135,5 @@ class Game(object):
 # Only run code if run without being imported
 if __name__ == "__main__":
     new_game = Game()
-    new_game.gameloop()
+
+

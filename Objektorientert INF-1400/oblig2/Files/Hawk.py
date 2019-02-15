@@ -45,7 +45,7 @@ class Hawk(Boid):
     def __init__(self, x , y):
         super().__init__(x, y)
         self.radius = HAWK_RADIUS_START_VALUE
-        self.nomsound = pygame.mixer.Sound('nomnom.ogg')
+        #self.nomsound = pygame.mixer.Sound('nomnom.ogg')
 
     def attack(self, boids):
         min_distance = sqrt(WIDTH_SCREEN**2 + HEIGHT_SCREEN**2)
@@ -60,7 +60,7 @@ class Hawk(Boid):
             if distance < self.radius:
                 boids.remove(boid)
                 #self.radius += 1
-                pygame.mixer.Sound.play(self.nomsound)
+                #pygame.mixer.Sound.play(self.nomsound)
 
         if len(boids) > 0:
             self.velx = ((x-self.x)/np.sqrt((x-self.x)**2 + (y-self.y)**2))*HAWK_ATTACK_SPEED_MULTIPLIER

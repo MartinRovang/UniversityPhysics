@@ -33,8 +33,15 @@ class Ball():
 
     def move(self, TIME_PASSED_SECONDS):
         """Moves the ball on the screen by the given ball speed, see config."""
-        self.x += self.velx/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED*TIME_PASSED_SECONDS
-        self.y += self.vely/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED*TIME_PASSED_SECONDS
+        try:
+            # To avoid time_passed_seconds being too high in the beginning.
+            if TIME_PASSED_SECONDS > 0.020:
+                TIME_PASSED_SECONDS = 0.017
+            self.x += self.velx/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED*TIME_PASSED_SECONDS
+            self.y += self.vely/(sqrt(self.velx**2 + self.vely**2))*BALL_SPEED*TIME_PASSED_SECONDS
+        except ZeroDivisionError:
+            self.x += 0.001
+            self.y += 0.001
 
 
     def check_wall_collisions(self):
@@ -62,7 +69,6 @@ class Ball():
         """
         # Coordinate change for where ball hit on the circle and add the corresponding x velocity according to angle
         theta = np.linspace(np.pi, 0 , platform.width)
-        radius_player = platform.width/2
 
         # Bounce ball when hitting the platform
         if self.x > platform.x and self.x < (platform.x + platform.width) \

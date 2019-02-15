@@ -3,6 +3,7 @@ from math import cos, sin, radians, sqrt
 from Files.config import *
 from Files.GenObjects import MovingObject
 import random
+import numpy as np
 
 class Boid(MovingObject):
     """
@@ -58,39 +59,29 @@ class Boid(MovingObject):
 
 
     def flocking(self, boids): 
+        mean_x = []
+        mean_y = []
         flock = self.flock
-        x = 0
-        y = 0
-        i = 0
         mean_pos_x = 0
         mean_pos_y = 0
-        velx = 0
-        vely = 0
+
         for boid in boids:
             if boid != self:
-                distance = sqrt((boid.x-self.x)**2 + (boid.y-self.y)**2)
+                distance = sqrt((boid.x - self.x)**2 + (boid.y - self.y)**2)
                 if distance <= BOID_DISTANCE_FLOCKING_RADIUS and boid not in flock:
+                    mean_x.append(boid.x)
+                    mean_y.append(boid.y)
                     flock.append(boid)
-                    x += boid.x 
-                    y += boid.y
-
-                    i += 1
-
                 if distance > BOID_DISTANCE_FLOCKING_RADIUS and boid in flock:
                     flock.remove(boid)
-                    x -= boid.x
-                    y -= boid.y
 
-                    i -= 1
-        if i > 0:
-            mean_pos_x = (x/i) - self.x
-            mean_pos_y = (y/i) - self.y
-            self.flocked = 1
+
+        if len(flock) > 0:
+            mean_pos_x = np.mean(mean_x)
+            mean_pos_y = np.mean(mean_y)
             self.velx = mean_pos_x
             self.vely = mean_pos_y
-    
-        else:
-            self.flocked = 0
+
 
 
     def match_speed(self, boids):
@@ -131,9 +122,9 @@ class Boid(MovingObject):
     def avoid_hawk(self, hawks):
         for hawk in hawks:
             distance = sqrt((hawk.x-self.x)**2 + (hawk.y-self.y)**2)
-            if distance < HAWK_TRIGGER_BOID_DISTANCE + hawk.radius:
-                self.vely += ((hawk.vely + self.vely) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
-                self.velx += ((hawk.velx + self.velx) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
+            if distance < HAWK_TRIGGER_BOID_DISTANCE:
+                self.vely = ((hawk.vely + self.vely) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
+                self.velx = ((hawk.velx + self.velx) / sqrt(self.vely**2 + hawk.vely**2))*BOID_AVOID_HAWK_MAGNITUDE
 
 
     

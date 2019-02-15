@@ -1,14 +1,17 @@
+#!/usr/bin/env python
+# coding: utf-8
 
-#%%
-import pandas as pd
-import numpy as np 
-import matplotlib.pyplot as plt 
-import datetime as dt
-import random
+# # Plot Oslo temperature data
+
+# In[1]:
+
+
 import os
-import statsmodels.api as sm
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
-filedir = ''
+filedir = '/Users/hege-beatefredriksen/OneDrive - UiT Office 365/Teaching/STA-2003spring2019/Data'
 filename = 'oslotemp_monthly.txt'
 
 file = os.path.join(filedir, filename)
@@ -25,83 +28,24 @@ time1 = startyear + int(month[0][0:2])/12
 time2 = endyear + int(month[-1][0:2])/12
 timearray = np.arange(time1,time2,1/12)
 
+
+# In[2]:
+
+
 fig, ax = plt.subplots(figsize = [9,5])
 #plt.plot(timearray,data,linewidth=2,color = "black")
-plt.plot(timearray,data,linewidth=2,color = "white") # siste 10 år
+plt.plot(timearray[-120:],data[-120:],linewidth=2,color = "black") # siste 10 år
 ax.set_xlabel('Year',fontsize = 18)
-ax.set_title('Monthly temperature Oslo',fontsize = 18)
+ax.set_title('Monthly mean temperature Oslo',fontsize = 18)
 ax.grid()
 #ax.set_xlim(min(timearray),max(timearray))
 #ax.set_ylim(-12,20)
 ax.tick_params(axis='both',labelsize=22)
-plt.show()
-
-datareal = np.copy(data)
-
-Y = data
-X = timearray - timearray[0]
-
-X = sm.add_constant(X)
-model1 = sm.OLS(Y, X)
-results1 = model1.fit()
-results1.params
-print(results1.summary())
-
-# plot trend together with data
-fig, ax = plt.subplots(figsize = [20,10])
-ax.plot(timearray,data);
-ax.plot(timearray,results1.fittedvalues, label = 'Linear fit')
-ax.set_xlabel('Year',fontsize = 18)
-ax.set_title('Monthly mean temperature Oslo',fontsize = 18)
-ax.grid()
-ax.tick_params(axis='both',labelsize=18)
-ax.legend(loc = 'best')
-plt.show()
 
 
-plt.plot(remove_climate1)
-plt.show()
+# In[3]:
 
 
-from statsmodels.graphics.gofplots import qqplot
-qqplot(remove_climate1)
-plt.show()
-
-
-
-# Residualene for lineær regresjon ser ut til å være normalfordelt støy
-# Dette kan bety at modellen ikke gjør økende "feil" over tid.
-#%%
-
-
-#Som i Eq. (2.19-2.21) i boka:
-# prediktorer:
-Y = data
-Z1 = timearray - timearray[0]  #Sånn at x-aksen start på 0 og oppover.
-Z2 = Z1**2
-
-X = np.column_stack((Z1, Z2))
-X = sm.add_constant(X)
-
-model2 = sm.OLS(Y,X)
-results2 = model2.fit()
-results2.params
-print(results2.summary())
-
-# plot trend together with data
-fig, ax = plt.subplots(figsize = [20,10])
-ax.plot(timearray, data)
-ax.plot(timearray,results2.fittedvalues, label = 'Linear fit')
-ax.set_xlabel('Year',fontsize = 18)
-ax.set_title('Monthly mean temperature Oslo',fontsize = 18)
-ax.grid()
-ax.tick_params(axis='both', labelsize=18)
-ax.legend(loc = 'best')
-plt.show()
-plt.plot(results2.fittedvalues)
-plt.show()
-
-#%%
 def climatology(x,months,returnresidual=False,period='Normal'):
     # inputs: 
     # x: the dataset
@@ -147,48 +91,97 @@ def climatology(x,months,returnresidual=False,period='Normal'):
         return [C,residual]
 
 
-
-# fig, ax = plt.subplots(nrows=1,ncols=2,figsize = [15,5])
-# ax[0].plot(climatology(Y,month, returnresidual = True,period = 'Normal'))
-# ax[1].plot(climatology(Y,month, returnresidual = True,period = 'All'))
-
-#%%
-climate, res = climatology(datareal, month, returnresidual = True, period = 'All')
-
-X = timearray
-X = sm.add_constant(X)
-model1 = sm.OLS(res, X)
-results1 = model1.fit()
+# In[4]:
 
 
-model1 = sm.OLS(res,X)
-results1 = model1.fit()
-results1.params
+fig, ax = plt.subplots(nrows=1,ncols=2,figsize = [15,5])
+ax[0].plot(climatology(data,month,period = 'Normal'));
+ax[1].plot(climatology(data,month,period = 'All'));
 
-model_residual = res - results1.fittedvalues
 
-qqplot(model_residual, fit = True, line = '45')
+# In[5]:
+
+
+clim, res = climatology(data,month,returnresidual=True)
+
+fig, ax = plt.subplots(figsize = [9,5])
+plt.plot(timearray,res,linewidth=2,color = "black")
+#plt.plot(timearray[-120:],res[-120:],linewidth=2,color = "black") # siste 10 år
+ax.set_xlabel('Year',fontsize = 18)
+ax.set_title('Monthly temperature anomalies in Oslo',fontsize = 18)
+ax.grid()
+ax.set_xlim(min(timearray),max(timearray))
+ax.tick_params(axis='both',labelsize=22)
+
+
+# In[6]:
+
+
+# compute annual mean values:
+
+def annualmean(x):
+    # input: data starting in january and ending in december 
+    y = np.full(int(len(x)/12), np.nan)
+    for t in range(0,int(len(x)/12)):
+        y[t] = np.mean(x[t*12:((t+1)*12)])
+    return y
+
+
+# In[7]:
+
+
+years = np.arange(startyear+1,endyear+1)
+T = annualmean(res[9:])
+
+fig, ax = plt.subplots(figsize = [9,5])
+plt.plot(years,T,linewidth=2,color = "black")
+ax.set_xlabel('Year',fontsize = 18)
+ax.set_title('Annual mean temperature anomalies in Oslo',fontsize = 18)
+ax.grid()
+ax.set_xlim(min(years),max(years))
+ax.tick_params(axis='both',labelsize=22)
+
+plt.plot();
+
+
+# In[8]:
+
+
+import statsmodels.api as sm
+
+fig, ax = plt.subplots(figsize = [8,8])
+sm.graphics.qqplot(T, ax=ax,fit=True, line='45')
+ax.tick_params(axis='both',labelsize=22)
+ax.xaxis.label.set_size(20)
+ax.yaxis.label.set_size(20)
 plt.show()
-plt.hist(model_residual, bins = 50)
-plt.show()
 
 
-#%%
-Z1 = timearray
-Z2 = Z1**2
-X = np.column_stack((Z1, Z2))
-X = sm.add_constant(X)
-model2 = sm.OLS(res, X)
-results2 = model2.fit()
+# In[9]:
 
 
-model2 = sm.OLS(res,X)
-results2 = model2.fit()
-results2.params
+print(np.mean(T))
+print(np.std(T))
+print(2*np.std(T))
 
-model_residual2 = res - results2.fittedvalues
-qqplot(model_residual2, fit = True, line = '45')
-plt.show()
-plt.hist(model_residual2, bins = 50)
-plt.show()
+
+# In[10]:
+
+
+from scipy.stats import norm
+print('Sannsynlighet for å være innenfor ett standardavvik:', norm.cdf(1)-norm.cdf(-1))
+print('Sannsynlighet for å være innenfor to standardavvik:', norm.cdf(2)-norm.cdf(-2))
+
+
+# In[12]:
+
+
+sample_kvantiler = (T-np.mean(T))/np.std(T)
+sample_kvantiler
+
+
+# In[ ]:
+
+
+
 
