@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  15 FEB 2019 18:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  15 FEB 2019 20:39
 entering extended mode
 **c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.tex
 (c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.tex
@@ -331,17 +331,17 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 
 {C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.aux) ) 
 Here is how much of TeX's memory you used:
- 6053 strings out of 492946
- 82386 string characters out of 3124490
- 171323 words of memory out of 3000000
- 9859 multiletter control sequences out of 15000+200000
- 7305 words of font info for 29 fonts, out of 3000000 for 9000
+ 6075 strings out of 492946
+ 82625 string characters out of 3124490
+ 172323 words of memory out of 3000000
+ 9875 multiletter control sequences out of 15000+200000
+ 11351 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,35p,342b,1070s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.pdf (1 page, 45384 bytes).
+<C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.pdf (1 page, 76305 bytes).
 PDF statistics:
- 22 PDF objects out of 1000 (max. 8388607)
+ 38 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
