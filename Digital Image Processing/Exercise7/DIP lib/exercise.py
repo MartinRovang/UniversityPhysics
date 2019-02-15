@@ -66,6 +66,13 @@ transformed_image1 = gamma_transform(I1, gamma)
 transformed_image2 = gamma_transform(I2, gamma)
 
 
+transedvalues = np.linspace(0,255, 256)
+Transformation =  gamma_transform(transedvalues, gamma)
+plt.plot(Transformation)
+plt.show()
+
+
+
 fig, ax = plt.subplots(2,2, figsize = (10,15))
 ax[0,0].imshow(I1, cmap = 'gray')
 ax[0,0].set_title('Original')
@@ -96,14 +103,14 @@ transformed_image2 = contrast_stretch(I, E[1], r0)
 transformed_image3 = contrast_stretch(I, E[2], r0)
 transformed_image4 = contrast_stretch(I, E[3], r0)
 
-I = np.linspace(0,255, 256)
-Transformation =  contrast_stretch(I, E[0], r0)
+transedvalues = np.linspace(0,255, 256)
+Transformation =  contrast_stretch(transedvalues, E[0], r0)
 plt.plot(Transformation)
-Transformation =  contrast_stretch(I, E[1], r0)
+Transformation =  contrast_stretch(transedvalues, E[1], r0)
 plt.plot(Transformation)
-Transformation =  contrast_stretch(I, E[2], r0)
+Transformation =  contrast_stretch(transedvalues, E[2], r0)
 plt.plot(Transformation)
-Transformation =  contrast_stretch(I, E[3], r0)
+Transformation =  contrast_stretch(transedvalues, E[3], r0)
 plt.plot(Transformation)
 plt.show()
 I = np.array(Image.open('washedout_pollen.tif'))
@@ -127,3 +134,6 @@ ax[2,0].set_title('Contrast stretch E = %s, r = %s'%(E[3], r0))
 plt.tight_layout()
 plt.show()
 
+
+
+#%%

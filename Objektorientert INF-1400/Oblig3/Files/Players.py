@@ -21,7 +21,9 @@ class Player1(pygame.sprite.Sprite):
         self.engine = 'off'
         self.fuel = 100
         self.points = 0
-        self.image = pygame.image.load(os.path.join(img_folder, 'rocket1.png')).convert_alpha()
+        self.rocket1image = pygame.image.load(os.path.join(img_folder, 'rocket111.png')).convert_alpha()
+        self.rocket2image = pygame.image.load(os.path.join(img_folder, 'rocket112.png')).convert_alpha()
+        self.image = self.rocket1image
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
 
@@ -32,11 +34,9 @@ class Player1(pygame.sprite.Sprite):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_a]:
             self.angle += 2
-            self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
 
         if keys[pygame.K_d]:
             self.angle -= 2
-            self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
 
         if keys[pygame.K_e]:
             bullet_sprites.add(Bullets(self))
@@ -44,7 +44,8 @@ class Player1(pygame.sprite.Sprite):
         if keys[pygame.K_w]:
             if self.fuel > 0:
                 self.engine = 'on'
-                self.vely = -np.sin(self.angle*np.pi/180 + np.pi/2)*SPEED + GRAVITY
+                self.vely = -np.sin(self.angle*np.pi/180 + np.pi/2)*SPEED
+                self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
                 self.fuel -= 0.1
                 return True
             else:
@@ -55,10 +56,10 @@ class Player1(pygame.sprite.Sprite):
 
     def image_direction(self):
         if self.engine == 'off':
-            self.image = pygame.image.load(os.path.join(img_folder, 'rocket1.png')).convert_alpha()
+            self.image = self.rocket1image
             self.image = pygame.transform.rotate(self.image, self.angle)
         if self.engine == 'on':
-            self.image = pygame.image.load(os.path.join(img_folder, 'rocket2.png')).convert_alpha()
+            self.image = self.rocket2image
             self.image = pygame.transform.rotate(self.image, self.angle)
 
         
@@ -70,7 +71,7 @@ class Player1(pygame.sprite.Sprite):
             self.vely = GRAVITY
 
         self.rect.x += self.velx/np.sqrt(self.velx**2 + self.vely**2)*SPEED
-        self.rect.y += self.vely/np.sqrt(self.velx**2 + self.vely**2)*SPEED
+        self.rect.y += self.vely/np.sqrt(self.velx**2 + self.vely**2)*SPEED + GRAVITY
 
         for player in collide:
             barrel = collide[player][0]
@@ -78,8 +79,9 @@ class Player1(pygame.sprite.Sprite):
 
 
         fuel_text = win_text.render('Fuel: %.1f'%self.fuel, False, GRAY)
+        points_text = win_text.render('Points: %.1f'%self.points, False, GRAY)
         SCREEN.blit(fuel_text,(10,50))
-
+        SCREEN.blit(points_text,(10,100))
 
 
 
@@ -87,8 +89,7 @@ class Player1(pygame.sprite.Sprite):
 class Player2(Player1):
     def __init__(self):
         Player1.__init__(self)
-        self.rect.center = (WIDTH_SCREEN-200, HEIGHT_SCREEN-200)
-
+        self.rect.center = (WIDTH_SCREEN - WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
 
     def controls(self, bullet_sprites):
         """Moves the platform"""
@@ -96,11 +97,10 @@ class Player2(Player1):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             self.angle += 2
-            self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
 
         if keys[pygame.K_RIGHT]:
             self.angle -= 2
-            self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
+
 
         if keys[pygame.K_SPACE]:
             bullet_sprites.add(Bullets(self))
@@ -108,7 +108,8 @@ class Player2(Player1):
         if keys[pygame.K_UP]:
             if self.fuel > 0:
                 self.engine = 'on'
-                self.vely = -np.sin(self.angle*np.pi/180 + np.pi/2)*SPEED + GRAVITY
+                self.vely = -np.sin(self.angle*np.pi/180 + np.pi/2)*SPEED
+                self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
                 self.fuel -= 0.1
                 return True
             else:
@@ -125,12 +126,16 @@ class Player2(Player1):
             self.vely = GRAVITY
 
         self.rect.x += self.velx/np.sqrt(self.velx**2 + self.vely**2)*SPEED
-        self.rect.y += self.vely/np.sqrt(self.velx**2 + self.vely**2)*SPEED
+        self.rect.y += self.vely/np.sqrt(self.velx**2 + self.vely**2)*SPEED + GRAVITY
 
         for player in collide:
             barrel = collide[player][0]
             player.fuel = barrel.fuel_amount
-            
+
 
         fuel_text = win_text.render('Fuel: %.1f'%self.fuel, False, GRAY)
+        points_text = win_text.render('Points: %.1f'%self.points, False, GRAY)
+
+        
         SCREEN.blit(fuel_text,(WIDTH_SCREEN-250,50))
+        SCREEN.blit(points_text,(WIDTH_SCREEN-250,100))

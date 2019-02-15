@@ -22,9 +22,10 @@ class Bullets(pygame.sprite.Sprite):
         self.image = pygame.image.load(os.path.join(img_folder, 'bullet.png')).convert_alpha()
         self.image = pygame.transform.rotate(self.image, player.angle - 90)
         self.rect = self.image.get_rect()
-        self.rect.midtop = (player.rect.midtop[0] + np.cos(player.angle*np.pi/180 + np.pi/2)*90, player.rect.midtop[1] - np.sin(player.angle*np.pi/180 + np.pi/2)*70)
-
+        self.rect.midtop = (player.rect.midtop[0] + np.cos(player.angle*np.pi/180 + np.pi/2)*90, player.rect.midtop[1] - np.sin(player.angle*np.pi/180 + np.pi/2)*100)
+        
 
     def update(self):
         self.rect.x += self.velx*BULLET_SPEED
         self.rect.y += self.vely*BULLET_SPEED
+

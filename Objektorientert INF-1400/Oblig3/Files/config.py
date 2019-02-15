@@ -62,7 +62,7 @@ PLAYER_2_BOOST = 'UP'
 
 # WORLD SETTINGS
 #########################################
-GRAVITY = 3
+GRAVITY = 1
 
 
 # FUEL SETTINGS

@@ -11,9 +11,10 @@ img_folder = os.path.join(game_folder, 'img')
 
 
 class Wall(pygame.sprite.Sprite):
-    def __init__(self, x, y, x1, y1):
+    def __init__(self, x, y, x1, y1, Image = None):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface((x1, y1))
+        self.image.fill((WHITE))
         self.rect = self.image.get_rect()
         self.rect.center = (x, y)
 

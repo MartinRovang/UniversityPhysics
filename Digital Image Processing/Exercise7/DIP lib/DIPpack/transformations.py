@@ -14,7 +14,7 @@ def transform_image_01(image):
     return transformed
 
 
-def gamma_transform(image, gamma, c = 1.0):
+def gamma_transform(image = None, gamma, c = 1.0):
     """
     Image -> Image
     gamma -> Gamma value
@@ -25,13 +25,13 @@ def gamma_transform(image, gamma, c = 1.0):
 
     transformed = transform_image_01(image)
     transformed = c*transformed**gamma
-
     transformed = transform_image_255(transformed)
+
     return transformed
 
 
 
-def contrast_stretch(image, E, r0 = 0.5):
+def contrast_stretch(image = None, E, r0 = 0.5):
     """
     Image -> Image
     E = Contrast stretch factor
@@ -42,7 +42,6 @@ def contrast_stretch(image, E, r0 = 0.5):
     transformed = transform_image_01(image)
     transformed = ((transformed / r0) **E)/(1 + (transformed / r0) **E)
     transformed = transform_image_255(transformed)
-
 
     return transformed
 
