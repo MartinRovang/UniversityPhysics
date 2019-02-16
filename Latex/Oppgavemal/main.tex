@@ -157,8 +157,18 @@ Kodetest:\newline
 
 \begin{figure}[hbt!]
 \begin{lstlisting}
-    B = 2992
-    def test()
+def fps_check(self, time1, frames, lastframe):
+    """Finds the FPS, returns time, current frame and last FPS frame"""
+    time2 = time.clock()
+    # If one second has passed return new FPS.
+    if (time2 - time1) > 1:
+        lastframe = frames
+        frames = 0
+        time1 = time.clock()
+        return time1, frames, lastframe
+    else:
+        frames += 1
+        return time1, frames, lastframe
 \end{lstlisting}
 \caption{Kode caption}
 \label{Kode1}

@@ -1,17 +1,18 @@
 # Fdb version 3
-["bibtex main"] 1550327437 "main.aux" "main.bbl" "main" 1550327532
+["bibtex main"] 1550328016 "main.aux" "main.bbl" "main" 1550328021
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "bibl.bib" 1550312527 1418 48d34f8759365520d3720371e800a06a ""
-  "main.aux" 1550327531 2116 f6da8b93bb2667fc1cc65c24f0634663 ""
+  "main.aux" 1550328020 2116 f9d60d337cdbc9a4792c16c2ba53f5ec ""
   (generated)
   "main.blg"
   "main.bbl"
-["makeindex main.idx"] 1550323033 "main.idx" "main.ind" "main" 1550327532
-  "main.idx" 1550327531 0 d41d8cd98f00b204e9800998ecf8427e ""
+["makeindex main.idx"] 1550327977 "main.idx" "main.ind" "main" 1550328021
+  "main.idx" 1550328019 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "main.ilg"
   "main.ind"
-["pdflatex"] 1550327526 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.pdf" "main" 1550327532
+  "main.ilg"
+["pdflatex"] 1550328017 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.pdf" "main" 1550328021
+  "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecit1000.pk" 1550327976 26728 69dba26f37480f5c4fa974ad5b046ba3 ""
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb1200.pk" 1550312067 28764 ee4d753178afed757be9ebe78dcc14b5 ""
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb2074.pk" 1550312068 55344 f5755726211ba2533234fc572da0727f ""
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1200.pk" 1550312072 28440 7c44b0a03d612a91781da09de92c1138 ""
@@ -24,6 +25,7 @@
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc" 1525740614 2457 aaabbccba4df2a7f7371410ee4e075a3 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/eccc1200.tfm" 993061984 2796 601f0e3324021d7edb90718e24047a6a ""
+  "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecit1000.tfm" 993062048 1356 26b6ae61ed8e8f2b58dad9f0a3f033b4 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrb1200.tfm" 993062102 3204 7113e5f97a4582b4d492c65443c79891 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrb2074.tfm" 993062106 3220 9600645a9f86e49d6de172edf20478f2 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1200.tfm" 993062126 3152 4850ff0163852b7fab34bd55e1197f28 ""
@@ -269,21 +271,21 @@
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty" 1419270738 5114 9c1069474ff71dbc47d5006555e352d3 ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.aux" 1550327531 2116 f6da8b93bb2667fc1cc65c24f0634663 ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.tex" 1550327525 6628 4f7c52b45db2a865db70b1fe81428873 ""
-  "main.aux" 1550327531 2116 f6da8b93bb2667fc1cc65c24f0634663 ""
-  "main.bbl" 1550327437 442 debdc5d94f59e452bb64cde5aa9ddffa "bibtex main"
-  "main.ind" 1550323033 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1550327531 278 eb4366026f426bd264ac24c2b11eac8f ""
-  "main.tex" 1550327525 6628 4f7c52b45db2a865db70b1fe81428873 ""
-  "main.toc" 1550327531 424 7a10ac8d266151874b553e8f5099e2ec ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.aux" 1550328020 2116 f9d60d337cdbc9a4792c16c2ba53f5ec ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.tex" 1550328010 7014 6a88a72267757fe180f752bea508198b ""
+  "main.aux" 1550328020 2116 f9d60d337cdbc9a4792c16c2ba53f5ec ""
+  "main.bbl" 1550328016 442 debdc5d94f59e452bb64cde5aa9ddffa "bibtex main"
+  "main.ind" 1550327977 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.out" 1550328020 278 eb4366026f426bd264ac24c2b11eac8f ""
+  "main.tex" 1550328010 7014 6a88a72267757fe180f752bea508198b ""
+  "main.toc" 1550328020 424 7a10ac8d266151874b553e8f5099e2ec ""
   "test.png" 1550314519 1845 9202dffc9ef938b64e2004c9c5c156e5 ""
   (generated)
+  "main.log"
   "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.pdf"
-  "main.out"
-  "main.toc"
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.log"
-  "main.idx"
   "main.aux"
   "main.pdf"
-  "main.log"
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.log"
+  "main.toc"
+  "main.out"
+  "main.idx"
