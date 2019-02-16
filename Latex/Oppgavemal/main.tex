@@ -33,6 +33,8 @@
 \usepackage{mathtools}
 \usepackage[page]{totalcount}
 \usepackage{lastpage}
+\usepackage{pgfplots}
+
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 \onehalfspacing
@@ -179,7 +181,7 @@ Referanse til kode \ref{Kode1}
 
 
 \begin{equation}
-    \int_{0}^{x} x^{2}
+    \int_{0}^{x} x^{2} \, dx
 \end{equation}
 
 
@@ -197,7 +199,9 @@ Referanse til kode \ref{Kode1}
 
 Dette er en referanse til testbildet \ref{test_image}.
 
-Vektortester:\\
+
+\newpage
+Vektortester:
 \begin{equation}
     \vect{B} = (1000,500)
 \end{equation}
@@ -216,13 +220,20 @@ Dette er en referanse test [p.38 \cite{alpaydin_2014}]
 
 Dette er en link \url{www.google.no}\footnote{Dette er en linktest i footer \url{www.google.no}}
 
-
+\newpage
 
 \section{Oppgave}
 \subsection{a}
 
 Ny seksjonstest.
 
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics{test.pdf}%[width=0.5\textwidth]
+    \caption{testbilde}
+    \label{test_image}
+\end{figure}
 
 
 % --------------------------------------------------------------
