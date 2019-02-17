@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  17 FEB 2019 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  17 FEB 2019 16:06
 entering extended mode
 **c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal2/main.tex
 (c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal2/main.tex
@@ -1434,9 +1434,7 @@ Make it at least 14.49998pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[2] [3]
-No file main.bbl.
-
+[2] [3] (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal2\main.bbl) 
 AED: lastpage setting LastPage
 [4]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 189.
@@ -1453,17 +1451,17 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
 ### simple group (level 1) entered at line 117 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38270 strings out of 492946
- 756664 string characters out of 3124490
+ 38281 strings out of 492946
+ 756972 string characters out of 3124490
  1144794 words of memory out of 3000000
- 41556 multiletter control sequences out of 15000+200000
- 598849 words of font info for 88 fonts, out of 3000000 for 9000
+ 41563 multiletter control sequences out of 15000+200000
+ 599533 words of font info for 89 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,11n,101p,1017b,426s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb2074.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
-Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal2\main.pdf (4 pages, 107428 bytes).
+ 63i,11n,101p,1017b,428s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb2074.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
+Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal2\main.pdf (4 pages, 116579 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 11965 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 12477 words of extra memory for PDF output out of 14400 (max. 10000000)
 

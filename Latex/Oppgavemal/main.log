@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  17 FEB 2019 12:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  17 FEB 2019 16:04
 entering extended mode
 **c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.tex
 (c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/main.tex
@@ -1439,11 +1439,11 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 160.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 159.
 ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1454,37 +1454,44 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 161.
+(Font)              using `T1/cmtt/m/n' instead on input line 160.
 
 <test.png, id=92, 151.3153pt x 84.315pt>
 File: test.png Graphic file (type png)
 <use test.png>
-Package pdftex.def Info: test.png  used on input line 193.
+Package pdftex.def Info: test.png  used on input line 192.
 (pdftex.def)             Requested size: 151.31493pt x 84.31477pt.
 [3 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/test.png>]
+
+Package natbib Warning: Citation `alpaydin_2014' on page 4 undefined on input line 216.
+
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 220.
+(Font)              scaled to size 6.99199pt on input line 219.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 220.
+(Font)              scaled to size 5.51999pt on input line 219.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 220.
+(Font)              scaled to size 6.99199pt on input line 219.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 220.
- [4]
-<test.pdf, id=142, 597.50829pt x 845.0471pt>
+(Font)              scaled to size 5.51999pt on input line 219.
+[4]
+<test.pdf, id=139, 597.50829pt x 845.0471pt>
 File: test.pdf Graphic file (type pdf)
 <use test.pdf>
-Package pdftex.def Info: test.pdf  used on input line 232.
+Package pdftex.def Info: test.pdf  used on input line 231.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 
-Overfull \hbox (144.53893pt too wide) in paragraph at lines 232--233
+Overfull \hbox (144.53893pt too wide) in paragraph at lines 231--232
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 235.13817pt on input line 236.
+LaTeX Warning: Float too large for page by 235.13817pt on input line 235.
 
-[5] (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.bbl) 
+[5] (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+
 AED: lastpage setting LastPage
 [6] [7 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal/test.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
@@ -1508,17 +1515,17 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 263.
 ### simple group (level 1) entered at line 117 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38850 strings out of 492946
- 763205 string characters out of 3124490
+ 38843 strings out of 492946
+ 763092 string characters out of 3124490
  1211794 words of memory out of 3000000
- 42070 multiletter control sequences out of 15000+200000
- 657799 words of font info for 143 fonts, out of 3000000 for 9000
+ 42065 multiletter control sequences out of 15000+200000
+ 660170 words of font info for 143 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,11n,101p,1016b,1511s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb2074.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
-Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.pdf (7 pages, 392754 bytes).
+ <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb2074.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
+Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.pdf (7 pages, 383939 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
+ 401 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
  22743 words of extra memory for PDF output out of 24883 (max. 10000000)
 
