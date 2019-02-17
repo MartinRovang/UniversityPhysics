@@ -154,86 +154,12 @@ Inneholder \pageref{LastPage} \, sider, inkludert forside.\par
 
 Replace this text with your summary/reflection of ``The Secret to Raising Smart Kids".  Your total reflection should be roughly a page long.
  
-Kodetest:\newline
-
-\begin{figure}[hbt!]
-\begin{lstlisting}
-def fps_check(self, time1, frames, lastframe):
-    """Finds the FPS, returns time, current frame and last FPS frame"""
-    time2 = time.clock()
-    # If one second has passed return new FPS.
-    if (time2 - time1) > 1:
-        lastframe = frames
-        frames = 0
-        time1 = time.clock()
-        return time1, frames, lastframe
-    else:
-        frames += 1
-        return time1, frames, lastframe
-\end{lstlisting}
-\caption{Kode caption}
-\label{Kode1}
-\end{figure}
-
-Referanse til kode \ref{Kode1}
 
 
-\begin{equation}
-    \int_{0}^{x} x^{2} \, dx
-\end{equation}
 
 
-\begin{equation}
-    \Omega = 505
-\end{equation}
 
 
-\begin{figure}[hbt!]
-    {\centering
-    \includegraphics{test.png}
-    \caption{testbilde}
-    \label{test_image}
-    \par}
-\end{figure}
-
-Dette er en referanse til testbildet \ref{test_image}.
-
-
-\newpage
-Vektortester:
-\begin{equation}
-    \vect{B} = (1000,500)
-\end{equation}
-\begin{equation}
-    \vec{B} = (1000,500)
-\end{equation}
-
-Ligning uten referanse
-
-\begin{equation*}
-    \nabla F = 5
-\end{equation*}
-
-Dette er en referanse test [p.38 \cite{alpaydin_2014}]
-
-
-Dette er en link \url{www.google.no}\footnote{Dette er en linktest i footer \url{www.google.no}}
-
-\newpage
-
-\section{Oppgave}
-\subsection{a}
-
-Ny seksjonstest.
-
-
-\begin{figure}[hbt!]
-    {\centering
-    \includegraphics{test.pdf}%[width=0.5\textwidth]
-    \caption{testbilde}
-    \label{test_image}
-    \par}
-\end{figure}
 
 
 % --------------------------------------------------------------
