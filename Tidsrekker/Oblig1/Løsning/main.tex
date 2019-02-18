@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[10pt]{article}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{float}
 \usepackage[norsk]{babel}
@@ -150,9 +150,9 @@ Hvit støy er en prosess som består av ukorrelerte tilfeldige variabler med for
 
 En hvit støy prosess man ofte kommer over er den Gaussiske hvite støy prosessen gitt ved,
 \begin{equation}
-  W_{t} \thicksim N(0,\sigma^2_{w})
+  W_{t} \stackrel {iid}{\sim} N(0,\sigma^2_{w})
 \end{equation}
-
+som er identisk uavhengig fordelte punkter, denne prosessen er da strengt stasjonær.
 
 \subsection{b}
 
@@ -183,7 +183,6 @@ Normalfordeling er symmetrisk rundt forventingen og vi vil derfor ha det samme f
 Derfor vil verdier mellom dette intervallet gi $1 - (0.025 + 0.025)  = 0.95$
 
 Ved bruk av python får vi samme resultat,
-\newpage
 \begin{lstlisting}
 from scipy.stats import norm
 ss = norm.cdf(1.96) - norm.cdf(-1.96)
@@ -201,7 +200,7 @@ I figur(\ref{ACF}) under kan man se verdiene på ACF over lag,
 \label{ACF}
 \end{figure}
 
-Her kan man se at nesten alle verdiene ligger mellom $\pm$ 1.96 standardavvik.
+Her kan man se at nesten alle verdiene ligger imellom $\pm$ 1.96 standardavvik.
 
 
 
@@ -217,7 +216,7 @@ Tidsrekke 3 er ikke hvit støy prosess fordi lag 1 er korrelert med tidligere ve
 \section{}
 \subsection{a}
 
-En stokastisk prosess er Gaussisk hvis hvert endelig datapunkt for hver endelig tid er en tilfeldig variabel $X$ som følger en multidimensjonal gaussisk distribusjon. Derfor vil en Gaussisk prosess ha stokastisk variabel $X \thicksim N(\vect{\mu},\vect{\Gamma})$,
+En stokastisk prosess er Gaussisk hvis hvert endelig datapunkt for hver endelig tid er en tilfeldig variabel $X$ som følger en multidimensjonal gaussisk distribusjon. Derfor vil en multivariabel Gaussisk prosess ha stokastisk variabel $X \thicksim N(\vect{\mu},\vect{\Gamma})$,
 
 \begin{equation}
   f_{\vect{X}}(x_{1},..,x_{N};t_{1},..,t_{N}) = \frac{1}{\sqrt{(2\pi)^{N} |\vect{\Gamma}|}}\exp\left[-\frac{1}{2}(\vect{x} - \vect{\bar{X}})^{T}\vect{\Gamma}^{-1}(\vect{x} - \vect{\bar{X}})  \right],
@@ -232,7 +231,7 @@ Vet at $E[x_{t}] = 0$, hvis vi ser på varianser får vi,
 \begin{equation*}
   Cov(x(t),x(s=t)) = \frac{\sigma^2}{2}(t^{2H} + t^{2H} - |t - t|^{2H}) = \sigma^2t^{2H}
 \end{equation*}
-Her ser vi at variansen er avhengig av tid og prosessen er dermed ikke stasjonær. Hvis variansen ikke hadde vært avhengig av tid måtte vi fortsatt se om autokovariansen kun var avhengig av \emph{lag} $|s - t| = h$ da variansen kun er et spesialtilfelle der $s = t$.
+Her ser vi at variansen er avhengig av tid og prosessen er dermed ikke stasjonær. Hvis variansen ikke hadde vært avhengig av tid måtte vi fortsatt se om autokovariansen kun var avhengig av \emph{lag} $|s - t| = h$, fordi variansen kun er et spesialtilfelle der $s = t$.
 
 
 
@@ -312,6 +311,14 @@ Hvis den ikke hadde vært iid (identically independent distributed) hadde den v�
 
 
 \subsection{f}
+Løser opp for den asymptotisk like funkjonen,
+\begin{equation*}
+  \frac{1}{2}\frac{d^2}{d\tau^2}\tau^{2H}
+\end{equation*}
+som blir,
+\begin{equation*}
+  H(2H-1)\tau^{2(H-1)}
+\end{equation*}
 I figur(\ref{asymp}) under er ACF plottet med den asymptotiske funksjonen.
 \begin{figure}[hbt!]
 \center{
@@ -335,7 +342,7 @@ I figur(\ref{asymp2}) er det samme plottet med verdi $H = 0.4$
 
 Her ser man at når $h -> \infty$ blir de mer lik som tidligere, men med negativ korrelasjon i starten untatt $h = 0$.
 
-Ved sammenligningstesten så konvergerer summen $\sum_{0}^{\infty} \rho(h)$, der $H > 1/2$.
+Ved sammenligningstesten så divergerer summen $\sum_{h = 1}^{\infty} \rho(h)$, der $H > 1/2$ hvis vi bruker $\rho(h) \thicksim H(2H-1)\tau^{2(H-1)}$.
 
 \subsection{g}
 Har,
@@ -354,8 +361,7 @@ for $a^{H}X(t)$ har vi,
   Cov(a^{H}X(t),a^{H}X(t)) = a^{2H}Cov(X(t), X(t)) = \sigma^2(at)^{2H}
   \end{equation}
 
-  Vi har da $[X(at)...X(at_{n})]\thicksim[a^{H}X(t)...a^{H}X(t_{n})]$
-
+Siden gaussisk prosess er kun definert ved første og andre ordens moment, og i dette tilfelle er første ordens moment $E[X(at)] = aE[X(t)] = E[a^{H}X(t)] = a^{H}E[X(t)] = 0$. Derfor har vi $[X(at)...X(at_{n})]\thicksim[a^{H}X(t)...a^{H}X(t_{n})]$.
 
 %\newpage
 \section{}
@@ -475,7 +481,11 @@ forenkler,
 \end{equation*}
 
 \begin{equation*}
-  \gamma_{\nabla x_{t}} = \gamma(h) - \gamma(h - 1) - \gamma(h + 1) + \gamma(h) = 2\gamma(h) - \gamma(h - 1) - \gamma(h + 1)
+  \gamma_{\nabla x_{t}} = \gamma(h) - \gamma(h - 1) - \gamma(h + 1) + \gamma(h)
+\end{equation*}
+som gir,
+\begin{equation*}
+  \gamma_{\nabla x_{t}} = 2\gamma(h) - \gamma(h - 1) - \gamma(h + 1)
 \end{equation*}
 
 Denne prosessen er derfor stasjonær fordi autokovariansen er avhengig av \emph{lag} h.

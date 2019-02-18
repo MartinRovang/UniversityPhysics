@@ -4,9 +4,8 @@ INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\mai
 OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.log
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
@@ -106,7 +105,7 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fonten
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1000.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fourier.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fourier.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
@@ -356,11 +355,11 @@ INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\mai
 OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.out
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm2074.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\eccc1200.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrb2074.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrb1200.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1440.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1728.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\eccc1000.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrb1728.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrb1000.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1200.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\t1futs.fd
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\t1futs.fd
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
@@ -383,14 +382,14 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsf
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
@@ -415,10 +414,10 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\four
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
@@ -432,9 +431,9 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt1000.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt0800.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecit1000.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecit0800.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\test.png
@@ -469,8 +468,7 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\four
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmib.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmib.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmib.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt1200.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt1000.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
@@ -480,9 +478,9 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\four
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futsy.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
@@ -500,25 +498,28 @@ INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\tes
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\test.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.bbl
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.bbl
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti1000.tfm
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.aux
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.out
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal\main.out
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\base\8r.enc
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecit1000.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecit1000.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecit0800.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecit0800.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\tex-gyre\q-ec.enc
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1200.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1200.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb2074.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb2074.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1728.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1728.pk
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mex.pfb
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mex.pfb
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-ml.pfb
