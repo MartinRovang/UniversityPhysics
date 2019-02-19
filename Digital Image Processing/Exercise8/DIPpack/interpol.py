@@ -11,7 +11,7 @@ def Interpolate(img, newN, newM, interp):
 
     'NEAREST',
     'LINEAR',
-    'BICUBIC',
+    'CUBIC',
     'LANCZOS'
     """
 

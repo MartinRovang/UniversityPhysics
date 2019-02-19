@@ -1,6 +1,6 @@
 
 import numpy as np
-
+from scipy.signal import convolve2d
 
 def transform_image_255(image):
     image *= 255
@@ -48,28 +48,90 @@ def contrast_stretch(image, E, r0 = 0.5):
 
 
 
-def histeq(img, L, prob = False):
+def histeq(img, L, prob = False, stairplot = False):
     """
     img -> np array
     L -> max intensity level i.e 256
     prob = True returns probability array, default = False
+    stairplot = False -> plots staircase plot
 
     Return result, probability
     or 
     Return result
     """
     M, N = img.shape
-    vals, index, n_vals = np.unique(img, return_counts = True, return_index = True)
-    probability = np.array([(x/(M*N)) for x in n_vals])
+    vals, n_vals = np.unique(img, return_counts = True)
+    hist, bins = np.histogram(img.flatten(),L,[0,L])
+    probability = hist/(M*N)
     result = img.astype('float')
+    stair = []
+    prev = []
 
     for i in range(0, L):
         idx = np.where(img == i)
         result[idx] = (L-1)*np.sum(probability[0:i+1])
-
+        stair.append((L-1)*np.sum(probability[0:i+1]))
+        prev.append(i)
     result = result.astype('uint8')
+
+    if stairplot == True:
+        plt.plot(prev, stair)
+        plt.show()
 
     if prob == True:
         return result, probability
+    else:
+        return result
+
+
+
+def smoothing(img, boxsize = 3):
+    """
+    Avarage smoothing of 2D array
+    boxsize -> size of boxkernal filter
+    returns filtered 2D array
+    """
+
+
+    boxkernal = np.ones((boxsize, boxsize))/(boxsize**2)
+    img = np.pad(img, (boxsize, boxsize), mode = 'constant')
+    result = convolve2d(boxkernal, img, mode = 'valid')
+
+    return result
+
+
+
+
+
+def lapsharp(img, maskret = False):
+    """
+    img -> 2D array
+    maskret = True -> returns result and mask
+    maskret = False -> returns result
+    """
+    lapmask = np.zeros((3, 3))
+    padded_image = np.pad(img, (1, 1), mode = 'symmetric')
+    # lap is linear therefore;
+    # lap f(x,y) = f(x + 1, y) + f(x - 1, y) + f(x, y + 1) + f(x, y - 1) - 4f(x,y)
+    #--------------------
+    c = -1 # Depends on kernel
+    lapmask[0,0] = 0
+    lapmask[0,1] = 1
+    lapmask[0,2] = 0
+
+    lapmask[1,0] = 1
+    lapmask[1,1] = -4
+    lapmask[1,2] = 1
+
+    lapmask[2,0] = 0
+    lapmask[2,1] = 1
+    lapmask[2,2] = 0
+    #--------------------
+    
+    mask = convolve2d(lapmask, padded_image, mode = 'valid')
+    result = img + c*mask
+
+    if maskret == True:
+        return result, mask
     else:
         return result
