@@ -1,0 +1,45 @@
+
+
+
+
+
+@startuml
+class Bricks{
+    + x: position
+    + y: position
+    + height
+    + width
+    + health
+    + hit_detection()
+    + initiate_bricks()
+    + draw()
+}
+
+class Platform{
+    + x: position
+    + y: position
+    + move()
+    + draw()
+}
+
+
+class Ball{
+    + x: position
+    + y: position
+    + radius
+    + velx: velocity
+    + vely: velocity
+    + move()
+    + check_wall_collision()
+    + check_platform_collision()
+    + draw()
+}
+
+class Game{
+    + fps_check()
+    + gameloop()
+}
+
+
+
+@enduml
