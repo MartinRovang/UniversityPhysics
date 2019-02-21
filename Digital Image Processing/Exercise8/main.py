@@ -35,19 +35,19 @@ fig, ax = plt.subplots(4,3, figsize = [20,20])
 
 ax[0,0].imshow(fig3161, cmap = 'gray', vmin = 0, vmax = 255)
 ax[0,1].imshow(equalized1, cmap = 'gray', vmin = 0, vmax = 255)
-ax[0,2].hist(equalized1.flatten(), range = [0,255], bins = 255, color = 'white')
+ax[0,2].hist(equalized1.flatten(), bins = 256)
 
 ax[1,0].imshow(fig3162, cmap = 'gray', vmin = 0, vmax = 255)
 ax[1,1].imshow(equalized2, cmap = 'gray', vmin = 0, vmax = 255)
-ax[1,2].hist(equalized2.flatten(), range = [0,255], bins = 255, color = 'white')
+ax[1,2].hist(equalized2.flatten(), bins = 256)
 
 ax[2,0].imshow(fig3163, cmap = 'gray', vmin = 0, vmax = 255)
 ax[2,1].imshow(equalized3, cmap = 'gray', vmin = 0, vmax = 255)
-ax[2,2].hist(equalized3.flatten(), range = [0,255], bins = 255, color = 'white')
+ax[2,2].hist(equalized3.flatten(), bins = 256)
 
 ax[3,0].imshow(fig3164, cmap = 'gray', vmin = 0, vmax = 255)
 ax[3,1].imshow(equalized4, cmap = 'gray', vmin = 0, vmax = 255)
-ax[3,2].hist(equalized4.flatten(), range = [0,255], bins = 255, color = 'white')
+ax[3,2].hist(equalized4.flatten(), bins = 256)
 
 
 plt.tight_layout()
@@ -81,12 +81,11 @@ fig333 = np.array(Image.open('fig333.tif'))
 
 def smoothing(img, boxsize = 3):
     boxkernal = np.ones((boxsize, boxsize))/(boxsize**2)
-    img = np.pad(img, (boxsize, boxsize), mode = 'constant')
+    #img = np.pad(img, (boxsize, boxsize), mode = 'constant')
 
-    result = convolve2d(boxkernal, img, mode = 'valid')
+    result = convolve2d(img, boxkernal, mode = 'same')
 
     return result
-
 
 
 result1 = smoothing(fig333, boxsize = 3)
@@ -100,10 +99,6 @@ ax[0,1].imshow(result1, cmap = 'gray')
 ax[1,0].imshow(result2, cmap = 'gray')
 ax[1,1].imshow(result3, cmap = 'gray')
 plt.show()
-
-
-
-
 
 
 #%%
@@ -125,7 +120,7 @@ def lapsharp(img, maskret = False):
     maskret = False -> returns result
     """
     lapmask = np.zeros((3, 3))
-    padded_image = np.pad(img, (1, 1), mode = 'symmetric')
+    #padded_image = np.pad(img, (1, 1), mode = 'symmetric')
     # lap is linear therefore;
     # lap f(x,y) = f(x + 1, y) + f(x - 1, y) + f(x, y + 1) + f(x, y - 1) - 4f(x,y)
     #--------------------
@@ -143,7 +138,7 @@ def lapsharp(img, maskret = False):
     lapmask[2,2] = 0
     #--------------------
     
-    edges = convolve2d(lapmask, padded_image, mode = 'valid')
+    edges = convolve2d(img, lapmask, mode = 'same')
     result = img + c*edges
 
     if maskret == True:
@@ -161,3 +156,60 @@ ax[1].imshow(result, cmap = 'gray', vmin = 0, vmax = 255)
 plt.show()
 
 #%%
+
+from scipy.signal import convolve2d
+import matplotlib.pyplot as plt
+import numpy as np 
+from PIL import Image
+from DIPpack import smoothing
+
+
+image2 = np.array(Image.open('checkerboard1024.tif'))
+image1 = np.array(Image.open('edge-step.tif'))
+
+
+
+fig, ax = plt.subplots(3,2, figsize = [20,20])
+
+image1s = smoothing(image1, 30)
+image2s = smoothing(image2, 30)
+
+
+ax[0,0].imshow(image1, cmap = 'gray')
+ax[0,1].imshow(image2, cmap = 'gray')
+ax[1,0].imshow(image1s, cmap = 'gray')
+ax[1,1].imshow(image2s, cmap = 'gray')
+ax[2,0].hist(image1s.flatten(), bins = 256)
+ax[2,1].hist(image2s.flatten(), bins = 256)
+plt.tight_layout()
+plt.show()
+
+#%%
+
+
+from DIPpack import DiPpackage as dip
+
+
+image = dip('3161.tif')
+
+
+plt.imshow(image.show(), cmap = 'gray', vmin = 0, vmax = 255)
+plt.show()
+
+result = image.gamma_transform(0.2)
+plt.imshow(result, cmap = 'gray', vmin = 0, vmax = 255)
+plt.show()
+
+result = image.Interpolate(50, 50, 'LINEAR')
+plt.imshow(result, cmap = 'gray', vmin = 0, vmax = 255)
+plt.show()
+
+result = image.contrast_stretch(0.4)
+plt.imshow(result, cmap = 'gray', vmin = 0, vmax = 255)
+plt.show()
+
+result = image.lapsharp()
+
+plt.imshow(result, cmap = 'gray', vmin = 0, vmax = 255)
+plt.show()
+

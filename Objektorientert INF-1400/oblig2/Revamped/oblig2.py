@@ -1,18 +1,16 @@
 import pygame
 import numpy as np
 import math
-from Files.Boid import Boid
+from Files import Boid, Hawk, Obstacle
 from Files.config import *
 
 
-
-
-
-
 class Simulation():
-    """Creates the simulation object and runs int."""
+    """Creates the simulation object and runs it."""
     def __init__(self):
         self.boids_list = []
+        self.hawk_list = []
+        self.obstacle_list = []
         self.simloop()
 
     def reset_screen(self):
@@ -36,15 +34,15 @@ class Simulation():
                 if event.type == pygame.QUIT:
                     exit()
 
-                # # Make obstacle
-                # if event.type == pygame.KEYDOWN:
-                #     if event.key == pygame.K_a:
-                #         obstacle_list.append(Obstacle(x, y))
+                # Make obstacle
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_a:
+                        self.obstacle_list.append(Obstacle(x, y))
 
-                # # Make hawks
-                # if event.type == pygame.KEYDOWN:
-                #     if event.key == pygame.K_c:
-                #         hawk_list.append(Hawk(x, y))
+                # Make hawks
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_c:
+                        self.hawk_list.append(Hawk(x, y))
 
 
 
@@ -54,16 +52,32 @@ class Simulation():
             TIME_PASSED_SECONDS = TIME_PASSED/1000.0
             self.spawn_boids()
             self.reset_screen()
-    
 
             for boid in self.boids_list:
-                boid.move(TIME_PASSED_SECONDS)
-                boid.rule1(self.boids_list)
-                boid.rule2(self.boids_list)
-                boid.rule3(self.boids_list)
+                boid.find_flock(self.boids_list)
+                boid.rule1()
+                boid.rule2()
+                boid.rule3()
                 boid.crash_wall_check()
+                boid.avoid_hawk(self.hawk_list)
+                boid.move()
                 boid.draw()
 
+            for hawk in self.hawk_list:
+                hawk.find_flock(self.hawk_list)
+                hawk.rule1()
+                hawk.rule2()
+                hawk.rule3()
+                hawk.crash_wall_check()
+                hawk.attack(self.boids_list)
+                hawk.move()
+                hawk.draw()
+
+
+            for obstacle in self.obstacle_list:
+                obstacle.avoid_obstacles(self.boids_list)
+                obstacle.avoid_obstacles(self.hawk_list)
+                obstacle.draw()
 
             # Draw new placements
             pygame.display.update()

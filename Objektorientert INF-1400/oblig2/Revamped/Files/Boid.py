@@ -13,56 +13,71 @@ class Boid(MovingObject):
         self.flock = []
         self.radius = BOIDS_RADIUS
 
-    def rule1(self, boids): 
-        mean_x = []
-        mean_y = []
+    def find_flock(self, boids):
         flock = self.flock
-        mean_pos_x = 0
-        mean_pos_y = 0
-
         for boid in boids:
-            if boid != self:
-                distance = sqrt((boid.x - self.x)**2 + (boid.y - self.y)**2)
-                if distance <= BOID_DISTANCE_FLOCKING_RADIUS and boid not in flock:
-                    mean_x.append(boid.x)
-                    mean_y.append(boid.y)
-                    flock.append(boid)
-                if distance > BOID_DISTANCE_FLOCKING_RADIUS and boid in flock:
-                    flock.remove(boid)
+            if (self.distance(boid) < BOID_DISTANCE_FLOCKING_RADIUS) and boid not in flock and boid != self:
+                self.flock.append(boid)
+            elif boid in flock:
+                self.flock.remove(boid)
 
+
+    def rule1(self):
+        flock = self.flock
+        x = 0
+        y = 0
+        for boid in flock:
+            x += boid.x
+            y += boid.y
 
         if len(flock) > 0:
-            mean_pos_x = np.mean(mean_x)
-            mean_pos_y = np.mean(mean_y)
-            self.velx = mean_pos_x
-            self.vely = mean_pos_y
-
-
-    def rule2(self, boids):
-        for boid in boids:
-            if boid != self:
-                distance = sqrt((boid.x-self.x)**2 + (boid.y-self.y)**2)
-                if distance < BOIDS_AVOID_CRASH_DISTANCE + boid.radius:
-                    boid.velx = (boid.x - self.x)
-                    boid.vely = (boid.y - self.y)
-                if distance < 1:
-                    boid.velx = 5
-                    boid.vely = 0
+            mean_x = x/len(flock)
+            mean_y = y/len(flock)
+            mean_velx = (mean_x - self.x)/100 # 1% of total
+            mean_vely = (mean_y - self.y)/100 # 1% of total
+            self.velx += mean_velx; self.vely += mean_vely
 
 
 
-    def rule3(self, boids):
+    def rule2(self):
+        flock = self.flock
+        cx = 0
+        cy = 0
+        for boid in flock:
+            if (self.distance(boid) < BOIDS_AVOID_CRASH_DISTANCE):
+                cx += -(boid.x - self.x)
+                cy += -(boid.y - self.y)
+
+        self.velx += cx; self.vely += cy;
+
+
+    def rule3(self):
         flock = self.flock
         velx = 0
         vely = 0
-        if len(flock) > 0:
-            for boid in flock:
+        COESIAN_NUMBER = 0
+        for boid in flock:
+            distance = self.distance(boid)
+            if distance < BOIDS_COHESIAN_RADIUS:
                 velx += boid.velx
                 vely += boid.vely
-        
-            self.velx = velx/len(flock)
-            self.vely = vely/len(flock)
+                COESIAN_NUMBER += 1
 
+        if COESIAN_NUMBER > 0:
+            mean_velx = velx/COESIAN_NUMBER
+            mean_vely = vely/COESIAN_NUMBER
+            mean_velx = (mean_velx - self.velx)/8 # 8 of total
+            mean_vely = (mean_vely - self.vely)/8 # 8 of total
+            self.velx += mean_velx; self.vely += mean_vely
+
+
+    def avoid_hawk(self, hawks):
+        for hawk in hawks:
+            distance = self.distance(hawk)
+            if distance < HAWK_TRIGGER_BOID_DISTANCE:
+                self.velx += (hawk.vely - self.vely)/100
+                self.vely += (hawk.velx - self.velx)/100
+        
 
     def draw(self):
         pygame.draw.circle(SCREEN, GRAY, (int(self.x), int(self.y)), self.radius)

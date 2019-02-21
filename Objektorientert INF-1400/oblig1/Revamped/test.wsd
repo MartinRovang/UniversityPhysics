@@ -1,0 +1,28 @@
+
+
+
+@startuml
+class Bricks{
+    + attr1
+    + func()
+}
+
+
+class Game{
+
+    + attr1
+    + attrb2
+    + attrib3
+    + func1()
+}
+
+
+class Test{
+
+    + attr2: This is a attribut
+    + func2()
+}
+
+Bricks --> Game: This TEST
+Game -> Test
+@enduml
