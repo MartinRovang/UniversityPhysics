@@ -9,7 +9,6 @@ class Boid(MovingObject):
 
     def __init__(self, x, y):
         super().__init__(x, y)
-        self.flocked = 0
         self.flock = []
         self.radius = BOIDS_RADIUS
 
@@ -75,8 +74,8 @@ class Boid(MovingObject):
         for hawk in hawks:
             distance = self.distance(hawk)
             if distance < HAWK_TRIGGER_BOID_DISTANCE:
-                self.velx += (hawk.vely - self.vely)/100
-                self.vely += (hawk.velx - self.velx)/100
+                self.velx += (hawk.vely - self.vely)/60
+                self.vely += (hawk.velx - self.velx)/60
         
 
     def draw(self):

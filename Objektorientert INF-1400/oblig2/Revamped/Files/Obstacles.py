@@ -7,7 +7,7 @@ import numpy as np
 
 
 
-class Obstacle(object):
+class Obstacle():
     """
     Summary:
         When called creates an obstacle object.
@@ -36,8 +36,6 @@ class Obstacle(object):
 
     def avoid_obstacles(self, moving_objects):
         for moving_object in moving_objects:
-            if (moving_object.x + moving_object.radius) > self.x and (moving_object.x - moving_object.radius) < (self.x + OBSTACLE_WIDTH)\
-            and  (moving_object.y + moving_object.radius) > self.y and (moving_object.y - moving_object.radius) < (self.y + OBSTACLE_HEIGHT) :
-                
-                moving_object.x += np.sign(moving_object.velx)*(-5)
-                moving_object.y += np.sign(moving_object.vely)*(-5)
+            if moving_object.distance(self) < WALL_DISTANCE_AVOID_VALUE:
+                moving_object.velx -= (self.x - moving_object.x)*30
+                moving_object.velx -= (self.x - moving_object.x)*30

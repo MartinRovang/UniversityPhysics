@@ -1,7 +1,7 @@
 
 import cv2
 
-def Interpolate(img, newN, newM, interp):
+def interpolate(img, newN, newM, interp):
     """
     ARGS:
     newN -> New N dimension

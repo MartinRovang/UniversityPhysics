@@ -1,5 +1,5 @@
 from DIPpack.imginfo import getinfo
-from DIPpack.interpol import Interpolate
+from DIPpack.interpol import interpolate
 from DIPpack.colormap import colormapping
 from DIPpack.transformations import gamma_transform, contrast_stretch, histeq, lapsharp, smoothing
 import numpy as np
@@ -30,7 +30,7 @@ class DiPpackage:
         """Image --> path to image"""
         getinfo(self.image_path)
     
-    def Interpolate(self, newN, newM, interp):
+    def interpolate(self, newN, newM, interp):
         """
         ARGS:
         newN -> New N dimension
@@ -43,7 +43,7 @@ class DiPpackage:
         'CUBIC',
         'LANCZOS'
         """
-        return Interpolate(self.image, newN, newM, interp)
+        return interpolate(self.image, newN, newM, interp)
 
     def contrast_stretch(self, E, r0 = 0.5):
         """

@@ -5,7 +5,7 @@ from Files.config import *
 import numpy as np
 
 
-class MovingObject(object):
+class MovingObject():
 
     """
     Summary:
@@ -45,27 +45,27 @@ class MovingObject(object):
         self.y += (self.vely/np.sqrt(self.velx**2+self.vely**2))*MOVEMENT_MAGNITUDE
 
 
-    def distance(self, boid):
-        return np.sqrt((boid.x - self.x)**2 + (boid.y - self.y)**2)
+    def distance(self, objecct):
+        return np.sqrt((objecct.x - self.x)**2 + (objecct.y - self.y)**2)
 
 
     def crash_wall_check(self):
 
         if self.x - self.radius < 0:
-            self.x = 0 + self.radius
-            self.velx *= -0.2
+            self.x = self.radius
+            self.velx *=  WALL_REFLECT
 
         if self.y - self.radius < 0:
-            self.y = 0 + self.radius
-            self.vely *= -0.2
+            self.y = self.radius
+            self.vely *= WALL_REFLECT
 
         if self.x + self.radius > WIDTH_SCREEN:
             self.x = WIDTH_SCREEN - self.radius
-            self.velx *= -0.2
+            self.velx *= WALL_REFLECT
 
         if self.y + self.radius > HEIGHT_SCREEN:
             self.y = HEIGHT_SCREEN - self.radius
-            self.vely *= -0.2
+            self.vely *= WALL_REFLECT
 
 
 

@@ -53,6 +53,7 @@ class Simulation():
             self.spawn_boids()
             self.reset_screen()
 
+
             for boid in self.boids_list:
                 boid.find_flock(self.boids_list)
                 boid.rule1()

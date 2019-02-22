@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 from DIPpack import histeq
 
+#DEPRECIATED USE PACKAGE
 
 
 fig3161 = np.array(Image.open('3161.tif'))
@@ -200,7 +201,7 @@ result = image.gamma_transform(0.2)
 plt.imshow(result, cmap = 'gray', vmin = 0, vmax = 255)
 plt.show()
 
-result = image.Interpolate(50, 50, 'LINEAR')
+result = image.interpolate(50, 50, 'LINEAR')
 plt.imshow(result, cmap = 'gray', vmin = 0, vmax = 255)
 plt.show()
 

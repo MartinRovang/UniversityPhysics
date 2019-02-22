@@ -1,0 +1,70 @@
+
+
+@startuml
+
+class Simulation{
+    +boids_list: list
+    +hawk_list: list
+    +obstacle_list: list
+
+    +reset_screen()
+    +spawn_boids()
+    +simloop()
+}
+
+class MovingObject{
+    +x:position
+    +y:position
+    +velx:velocity
+    +vely:velocity
+    +radius:radius of model
+
+    +move()
+    +distance()
+    +crash_wall_check()
+    +draw()
+}
+
+
+class Boid{
+    +flock: list
+    +radius = BOIDS_RADIUS
+
+    +find_flock()
+    +rule1()
+    +rule2()
+    +rule3()
+    +avoid_hawk()
+    +draw()
+'
+}
+
+class Hawk{
+    +radius = HAWK_RADIUS_START_VALUE
+
+    +attack()
+    +move()
+    +draw()
+}
+
+class Obstacle{
+    +x:position
+    +y:position
+
+    +avoid_obstacles()
+    +draw()
+}
+
+
+
+MovingObject --> Boid
+Boid --> Hawk
+
+
+
+
+
+
+
+
+@enduml
