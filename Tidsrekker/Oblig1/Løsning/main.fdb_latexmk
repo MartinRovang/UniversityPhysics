@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex main"] 1550516894 "main.aux" "main.bbl" "main" 1550517096
+["bibtex main"] 1550861461 "main.aux" "main.bbl" "main" 1550861467
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "bibl.bib" 1550312527 1418 48d34f8759365520d3720371e800a06a ""
-  "main.aux" 1550517094 3730 97cf4714fb6405819cbad6c2e1f31490 ""
+  "main.aux" 1550861466 3730 97cf4714fb6405819cbad6c2e1f31490 ""
   (generated)
-  "main.blg"
   "main.bbl"
-["makeindex main.idx"] 1550324236 "main.idx" "main.ind" "main" 1550517096
-  "main.idx" 1550517093 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main.blg"
+["makeindex main.idx"] 1550324236 "main.idx" "main.ind" "main" 1550861467
+  "main.idx" 1550861465 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "main.ind"
   "main.ilg"
-["pdflatex"] 1550517086 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.pdf" "main" 1550517096
+  "main.ind"
+["pdflatex"] 1550861462 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.pdf" "main" 1550861467
   "ACF_plot.png" 1550314916 18237 14de565ac6896c742df49a1da7806cf0 ""
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb1000.pk" 1550501447 23092 1cd886f958d5de742d5a85b1badd5ebf ""
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb1728.pk" 1550501449 44992 e9dfb22892e6109c7bffc1404cda5791 ""
@@ -278,20 +278,20 @@
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty" 1419270738 5114 9c1069474ff71dbc47d5006555e352d3 ""
   "Plots.jpg" 1550314916 89072 5d640c009ea818ec54f2249472189d89 ""
   "Plots2.jpg" 1550314916 90885 426ad5d9843bffa2e9758cbbcd965ba8 ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.aux" 1550517094 3730 97cf4714fb6405819cbad6c2e1f31490 ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.tex" 1550517084 16502 6e95b02a69e198a01c60ac2d1ad16611 ""
-  "main.aux" 1550517094 3730 97cf4714fb6405819cbad6c2e1f31490 ""
-  "main.bbl" 1550516894 283 de5ffaf5b665b622658d80bed97ba2a5 "bibtex main"
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.aux" 1550861466 3730 97cf4714fb6405819cbad6c2e1f31490 ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.tex" 1550861454 16760 17935f30ac9c326c894a99602e610dfa ""
+  "main.aux" 1550861466 3730 97cf4714fb6405819cbad6c2e1f31490 ""
+  "main.bbl" 1550861461 283 de5ffaf5b665b622658d80bed97ba2a5 "bibtex main"
   "main.ind" 1550324236 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1550517094 870 e7f53db83bed43482e600afb15f4d853 ""
-  "main.tex" 1550517084 16502 6e95b02a69e198a01c60ac2d1ad16611 ""
-  "main.toc" 1550517094 1229 d9eeb8575a8994e52f0c7e91260f4f56 ""
+  "main.out" 1550861466 870 e7f53db83bed43482e600afb15f4d853 ""
+  "main.tex" 1550861454 16760 17935f30ac9c326c894a99602e610dfa ""
+  "main.toc" 1550861466 1229 d9eeb8575a8994e52f0c7e91260f4f56 ""
   (generated)
-  "main.aux"
-  "main.toc"
-  "main.idx"
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.log"
-  "main.pdf"
-  "main.out"
   "main.log"
+  "main.idx"
+  "main.toc"
+  "main.aux"
   "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.pdf"
+  "main.pdf"
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.log"
+  "main.out"

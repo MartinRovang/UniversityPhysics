@@ -63,7 +63,7 @@ while True:
     
     timer = time.time()
     if fueltimer < timer:
-        fueltimer += 10
+        fueltimer += 40
         fuel_sprites.add(FuelBarrel())
 
 

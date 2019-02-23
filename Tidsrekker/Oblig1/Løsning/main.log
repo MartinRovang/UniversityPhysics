@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  18 FEB 2019 20:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  22 FEB 2019 19:51
 entering extended mode
 **c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.tex
 (c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig1/Løsning/main.tex
@@ -1464,18 +1464,18 @@ Package natbib Warning: Empty `thebibliography' environment on input line 8.
 ) 
 AED: lastpage setting LastPage
 [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 522.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 522.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 523.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 523.
  (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig1\Løsning\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 522.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 522.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 523.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 523.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 82E28ABECD98D8D46057A66E112BE192;870.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 522.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 523.
  )
 (\end occurred inside a group at level 1)
 
@@ -1490,9 +1490,9 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  63i,12n,101p,1026b,1355s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mcl.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlitb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
-Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig1\Løsning\main.pdf (10 pages, 415100 bytes).
+Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig1\Løsning\main.pdf (10 pages, 416165 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
+ 467 PDF objects out of 1000 (max. 8388607)
  51 named destinations out of 1000 (max. 500000)
  20796 words of extra memory for PDF output out of 24883 (max. 10000000)
 

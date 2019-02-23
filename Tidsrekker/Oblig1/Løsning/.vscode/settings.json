@@ -3,6 +3,5 @@
     "spellright.documentTypes": [
         "markdown",
         "plaintext"
-    ],
-    "dimmer.enabled": true
+    ]
 }

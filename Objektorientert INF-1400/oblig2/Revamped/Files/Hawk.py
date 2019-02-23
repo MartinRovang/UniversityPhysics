@@ -9,45 +9,47 @@ import numpy as np
 class Hawk(Boid):
     """
     Summary:
-        Inherits from MovingObject, this class makes the boids object
-        
-    Args:
-    x: x-position.
+        When called creates a hawk/hoik object. Inherits from Boid class
 
-    y: y-position.   
+    Args:
+    x: x-position
+
+    y: y-position   
 
     Methods:
-    move(TIME_PASSED_SECONDS): Places the moving object according to its speed and magnitude.
+    move(): Places the moving object according to its speed and magnitude.
 
-    get_pos: Returns the position (x, y).
+    find_flock(boids): assigns boids to a boids flock.
 
-    set_pos(x,y): Sets the position to (x, y).
+    rule1(): Activates first rule of the boid, moves the boid to percieved center of local flockmates.
 
-    set_vel(velx,vely): Sets the velocity to (velx, vely).
+    rule2(): Activates second rule of the boid, makes the boid avoid eachother when they get to close.
 
-    get_vel: Returns the velocity (velx, vely).
+    rule3(): Activates third rule of the boid, boid wants to match velocity the boids in their vicinity.
 
-    crash_wall_check(TIME_PASSED_SECONDS, wall_lock): Checks if the object is colliding with the walls of the screen, and bounce them off if wall_lock == 1 else they go to the other side.
+    attack(boids): Finds the closest boid and tries to eat it.
 
-    noisy_movement(TIME_PASSED_SECONDS): Makes the noisy movement to the hawks.
+    draw: Draws the  object on the screen.
 
-    flocking(hawks): Takes the list of hawks and makes the hawks flock together to their percieved center.
-
-    match_speed(hawks): Takes the list of hawks and sets the avarage heading of the flock.
-
-    avoid_crash(hawks): Takes the list of hawks and makes them avoid eachother.
-
-    attack(boids): Takes the list of boids and sends the hawk to attack the nearest boid.
-
-    draw: draws the obstacle object on the screen
     """
 
     def __init__(self, x , y):
+        """
+        Initate attributes for the hawk\n
+            x: int
+            y: int
+            flock: list
+            radius: int ---> HAWK_RADIUS_START_VALUE | See config
+        """
         super().__init__(x, y)
         self.radius = HAWK_RADIUS_START_VALUE
-        #self.nomsound = pygame.mixer.Sound('nomnom.ogg')
+
 
     def attack(self, boids):
+        """
+        Finds the closest boid and attacks it, if the boid is within the radius it eats the boid(removes it from the boid list).\n
+        boids: list
+        """
         min_distance = sqrt(WIDTH_SCREEN**2 + HEIGHT_SCREEN**2)
         for boid in boids:
             distance = self.distance(boid)
@@ -60,17 +62,21 @@ class Hawk(Boid):
             if distance < self.radius:
                 boids.remove(boid)
                 #self.radius += 1
-                #pygame.mixer.Sound.play(self.nomsound)
 
         if len(boids) > 0:
             self.velx += (x - self.x)*HAWK_ATTACK_SPEED_MULTIPLIER
             self.vely += (y - self.y)*HAWK_ATTACK_SPEED_MULTIPLIER
 
     def move(self):
+        """
+        Moves the hawk\n
+            scalar --> HAWK_ATTACK_SPEED_MULTIPLIER | See config
+            """
         self.x += (self.velx/np.sqrt(self.velx**2 + self.vely**2))*HAWK_ATTACK_SPEED_MULTIPLIER
         self.y += (self.vely/np.sqrt(self.velx**2 + self.vely**2))*HAWK_ATTACK_SPEED_MULTIPLIER
 
     def draw(self):
+        """Draws the hawk on the program window"""
         pygame.draw.circle(SCREEN, RED, [int(self.x), int(self.y)], self.radius)
 
 

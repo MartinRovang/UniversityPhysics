@@ -108,8 +108,8 @@ class Player2(Player1):
         if keys[pygame.K_UP]:
             if self.fuel > 0:
                 self.engine = 'on'
-                self.vely = -np.sin(self.angle*np.pi/180 + np.pi/2)*SPEED
-                self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
+                self.vely += -np.sin(self.angle*np.pi/180 + np.pi/2)*SPEED  + GRAVITY
+                self.velx += np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
                 self.fuel -= 0.1
                 return True
             else:
@@ -126,7 +126,7 @@ class Player2(Player1):
             self.vely = GRAVITY
 
         self.rect.x += self.velx/np.sqrt(self.velx**2 + self.vely**2)*SPEED
-        self.rect.y += self.vely/np.sqrt(self.velx**2 + self.vely**2)*SPEED + GRAVITY
+        self.rect.y += self.vely/np.sqrt(self.velx**2 + self.vely**2)*SPEED
 
         for player in collide:
             barrel = collide[player][0]

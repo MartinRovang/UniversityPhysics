@@ -31,6 +31,7 @@ GREEN = (  0, 255,   0)
 WHITE = (255, 255, 255)
 BLUE =  (  0,   0, 255)
 GRAY = (240, 248, 255)
+BLACK = (0, 0, 0)
 
 # Clock/Timers
 clock = pygame.time.Clock() # Initiate clock object

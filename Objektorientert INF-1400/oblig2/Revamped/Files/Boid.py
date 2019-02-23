@@ -2,17 +2,52 @@ import pygame
 from math import cos, sin, radians, sqrt
 from Files.config import *
 from Files.GenMovObject import MovingObject
-import random
-import numpy as np
+
 
 class Boid(MovingObject):
+    """
+    Summary:
+        When called creates a boid object. Inherits from MovingObject class
 
+    Args:
+    x: x-position
+
+    y: y-position
+
+    Methods:
+    move(): Places the moving object according to its speed and magnitude.
+
+    find_flock(boids): assigns boids to a boids flock.
+
+    rule1(): Activates first rule of the boid, moves the boid to percieved center of local flockmates.
+
+    rule2(): Activates second rule of the boid, makes the boid avoid eachother when they get to close.
+
+    rule3(): Activates third rule of the boid, boid wants to match velocity the boids in their vicinity.
+
+    avoid_hawk(hawks): If the Hawks/Hoiks gets to close they will try to avoid it. 
+
+
+    draw: Draws the object on the screen.
+
+    """
     def __init__(self, x, y):
+        """
+        Initate attributes for the boid\n
+            x: int
+            y: int
+            flock: list
+            radius: int ---> BOIDS_RADIUS | See config
+        """
         super().__init__(x, y)
         self.flock = []
         self.radius = BOIDS_RADIUS
 
     def find_flock(self, boids):
+        """
+        Puts the boids which belongs to a boid flock into flock list.\n
+        boids: list
+        """
         flock = self.flock
         for boid in boids:
             if (self.distance(boid) < BOID_DISTANCE_FLOCKING_RADIUS) and boid not in flock and boid != self:
@@ -22,6 +57,7 @@ class Boid(MovingObject):
 
 
     def rule1(self):
+        """Activates first rule of the boid, moves the boid to percieved center of local flockmates."""
         flock = self.flock
         x = 0
         y = 0
@@ -32,13 +68,13 @@ class Boid(MovingObject):
         if len(flock) > 0:
             mean_x = x/len(flock)
             mean_y = y/len(flock)
-            mean_velx = (mean_x - self.x)/100 # 1% of total
-            mean_vely = (mean_y - self.y)/100 # 1% of total
+            mean_velx = (mean_x - self.x)/100 # 1% of total to avoid massive numbers
+            mean_vely = (mean_y - self.y)/100 # 1% of total to avoid massive numbers
             self.velx += mean_velx; self.vely += mean_vely
 
 
-
     def rule2(self):
+        """Activates second rule of the boid, makes the boid avoid eachother when they get to close."""
         flock = self.flock
         cx = 0
         cy = 0
@@ -51,6 +87,7 @@ class Boid(MovingObject):
 
 
     def rule3(self):
+        """Activates third rule of the boid, boid wants to match velocity the boids in their vicinity."""
         flock = self.flock
         velx = 0
         vely = 0
@@ -71,6 +108,10 @@ class Boid(MovingObject):
 
 
     def avoid_hawk(self, hawks):
+        """
+        If the Hawks/Hoiks gets to close they will try to avoid it. \n
+            hawks: list
+        """
         for hawk in hawks:
             distance = self.distance(hawk)
             if distance < HAWK_TRIGGER_BOID_DISTANCE:
@@ -79,4 +120,9 @@ class Boid(MovingObject):
         
 
     def draw(self):
+        """Draws the object on the screen."""
         pygame.draw.circle(SCREEN, GRAY, (int(self.x), int(self.y)), self.radius)
+
+
+
+
