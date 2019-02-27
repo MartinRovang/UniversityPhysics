@@ -82,6 +82,7 @@ class Simulation():
             self.spawn_boids()
             self.reset_screen()
 
+
             # Activate all rules and methods to make the boid act natural
             # See Boid.py for explanations.
             for boid in self.boids_list:
@@ -94,7 +95,7 @@ class Simulation():
                 boid.move()
                 boid.draw()
 
-            # Activate all rules and methods to make the hawk  act natural
+            # Activate all rules and methods to make the hawk act natural
             # See Hawk.py for explanations.
             for hawk in self.hawk_list:
                 hawk.find_flock(self.hawk_list)

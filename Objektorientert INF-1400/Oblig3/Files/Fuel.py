@@ -1,6 +1,5 @@
 import pygame
 from Files.config import *
-from math import sqrt, cos
 import numpy as np
 import os
 
@@ -11,7 +10,9 @@ img_folder = os.path.join(game_folder, 'img')
 
 
 class FuelBarrel(pygame.sprite.Sprite):
-    # Sprite for the player
+    """
+    Fuel for the players to refuel their ship.
+    """
     
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)

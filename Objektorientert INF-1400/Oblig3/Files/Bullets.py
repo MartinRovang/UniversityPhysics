@@ -1,6 +1,5 @@
 import pygame
 from Files.config import *
-from math import sqrt, cos
 import numpy as np
 import os
 
@@ -11,9 +10,15 @@ img_folder = os.path.join(game_folder, 'img')
 
 
 class Bullets(pygame.sprite.Sprite):
-    # Sprite for the player
+    """
+    The bullet class for shooting other players.
+    """
     
     def __init__(self, player):
+        """
+        Initiates the bullet\n
+        player -> pygame sprite.   
+            """
         pygame.sprite.Sprite.__init__(self)
 
         self.velx = np.cos(player.angle*np.pi/180 + np.pi/2)
@@ -26,6 +31,9 @@ class Bullets(pygame.sprite.Sprite):
         
 
     def update(self):
+        """
+        Updates the bullet position.
+        """
         self.rect.x += self.velx*BULLET_SPEED
         self.rect.y += self.vely*BULLET_SPEED
 

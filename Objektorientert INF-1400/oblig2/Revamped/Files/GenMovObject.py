@@ -16,6 +16,14 @@ class MovingObject():
 
     y: y-position   
 
+    __init__:\n
+        
+    velx: int
+    
+    vely: int
+        
+    radius: int --> MOVING_OBJECT_RADIUS| See config
+
     Methods:
     move(): Places the moving object according to its speed and magnitude.
 
@@ -42,7 +50,10 @@ class MovingObject():
         self.radius = MOVING_OBJECT_RADIUS
 
     def move(self):
-        """Moves the object according to the velocity vector and MOVEMENT_MAGNITUDE scalar value from config."""
+        """
+        Moves the object according to the velocity vector and MOVEMENT_MAGNITUDE scalar value from config.
+        """
+        # Normalization using (v/||v||)
         self.x += (self.velx/np.sqrt(self.velx**2+self.vely**2))*MOVEMENT_MAGNITUDE
         self.y += (self.vely/np.sqrt(self.velx**2+self.vely**2))*MOVEMENT_MAGNITUDE
 

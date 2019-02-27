@@ -155,12 +155,14 @@ Dette gir en fin og glatt bevegelse til flokkene som ser noe naturlig ut.
 Denne klassen arver fra boids så disse vil oppføre seg likt som dem. Metodene er,
 
 \begin{itemize}
-    \item \emph{attack}: summer opp en vektor som peker i retningen av den nærmeste boiden til hastigheten til hauken.
+    \item \emph{attack}: Summer opp hastighets-vektoren til hauken som peker i retningen av den nærmeste boiden.
     \item \emph{move}: Lagt til en egen move funksjon fordi hauken har en egen global variabel i konfigurasjonefilen som angir farten uavhengig av boid farten.
     \item \emph{draw}: Tegner hauken ut på skjermen.
 \end{itemize}
 
 
+Denne klassen var ganske grei å implementere da det meste var gjort ved arv fra boid klassen.
+Noe å ta med seg er at hauken bør ha en kjappere hastighet enn boidsene, derfor måtte man implementere en ny metode som tok inn egen skalar for hauken.
 
 
 
@@ -175,9 +177,13 @@ Pygame \footnote{https://www.pygame.org/wiki/GettingStarted} Version: 1.9.4\\
 Nympy \footnote{http://www.numpy.org/} Version: 1.14.5\\
 
 
+\subsection{Obstacles}
+Dette er en klasse som skal oppføre seg som en vegg for de bevegelige objektene. Metodene er,
 
-
-
+\begin{itemize}
+    \item \emph{collision}: Sjekker om et bevegelig objekt treffer veggene. returnerer \emph{True} for å bruke det i \emph{avoid\_obstacles} metoden.
+    \item \emph{avoid\_obstacles}: 
+\end{itemize}
 
 \section{Diskusjon}
 

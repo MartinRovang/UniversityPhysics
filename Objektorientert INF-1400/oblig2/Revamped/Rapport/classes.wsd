@@ -50,19 +50,17 @@ class Hawk{
 class Obstacle{
     +x:position
     +y:position
-
+    +width
+    +height
     +avoid_obstacles()
+    +collision()
     +draw()
 }
 
 
 
-MovingObject --> Boid
-Boid --> Hawk
-
-
-
-
+MovingObject <-- Boid
+Boid <-- Hawk
 
 
 

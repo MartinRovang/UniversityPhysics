@@ -14,6 +14,13 @@ class Boid(MovingObject):
 
     y: y-position
 
+    __init__:\n
+    
+    self.flock = []
+    
+    self.radius = BOIDS_RADIUS | See config
+
+
     Methods:
     move(): Places the moving object according to its speed and magnitude.
 
@@ -27,10 +34,10 @@ class Boid(MovingObject):
 
     avoid_hawk(hawks): If the Hawks/Hoiks gets to close they will try to avoid it. 
 
-
     draw: Draws the object on the screen.
 
     """
+    
     def __init__(self, x, y):
         """
         Initate attributes for the boid\n
@@ -82,7 +89,6 @@ class Boid(MovingObject):
             if (self.distance(boid) < BOIDS_AVOID_CRASH_DISTANCE):
                 cx += -(boid.x - self.x)
                 cy += -(boid.y - self.y)
-
         self.velx += cx; self.vely += cy;
 
 
@@ -115,10 +121,10 @@ class Boid(MovingObject):
         for hawk in hawks:
             distance = self.distance(hawk)
             if distance < HAWK_TRIGGER_BOID_DISTANCE:
-                self.velx += (hawk.vely - self.vely)/60
-                self.vely += (hawk.velx - self.velx)/60
+                self.velx += (hawk.vely - self.vely)/100  #1% of total to avoid massive numbers
+                self.vely += (hawk.velx - self.velx)/100  #1% of total to avoid massive numbers
         
-
+        
     def draw(self):
         """Draws the object on the screen."""
         pygame.draw.circle(SCREEN, GRAY, (int(self.x), int(self.y)), self.radius)

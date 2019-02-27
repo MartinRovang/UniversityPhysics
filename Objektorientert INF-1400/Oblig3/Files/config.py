@@ -25,6 +25,8 @@ WHITE = (255, 255, 255)
 BLUE =  (  0,   0, 255)
 GRAY = (240, 248, 255)
 BLACK = (0, 0, 0)
+# OTHER
+FPS = 60
 
 
 # SCREEN
@@ -44,6 +46,7 @@ win_text = pygame.font.SysFont('Comic Sans MS', 30)
 # PLAYER GENERAL SETTINGS
 ##########################################
 SPEED = 5
+PLAYER_START_FUEL = 100
 
 # PLAYER1 SETTINGS
 ##########################################
@@ -62,7 +65,8 @@ PLAYER_2_BOOST = 'UP'
 
 # WORLD SETTINGS
 #########################################
-GRAVITY = 1
+GRAVITY = 0.5
+FUEL_TIMER = 40
 
 
 # FUEL SETTINGS

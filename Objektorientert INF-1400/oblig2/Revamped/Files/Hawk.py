@@ -14,7 +14,13 @@ class Hawk(Boid):
     Args:
     x: x-position
 
-    y: y-position   
+    y: y-position 
+
+    __init__:\n
+
+    flock: list
+
+    self.radius = HAWK_RADIUS_START_VALUE  | See config
 
     Methods:
     move(): Places the moving object according to its speed and magnitude.
@@ -62,18 +68,19 @@ class Hawk(Boid):
             if distance < self.radius:
                 boids.remove(boid)
                 #self.radius += 1
-
         if len(boids) > 0:
-            self.velx += (x - self.x)*HAWK_ATTACK_SPEED_MULTIPLIER
-            self.vely += (y - self.y)*HAWK_ATTACK_SPEED_MULTIPLIER
+            self.velx += (x - self.x)
+            self.vely += (y - self.y)
 
     def move(self):
         """
         Moves the hawk\n
             scalar --> HAWK_ATTACK_SPEED_MULTIPLIER | See config
-            """
-        self.x += (self.velx/np.sqrt(self.velx**2 + self.vely**2))*HAWK_ATTACK_SPEED_MULTIPLIER
-        self.y += (self.vely/np.sqrt(self.velx**2 + self.vely**2))*HAWK_ATTACK_SPEED_MULTIPLIER
+         """
+
+        # Normalization using (v/||v||)
+        self.x += (self.velx/np.sqrt(self.velx**2 + self.vely**2))*HAWK_ATTACK_SPEED
+        self.y += (self.vely/np.sqrt(self.velx**2 + self.vely**2))*HAWK_ATTACK_SPEED
 
     def draw(self):
         """Draws the hawk on the program window"""

@@ -9,6 +9,7 @@
 \contentsline {subsection}{\numberline {3.4}Boid}{5}{subsection.3.4}% 
 \contentsline {subsection}{\numberline {3.5}Hawk}{6}{subsection.3.5}% 
 \contentsline {section}{\numberline {4}Implementasjon}{6}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Obstacles}{7}{subsection.4.1}% 
 \contentsline {section}{\numberline {5}Diskusjon}{7}{section.5}% 
 \contentsline {subsection}{\numberline {5.1}Evaluasjon}{7}{subsection.5.1}% 
 \contentsline {section}{\numberline {6}Konklusjon}{7}{section.6}% 
