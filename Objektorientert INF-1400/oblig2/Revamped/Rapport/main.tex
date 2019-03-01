@@ -42,13 +42,14 @@ Inneholder \pageref{LastPage} \, sider, inkludert forside.\par
 \newpage
 
 \section{Introduksjon}
+I denne oppgaven ble det laget en boid simulator, en simulator som simulerer en flokk. Det beskrives hvordan dette kan bli implementert og hvordan det gjøres med hensyn på objekt-orientert programmering.
 
 \subsection{Krav}
 
 
 \section{Teknisk bakgrunn}
-ARV \\
-super
+\emph{Arv(Inheritance)}: Ved å arve fra en annen klasse henter man ut alle egenskapene denne klassen har. Dette kan brukes til å utbedre eller legge til flere ting som er spesialisert, men også bruker andre generelle egenskaper. Dette gjør koden bedre å lese og enklere å bygge på, navigere og feilsøke.[\cite{Dustyphil} p.71\\
+\emph{super()}: Super metoden gir deg mulighet til å hente ut metoder eller attributter fra foreldreklassen(parentclass). Hvis du for eksempel skal legge til flere atributter ved instansering av et objekt, men vil også beholde de fra foreldreklassen må man kjøre \emph{super().\_\_init\_\_()} for å hente ut disse [\cite{Dustyphil} p.74].
 
 \section{Design}
 \subsection{Klassestruktur}
@@ -61,7 +62,7 @@ I dette prosjektet har vi klassestrukturen som vist i figur(\ref{klassestrukture
 \par}
 \end{figure}
 
-Her arver \emph{Boid} klassen fra \emph{MovingObject} og \emph{Hawk}(Hoik) fra Boid. Hvis man arver fra en generell struktur kan man spare kodeplass og generelt får mer strukturert kode. Hvis man arver fra en klasse får man alle metodene og attributtene fra klassen man arver fra. I noen av klassene ble noen av metodene og attributter erstattet. Dette ble gjort ved å lage en metode som heter det samme i barneklassen(den klassen som arver). Dette gjelder også \emph{\_\_init\_\_()} metoden, derfor vil det oppstå problemer hvis man vil legge inn nye initialattributter, da dette vil erstatte arv-attributtene. et eksempel vil være å gjøre slik som vist i figur(\ref{nye_att})
+Her arver \emph{Boid} klassen fra \emph{MovingObject} og \emph{Hawk}(Hoik) fra Boid. Hvis man arver fra en generell struktur kan man spare kodeplass og generelt får mer strukturert kode. Ved får man også alle metodene og attributtene fra klassen man arver fra[\cite{Dustyphil} p.71]. I noen av klassene ble noen av metodene og attributter erstattet. Dette ble gjort ved å lage en metode som heter det samme i barneklassen(den klassen som arver). Dette gjelder også \emph{\_\_init\_\_()} metoden, derfor vil det oppstå problemer hvis man vil legge inn nye initialattributter, da dette vil erstatte arv-attributtene. et eksempel vil være å gjøre slik som vist i figur(\ref{nye_att}) ved bruk av super()[\cite{Dustyphil} p.74].
 
 \begin{figure}[hbt!]
     \begin{lstlisting}
@@ -141,7 +142,7 @@ Når disse blir summet opp vil man få en totalvektor som vist i figur(\ref{sumv
 
 \begin{figure}[hbt!]
 {\centering
-    \includegraphics[width=0.30\textwidth]{rulelast.pdf}
+    \includegraphics[width=0.35\textwidth]{rulelast.pdf}
     \caption{Summen av vektorene}
     \label{sumvektor}
 \par}
@@ -150,24 +151,34 @@ Når disse blir summet opp vil man få en totalvektor som vist i figur(\ref{sumv
 Dette gir en fin og glatt bevegelse til flokkene som ser noe naturlig ut.
 
 
-\subsection{Hawk}
+\subsection{Hawk/Hoik}
 
 Denne klassen arver fra boids så disse vil oppføre seg likt som dem. Metodene er,
 
 \begin{itemize}
     \item \emph{attack}: Summer opp hastighets-vektoren til hauken som peker i retningen av den nærmeste boiden.
     \item \emph{move}: Lagt til en egen move funksjon fordi hauken har en egen global variabel i konfigurasjonefilen som angir farten uavhengig av boid farten.
-    \item \emph{draw}: Tegner hauken ut på skjermen.
+    \item \emph{draw}: Tegner hauken/hoiken ut på skjermen.
 \end{itemize}
 
 
 Denne klassen var ganske grei å implementere da det meste var gjort ved arv fra boid klassen.
-Noe å ta med seg er at hauken bør ha en kjappere hastighet enn boidsene, derfor måtte man implementere en ny metode som tok inn egen skalar for hauken.
+Noe å ta med seg er at hauken/hoiken bør ha større hastighet enn boidsene, derfor måtte man implementere en ny metode som tok inn egen skalar for hauken.
+
+
+
+\subsection{Obstacles}
+Dette er en klasse som skal oppføre seg som en vegg for de bevegelige objektene. Metodene er;
+
+\begin{itemize}
+    \item \emph{collision}: Sjekker om et bevegelig objekt treffer veggene. returnerer \emph{True} for å bruke det i \emph{avoid\_obstacles} metoden.
+    \item \emph{avoid\_obstacles}: Summer opp en hastighetsvektor til boiden/hauken som peker i motsatt retning av veggen slik at de flyr unna. Det er også en test som setter hastigheten til den motsatte retningen om du skulle kræsje med veggen. Distansen fra veggen før boids/hoiks begynner å styre unna er satt i config filen under det globale variabelnavnet \color{purple}{WALL\_DISTANCE\_AVOID\_VALUE}.
+\end{itemize}
 
 
 
 \section{Implementasjon}
-Koden er skrevet i Python versjon 3.\footnote{https://www.python.org/}\\
+Koden er skrevet i Python versjon 3.7\footnote{https://www.python.org/}\\
 OS: Windows 10\\
 Systemtype: 64-bit OS, x64-basert prosessor\\
 Skjermkort: NVIDIA Geforce 920MX\\
@@ -177,21 +188,37 @@ Pygame \footnote{https://www.pygame.org/wiki/GettingStarted} Version: 1.9.4\\
 Nympy \footnote{http://www.numpy.org/} Version: 1.14.5\\
 
 
-\subsection{Obstacles}
-Dette er en klasse som skal oppføre seg som en vegg for de bevegelige objektene. Metodene er,
-
-\begin{itemize}
-    \item \emph{collision}: Sjekker om et bevegelig objekt treffer veggene. returnerer \emph{True} for å bruke det i \emph{avoid\_obstacles} metoden.
-    \item \emph{avoid\_obstacles}: 
-\end{itemize}
 
 \section{Diskusjon}
 
 
+Via sumulasjons-klassen er det lagt inn mulighet for å lage boids ved å trykke på venstre \emph{musetast}, for hoikene trykker man knappen \emph{C} på tastaturet og for å lage en obstacle trykker man på \emph{A}. Dette ble gjort ved bruk av events i pygame.\footnote{https://www.pygame.org/docs/ref/event.html} 
+I denne oppgaven ble pseudokoden fra \url{http://www.kfish.org/boids/pseudocode.html}, dette gjorde det ganske enkelt å implementere reglene for simulatoren. Det vanskligste var å få hoikene/boidsene til å unngå obstacles så fint som mulig og rett og slett angi de riktige størrelsene på skalarene slik at bevegelsene så naturlige ut. Implementasjonen til kantene til simulasjonsvinduet gjorde at det så litt ping-pong ut da boids/hoiks traff dem. Her kunne man ha fjernet veggene ved å for eksempel flytte dem over til den andre siden da de var på vei ut av den ene siden. Dette ville ha skapet litt bedre flyt. Et problem med dette er at de første boidsene/hoiksene som havnet på den andre siden vil miste sine flokk egenskaper da ikke de andre flokk medlemmene har blitt flyttet enda. Dette kan også føre til at hauken/hoiken plutselig vil snu og bevege seg mot den andre siden istedet for å bli med ut av skjermen og også bli flyttet, noe som kan virke unaturlig.
+
 
 \subsection{Evaluasjon}
 
+Ved bruk av snakeviz\footnote{https://jiffyclub.github.io/snakeviz} kan man visualisere tidsbruk av de forkjellige klassene og metodene. I figur(\ref{Evaluasjon}) ser man en visualisering av dette programmet.
+
+\begin{figure}[hbt!]
+{\centering
+    \includegraphics[width=0.70\textwidth]{systeminfo.png}
+    \includegraphics[width=0.50\textwidth]{systeminfo2.png}
+    \caption{Visualisering av programmet, her ser man at find\_flock metoden er den som bruker mest tid av de selvskapte metodene, der mesteparten av tidsbruket kommer fra distance metoden.}
+    \label{Evaluasjon}
+\par}
+\end{figure}
+
+Distanse metoden (untatt simloop osv.) er den som bruker mest tid i programmet. Dette er ikke så rart da denne metoden blir kjørt av mange metoder. (rule3, rule2, avoid\_hawk, attack etc). Tar man en titt på find\_flock metoden kan man se en grunn til at dette er den metoden som bruker mest tid. I denne metoden går man igjennom alle boidsene(som kan bli veldig mange) også sjekker man distansen fra en boid til en annen (dette skjer for hver eneste boid!!). deretter blir de lagt inn en liste-attributt som hver boid har.
+
+
 \section{Konklusjon}
+
+I denne oppgaven så vi på hvordan man kan implementere en boid simulator i python med pygame modulen. Her så man hvordan tre enkle regler gjorde at bevegelige objekter fikk en naturlig flokkbevegelse som man kan observere med blant annet fugler og fisker. Det ble også introdusert rovdyr(hoik) som prøver å spise boidsene for å simulere flokk-rovdyr effekt. Reglene ble implementert ut ifra psuedokoden gitt fra \url{http://www.kfish.org/boids/pseudocode.html}. Det krevde at man finjusterte parametere på hastigheter osv for å få det til å fungere på best mulig måte.
+
+
+
+
 
 % --------------------------------------------------------------
 %     Reference og appendix

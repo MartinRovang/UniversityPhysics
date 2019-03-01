@@ -223,7 +223,6 @@ class DiPpackage:
             print('Dictionary lists(colors) and values list must have same length!')
 
 
-
     def medianfilter(self, boxsize = 3):
         """
         Uses median filter\n
@@ -236,7 +235,7 @@ class DiPpackage:
         # Multiply by 2 because there is 2 time the new pad size in each dimension.
         for row in range((rows-boxsize*2)):
             for col in range((cols-boxsize*2)):
-                result[row,col] = np.median(image[row:row + boxsize+1,col:col + boxsize+1].flatten())
+                result[row, col] = np.median(image[row:row + boxsize+1,col:col + boxsize+1].flatten())
         return result
 
 

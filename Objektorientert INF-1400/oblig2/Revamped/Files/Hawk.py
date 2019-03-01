@@ -57,17 +57,17 @@ class Hawk(Boid):
         boids: list
         """
         min_distance = sqrt(WIDTH_SCREEN**2 + HEIGHT_SCREEN**2)
+        # Find the closest boid
         for boid in boids:
             distance = self.distance(boid)
             if distance < min_distance:
                 min_distance = distance
                 x = boid.x
                 y = boid.y
-                meanx = boid.velx
-                meany = boid.vely
             if distance < self.radius:
                 boids.remove(boid)
                 #self.radius += 1
+        # Add velocity vector 
         if len(boids) > 0:
             self.velx += (x - self.x)
             self.vely += (y - self.y)

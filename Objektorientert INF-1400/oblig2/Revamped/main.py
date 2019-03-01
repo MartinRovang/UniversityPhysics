@@ -107,6 +107,7 @@ class Simulation():
                 hawk.move()
                 hawk.draw()
 
+
             # Makes the boids and hoiks avoid obstacles.
             for obstacle in self.obstacle_list:
                 obstacle.avoid_obstacles(self.boids_list)
@@ -115,6 +116,7 @@ class Simulation():
 
             # Draw new placements
             pygame.display.update()
+
 
 
 

@@ -42,27 +42,31 @@ Fshift = np.fft.fftshift(F)
 freq = np.fft.fftfreq(len(F))
 phase = np.fft.fftshift(np.angle(F, deg=True))
 
-plt.stem(freq, np.abs(F)**2)
+plt.stem(freq, np.abs(F))
 plt.show()
-plt.stem(freq, np.abs(Fshift)**2)
+plt.stem(freq, Fshift)
 plt.show()
-plt.plot(phase)
+plt.stem(phase)
 plt.show()
 
 
 
 #%%
-f0 = np.pad(f, (5,5), mode = 'constant') # can see that it turns into sinc function the more zeroes on the sides the better resolution.
+f0 = np.pad(f, (50,50), mode = 'constant') # can see that it turns into sinc function the more zeroes on the sides the better resolution.
 F0 = np.fft.fft(f0)
 Fshift0 = np.fft.fftshift(F0)
 freq0 = np.fft.fftfreq(len(F0))
-phase0 = np.fft.fftshift(np.angle(F0, deg=True))
+phase0 = np.angle(F0, deg=True)
+phasefreq = np.fft.fftfreq(len(phase0))
 
-plt.stem(freq0, np.abs(F0)**2)
+
+plt.stem(f)
 plt.show()
-plt.stem(freq0, np.abs(Fshift0)**2)
+plt.stem(freq0, np.abs(F0))
 plt.show()
-plt.plot(phase0)
+plt.stem(freq0, Fshift0)
+plt.show()
+plt.stem(phasefreq, phase0)
 plt.show()
 
 #%%
@@ -71,7 +75,7 @@ F = np.fft.fft(f)
 Fshift_pad = np.pad(F, (5,5), mode = 'constant')
 freq_pad = np.fft.fftfreq(len(Fshift_pad))
 
-plt.stem(freq_pad, np.abs(Fshift_pad)**2)
+plt.stem(freq_pad, Fshift_pad)
 plt.show()
 
 
@@ -88,14 +92,14 @@ image = dip('Fig0424(a)(rectangle).tif')
 image.plot()
 plt.show()
 #%%
-fft = image.fft()
+fft = image.fft() # 2d Boxcar in spacial/time domain
 
-fft = np.log(fft)
+fftlog = np.log(fft+1)
 
-plt.imshow(np.abs(fft)**2, cmap = 'gray')
+plt.imshow(np.abs(fftlog))
 plt.show()
 phase = np.angle(fft, deg=True)
-plt.imshow(phase, cmap = 'gray')
+plt.imshow(phase)
 plt.show()
 
 #%%
@@ -106,33 +110,28 @@ image.plot()
 plt.show()
 #%%
 fft = image.fft()
-
-fft = 10*np.log10(fft+1)
-
-plt.imshow(fft.real, cmap = 'gray', vmin = 0, vmax = 255)
+fftlog = np.log(fft+1)
+plt.imshow(np.abs(fftlog))
 plt.show()
+
 phase = np.angle(fft, deg=True)
-plt.imshow(phase, cmap = 'gray')
+plt.imshow(phase)
 plt.show()
 
 #%%
 
 image_rot = image.rotate(-45)
-
-
 image_rot = dip(image_new = image_rot)
 
 image_rot.plot()
 plt.show()
 
 fft = image_rot.fft()
+fft = np.log(fft+1)
 
-fft = 10*np.log10(fft+1)
-
-plt.imshow(fft.real, cmap = 'gray', vmin = 0, vmax = 255)
+plt.imshow(np.abs(fft))
 plt.show()
 phase = np.angle(fft, deg=True)
 plt.imshow(phase, cmap = 'gray')
 plt.show()
-
 
