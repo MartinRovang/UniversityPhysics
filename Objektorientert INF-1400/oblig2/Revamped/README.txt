@@ -31,7 +31,7 @@
 #                                                                                                                             #
 #                              This code is a algorithm to simulate natural movement of flock behavior.                       #
 #                              Followed pusedo code from: http://www.kfish.org/boids/pseudocode.html                          #
-#                 Developed for mandatory assignment INF-1400 Objective orientented programming, University of Tromsø.        #
+#                 Developed for mandatory assignment INF-1400 Object orientented programming, University of Tromsø.        #
 #                                                                                                                             #
 ###############################################################################################################################
 

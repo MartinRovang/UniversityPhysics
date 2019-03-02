@@ -14,15 +14,19 @@ def periodogram(signal, f):
 
 def plot_per(N):
     real_spec = 1
+    t = np.linspace(0, 10, N)
+    f0 = 90
     gaussian_proc = np.random.normal(0,1,N)
+    #gaussian_proc = np.random.normal(0,1,N) + np.sin(2*np.pi*f0*t) # add signal
     S_list = []
     m = np.arange(0, N/2, 1) # fourier frequency n/(N*dt), n = 0,1,2,3,4... N/2
     f_list = m/N # fourier frequency n/(N*dt), n = 0,1,2,3,4... N/2 Se kompendium s.32
+    # f_list = np.arange(0, 100, 1)/N
     for f in f_list:
         S = S_list.append(periodogram(gaussian_proc, f))
     fig, ax = plt.subplots()
 
-    ax.stem(f_list, S_list)
+    ax.plot(f_list, S_list)
     ax.set_title('Frequency')
     ax.plot(f_list, np.full(len(S_list), real_spec), '-.')
     plt.tight_layout()
@@ -52,11 +56,12 @@ def plot_fft(N, M):
     ax.stem(freq, np.abs(fft))
     ax.set_title('Frequency')
     ax.plot(freq, np.full(len(fft), real_spec), '-.')
+    #ax.set_xlim([0,0.5])
     plt.tight_layout()
     plt.show()
 
 
-plot_fft(51, 25)
+plot_fft(51, 1000)
 
 
 #%%
