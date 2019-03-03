@@ -1,4 +1,3 @@
-from DIPpack.imginfo import getinfo
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
@@ -9,7 +8,7 @@ from scipy.ndimage.interpolation import rotate
 import cv2
 
 
-class DiPpackage:
+class DipPackage:
     """Initate the image for processing\n
         image_path = None, image_new: 2Darray"""
     def __init__(self, image_path = None, image_new = [[None]]):

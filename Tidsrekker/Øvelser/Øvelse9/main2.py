@@ -24,3 +24,27 @@ ax.plot(f, dft_wn, linewidth=2, color = "black")
 ax.grid()
 ax.set_xlim(0,1/timestep)
 ax.tick_params(axis='both',labelsize=18)
+
+
+
+#%%
+
+from scipy import signal
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+data = pd.read_csv('ASETEK.OL.csv')
+data = pd.DataFrame(data)
+
+x = data['Adj Close'].values[1:]
+x = np.array(x,float)
+x = np.diff(x,1)
+N = 1000
+
+spectrum = (1/N)*np.abs(np.fft.fft(x, n = N))**2
+freq = np.fft.fftfreq(len(spectrum))
+
+S_shift, f_shift = np.fft.fftshift([freq,spectrum])
+plt.plot(f_shift, S_shift)
+plt.show()
