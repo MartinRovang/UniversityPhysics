@@ -7,7 +7,7 @@ sigma_w = 1
 N = 100
 timestep = 1
 t = np.linspace(0, 10, N)
-f0 = 20
+f0 = 0.2
 A = 1
 wn = A*np.sin(2*np.pi*f0*t) + np.random.normal(loc=0, scale=sigma_w, size=N)
 
@@ -39,12 +39,21 @@ data = pd.DataFrame(data)
 
 x = data['Adj Close'].values[1:]
 x = np.array(x,float)
-x = np.diff(x,1)
-N = 1000
 
-spectrum = (1/N)*np.abs(np.fft.fft(x, n = N))**2
-freq = np.fft.fftfreq(len(spectrum))
+#%%
+import numpy as np
+import matplotlib.pyplot as plt
+f = 2000
+fs = 8000
+N = 16000
+n = np.arange(0,N,1)
+x = np.cos(2*np.pi*f*n/fs)
+X = np.fft.fft(x)
+freq = np.fft.fftfreq(len(X), 1/fs)
 
-S_shift, f_shift = np.fft.fftshift([freq,spectrum])
-plt.plot(f_shift, S_shift)
+
+plt.plot(freq, np.abs(X))
 plt.show()
+
+print(8000*2000/N)
+

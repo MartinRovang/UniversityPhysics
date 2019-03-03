@@ -1,10 +1,9 @@
 
 #%%
-
 import numpy as np
 import matplotlib.pyplot as plt
 
-
+#%%
 def periodogram(signal, f):
     N = len(signal)
     n = np.arange(0,N,1)
@@ -35,6 +34,8 @@ def plot_per(N):
 N = 51
 plot_per(N)
 
+
+
 #%%
 N = 101
 plot_per(N)
@@ -42,87 +43,3 @@ plot_per(N)
 #%%
 N = 401
 plot_per(N)
-
-
-#%%
-
-def plot_fft(N, M):
-    real_spec = 1
-    gaussian_proc = np.random.normal(0, 1, N)
-    fft = np.fft.fft(gaussian_proc, n = M)
-    freq = np.fft.fftfreq(len(fft))
-    fig, ax = plt.subplots()
-
-    ax.stem(freq, np.abs(fft))
-    ax.set_title('Frequency')
-    ax.plot(freq, np.full(len(fft), real_spec), '-.')
-    #ax.set_xlim([0,0.5])
-    plt.tight_layout()
-    plt.show()
-
-
-plot_fft(51, 1000)
-
-
-#%%
-
-plot_fft(51, 512)
-
-
-
-#%% 
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-A = 1
-dt = 0.2
-n = np.arange(0,40,dt)
-N = len(n)
-df = 1/(N*dt)
-f_fourier = k*df # k = 0,1,2,3,4 N-1
-f0 = 0.6 + 1/2*df
-
-
-theta = np.random.uniform(low=0, high=2*pi, size=1)
-Xt = A*np.sin(2*pi*f0*n + theta)
-#Xt = np.random.normal(0, 1, N)
-#plt.plot(Xt)
-
-# beregn periodogrammet
-S_per = dt/N*abs(np.fft.fft(Xt))**2
-freq = np.fft.fftfreq(N, d=dt)
-S_shift,f_shift = np.fft.fftshift([freq,S_per])
-
-fig, ax = plt.subplots(figsize = [10,7])
-ax.stem(f_shift, S_shift)
-ax.grid()
-ax.set_xlim(-1/(2*dt),1/(2*dt))
-ax.tick_params(axis='both',labelsize=18)
-plt.show()
-
-
-#%%
-
-import time                                                
-
-def timeit(method):
-
-    def timed(*args, **kw):
-        ts = time.time()
-        result = method(*args, **kw)
-        te = time.time()
-
-        print ('%r (%r, %r) %2.2f sec' % \
-              (method.__name__, args, kw, te-ts))
-        return result
-
-    return timed
-
-
-@timeit
-def f2(a):
-    time.sleep(2)
-    print ('f2',a)
-
-f2(42)
