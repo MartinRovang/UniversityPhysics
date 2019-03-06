@@ -1,6 +1,5 @@
 
 import pygame
-from math import cos, sin, radians, sqrt
 from Files.config import *
 import random
 import numpy as np
@@ -38,6 +37,8 @@ class Obstacle():
     def collision(self, moving_object):
         """
         Checks for collision between the obstacle and the moving objects.\n
+            Params:\n
+                moving_object -> object\n
         Returns True
         """
         object_x = moving_object.x
@@ -53,15 +54,18 @@ class Obstacle():
     def avoid_obstacles(self, moving_objects):
         """
         Makes boids and hawks avoid the obstacle.\n
-            moving_objects: list
+            Params:\n
+            moving_objects: list -> objects
         """
         for moving_object in moving_objects:
-            if moving_object.distance(self) < WALL_DISTANCE_AVOID_VALUE:
-                moving_object.velx -= (self.x - moving_object.x)
-                moving_object.vely -= (self.y - moving_object.y)
+            # distance to the center of obstacle
+            distance = np.sqrt((self.x + self.width - moving_object.x)**2 + (self.y + self.height - moving_object.y)**2)
+            if distance < WALL_DISTANCE_AVOID_VALUE:
+                moving_object.velx -= (self.x + self.width - moving_object.x)
+                moving_object.vely -= (self.y + self.height - moving_object.y)
             if self.collision(moving_object):
-                moving_object.velx = -(self.x - moving_object.x)
-                moving_object.vely = -(self.y - moving_object.y)
+                moving_object.velx = -(self.x + self.width - moving_object.x)
+                moving_object.vely = -(self.y + self.height - moving_object.y)
 
     def draw(self):
         """Draws the obstacle to the program window."""

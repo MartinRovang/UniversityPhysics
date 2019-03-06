@@ -66,8 +66,7 @@ class Boid(MovingObject):
     def rule1(self):
         """Activates first rule of the boid, moves the boid to percieved center of local flockmates."""
         flock = self.flock
-        x = 0
-        y = 0
+        x, y = (0,0)
         for boid in flock:
             x += boid.x
             y += boid.y
@@ -83,13 +82,13 @@ class Boid(MovingObject):
     def rule2(self):
         """Activates second rule of the boid, makes the boid avoid eachother when they get to close."""
         flock = self.flock
-        cx = 0
-        cy = 0
+        velx = 0
+        vely = 0
         for boid in flock:
             if (self.distance(boid) < BOIDS_AVOID_CRASH_DISTANCE):
-                cx += -(boid.x - self.x)
-                cy += -(boid.y - self.y)
-        self.velx += cx; self.vely += cy;
+                velx += -(boid.x - self.x)
+                vely += -(boid.y - self.y)
+        self.velx += velx; self.vely += vely;
 
 
     def rule3(self):

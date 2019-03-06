@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  28 FEB 2019 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  4 MAR 2019 14:08
 entering extended mode
 **"c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/oblig2/Revamped/Rapport/main.tex"
 ("c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/oblig2/Revamped/Rapport/main.tex"
@@ -1515,15 +1515,15 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
 ### simple group (level 1) entered at line 9 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38880 strings out of 492946
- 764423 string characters out of 3124490
- 1176697 words of memory out of 3000000
- 42084 multiletter control sequences out of 15000+200000
+ 38879 strings out of 492946
+ 764403 string characters out of 3124490
+ 1176445 words of memory out of 3000000
+ 42083 multiletter control sequences out of 15000+200000
  656680 words of font info for 140 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,11n,101p,1143b,1492s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,11n,101p,1493b,1492s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
-Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\main.pdf" (10 pages, 386963 bytes).
+Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\main.pdf" (10 pages, 388643 bytes).
 PDF statistics:
  601 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)

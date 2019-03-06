@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {3.6}Obstacles}{6}{subsection.3.6}% 
 \contentsline {section}{\numberline {4}Implementasjon}{7}{section.4}% 
 \contentsline {section}{\numberline {5}Diskusjon}{7}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Evaluasjon}{7}{subsection.5.1}% 
-\contentsline {section}{\numberline {6}Konklusjon}{8}{section.6}% 
+\contentsline {subsection}{\numberline {5.1}Evaluasjon}{8}{subsection.5.1}% 
+\contentsline {section}{\numberline {6}Konklusjon}{9}{section.6}% 
 \contentsline {section}{\numberline {7}Appendix}{10}{section.7}% 
 \contentsline {section}{\numberline {8}Referanser}{10}{section.8}% 
