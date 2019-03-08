@@ -16,6 +16,10 @@ plt.show()
 #%%
 test = image.medianfilter(boxsize=7)
 
+plt.figure(figsize = (10,10))
+plt.imshow(test, cmap = 'gray', vmin = 0, vmax = 255)
+plt.show()
+
 
 #%%
 plt.hist(image.image.flatten(), bins = 256)
@@ -23,13 +27,6 @@ plt.show()
 plt.hist(test.flatten(), bins = 256)
 plt.show()
 
-
-
-
-#%%
-plt.figure(figsize = (10,10))
-plt.imshow(test, cmap = 'gray', vmin = 0, vmax = 255)
-plt.show()
 
 
 # Ex 3

@@ -31,10 +31,26 @@
 #                                                                                                                             #
 #                              This code is a algorithm to simulate natural movement of flock behavior.                       #
 #                              Followed pusedo code from: http://www.kfish.org/boids/pseudocode.html                          #
-#                 Developed for mandatory assignment INF-1400 Object orientented programming, University of Tromsø.        #
+#                 Developed for mandatory assignment INF-1400 Object orientented programming, University of Tromsø.           #
 #                                                                                                                             #
 ###############################################################################################################################
 
 
 Introduction:
 
+This project is for simulation natural flock movements.
+
+How to run:
+run python main.py in cmd from folder. (Need python 3.6+ to run)
+
+Controls:
+
+Use right mouse button to spawn boids. Press A on keyboard to place an obstacle, Press C to spawn a hoik/predator.
+
+Dependencies:
+Python 3.6+
+numpy 1.15.0
+
+Remark;
+
+Dont spawn to much because the program will get slow.

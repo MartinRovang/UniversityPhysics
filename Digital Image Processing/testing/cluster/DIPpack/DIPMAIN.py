@@ -8,7 +8,7 @@ from scipy.ndimage.interpolation import rotate
 import cv2
 
 
-class DiPpackage:
+class DipPackage:
     """Initate the image for processing\n
         image_path = None, image_new: 2Darray"""
     def __init__(self, image_path = None, image_new = [[None]]):
@@ -240,30 +240,14 @@ class DiPpackage:
 
 
 
-    def gaussian_lp(self, sigma):
-        row, col = self.image.shape
-        H = np.zeros((row, col))
-        for y in range(row):
-            for x in range(col):
-                D = np.sqrt((y-int(row/2))**2 + (x-int(col/2))**2)
-                H[y,x] = np.exp(-D**2/(2*sigma**2))
-        X = np.fft.fftshift(np.fft.fft2(self.image))
-        Y = np.fft.fftshift(X*H)
-        y = np.fft.ifft2(Y)        
-        return np.abs(y)
+    def fft(self):
+        fft = np.fft.fft2(self.image)
+        fft = np.fft.fftshift(fft)
+        return fft
     
-    def gaussian_hp(self, sigma):
-        row, col = self.image.shape
-        H = np.zeros((row, col))
-        for y in range(row):
-            for x in range(col):
-                D = np.sqrt((y-int(row/2))**2 + (x-int(col/2))**2)
-                H[y,x] = np.exp(-D**2/(2*sigma**2))
-        H_hp = (1-H)
-        X = np.fft.fftshift(np.fft.fft2(self.image))
-        Y = np.fft.fftshift(X*H_hp)
-        y = np.fft.ifft2(Y)
-        return np.abs(y)
+    def ifft(self, N = 1):
+        fft = np.fft.ifft2(self.image)
+        return fft
 
 
 

@@ -230,7 +230,7 @@ class DiPpackage:
             returns processed image.
         """
         image = self.image
-        image_padded = np.pad(image, (boxsize,boxsize) , mode = 'constant')
+        image_padded = np.pad(image, (boxsize, boxsize) , mode = 'constant')
         result = np.zeros(image.shape)
         rows, cols = image_padded.shape
         # Multiply by 2 because there is 2 time the new pad size in each dimension.

@@ -1,1 +1,1 @@
-from DIPpack.DIPMAIN import DipPackage
+from DIPpack.DIPMAIN import DiPpackage

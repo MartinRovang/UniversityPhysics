@@ -80,7 +80,7 @@ from PIL import Image
 fig333 = np.array(Image.open('fig333.tif'))
 
 
-def smoothing(img, boxsize = 3):
+def smoothing(img, boxsize = 11):
     boxkernal = np.ones((boxsize, boxsize))/(boxsize**2)
     #img = np.pad(img, (boxsize, boxsize), mode = 'constant')
 

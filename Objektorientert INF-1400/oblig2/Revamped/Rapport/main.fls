@@ -428,9 +428,9 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\four
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
 OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\main.toc
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti1000.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti1000.tfm
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\classes.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\classes.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\classes.pdf
@@ -507,6 +507,10 @@ INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\systeminfo2.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\systeminfo2.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\systeminfo2.png
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futmii.vf
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mlit.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ml.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futri8r.tfm
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\main.bbl
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\main.bbl
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\oblig2\Revamped\Rapport\main.aux
