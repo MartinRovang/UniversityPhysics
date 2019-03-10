@@ -19,6 +19,8 @@ if flag == '-e':
     # loading png yield float array therefore multiply by 255 to get integer intensity values
     extractim = plt.imread(extractim_path)*255
     extractim = extractim.astype('uint8')
+    if len(sys.argv) > 3:
+        raise Exception('You are using wrong arguments, extraction only takes 1 argument(image)')
 
 
 if flag == '-w':
@@ -78,7 +80,6 @@ if flag == '-e':
     plt.axis('off')
     plt.imshow(dewatermarked)
     plt.savefig('extractedwatermark.png', bbox_inches='tight', transparent=True, pad_inches=0)
-    plt.show()
     plt.close()
     print('Extracting Complete')
     print('Saved as extractedwatermark.png')
