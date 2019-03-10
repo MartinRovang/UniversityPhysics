@@ -48,14 +48,19 @@ fw_list, Sw_list = w_periodogram(data, dt)
 
 
 fig, ax = plt.subplots(3,1)
-ax[0].plot(data)
+ax[0].plot(data, color = 'black', linewidth = 2)
 ax[0].set_title('Original time series')
-ax[1].stem(f_list, 10*np.log10(S_list/S_list[0]))
-# ax[1].stem(f_list, S_list)
+ax[0].set_xlabel('x')
+ax[0].set_ylabel('y')
+ax[1].plot(f_list, 10*np.log10(S_list/S_list[0]),'--', color = 'black', linewidth = 1)
 ax[1].set_title('Periodogram')
-ax[2].stem(fw_list, 10*np.log10(Sw_list/Sw_list[0]))
+ax[1].set_xlabel('Frequecy')
+ax[1].set_ylabel('dB')
+ax[2].plot(fw_list, 10*np.log10(Sw_list/Sw_list[0]),'--', color = 'black', linewidth = 1)
 # ax[2].stem(fw_list, Sw_list)
 ax[2].set_title('Periodogram with Hann window')
+ax[2].set_xlabel('Frequecy')
+ax[2].set_ylabel('dB')
 plt.tight_layout()
 plt.show()
 
@@ -91,36 +96,15 @@ def WOSA(x, M, overlap = 1/2, dt = 1):
         X = np.fft.fft(tapering_window*x[(int(overlap*i)*M):(int(overlap*i)+1)*M])
         spectrum += (dt/(M*U))*np.abs(X)**2
 
-    return spectrum
+    return spectrum/n_windows
 
 spectrum = WOSA(data, M = 40, overlap = 1/2)
 dt = 1
 # shift to -pi to pi from 0 to 2pi
 spectrum = 10*np.log10(spectrum/spectrum[0])
 freq = np.fft.fftfreq(len(spectrum), 1)
-plt.stem(freq[0:20], spectrum[0:20])
-plt.show()
-
-
-#%%
-
-import os
-import pandas as pd
-
-filedir = os.path.dirname(__file__)
-filename = 'SN_y_tot_V2.0.txt'
-
-file = os.path.join(filedir, filename)
-
-# load file
-datatable = pd.read_csv(file,sep='\t',header=None,engine='python')
-time = np.zeros(len(datatable))
-sunspots = np.zeros(len(datatable))
-
-for i in range(len(datatable)):
-     time[i] = datatable.values[i,0][0:6]
-     sunspots[i] = datatable.values[i,0][8:13]
-
-
-plt.plot(time, sunspots)
+plt.plot(freq[0:20], spectrum[0:20], '--', color = 'black', linewidth = 1)
+plt.title('WOSA')
+plt.xlabel('Frequecy')
+plt.ylabel('dB')
 plt.show()
