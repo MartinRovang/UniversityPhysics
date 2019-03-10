@@ -62,10 +62,15 @@ ax[2].set_title('Extracted watermark')
 plt.tight_layout()
 plt.show()
 
+print(test.shape)
+print(image.shape)
+
+
 plt.figure()
-plt.imshow(test)
 plt.axis('off')
-plt.savefig('Watermarkedprofile.png')
+plt.imshow(test)
+#plt.savefig('Watermarkedprofile.png', bbox_inches=extent)
+plt.savefig('Watermarkedprofile.png',bbox_inches='tight',transparent=True, pad_inches=0)
 plt.show()
 plt.close()
 
