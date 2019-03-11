@@ -8,7 +8,7 @@
 \documentclass[10pt]{article}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{float}
-\usepackage[norsk]{babel}
+% \usepackage[norsk]{babel}
 \usepackage[table]{xcolor}
 \usepackage{color}
 \usepackage{graphicx}
@@ -44,12 +44,11 @@
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
-%\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \definecolor{skyblue}{rgb}{0.950, 1, 1}
-\definecolor{pink}{rgb}{1, 0.1, 0.5}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{skyblue},   
+    backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
@@ -67,14 +66,15 @@
     tabsize=2,
     frame=single,
     %keywordstyle=\color{blue},
-    language=Python
+    language=Python,
+    backgroundcolor = \color{skyblue}
 }
  
 \lstset{style=mystyle}
 \lstset{
     basicstyle=\footnotesize\ttfamily,
-  identifierstyle=\bfseries\color{pink!40!pink},
-  commentstyle=\itshape\color{black!40!black},
+  identifierstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
   keywordstyle=\color{blue},
   stringstyle=\color{orange},
 }
@@ -106,6 +106,6 @@
 \fancyhf{}
 \pagestyle{fancy}
 \rhead{Martin Soria Røvang}
-\lhead{INF-1400-Objektorientert programmering}
-\rfoot{Side \thepage \, av \pageref{LastPage}}
+\lhead{STA-2003-Tidsrekker}
+\rfoot{Page \thepage \, of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.3pt}

@@ -1,10 +1,10 @@
-PWD c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2
+PWD c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.tex
-OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.log
-OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\preamble.aux
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\preamble.tex
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\preamble.tex
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.tex
+OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.log
+OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\preamble.aux
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\preamble.tex
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\preamble.tex
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
@@ -27,15 +27,6 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\am
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-norsk\norsk.ldf
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-norsk\norsk.ldf
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.def
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
@@ -150,8 +141,8 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\c
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\nul:.tex
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\nul:.tex
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\nul:.tex
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\nul:.tex
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode.def
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode.def
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty
@@ -315,7 +306,7 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\front
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfadings.code.tex
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.tex
-OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.pdf
+OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.pdf
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tcolorbox\tcbposter.code.tex
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty
@@ -327,10 +318,10 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\tot
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\totalcount.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
-OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.idx
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.aux
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.aux
-OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.aux
+OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.idx
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.aux
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.aux
+OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.aux
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd
@@ -349,13 +340,13 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\na
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.out
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.out
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.out
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.out
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.out
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.out
-OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.out
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
+OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1728.tfm
@@ -402,8 +393,8 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\four
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.toc
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.toc
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.toc
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.toc
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
@@ -428,15 +419,15 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\four
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
-OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.toc
+OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.toc
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.bbl
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.bbl
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.bbl
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.bbl
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti1000.tfm
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.aux
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.out
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\main.out
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.aux
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\tex-gyre\q-ec.enc
