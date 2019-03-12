@@ -23,15 +23,20 @@ def WOSA(x, M, dt = 1):
     window = (1/2)*(1 - np.cos(2*np.pi*n/(M-1)))
     U = (1/M)*np.sum(window**2)
     spectrum = np.zeros(M)
-    # zero pad to avoid out of bound error
-    x = np.pad(x, (0, int(M + M/2)), 'constant')
-    n_windows = int(len(x)/(M-1))
+    n_windows = 2*int(len(x)/(M-1))-1
+    x = np.pad(x, (0, M), 'constant')
     for i in range(n_windows):
         if i == 0:
             spectrum_temp = np.fft.fftshift(np.fft.fft(window*x[0:40]))
+            plt.plot(x[0:40])
+            t = np.arange(0, 40, 1)
+            plt.plot(t, 200*window)
         else:
             spectrum_temp = np.fft.fftshift(np.fft.fft(window*x[(i*int(M/2)):(i+2)*int(M/2)]))
-        spectrum += (dt/(M*U))*np.abs(spectrum_temp)**2        
+            plt.plot(x[0:(i+2)*int(M/2)])
+            t = np.arange((i*int(M/2)), (i+2)*int(M/2), 1)
+            plt.plot(t, 200*window)
+        spectrum += (dt/(M*U))*np.abs(spectrum_temp)**2   
     spectrum /= n_windows
     freq = np.fft.fftshift(np.fft.fftfreq(M, dt))
     print('Number of windows: %s'%n_windows)
@@ -56,10 +61,10 @@ ax[0].plot(sunspots, linewidth = '3', color = 'black')
 ax[0].set_title('Sunspots plot', fontsize = '20')
 ax[0].set_ylabel('Sunspots')
 ax[0].set_xlabel('Year')
-#ax[1].plot(freq, 10*np.log10(spectrum/spectrum[idx]), '-.', linewidth = '1', color = 'black')
+ax[1].plot(freq, 10*np.log10(spectrum/spectrum[idx]), '-.', linewidth = '1', color = 'black')
 ax[1].set_title('WOSA, M = %s'%M, fontsize = '20')
 ax[1].set_xlabel('Frequency')
 ax[1].set_ylabel('dB power')
-ax[1].set_xlim([0,1/(2*dt)])
+#ax[1].set_xlim([0,1/(2*dt)])
 plt.tight_layout()
 plt.show() 

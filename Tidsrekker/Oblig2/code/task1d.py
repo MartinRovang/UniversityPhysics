@@ -16,9 +16,7 @@ def WOSA(x, M, dt = 1):
     window = (1/2)*(1 - np.cos(2*np.pi*n/(M-1)))
     U = (1/M)*np.sum(window**2)
     spectrum = np.zeros(M)
-    # zero pad to avoid out of bound error
-    x = np.pad(x, (0, int(M + M/2)), 'constant')
-    n_windows = int(len(x)/(M-1))
+    n_windows = 2*int(len(x)/(M-1))
     for i in range(n_windows):
         if i == 0:
             spectrum_temp = np.fft.fftshift(np.fft.fft(window*x[0:40]))
@@ -52,6 +50,6 @@ ax[1].plot(freq, 10*np.log10(spectrum/spectrum[idx]), '-.', linewidth = '1', col
 ax[1].set_title('WOSA, M = %s'%M, fontsize = '20')
 ax[1].set_xlabel('Frequency')
 ax[1].set_ylabel('dB power')
-ax[1].set_xlim([0,1/(2*dt)])
+#ax[1].set_xlim([0,1/(2*dt)])
 plt.tight_layout()
 plt.show() 

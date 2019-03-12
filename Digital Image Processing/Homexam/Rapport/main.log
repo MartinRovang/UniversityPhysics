@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  11 MAR 2019 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  12 MAR 2019 19:24
 entering extended mode
 **"c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex"
 ("c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex"
@@ -1218,44 +1218,44 @@ Writing index file main.idx
 ) ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.aux")
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 3.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 8.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 8.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 3.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 3.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 8.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 8.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmsfutm.fd"
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 3.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 3.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 8.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 8.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmxfutm.fd"
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 3.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 8.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count335
@@ -1317,11 +1317,11 @@ Package grfext Info: Graphics extension search list:
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 3.
+(lastpage)             ! on input line 8.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 3.
+LaTeX Info: Redefining \microtypecontext on input line 8.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1336,7 +1336,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \AtBeginShipoutBox=\box104
-Package hyperref Info: Link coloring OFF on input line 3.
+Package hyperref Info: Link coloring OFF on input line 8.
 ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
@@ -1344,9 +1344,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count342
 )
-LaTeX Info: Redefining \ref on input line 3.
-LaTeX Info: Redefining \pageref on input line 3.
-LaTeX Info: Redefining \nameref on input line 3.
+LaTeX Info: Redefining \ref on input line 8.
+LaTeX Info: Redefining \pageref on input line 8.
+LaTeX Info: Redefining \nameref on input line 8.
  ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out") ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out")
 \@outlinefile=\write7
 \openout7 = `main.out'.
@@ -1354,7 +1354,7 @@ LaTeX Info: Redefining \nameref on input line 3.
  ABD: EveryShipout initializing macros ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for T1+futs on input line 26.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 31.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\t1futs.fd"
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
@@ -1362,34 +1362,34 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `futs' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 26.
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 31.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmlfutmi.fd"
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 26.
+(Font)              scaled to size 11.03998pt on input line 31.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 26.
+(Font)              scaled to size 8.27998pt on input line 31.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 26.
-LaTeX Font Info:    Try loading font information for U+msa on input line 26.
+(Font)              scaled to size 6.43999pt on input line 31.
+LaTeX Font Info:    Try loading font information for U+msa on input line 31.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+LaTeX Font Info:    Try loading font information for U+msb on input line 31.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 26.
+(Font)              scaled to size 11.03998pt on input line 31.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 26.
+(Font)              scaled to size 8.27998pt on input line 31.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 26.
+(Font)              scaled to size 6.43999pt on input line 31.
  [1
 
 
@@ -1412,34 +1412,150 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
- [2] [3] ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.bbl") 
+ [2]
+<bits.png, id=144, 472.76625pt x 343.2825pt>
+File: bits.png Graphic file (type png)
+<use bits.png>
+Package pdftex.def Info: bits.png  used on input line 64.
+(pdftex.def)             Requested size: 317.07614pt x 230.23901pt.
+<checker1.png, id=146, 700.11563pt x 657.95813pt>
+File: checker1.png Graphic file (type png)
+<use checker1.png>
+Package pdftex.def Info: checker1.png  used on input line 76.
+(pdftex.def)             Requested size: 135.89174pt x 127.70396pt.
+ [3 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/bits.png>]
+<checker3.png, id=164, 449.42906pt x 59.47218pt>
+File: checker3.png Graphic file (type png)
+<use checker3.png>
+Package pdftex.def Info: checker3.png  used on input line 95.
+(pdftex.def)             Requested size: 135.89174pt x 17.98244pt.
+<resized.pdf, id=168, 462.52798pt x 346.89601pt>
+File: resized.pdf Graphic file (type pdf)
+<use resized.pdf>
+Package pdftex.def Info: resized.pdf  used on input line 113.
+(pdftex.def)             Requested size: 271.7835pt x 203.84642pt.
+ [4 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/checker1.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/checker3.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 148.
+ ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
+(Font)              using `T1/cmtt/m/n' instead on input line 150.
+
+[5 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/resized.pdf>]
+<smoothing.png, id=227, 886.06032pt x 339.51843pt>
+File: smoothing.png Graphic file (type png)
+<use smoothing.png>
+Package pdftex.def Info: smoothing.png  used on input line 157.
+(pdftex.def)             Requested size: 430.31812pt x 164.88899pt.
+ [6 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/smoothing.png>]
+<sharpened.pdf, id=250, 462.52798pt x 346.89601pt>
+File: sharpened.pdf Graphic file (type pdf)
+<use sharpened.pdf>
+Package pdftex.def Info: sharpened.pdf  used on input line 197.
+(pdftex.def)             Requested size: 362.37569pt x 271.79523pt.
+<smoothafter.png, id=252, 881.54344pt x 338.01282pt>
+File: smoothafter.png Graphic file (type png)
+<use smoothafter.png>
+Package pdftex.def Info: smoothafter.png  used on input line 222.
+(pdftex.def)             Requested size: 362.37569pt x 138.94717pt.
+ [7 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/sharpened.pdf>]
+<sharpened2.pdf, id=304, 462.52798pt x 346.89601pt>
+File: sharpened2.pdf Graphic file (type pdf)
+<use sharpened2.pdf>
+Package pdftex.def Info: sharpened2.pdf  used on input line 232.
+(pdftex.def)             Requested size: 362.37569pt x 271.79523pt.
+ [8 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/smoothafter.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/sharpened2.pdf>]
+<F1.png, id=351, 602.25pt x 602.25pt>
+File: F1.png Graphic file (type png)
+<use F1.png>
+Package pdftex.def Info: F1.png  used on input line 248.
+(pdftex.def)             Requested size: 113.24197pt x 113.23404pt.
+<F2.png, id=352, 602.25pt x 602.25pt>
+File: F2.png Graphic file (type png)
+<use F2.png>
+Package pdftex.def Info: F2.png  used on input line 248.
+(pdftex.def)             Requested size: 113.24197pt x 113.23404pt.
+<F3.png, id=353, 602.25pt x 602.25pt>
+File: F3.png Graphic file (type png)
+<use F3.png>
+Package pdftex.def Info: F3.png  used on input line 248.
+(pdftex.def)             Requested size: 113.24197pt x 113.23404pt.
+<F4.png, id=354, 602.25pt x 602.25pt>
+File: F4.png Graphic file (type png)
+<use F4.png>
+Package pdftex.def Info: F4.png  used on input line 248.
+(pdftex.def)             Requested size: 113.24197pt x 113.23404pt.
+<F5.png, id=355, 602.25pt x 602.25pt>
+File: F5.png Graphic file (type png)
+<use F5.png>
+Package pdftex.def Info: F5.png  used on input line 248.
+(pdftex.def)             Requested size: 113.24197pt x 113.23404pt.
+<noisehist.pdf, id=357, 639.58951pt x 319.4334pt>
+File: noisehist.pdf Graphic file (type pdf)
+<use noisehist.pdf>
+Package pdftex.def Info: noisehist.pdf  used on input line 259.
+(pdftex.def)             Requested size: 317.07614pt x 158.36128pt.
+ [9 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/F1.png (PNG copy)> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/F2.png (PNG copy)> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/F3.png (PNG copy)> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/F4.png (PNG copy)> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/F5.png (PNG copy)>]
+<fourierrep.png, id=366, 883.04906pt x 283.81032pt>
+File: fourierrep.png Graphic file (type png)
+<use fourierrep.png>
+Package pdftex.def Info: fourierrep.png  used on input line 269.
+(pdftex.def)             Requested size: 430.31812pt x 138.30174pt.
+<filterrep2.png, id=367, 1349.79282pt x 430.60875pt>
+File: filterrep2.png Graphic file (type png)
+<use filterrep2.png>
+Package pdftex.def Info: filterrep2.png  used on input line 270.
+(pdftex.def)             Requested size: 430.31812pt x 137.27853pt.
+<filtersalt.png, id=368, 809.27344pt x 411.03563pt>
+File: filtersalt.png Graphic file (type png)
+<use filtersalt.png>
+Package pdftex.def Info: filtersalt.png  used on input line 283.
+(pdftex.def)             Requested size: 339.72592pt x 172.55225pt.
+ [10 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/noisehist.pdf> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/fourierrep.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/filterrep2.png>]
+<gaussianfiltered.png, id=404, 438.13687pt x 224.33812pt>
+File: gaussianfiltered.png Graphic file (type png)
+<use gaussianfiltered.png>
+Package pdftex.def Info: gaussianfiltered.png  used on input line 300.
+(pdftex.def)             Requested size: 339.72592pt x 173.95267pt.
+ [11 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/filtersalt.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/gaussianfiltered.png>] ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.bbl") 
 AED: lastpage setting LastPage
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
  ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9977B55127EF70E843DFD7F0C1CFE1C4;232.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
+(rerunfilecheck)             Checksum: B595796483BB8557669CE2A802A4AE80;784.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 7 ({)
+### simple group (level 1) entered at line 12 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 37726 strings out of 492946
- 749644 string characters out of 3124490
- 1128782 words of memory out of 3000000
- 41026 multiletter control sequences out of 15000+200000
- 599243 words of font info for 88 fonts, out of 3000000 for 9000
+ 38373 strings out of 492946
+ 756812 string characters out of 3124490
+ 1155782 words of memory out of 3000000
+ 41569 multiletter control sequences out of 15000+200000
+ 618156 words of font info for 118 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,11n,103p,1061b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
-Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.pdf" (4 pages, 115259 bytes).
+ 67i,12n,103p,1061b,1484s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0800.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
+Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.pdf" (12 pages, 3197253 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 12485 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 722 PDF objects out of 1000 (max. 8388607)
+ 63 named destinations out of 1000 (max. 500000)
+ 19319 words of extra memory for PDF output out of 20736 (max. 10000000)
 
