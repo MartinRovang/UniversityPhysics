@@ -1,3 +1,4 @@
+#%%
 import numpy as np 
 import matplotlib.pyplot as plt
 import os
@@ -5,7 +6,7 @@ from PIL import Image
 import cv2
 from scipy.signal import convolve2d
 
-
+# Load images
 filedir = os.path.dirname(__file__)
 imagedir = 'images/'
 filename1 = 'F1.png'
@@ -85,7 +86,7 @@ plt.show()
 
 def medianfilter(image, boxsize = 3):
         """
-        Uses median filter\n
+        Uses median filter, convolution in spatial domain\n
             returns processed image.
         """
         image_padded = np.pad(image, (boxsize,boxsize) , mode = 'constant')
@@ -94,21 +95,23 @@ def medianfilter(image, boxsize = 3):
         # Multiply by 2 because there is 2 time the new pad size in each dimension.
         for row in range((rows-boxsize*2)):
             for col in range((cols-boxsize*2)):
-                result[row, col] = np.median(image[row:row + boxsize,col:col + boxsize].flatten())
+                result[row, col] = np.median(image_padded[row:row + boxsize,col:col + boxsize].flatten())
         return result
 
 
 filteredsalt = medianfilter(F1)
 
 
-# fig, ax = plt.subplots(1,2)
+fig, ax = plt.subplots(1,2)
 
-# ax[0].imshow(F1, cmap = 'gray', interpolation = 'none')
-# ax[1].imshow(filteredsalt, cmap = 'gray', interpolation = 'none')
-# ax[0].set_title('Original')
-# ax[1].set_title('Salt/pepper image, median filtered.')
-# plt.savefig('Filtered_saltimage.pdf')
-# plt.show()
+ax[0].imshow(F1, cmap = 'gray', vmin = 0, vmax = 255, interpolation="none")
+ax[1].imshow(filteredsalt, cmap = 'gray', vmin = 0, vmax = 255, interpolation="none")
+ax[0].set_title('Original')
+ax[1].set_title('Salt/pepper image, median filtered.')
+plt.tight_layout()
+plt.savefig('Filtered_saltimage.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
+plt.show()
 
 #%%
 
@@ -126,27 +129,7 @@ def geoemtric_filter(image, boxsize = 3):
                 result[row, col] = np.prod(image[row:row + boxsize,col:col + boxsize].flatten())**(1/(boxsize**2))
         return result.astype('uint8')
 
-# def adaptive_filter(image, boxsize = 3):
-#         """
-#         Uses median filter\n
-#             returns processed image.
-#         """
-#         image_padded = np.pad(image, (boxsize,boxsize) , mode = 'constant')
-#         result = np.zeros(image.shape)
-#         rows, cols = image_padded.shape
-#         global_var = np.var(image)
-#         # Multiply by 2 because there is 2 time the new pad size in each dimension.
-#         try:
-#             for row in range((rows-boxsize*2)):
-#                 for col in range((cols-boxsize*2)):
-#                     local_mean = np.mean(image[row:row + boxsize,col:col + boxsize])
-#                     local_var = np.var(image[row:row + boxsize,col:col + boxsize])
-#                     current_val = image[row:row + boxsize,col:col + boxsize][1,1]
-#                     result[row, col] = current_val - (global_var/local_var)*(current_val - local_mean)
-                    
-#         except:
-#             pass
-#         return result
+
 def lapsharp(image, maskret = False):
         """
         img -> 2D array
@@ -198,6 +181,14 @@ ax[0].imshow(F2, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[1].imshow(gaussianfiltered, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[0].set_title('Original')
 ax[1].set_title('geometric filtering + median + sharp')
-plt.savefig('gaussianfiltered.pdf')
+plt.tight_layout()
+plt.savefig('gaussianfiltered.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
 plt.show()
+
+
+
+#%%
+
+
 

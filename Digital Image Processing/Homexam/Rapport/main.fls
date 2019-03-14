@@ -319,6 +319,8 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\tot
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.idx
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\gensymb.sty
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\gensymb.sty
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.aux
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.aux
 OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.aux
@@ -390,6 +392,11 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\four
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tex-gyre\ts1qbk.fd
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tex-gyre\ts1qbk.fd
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
@@ -419,6 +426,9 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\four
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
 OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.toc
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
@@ -430,26 +440,31 @@ INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Proces
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\bits.png
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futmii.vf
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mlit.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ml.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8r.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futri8r.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futr8t.vf
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8r.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-alt.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futsy.vf
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ms.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mcl.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futr8t.vf
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-alt.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futmii.vf
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mlit.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ml.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futri8r.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futmii.vf
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mlit.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ml.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8r.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futri8r.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futsy.vf
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ms.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mcl.tfm
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker1.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker3.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker3.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\checker3.png
@@ -465,25 +480,21 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt0800.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecit0800.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futr8t.vf
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-alt.tfm
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothing.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothing.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothing.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothing.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothing.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothing.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothing.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothing.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothing.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\sharpened.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\sharpened.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\sharpened.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\sharpened.pdf
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothafter.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothafter.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothafter.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothafter.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothafter.png
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futr8t.vf
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8r.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-alt.tfm
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothafter.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothafter.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothafter.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\smoothafter.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\sharpened2.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\sharpened2.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\sharpened2.pdf
@@ -527,23 +538,89 @@ INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Proces
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\filterrep2.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\filterrep2.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\filterrep2.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\filtersalt.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\filtersalt.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\filtersalt.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\filtersalt.png
-INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\filtersalt.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\Filtered_saltimage.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\Filtered_saltimage.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\Filtered_saltimage.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\Filtered_saltimage.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\gaussianfiltered.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\gaussianfiltered.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\gaussianfiltered.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\gaussianfiltered.png
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\gaussianfiltered.png
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futsy.vf
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ms.tfm
-INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mcl.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futmii.vf
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mlit.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ml.tfm
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futri8r.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1000.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futmi.vf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4gauss.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4gauss.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4gauss.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4gauss.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4gauss.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4pepper.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4pepper.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4pepper.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4pepper.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\task4pepper.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\simulatedperiod.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\simulatedperiod.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\simulatedperiod.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\simulatedperiod.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\simulatedperiod.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\superpositionfreq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\superpositionfreq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\superpositionfreq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\superpositionfreq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\superpositionfreq.png
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0800.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti0800.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0600.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti0600.tfm
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3freq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3freq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3freq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3freq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F3freq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7Edge.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7Edge.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7Edge.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7Edge.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7Edge.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4freq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4freq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4freq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4freq.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F4freq.png
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futmii.vf
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mlit.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ml.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8r.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futri8r.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futsy.vf
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ms.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mcl.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futr8t.vf
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-alt.tfm
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F5.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F5.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F5.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F5.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\C7F5.png
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\removed_per_noise_freq.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\removed_per_noise_freq.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\removed_per_noise_freq.pdf
+INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\removed_per_noise_freq.pdf
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.bbl
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.bbl
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt1000.tfm
@@ -552,13 +629,16 @@ INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Proces
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.out
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\tex-gyre\q-ts1.enc
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecit0800.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecit0800.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\base\8r.enc
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
-INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\tex-gyre\q-ec.enc
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
@@ -570,6 +650,8 @@ INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1728.pk
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mex.pfb
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mex.pfb
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-ml.pfb
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-ml.pfb
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mlit.pfb
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mlit.pfb
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-ms.pfb

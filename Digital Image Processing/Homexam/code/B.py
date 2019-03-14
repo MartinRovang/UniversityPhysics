@@ -5,6 +5,7 @@ from PIL import Image
 import cv2
 from scipy.signal import convolve2d
 
+# Load images
 filedir = os.path.dirname(__file__)
 imagedir = 'images/'
 filename = 'Fig_part_B.tif'
@@ -13,6 +14,7 @@ file = os.path.join(filedir, imagedir, filename)
 image = plt.imread(file)
 
 def resize_image(image, newN, newM):
+    """Resizing by taking only the second pixel (50% resizing)"""
     resize = np.zeros((newM, newN))
     row, col = resize.shape
     try:
@@ -35,7 +37,8 @@ ax[0].set_title('Resized 50%')
 ax[1].imshow(image, cmap = 'gray', interpolation="none")
 ax[1].set_title('Original image')
 plt.tight_layout()
-plt.savefig('resized.pdf')
+plt.savefig('resized.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
 plt.show()
 
 def smoothing(image, boxsize = 3):
@@ -44,13 +47,12 @@ def smoothing(image, boxsize = 3):
         boxsize -> size of boxkernal filter
         returns filtered 2D array
         """
-
-
         boxkernal = np.ones((boxsize, boxsize))/(boxsize**2)
         result = convolve2d(image, boxkernal, mode = 'same')
         return result.astype('uint8')
 
 
+# Use these to smooth before resizing.
 
 # smooth1 = smoothing(image, boxsize = 3)
 # smooth2 = smoothing(image, boxsize = 5)
@@ -71,12 +73,12 @@ smooth3 = smoothing(imagerez3, boxsize = 10)
 fig, ax = plt.subplots(1,3)
 ax[0].imshow(smooth1, cmap = 'gray', interpolation="none", vmin = 0, vmax = 255)
 ax[0].set_title('Smoothing, kernel 3x3')
-ax[1].imshow(smooth1, cmap = 'gray', interpolation="none", vmin = 0, vmax = 255)
+ax[1].imshow(smooth2, cmap = 'gray', interpolation="none", vmin = 0, vmax = 255)
 ax[1].set_title('Smoothing, kernel 5x5')
-ax[2].imshow(smooth1, cmap = 'gray', interpolation="none", vmin = 0, vmax = 255)
+ax[2].imshow(smooth3, cmap = 'gray', interpolation="none", vmin = 0, vmax = 255)
 ax[2].set_title('Smoothing, kernel 10x10')
 plt.tight_layout()
-plt.savefig('smoothing.pdf')
+plt.savefig('smoothing.pdf', bbox_inches = 'tight', pad_inches = 0)
 plt.show()
 
 def lapsharp(image, maskret = False):
@@ -84,16 +86,16 @@ def lapsharp(image, maskret = False):
         img -> 2D array
         maskret = True -> returns result and mask
         maskret = False -> returns result
-
-        *(truncate)
         """
         #padded_image = np.pad(img, (1, 1), mode = 'symmetric')
         # lap is linear therefore;
         # lap f(x,y) = f(x + 1, y) + f(x - 1, y) + f(x, y + 1) + f(x, y - 1) - 4f(x,y)...
         #--------------------
         c = -1 # Depends on kernel
+        # make zero kernal
         lapmask = np.zeros((3, 3))
         
+        # add values to kernel
         lapmask[0,0] = 1
         lapmask[0,1] = 1
         lapmask[0,2] = 1
@@ -134,6 +136,12 @@ def gaussian_hp(image, sigma):
         return y.real
 
 sigma = 40
+
+# If enabled blurring before resizing
+# sharpedimage = lapsharp(smooth1)
+# sharpedimage2 = gaussian_hp(smooth1, sigma) + smooth1  # Adding highpass mask to blurred image to sharp it.
+
+
 sharpedimage = lapsharp(imagerez1)
 sharpedimage2 = gaussian_hp(imagerez1, sigma) + imagerez1  # Adding highpass mask to blurred image to sharp it.
 
@@ -143,5 +151,8 @@ ax[0].set_title('Sharpened, Laplace kernel')
 ax[1].imshow(sharpedimage2, cmap = 'gray', vmin = 0, vmax = 255, interpolation="none")
 ax[1].set_title('Sharpened, gaussian highpass $\sigma = %s$'%sigma)
 plt.tight_layout()
-plt.savefig('sharpened.pdf')
+plt.savefig('sharpened.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
 plt.show()
+
+
