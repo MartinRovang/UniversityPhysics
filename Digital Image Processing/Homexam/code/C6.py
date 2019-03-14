@@ -31,7 +31,7 @@ HfreqM = np.fft.fftshift(np.fft.fftfreq(M, 1))
 
 # Plot
 fig, ax = plt.subplots(1,2)
-ax[0].imshow(F5, cmap = 'gray')
+ax[0].imshow(F5, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[1].set_title('Spectrum F5')
 ax[1].imshow(spectrum1, cmap = plt.cm.BuPu_r, aspect='auto', extent=(HfreqN.min(),HfreqN.max(),HfreqM.min(),HfreqM.max()))
 ax[0].set_title('F5')

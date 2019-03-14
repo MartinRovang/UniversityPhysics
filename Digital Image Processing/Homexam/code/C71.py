@@ -83,24 +83,27 @@ mid = 300# Centered frequency, since notch filter have origo in center we need t
 notches = np.array([[0, 330-mid]])
 
 
-
+# Use filters
 y, H = butter_notch_filter(F3, 2, notches, 5)
 hp_mask = butterworth_hp(y, 190, 3)
 
+# Apply mask
 y = y + hp_mask
 
+# transform values 0-255
 y = (y-np.min(y))/np.max(y-np.min(y))*255
 y = y.astype('uint8')
 
+# Get frequencies
 N , M = H.shape
 HfreqN = np.fft.fftshift(np.fft.fftfreq(N, 1))
 HfreqM = np.fft.fftshift(np.fft.fftfreq(M, 1))
 
 
 fig, ax = plt.subplots(1,2)
-ax[0].imshow(F3, cmap = 'gray')
+ax[0].imshow(F3, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[0].set_title('Original')
-ax[1].imshow(y, cmap = 'gray')
+ax[1].imshow(y, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[1].set_title('Filtered image')
 plt.savefig('removed_per_noise.pdf', bbox_inches = 'tight',
     pad_inches = 0)

@@ -84,10 +84,11 @@ mid = 300 # Centered frequency, since notch filter have origo in center we need 
 notches = np.array([[330-mid, 0]])
 
 
-
+# Use filters
 y, H = butter_notch_filter(F4, 2, notches, 5)
 hp_mask = butterworth_hp(y, 190, 3)
 
+# Apply mask
 y = y + hp_mask
 
 # Convert back to 255 after masking

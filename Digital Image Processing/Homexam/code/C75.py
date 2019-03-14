@@ -9,7 +9,7 @@ from scipy.signal import convolve2d
 
 
 
-
+# Loading images
 filedir = os.path.dirname(__file__)
 imagedir = 'images/'
 filename5 = 'F5.png'
@@ -23,7 +23,6 @@ file4 = os.path.join(filedir, imagedir, filename4)
 
 filename5 = 'F5.png'
 file5 = os.path.join(filedir, imagedir, filename5)
-
 
 F3 = plt.imread(file3)
 F4 = plt.imread(file4)
@@ -81,36 +80,48 @@ def butterworth_hp(image, sigma, n):
 mid = 300 # Centered frequency, since notch filter have origo in center we need this to subtract.
 notches = np.array([[450-mid, 0], [330-mid, 0], [320-mid, 0], [315-mid, 0], [0, 450-mid], [0, 330-mid], [0, 320-mid], [0, 315-mid] ])
 
-y, H = butter_notch_filter(F5, 2, notches, 5)
-hp_mask = butterworth_hp(y, 250, 3)
+# Use filters
+y, H = butter_notch_filter(F5, 1, notches, 3)
+hp_mask = butterworth_hp(y, 100, 3)
+hp_mask = hp_mask.astype('uint8')
 
+# Apply mask
 y = y + hp_mask
 
+# transform values 0-255
 y = (y-np.min(y))/np.max(y-np.min(y))*255
 y = y.astype('uint8')
 
+# Get frequencies
 N , M = H.shape
 HfreqN = np.fft.fftshift(np.fft.fftfreq(N, 1))
 HfreqM = np.fft.fftshift(np.fft.fftfreq(M, 1))
 
-
+# Plot
 fig, ax = plt.subplots(1,2)
-ax[0].imshow(F5, cmap = 'gray')
+ax[0].imshow(F5, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[0].set_title('Original')
-ax[1].imshow(y, cmap = 'gray')
+ax[1].imshow(y, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[1].set_title('Filtered image')
+plt.tight_layout()
 plt.savefig('removed_per_noise.pdf', bbox_inches = 'tight',
     pad_inches = 0)
 plt.show()
 
-
+# Fourier of image
 Y = 10*np.log10(np.abs(np.fft.fftshift(np.fft.fft2(F5))))
 
+# plot
 fig, ax = plt.subplots(1,2)
 ax[0].imshow(Y, cmap=plt.cm.BuPu_r, aspect='auto', extent=(HfreqN.min(),HfreqN.max(),HfreqM.min(),HfreqM.max()))
 ax[0].set_title('Frequency spectrum of F5')
-ax[1].imshow(H*Y, cmap = 'gray', aspect='auto', extent=(HfreqN.min(),HfreqN.max(),HfreqM.min(),HfreqM.max()))
+ax[1].imshow(H*Y, cmap=plt.cm.BuPu_r, aspect='auto', extent=(HfreqN.min(),HfreqN.max(),HfreqM.min(),HfreqM.max()))
 ax[1].set_title('Frequency spectrum with notch applied.')
+ax[0].set_xlim([-0.08,0.08])
+ax[0].set_ylim([-0.08,0.08])
+ax[1].set_xlim([-0.08,0.08])
+ax[1].set_ylim([-0.08,0.08])
+plt.tight_layout()
 plt.savefig('removed_per_noise_freq.pdf', bbox_inches = 'tight',
     pad_inches = 0)
 plt.show()

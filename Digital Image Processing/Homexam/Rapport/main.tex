@@ -577,18 +577,18 @@ Image F4.png is almost the same noise, but shifted by $90\degree$, so here we fl
         \end{figure}
 
 
-Removing the noise in image F5 was done by using a Butterworth notch filter (with cutoff 2 and order $n = 5$), on each of the 8 impulses shown in figure(\ref{F5notch}). As we can see in figure(\ref{C7F5}) we have removed almost all the noise, we have some ripple effects in some areas, most likely because we used notches which were to idealized, so here we should have tried other parameters to tune it better.
+Removing the noise in image F5 was done by using a Butterworth notch filter (with cutoff 1 and order $n = 3$), on each of the 8 impulses shown in figure(\ref{F5notch}). As we can see in figure(\ref{C7F5}) we have removed almost all the noise, we have some ripple effects in some areas, most likely because we used notches which were to idealized, so here we should have tried other parameters to tune it better.
 
 
 \begin{figure}[H]
     {\centering
-        \includegraphics[width=0.75\textwidth]{C7F5.png}
+        \includegraphics[width=0.75\textwidth]{removed_per_noise.pdf}
         \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using a Butterworth high pass mask.}
         \label{C7F5}
     \par}
     \end{figure}
 
-After removing the noise with the notch filter, we made a edge mask using Butterworth with cutoff 70 and order $n = 3$.
+After removing the noise with the notch filter, we made a edge mask using Butterworth with cutoff 100 and order $n = 3$.
 
 
 

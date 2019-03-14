@@ -47,7 +47,7 @@ Y2freqM = np.fft.fftshift(np.fft.fftfreq(M2, 1))
 
 # plot
 fig, ax = plt.subplots(1,2)
-ax[0].imshow(F4, cmap='gray')
+ax[0].imshow(F4, cmap='gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[0].set_title('F4')
 ax[1].imshow(Y2, cmap=plt.cm.BuPu_r, extent=(Y2freqN.min(),Y2freqN.max(),Y2freqM.min(),Y2freqM.max()))
 ax[1].set_title('Frequency spectrum in dB scale, T = 20')

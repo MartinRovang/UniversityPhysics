@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  14 MAR 2019 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  14 MAR 2019 19:43
 entering extended mode
 **"c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex"
 ("c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex"
@@ -1603,17 +1603,17 @@ File: C7F4freq.png Graphic file (type png)
 Package pdftex.def Info: C7F4freq.png  used on input line 573.
 (pdftex.def)             Requested size: 339.72592pt x 152.0381pt.
  [17 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C7Edge.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C7F4.png>]
-<C7F5.png, id=639, 420.82219pt x 216.81pt>
-File: C7F5.png Graphic file (type png)
-<use C7F5.png>
-Package pdftex.def Info: C7F5.png  used on input line 585.
-(pdftex.def)             Requested size: 339.72592pt x 175.02957pt.
-<removed_per_noise_freq.pdf, id=641, 430.15717pt x 299.02603pt>
+<removed_per_noise.pdf, id=639, 440.99329pt x 211.16551pt>
+File: removed_per_noise.pdf Graphic file (type pdf)
+<use removed_per_noise.pdf>
+Package pdftex.def Info: removed_per_noise.pdf  used on input line 585.
+(pdftex.def)             Requested size: 339.72592pt x 162.68172pt.
+<removed_per_noise_freq.pdf, id=641, 445.18347pt x 325.29216pt>
 File: removed_per_noise_freq.pdf Graphic file (type pdf)
 <use removed_per_noise_freq.pdf>
 Package pdftex.def Info: removed_per_noise_freq.pdf  used on input line 599.
-(pdftex.def)             Requested size: 294.42636pt x 204.68558pt.
- [18 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C7F4freq.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C7F5.png>] [19 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/removed_per_noise_freq.pdf>] ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.bbl") 
+(pdftex.def)             Requested size: 294.42636pt x 215.14516pt.
+ [18 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C7F4freq.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/removed_per_noise.pdf>] [19 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/removed_per_noise_freq.pdf>] ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.bbl") 
 AED: lastpage setting LastPage
 [20]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 674.
@@ -1635,16 +1635,16 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 674.
 ### bottom level 
 Here is how much of TeX's memory you used:
  38612 strings out of 492946
- 760483 string characters out of 3124490
+ 760572 string characters out of 3124490
  1154782 words of memory out of 3000000
  41723 multiletter control sequences out of 15000+200000
  626421 words of font info for 144 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,12n,103p,1061b,1484s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ts1.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0800.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
-Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.pdf" (20 pages, 5313803 bytes).
+Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.pdf" (20 pages, 5603660 bytes).
 PDF statistics:
- 1033 PDF objects out of 1200 (max. 8388607)
+ 1063 PDF objects out of 1200 (max. 8388607)
  101 named destinations out of 1000 (max. 500000)
  25078 words of extra memory for PDF output out of 29859 (max. 10000000)
 
