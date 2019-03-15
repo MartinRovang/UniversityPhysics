@@ -36,7 +36,11 @@ F2 = (F2-np.min(F2))/np.max(F2-np.min(F2))*255
 F3 = (F3-np.min(F3))/np.max(F3-np.min(F3))*255
 F4 = (F4-np.min(F4))/np.max(F4-np.min(F4))*255
 F5 = (F5-np.min(F5))/np.max(F5-np.min(F5))*255
-
+F1 = F1.astype('uint8')
+F2 = F2.astype('uint8')
+F3 = F3.astype('uint8')
+F4 = F4.astype('uint8')
+F5 = F5.astype('uint8')
 
 fig, ax = plt.subplots(1,2)
 ax[0].hist(F1.flatten(), bins = 256)
@@ -81,7 +85,6 @@ plt.show()
 
 
 
-
 #%%
 
 def medianfilter(image, boxsize = 3):
@@ -98,12 +101,11 @@ def medianfilter(image, boxsize = 3):
                 result[row, col] = np.median(image_padded[row:row + boxsize,col:col + boxsize].flatten())
         return result
 
-
+# Filter image
 filteredsalt = medianfilter(F1)
 
 
 fig, ax = plt.subplots(1,2)
-
 ax[0].imshow(F1, cmap = 'gray', vmin = 0, vmax = 255, interpolation="none")
 ax[1].imshow(filteredsalt, cmap = 'gray', vmin = 0, vmax = 255, interpolation="none")
 ax[0].set_title('Original')
@@ -114,72 +116,43 @@ plt.savefig('Filtered_saltimage.pdf', bbox_inches = 'tight',
 plt.show()
 
 #%%
-
-def geoemtric_filter(image, boxsize = 3):
+def adaptive(image, boxsize = 5):
         """
-        Uses median filter\n
-            returns processed image.
+        Adptive filtering, found variance of noise by find variance of a slice in the top image.
+        Uses local var and local mean to set pixel value.
         """
-        image_padded = np.pad(image, (boxsize,boxsize) , mode = 'constant')
+        # Pad image
+        image_padded = np.pad(image, (boxsize, boxsize) , mode = 'symmetric')
         result = np.zeros(image.shape)
         rows, cols = image_padded.shape
+
+        variance_noise = np.var(image[5,0:cols])
+        #print(variance_noise)
+
         # Multiply by 2 because there is 2 time the new pad size in each dimension.
         for row in range((rows-boxsize*2)):
             for col in range((cols-boxsize*2)):
-                result[row, col] = np.prod(image[row:row + boxsize,col:col + boxsize].flatten())**(1/(boxsize**2))
+
+                local_var = np.var(image_padded[row:row + boxsize,col:col + boxsize])
+                local_mean = np.mean(image_padded[row:row + boxsize,col:col + boxsize])
+                kernel_placement = image_padded[row:row + boxsize,col:col + boxsize] 
+                current_val = image_padded[row+1,col+1]
+                if variance_noise > local_var:
+                    result[row, col] = current_val - 1*(current_val - local_mean)
+                else:
+                    result[row, col] = current_val - (variance_noise/local_var)*(current_val - local_mean)
+        
         return result.astype('uint8')
 
+# Filter image
+filteredimage = adaptive(F2, boxsize= 5)
 
-def lapsharp(image, maskret = False):
-        """
-        img -> 2D array
-        maskret = True -> returns result and mask
-        maskret = False -> returns result
-
-        *(truncate)
-        """
-        #padded_image = np.pad(img, (1, 1), mode = 'symmetric')
-        # lap is linear therefore;
-        # lap f(x,y) = f(x + 1, y) + f(x - 1, y) + f(x, y + 1) + f(x, y - 1) - 4f(x,y)...
-        #--------------------
-        c = -1 # Depends on kernel
-        lapmask = np.zeros((3, 3))
-        
-        lapmask[0,0] = 1
-        lapmask[0,1] = 1
-        lapmask[0,2] = 1
-
-        lapmask[1,0] = 1
-        lapmask[1,1] = -8
-        lapmask[1,2] = 1
-
-        lapmask[2,0] = 1
-        lapmask[2,1] = 1
-        lapmask[2,2] = 1
-        #--------------------
-        mask = convolve2d(image, lapmask, mode = 'same')
-        result = image + c*mask
-
-        # Map values to 0-255
-        g1 = image - np.min(image)
-        g = g1/np.max(g1) *255
-        g = g.astype('uint8')
-
-        if maskret == True:
-            return g.astype('uint8'), mask
-        else:
-            return g.astype('uint8')
-
-gaussianfiltered = geoemtric_filter(F2, boxsize = 3)
-gaussianfiltered = medianfilter(gaussianfiltered, boxsize = 7)
-gaussianfiltered = lapsharp(gaussianfiltered)
-
+# Plot
 fig, ax = plt.subplots(1,2)
-
 ax[0].imshow(F2, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
-ax[1].imshow(gaussianfiltered, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
+ax[1].imshow(filteredimage, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[0].set_title('Original')
-ax[1].set_title('geometric filtering + median + sharp')
+ax[1].set_title('Adaptive filtered')
 plt.tight_layout()
 plt.savefig('gaussianfiltered.pdf', bbox_inches = 'tight',
     pad_inches = 0)

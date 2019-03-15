@@ -91,15 +91,15 @@ and $g_{y} = s_{1}\otimes s_{2}$ yields,
 These are the Sobel operators.
 \subsection{2}
 
-In (b) the operator $g_{x}$ is used as it increases the edges in the x-direction, the reason for this is that we have zeros in the  directions. When we convolve we then get the changes in the y-direction assigned to the center(top and bottom difference in the matrix) value of the convolving kernel. We see in (b) that the image has sharpened the y-directional edges. In image (c) it has been used the $g_{y}$ as it enhances the x-directional edges.
+In (b) the operator $g_{x}$ is used as it increases the edges in the y-direction, the reason for this is that we have zeros in the center and in horizontal direction. When we convolve we then get the changes in the y-direction assigned to the pixel (top and bottom difference in the matrix). In image (c) the $g_{y}$ kernel has been used as it has enhanced the x-directional edges.
 
 
 \subsection{3}
-The bit plane which represents the most significant bits are the one with most details (\emph{g7}). By setting the two least significant bits to zero shift the intensities to only be $4\cdot k$ intensity, where k is an integer. So here we would only have 4 shades between the intensities in the image. (the human eye cannot perceive the difference of abrupt change of such few intensities [p.626 \cite{dip}]). The histogram would look like figure(\ref{hist})
-\begin{figure}[H]
+The bit plane which represents the most significant bits are the one with most details (\emph{b7}). By setting the two least significant bits to zero shift the intensities to only be $4\cdot k$ intensity, where k is an integer. So here we would only have 4 shades between the intensities in the image. (the human eye cannot perceive the difference of abrupt change of such few intensities [p.626 \cite{dip}]). The histogram would look like figure(\ref{hist})
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.70\textwidth]{bits.png}
-        \caption{How the histogram changes when setting the two least significant bits(LSB) to zero.}
+        \caption{How the histogram changes when setting the two least significant bits(LSB) to zero. Observe how the intensities are shifted to its closest intensity which does not use the last two bits $(1,2,3) \rightarrow [01,10,11]$ every intensity from 3 to 1 is also zero.}
         \label{hist}
     \par}
     \end{figure}
@@ -116,10 +116,7 @@ The bit plane which represents the most significant bits are the one with most d
          \end{cases}
     \end{equation}
     
-    This will be the most significant bit-plane as it contains the most intensities.
-    
-    
-    
+    This will be the most significant bit-plane as it contains the most intensities. Its also possible to store information of the two most significant bits of an watermark and place them into the least significant bits of the original image, and the two last bits are insignificant in how a person perceive the image, you can watermark images without anyone seeing it. This can then be retrieved with an algorithm.
     
     
     \subsection{5}
@@ -163,7 +160,7 @@ The bit plane which represents the most significant bits are the one with most d
 \subsection{1}
 Spatial aliasing is loss of information by not using sufficient sampling rate, depending on the change of frequencies in the intensities one want to have an image of. This follows from the Nyquist sampling which says we need to sample with $f_{s} = 2f$ where f is the \emph{real} frequency and $f_{s}$ is the sampling frequency. If we use a checkerboard as an example,
 
-\begin{figure}[H]
+\begin{figure}[!htb]
 {\centering
     \includegraphics[width=0.30\textwidth]{checker1.png}
     \caption{An image of a checkerboard. Image taken from [\cite{dip}].}
@@ -173,7 +170,7 @@ Spatial aliasing is loss of information by not using sufficient sampling rate, d
 
 % If we slice a strip on the image we can represent it as an one dimensional signal as shown in figure({\ref{checker2}) below.
 
-% \begin{figure}[hbt!]
+% \begin{figure}[!htb]
 %     {\centering
 %         \includegraphics[width=0.30\textwidth]{checker2.png}
 %         \caption{By taking a slice of the image we can represent it as an pulse.}
@@ -182,7 +179,7 @@ Spatial aliasing is loss of information by not using sufficient sampling rate, d
 %     \end{figure}
 
 If we sample with less pixels (or increase the frequency rate(the rate of changing intensities) of the object we are imaging) we could end up with only getting every cycle of the black intensity such that we only get a black strip. We could also use a different sampling rate and end up getting an $"$Fake$"$ image by reconstructing every second black intensity with one white in between such as shown in the sliced checkerboard in figure (\ref{checker3}) below.
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.30\textwidth]{checker3.png}
         \caption{Aliased slice}
@@ -198,9 +195,9 @@ In figure 4.19 in the book [\cite{dip}] we can clearly see the aliasing effect i
 \subsection{3}
 
 
-We resize the image to 50\% of its original size, the result can be shown in figure(\ref{resized}) below. The resizing is done by only taking out every second pixel in the original image into an new image.
+We resize the image to 50\% of its original size, the result can be shown in figure(\ref{resized}) . The resizing is done by only taking out every second pixel in the original image into an new image.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.60\textwidth]{resized.pdf}
         \caption{Resized image to 50\% of its original size, we can clearly observe the aliasing in the high frequency areas of the image.}
@@ -213,21 +210,21 @@ In the figure we can see the aliasing effect as the high frequency areas wont be
 \subsection{4}
 
 We can blur the images prior to resizing by convolving an averaging filter with the image as follows,
-\begin{figure}[H]
+\begin{figure}[!htb]
 \begin{equation}
     g(x,y) = h(x,y) \bigstar i(x,y)
 \end{equation}
 \end{figure}
 
-where h is the average filter defined as in equation(\ref{avaragefilter}) and i(x,y) is the image, $\bigstar$ means convolve. 
+where h is the average filter defined as in equation(\ref{avaragefilter}) and i(x,y) is the image, $\bigstar$ means convolution. 
 
-\begin{figure}[H]
+\begin{figure}[!htb]
 \begin{equation}
     h = \frac{1}{MN}\begin{bmatrix}
         1_{1,1}       & 1_{1,2} & 1_{1,3} & \dots & 1_{N,1} \\
         1_{1,2}       & 1_{2,2} & 1_{3,2} & \dots & 1_{N,2} \\
         \hdotsfor{5} \\
-        1_{1,M}       & 1 & 1 & \dots & 1_{M,N}
+        1_{1,M}       & 1_{2,M} & 1_{3,M} & \dots & 1_{N,M}
     \end{bmatrix}
     \label{avaragefilter}
 \end{equation}
@@ -236,7 +233,7 @@ where h is the average filter defined as in equation(\ref{avaragefilter}) and i(
 when convolving we are applying the filter in the spatial domain, since this is an averaging filter/moving averaging(as it traverses the image), we essentially apply a lowpass filter. Lowpass filter will only allow the low frequency components of the image to go through. This means that the image will not have rapid changing intensities(more smudged out/smooth). This is clearly visible in figure(\ref{smooth}). This will decrease the effect of aliasing. In fact this is how many of the anti-aliasing setting in video games work.[\cite{wiki}]
 When applying a filter we want to zero pad our image, in the case of convolving in spatial domain we would have problems fitting the kernel on the edges of the image. In our case the the convolve method from scipy module in python does this.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \begin{lstlisting}
         # Convolve using scipy package
         from scipy.signal import convolve2d
@@ -244,7 +241,7 @@ When applying a filter we want to zero pad our image, in the case of convolving 
     \end{lstlisting}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.95\textwidth]{smoothing.pdf}
         \caption{Smoothed the aliased image with different sizes of the averaging kernel. We can see here that the 10x10 kernel has strong blurring. The aliasing seems to go away as we blur the image.}
@@ -267,7 +264,7 @@ We can try to restore the image by using an sharpening filter we would emphasize
 
 This stems from the fact that we use the Laplacian $\nabla^2 f(x,y)$ which will generate the discrete version $f[x,y+1] + f[x+1,y+1] + f[x+1,y] + f[x-1,y] + f[x-1,y-1] + f[x+1,y-1] - 4f[x,y]$(summing to zero yield no response in areas of constant intensity). This is linear and therefore allowed to be used in convolution. By doing this convolution we get a mask g(x,y),
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \begin{equation}
         g(x,y) = h(x,y) \bigstar i(x,y)
     \end{equation}
@@ -275,7 +272,7 @@ This stems from the fact that we use the Laplacian $\nabla^2 f(x,y)$ which will 
 
 here h(x,y) is the Laplacian filter and i(x,y) is the image. To enhance the edges we add this mask to our image. By using the Laplace kernel in equation(\ref{laplace kernel}) we will sharpen in all direction. We could for instance use a star-shaped Laplace to neglect diagonal direction. (set diagonals in the matrix to zero.)
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \begin{equation}
         E(x,y) = i(x,y) + Cg(x,y)
     \end{equation}
@@ -284,7 +281,7 @@ Where E(x,y) is the enhanced image and C is an constant which is either -1 or 1 
 
 The result of the sharping with two different methods are shown in figure(\ref{sharpened}).
 
-\begin{figure}[hbt!]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.80\textwidth]{sharpened.pdf}
         \caption{Sharpened by using two different sharping techniques. Remark: Laplace sharping was done in spatial domain and gaussian high pass was done in frequency domain.}
@@ -317,7 +314,7 @@ This will yield a mask which contains the high frequencies. We then sum this on 
 
 In the previous case we blurred the image PRIOR to resizing, this made the image look good and without aliasing. We have these images in figure(\ref{smooth2}).
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.90\textwidth]{smoothafter.pdf}
         \caption{Smoothed images on images blurred after resizing.}
@@ -325,9 +322,9 @@ In the previous case we blurred the image PRIOR to resizing, this made the image
     \par}
     \end{figure}
 
-If we blur the image after resizing and using Laplace sharping we get the images in figure(\ref{sharpened2}) below.
+If we blur the image after resizing and using Laplace sharping we get the images in figure(\ref{sharpened2}).
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.60\textwidth]{sharpened2.pdf}
         \caption{Sharpened by using two different sharping techniques on image blurred after resizing. Here we can clearly see that we got aliasing again.}
@@ -344,7 +341,7 @@ In this case we can see that the aliasing is back, so here we can see how sharpe
 By visually inspecting the images,in \emph{F1.png} we can clearly see the distinctive \emph{salt \& pepper} noise with its black/white broken pixels. In \emph{F2.png} it looks like gaussian noise, in \emph{F3.png} we have vertical periodic noise, in \emph{F4.png} we have horizontal periodic noise. In the last image \emph{F5.png} we have a superposition of horizontal and vertical periodic noises. The images of shown in figure(\ref{Fimages}).
 
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
     \includegraphics[width=0.30\textwidth]{F1.png} \,\includegraphics[width=0.30\textwidth]{F2.png}\\ \includegraphics[width=0.30\textwidth]{F3.png} \,\includegraphics[width=0.30\textwidth]{F4.png}\\ \includegraphics[width=0.30\textwidth]{F5.png}
         \caption{Image F1.png, F2.png, F3.png, F4.png, F5.png}
@@ -355,7 +352,7 @@ By visually inspecting the images,in \emph{F1.png} we can clearly see the distin
 
 
 We could find the histogram representation of the image to see the noise pattern, in figure(\ref{histogramnoise}) we can see that the gaussian noise form gaussian structures in the histogram. The salt and pepper noise has large spike at the white and black intensity(0 and 255), but the overall structure of the image stays intact, its much harder to know the structure of the image with the gaussian noise.
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.70\textwidth]{noisehist.pdf}
         \caption{Histogram of the images}
@@ -363,9 +360,9 @@ We could find the histogram representation of the image to see the noise pattern
     \par}
     \end{figure}
 
-The periodic noises would be a lot easier to see in the frequency domain as sine waves in frequency domain look like conjugated impulses. In figure(\ref{fourierrep}) below we can see the impulses.
+The periodic noises would be a lot easier to see in the frequency domain as sine waves in frequency domain look like conjugated impulses. In figure(\ref{fourierrep}) we can see the impulses.
 
-    \begin{figure}[H]
+    \begin{figure}[!htb]
         {\centering
             \includegraphics[width=0.95\textwidth]{fourierrep.png}
             \includegraphics[width=0.95\textwidth]{filterrep2.png}
@@ -380,39 +377,43 @@ The periodic noises would be a lot easier to see in the frequency domain as sine
 For removing salt and pepper noise a median filter would be a good choice. With the median filter we rank the values from lowest to highest value and choose the 50\% percentile intensity value in the kernel and set this value as the new pixel intensity of the new image. We do this for all the pixels in the image.
 
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.72\textwidth]{Filtered_saltimage.pdf}
-        \caption{F1 image filtered using median filter with 3x3 kernel.}
+        \caption{F1 image filtered using median filter with a 3x3 kernel.}
         \label{salt}
     \par}
     \end{figure}
 Here g(r,c) is the values from the image which are inside our convolving kernel.
 
-For the gaussian noise image we use an geometric filter defined as,
+For the gaussian noise image we use an adaptive filter defined as,
 
 \begin{equation}
-    \hat{f}(x,y) = \left[\prod_{(r,c)\in S_{xy}}g(r,c)\right]^{1/MN}
+    \hat{f}(x,y) = g(x,y) - \frac{\sigma^{2}_{\eta}}{\sigma_{S_{xy}}}\left[g(x,y) - \bar{z}_{S_{xy}}\right]
+    \label{adaptive}
 \end{equation}
 
-The geometric filter will blur the image like the averaging filter, but to another degree. In the figure below we used kernel 3x3. After applying the geometric filter we still had some black spots in our image, like we had pepper noise, therefore we applied median filter with kernel 7x7. These filters made our image very smooth, so we applied Laplacian filter to emphasize the edges. The result is shown in figure(\ref{geoemtricfilter}) below.
+Here $\hat{f}(x,y)$ is the filtered image, $g(x,y)$ is the noisy image, $\sigma^{2}_{\eta}$ is the variance of the noise, $\sigma_{S_{xy}}$ is the variance inside the kernel which is traversing the image, $\bar{z}_{S_{xy}}$ is the mean in of the kernel. Here we found the estimated variance of the noise by finding the variance in an sub image which taken to be the top part of the image which has mostly low frequency in the original image. The variance was found with the sample variance in equation(\ref{variance}).
 
-\begin{figure}[H]
+\begin{equation}
+    \hat{\sigma}^{2}_{\eta} = \sum_{0}^{N-1}\frac{(r - \bar{r})^{2}}{N-1}
+    \label{variance}
+\end{equation}
+where r is the intensity value and $\bar{r}$ is the mean intensity value.
+
+
+\begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.72\textwidth]{gaussianfiltered.png}
-        \caption{Filtered gaussian noise image, here we applied the geometric filter, median and sharping}
-        \label{geoemtricfilter}
+        \includegraphics[width=0.72\textwidth]{gaussianfiltered.pdf}
+        \caption{Filtered gaussian noise image, here we applied the adaptive filter discussed above. }
+        \label{adaptivefig}
     \par}
     \end{figure}
 
-It looks better, but we could probably do better with some other technique like using an adaptive filter. The geometric filter didn't perform as well as it should on gaussian noise and by looking at its histogram its suspected that we might have salt \& pepper + gaussian noise.
+It looks better, but we could probably do better with some other technique. If we look at the histogram in figure(\ref{histogramnoise}) we might suspect that we have salt \& pepper + gaussian noise.
 
 
 \subsection{3}
-
-
-% 3. Describe the procedure of filtering images in the frequency domain, the importance of zeropadding, and the link between filtering in the spatial and frequency domains.
-
 
 The procedure for filtering in frequency domain is,
 
@@ -449,7 +450,7 @@ but since we work with the discrete version we now have this sequence in periodi
 
 Since both salt \& pepper noise and gaussian noise has high frequency using a gaussian low pass (see equation(\ref{gausslowp}))would help removing a lot of the noise as shown in figure(\ref{task4gauss}) and figure(\ref{task4pepper}).
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.75\textwidth]{task4gauss.png}
         \caption{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.}
@@ -459,7 +460,7 @@ Since both salt \& pepper noise and gaussian noise has high frequency using a ga
 
 
 
-    \begin{figure}[H]
+    \begin{figure}[!htb]
         {\centering
             \includegraphics[width=0.75\textwidth]{task4pepper.png}
             \caption{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.}
@@ -474,9 +475,9 @@ Although we removed much noise we now have very smooth borders on the building, 
 
 The noise in F3 and F4 are the same noise except one is shifted by $90\degree$, by analyzing F4 in the frequency domain, see figure(\ref{fourierrep}) we can see that there are some conjugated impulses. These impulses are shifted to $\approx$ +- 20 from the center, so here we have a period of about 20 pixels between the amplitudes of the noise. If we inspect the spatial domain we can also see that the lines are separated by $\approx$ 20 pixels between the amplitudes so in F3 and F4 we have a frequency of 0.05.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.65\textwidth]{simulatedperiod.png}
+        \includegraphics[width=0.75\textwidth]{simulatedperiod.png}
         \caption{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image. The impulses are at -0.05 and 0.05.}
         \label{simulatedperiod}
     \par}
@@ -491,9 +492,9 @@ The noise in F3 and F4 are the same noise except one is shifted by $90\degree$, 
 We can clearly see in the frequency domain of the image F5 the impulses of the periodic noise of the image in figure(\ref{F5period}). It looks like we have 8 periodic components 4 horizontal and 4 vertical.
 
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.65\textwidth]{superpositionfreq.png}
+        \includegraphics[width=0.75\textwidth]{superpositionfreq.png}
         \caption{Left; Original image F5, Right; decibel frequency domain. The black arrows show 2 periodicities with high frequency}
         \label{F5period}
     \par}
@@ -514,23 +515,24 @@ For filtering the images in this task we used the Butterworth notch reject filte
 
 \begin{equation}
     H_{NR}(u,v) = \prod_{k=1}^{3}\left[\frac{1}{1+[D_{0k}/D_{k}(u,v)]^{n}} \right]\left[\frac{1}{1+[D_{0k}/D_{-k}(u,v)]^{n}} \right]
+    \label{notchiboy}
 \end{equation}
 
 where $D_{0k}$ is the cutoff frequency for each notch, $D_{k}(u,v) $is the distance to the impulse to place the notch, these are symmetric so we have a $D_{-k}(u,v)$ term as well, and n is the order of Butterworth.
 
-Removing the noise in image F3 was done with this filter (with cutoff 1 and order $n = 3$), on each of the 2 impulses shown in figure(\ref{C7F3freq}). The result is shown in figure(\ref{C7F3}) below.
+Removing the noise in all the images below was done with this filter (with cutoff 1 and order $n = 3$), on each of the impulses. Shown in figure(\ref{C7F3freq}) we have the frequency domain representation of the image F3. The result of using this notch filter on F3 is shown in figure(\ref{C7F3}).
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.80\textwidth]{C7F3.pdf}
-        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.}
+        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref{notchiboy}) with $D_{0} = 1$ and $n = 3$.  We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.}
         \label{C7F3}
     \par}
     \end{figure}
 
 
 
-    \begin{figure}[H]
+    \begin{figure}[!htb]
         {\centering
             \includegraphics[width=0.55\textwidth]{C7F3freq.pdf}
             \caption{Left; frequency representation of image F5.png, Right; frequency representation of the Butterworth notch filter. Here we have vertical impulses since the periodic noise is in y-direction.}
@@ -556,7 +558,7 @@ The sharpening is done by the high-frequency-emphasis filtering in equation(\ref
 Here $\mathcal{F}^{-1}$ is the inverse Fourier transform, k gives control over the proportion of high frequencies. When we applied this we used $k = 1$ and g(x,y) is the sharpened image, and F(u,v) is the frequency domain of the noise filtered image.
 
 
-As the high pass filter we used the Butterworth high pass filter given by equation(\ref{buttyboi} below,
+As the high pass filter we used the Butterworth high pass filter given by equation(\ref{buttyboi} ,
 
 \begin{equation}
    H_{HP} = \frac{1}{1+[D_{0}/D(u,v))]^{2n}}
@@ -569,15 +571,15 @@ Here $D(u,v)$ is the distance from the center, $D_{0}$ is the cutoff frequency a
 
 Image F4.png is almost the same noise, but shifted by $90\degree$, so here we flip our previous notch filter and apply and then sharpen with equation(\ref{sharping2}), the result is shown in figure(\ref{C7F4}).
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.85\textwidth]{C7F4.pdf}
-        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$,$D_{0} = 8$.}
+        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref{notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$,$D_{0} = 8$.}
         \label{C7F4}
     \par}
     \end{figure}
 
-    \begin{figure}[H]
+    \begin{figure}[!htb]
         {\centering
             \includegraphics[width=0.65\textwidth]{C7F4freq.pdf}
             \caption{Left; frequency representation of image F4.png, Right; frequency representation of the Butterworth notch filter. Here the impulses are in horizontal direction since the noise is periodic in x-direction.}
@@ -589,10 +591,10 @@ Image F4.png is almost the same noise, but shifted by $90\degree$, so here we fl
 Removing the noise in image F5 was done by using a Butterworth notch filter (with cutoff 1 and order $n = 3$), on each of the 8 impulses shown in figure(\ref{F5notch}). As we can see in figure(\ref{C7F5}) we have removed almost all the noise, we have some ripple effects in some areas, most likely because we used notches which were to idealized, so here we should have tried other parameters to tune it better.
 
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.80\textwidth]{C7F5.pdf}
-        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.}
+        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref{notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.}
         \label{C7F5}
     \par}
     \end{figure}
@@ -603,7 +605,7 @@ After removing the noise with the notch filter, we made a edge mask using Butter
 
 In figure(\ref{F5notch}) we see the dB scale frequency spectrum and the Butterworth notch rejection filter applied. Her we can see the black dots applied right on top of the impulses generated from the periodic noise.
 
-    \begin{figure}[H]
+    \begin{figure}[!htb]
         {\centering
             \includegraphics[width=0.65\textwidth]{removed_per_noise_freq.pdf}
             \caption{Left; frequency representation of image F5.png, Right; frequency representation with the Butterworth notch reject filter applied.}
@@ -616,12 +618,8 @@ In figure(\ref{F5notch}) we see the dB scale frequency spectrum and the Butterwo
 
 
 
-
 \section{Part D}
 \subsection{1}
-
-
-
 
 
 
