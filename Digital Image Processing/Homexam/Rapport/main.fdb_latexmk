@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex main"] 1552687827 "main.aux" "main.bbl" "main" 1552687837
+["bibtex main"] 1552687827 "main.aux" "main.bbl" "main" 1552688734
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "bibl.bib" 1552383842 1420 2e0d6d5bbb0e036890fb3cd1538dfd74 ""
-  "main.aux" 1552687836 15844 c3dc2e61cd6c6c56a024326d397df29a ""
+  "main.aux" 1552688733 15844 c3dc2e61cd6c6c56a024326d397df29a ""
   (generated)
   "main.blg"
   "main.bbl"
-["makeindex main.idx"] 1552687241 "main.idx" "main.ind" "main" 1552687837
-  "main.idx" 1552687833 0 d41d8cd98f00b204e9800998ecf8427e ""
+["makeindex main.idx"] 1552687241 "main.idx" "main.ind" "main" 1552688734
+  "main.idx" 1552688731 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "main.ilg"
   "main.ind"
-["pdflatex"] 1552687829 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.pdf" "main" 1552687837
+  "main.ilg"
+["pdflatex"] 1552688726 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.pdf" "main" 1552688734
   "C7F3.pdf" 1552659378 506976 d91f68ffaebf00661f02804958cad4d0 ""
   "C7F3freq.pdf" 1552655477 39366 6e8251f57d01f7d04918bfd50b25328d ""
   "C7F4.pdf" 1552659843 106605 206bfc703836783d95402b05284fa8d5 ""
@@ -280,19 +280,19 @@
   "F5.png" 1552396435 212348 2a617fd7f0e7448fd1373787ccc70ba6 ""
   "Filtered_saltimage.pdf" 1552572529 538586 644b2a46b05d288dced3622acb20e078 ""
   "bits.png" 1552338342 31732 a52a0520e6bf0d581b25edc1fda14647 ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.aux" 1552687836 15844 c3dc2e61cd6c6c56a024326d397df29a ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex" 1552687817 31610 21e110b574baff804ec651ca1cc949d0 ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.aux" 1552688733 15844 c3dc2e61cd6c6c56a024326d397df29a ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex" 1552688724 31615 4c07c5a73affbb391e790514bf187e98 ""
   "checker1.png" 1552328883 20723 0d9745f1aba92f4ffc0e39478f01f6e1 ""
   "checker3.png" 1552330399 1204 7a491560df85f592ff7f49fc6924b535 ""
   "filterrep2.png" 1552403423 45835 3d9b72dab2d7c3916294b48619cdae62 ""
   "fourierrep.png" 1552402069 268723 8f6a650e290e0e4a7432a850103ee70a ""
   "gaussianfiltered.pdf" 1552686436 961357 1b8a9651d73e329b1520664129238bc3 ""
-  "main.aux" 1552687836 15844 c3dc2e61cd6c6c56a024326d397df29a ""
+  "main.aux" 1552688733 15844 c3dc2e61cd6c6c56a024326d397df29a ""
   "main.bbl" 1552687828 705 ca5e9d85aba9d2fd9be6508203257297 "bibtex main"
   "main.ind" 1552687241 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1552687836 1234 bfc2291a2d52664c321e648db6e04f99 ""
-  "main.tex" 1552687817 31610 21e110b574baff804ec651ca1cc949d0 ""
-  "main.toc" 1552687836 1709 89ee28919635bafee9ec4a20d4362522 ""
+  "main.out" 1552688733 1234 bfc2291a2d52664c321e648db6e04f99 ""
+  "main.tex" 1552688724 31615 4c07c5a73affbb391e790514bf187e98 ""
+  "main.toc" 1552688733 1709 89ee28919635bafee9ec4a20d4362522 ""
   "noisehist.pdf" 1552400475 21941 29c31fbe85fed60c84c43325b5c0f906 ""
   "preamble.tex" 1552332460 3869 89f63c3b47c69c2e6d5f0e828831771b ""
   "removed_per_noise_freq.pdf" 1552647601 62954 e76f14d0e6bffa24c21f2c3ea2e0ca4c ""
@@ -306,12 +306,12 @@
   "task4gauss.png" 1552511793 138322 cae2a9065ac5982192839757242c5ef7 ""
   "task4pepper.png" 1552512272 173424 27dcb518616c4622faa03f6a8de53058 ""
   (generated)
+  "main.log"
   "preamble.aux"
+  "main.aux"
   "main.toc"
   "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.log"
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.pdf"
-  "main.log"
   "main.out"
-  "main.idx"
   "main.pdf"
-  "main.aux"
+  "main.idx"
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.pdf"
