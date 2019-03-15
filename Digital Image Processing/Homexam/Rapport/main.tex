@@ -111,8 +111,8 @@ The bit plane which represents the most significant bits are the one with most d
     
     \begin{equation}
         T(r) =  \begin{cases} 
-            0 \, r\in\{0\geq r \leq 127 \} \\
-            1 \, r\in\{128\geq r \leq 255 \}
+            0 \, r\in\{0\leq r \leq 127 \} \\
+            1 \, r\in\{128\leq r \leq 255 \}
          \end{cases}
     \end{equation}
     
@@ -346,7 +346,7 @@ By visually inspecting the images,in \emph{F1.png} we can clearly see the distin
 
 \begin{figure}[H]
     {\centering
-    \includegraphics[width=0.20\textwidth]{F1.png} \,\includegraphics[width=0.20\textwidth]{F2.png}\\ \includegraphics[width=0.20\textwidth]{F3.png} \,\includegraphics[width=0.20\textwidth]{F4.png}\\ \includegraphics[width=0.20\textwidth]{F5.png}
+    \includegraphics[width=0.30\textwidth]{F1.png} \,\includegraphics[width=0.30\textwidth]{F2.png}\\ \includegraphics[width=0.30\textwidth]{F3.png} \,\includegraphics[width=0.30\textwidth]{F4.png}\\ \includegraphics[width=0.30\textwidth]{F5.png}
         \caption{Image F1.png, F2.png, F3.png, F4.png, F5.png}
         \label{Fimages}
     \par}
@@ -405,7 +405,7 @@ The geometric filter will blur the image like the averaging filter, but to anoth
     \par}
     \end{figure}
 
-It looks better, but we could probably do better with some other technique. The geometric filter didn't perform as well as it should on gaussian noise and by looking at its histogram i suspect we might have salt \& pepper + gaussian noise.
+It looks better, but we could probably do better with some other technique like using an adaptive filter. The geometric filter didn't perform as well as it should on gaussian noise and by looking at its histogram its suspected that we might have salt \& pepper + gaussian noise.
 
 
 \subsection{3}
@@ -443,7 +443,6 @@ or the DFT in equation(\ref{discconv}),
 \end{equation}
 
 but since we work with the discrete version we now have this sequence in periodic intervals, this means that when we perform the convolution we do a convolution with its periodicities. Although we can multiply them in the frequency domain we have to perform the inverse to get the image, which will in turn do the circular convolution which will yield a wrap around error. If we zero pad the signal/image in spatial/time domain we increase the distance to its periodicity such that the convolution is finished before it arrives at the periodicity generated from the DFT.
-
 
 
 \subsection{4}
@@ -519,12 +518,12 @@ For filtering the images in this task we used the Butterworth notch reject filte
 
 where $D_{0k}$ is the cutoff frequency for each notch, $D_{k}(u,v) $is the distance to the impulse to place the notch, these are symmetric so we have a $D_{-k}(u,v)$ term as well, and n is the order of Butterworth.
 
-Removing the noise in image F3 was done by using a Butterworth notch filter (with cutoff 2 and order $n = 5$), on each of the 2 impulses shown in figure(\ref{C7F3freq}). The result is shown in figure(\ref{C7F3}) below.
+Removing the noise in image F3 was done with this filter (with cutoff 1 and order $n = 3$), on each of the 2 impulses shown in figure(\ref{C7F3freq}). The result is shown in figure(\ref{C7F3}) below.
 
 \begin{figure}[H]
     {\centering
-        \includegraphics[width=0.75\textwidth]{C7F3.png}
-        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using a Butterworth high pass mask.}
+        \includegraphics[width=0.80\textwidth]{C7F3.pdf}
+        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.}
         \label{C7F3}
     \par}
     \end{figure}
@@ -533,45 +532,55 @@ Removing the noise in image F3 was done by using a Butterworth notch filter (wit
 
     \begin{figure}[H]
         {\centering
-            \includegraphics[width=0.85\textwidth]{C7F3freq.png}
-            \caption{Left; frequency representation of image F5.png, Right; frequency representation of the Butterworth notch filter.}
+            \includegraphics[width=0.55\textwidth]{C7F3freq.pdf}
+            \caption{Left; frequency representation of image F5.png, Right; frequency representation of the Butterworth notch filter. Here we have vertical impulses since the periodic noise is in y-direction.}
             \label{C7F3freq}
         \par}
         \end{figure}
 
-        The mask is shown in figure(\ref{C7Edge})
-
-    \begin{figure}[H]
-        {\centering
-            \includegraphics[width=0.45\textwidth]{C7Edge.png}
-            \caption{Mask generated from the Butterworth high pass filter with $\sigma = 190$(cutoff) and order $n = 3$.}
-            \label{C7Edge}
-        \par}
-        \end{figure}
-
-We can observe how the borders are highlighted, these are added to the noise reduced image so that we sharp the edges. After adding the mask we rescale our values in the image to 0-255 by using,
-
+    After applying notch rejection and sharpening we transformed the intensities to 0-255 using equation(\ref{transform}).
 \begin{equation}
     g(x,y) = \frac{image-min\{image\}}{max\{image-min\{image\}\}}(L-1)
+    \label{transform}
 \end{equation}
+
 where $L = 256$ in this case.
+
+The sharpening is done by the high-frequency-emphasis filtering in equation(\ref{sharping2}),
+
+\begin{equation}
+    g(x,y) = \mathcal{F}^{-1}\left\lbrace[1 + kH_{HP}(u,v)]F(u,v) \right\lbrace
+    \label{sharping2}
+\end{equation}
+
+Here $\mathcal{F}^{-1}$ is the inverse Fourier transform, k gives control over the proportion of high frequencies. When we applied this we used $k = 1$ and g(x,y) is the sharpened image, and F(u,v) is the frequency domain of the noise filtered image.
+
+
+As the high pass filter we used the Butterworth high pass filter given by equation(\ref{buttyboi} below,
+
+\begin{equation}
+   H_{HP} = \frac{1}{1+[D_{0}/D(u,v))]^{2n}}
+    \label{buttyboi}
+\end{equation}
+
+Here $D(u,v)$ is the distance from the center, $D_{0}$ is the cutoff frequency and n is the order of the filter, the higher this order is the closer to ideal filter. The closer to ideal filter we are the more ringing effect will we have.
 
 %F4
 
-Image F4.png is almost the same noise, but shifted by $90\degree$, so here we flip our previous notch filter and apply, the result is shown in figure(\ref{C7F4})
+Image F4.png is almost the same noise, but shifted by $90\degree$, so here we flip our previous notch filter and apply and then sharpen with equation(\ref{sharping2}), the result is shown in figure(\ref{C7F4}).
 
 \begin{figure}[H]
     {\centering
-        \includegraphics[width=0.65\textwidth]{C7F4.png}
-        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using a Butterworth high pass mask.}
+        \includegraphics[width=0.85\textwidth]{C7F4.pdf}
+        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$,$D_{0} = 8$.}
         \label{C7F4}
     \par}
     \end{figure}
 
     \begin{figure}[H]
         {\centering
-            \includegraphics[width=0.75\textwidth]{C7F4freq.png}
-            \caption{Left; frequency representation of image F4.png, Right; frequency representation of the Butterworth notch filter.}
+            \includegraphics[width=0.65\textwidth]{C7F4freq.pdf}
+            \caption{Left; frequency representation of image F4.png, Right; frequency representation of the Butterworth notch filter. Here the impulses are in horizontal direction since the noise is periodic in x-direction.}
             \label{C7F4freq}
         \par}
         \end{figure}
@@ -582,13 +591,13 @@ Removing the noise in image F5 was done by using a Butterworth notch filter (wit
 
 \begin{figure}[H]
     {\centering
-        \includegraphics[width=0.75\textwidth]{removed_per_noise.pdf}
-        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using a Butterworth high pass mask.}
+        \includegraphics[width=0.80\textwidth]{C7F5.pdf}
+        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.}
         \label{C7F5}
     \par}
     \end{figure}
 
-After removing the noise with the notch filter, we made a edge mask using Butterworth with cutoff 100 and order $n = 3$.
+After removing the noise with the notch filter, we made a edge mask using Butterworth with cutoff 7 and order $n = 5$.
 
 
 
@@ -601,8 +610,6 @@ In figure(\ref{F5notch}) we see the dB scale frequency spectrum and the Butterwo
             \label{F5notch}
         \par}
         \end{figure}
-
-
 
 
 

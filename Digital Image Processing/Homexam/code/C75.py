@@ -58,7 +58,7 @@ def butter_notch_filter(image, sigma, notches, n):
         y = np.fft.ifft2(Y)
         return np.abs(y), H
 
-def butterworth_hp(image, sigma, n):
+def butterworth_hp_sharp(image, sigma, n, k):
         """Butterworth high pass filter, sigma defines the radius around the centered frequency
         and n defines the order.(how close to ideal you want)"""
         row, col = image.shape
@@ -71,7 +71,9 @@ def butterworth_hp(image, sigma, n):
                 else:
                     H[y,x] = 0
         X = np.fft.fftshift(np.fft.fft2(image))
-        Y = np.fft.fftshift(X*H)
+        # sharp image
+        Y = (1+k*H)*X
+        Y = np.fft.fftshift(Y)
         y = np.fft.ifft2(Y)
         return np.abs(y)
 
@@ -82,11 +84,7 @@ notches = np.array([[450-mid, 0], [330-mid, 0], [320-mid, 0], [315-mid, 0], [0, 
 
 # Use filters
 y, H = butter_notch_filter(F5, 1, notches, 3)
-hp_mask = butterworth_hp(y, 100, 3)
-hp_mask = hp_mask.astype('uint8')
-
-# Apply mask
-y = y + hp_mask
+y = butterworth_hp_sharp(y, 8, 5, k = 1)
 
 # transform values 0-255
 y = (y-np.min(y))/np.max(y-np.min(y))*255
@@ -104,7 +102,7 @@ ax[0].set_title('Original')
 ax[1].imshow(y, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[1].set_title('Filtered image')
 plt.tight_layout()
-plt.savefig('removed_per_noise.pdf', bbox_inches = 'tight',
+plt.savefig('C7F5.pdf', bbox_inches = 'tight',
     pad_inches = 0)
 plt.show()
 

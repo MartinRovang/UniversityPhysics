@@ -171,7 +171,6 @@ def lapsharp(image, maskret = False):
             return g.astype('uint8')
 
 gaussianfiltered = geoemtric_filter(F2, boxsize = 3)
-
 gaussianfiltered = medianfilter(gaussianfiltered, boxsize = 7)
 gaussianfiltered = lapsharp(gaussianfiltered)
 
