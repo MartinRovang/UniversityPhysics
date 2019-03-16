@@ -53,7 +53,19 @@ def adaptive(image, boxsize = 5):
         result = np.zeros(image.shape)
         rows, cols = image_padded.shape
 
-        variance_noise = np.var(image[5,0:cols])
+
+        hist, bins = np.histogram(F2.flatten(),256)
+
+        r = np.array([x for x in range(256)])
+
+        rows,cols = image.shape
+        prob = hist/(rows*cols)
+
+        m = np.sum(r*prob)
+        variance_noise = np.sum((r-m)**2*prob)
+
+
+        #variance_noise = np.var(image[5,0:cols])
         #print(variance_noise)
 
         # Multiply by 2 because there is 2 time the new pad size in each dimension.
@@ -63,7 +75,7 @@ def adaptive(image, boxsize = 5):
                 local_var = np.var(image_padded[row:row + boxsize,col:col + boxsize])
                 local_mean = np.mean(image_padded[row:row + boxsize,col:col + boxsize])
                 kernel_placement = image_padded[row:row + boxsize,col:col + boxsize] 
-                current_val = image_padded[row+1,col+1]
+                current_val = image_padded[row,col]
                 if variance_noise > local_var:
                     result[row, col] = current_val - 1*(current_val - local_mean)
                 else:
@@ -75,6 +87,6 @@ image = adaptive(F2, boxsize= 3)
 
 fig, ax = plt.subplots(1,2)
 
-ax[0].imshow(image2, cmap = 'gray', vmin = 0, vmax= 255)
+ax[0].imshow(F2, cmap = 'gray', vmin = 0, vmax= 255)
 ax[1].imshow(image, cmap = 'gray', vmin = 0, vmax= 255)
 plt.show()

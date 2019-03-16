@@ -6,6 +6,7 @@ data = np.genfromtxt('tidsrekke_oblig2_oppg1.txt')
 
 
 def periodogram(x, dt):
+    """Regular periodogram"""
     N = len(x)
     spectrum = np.abs(np.fft.fftshift(np.fft.fft(x))**2)
     spectrum *= dt/ N
@@ -15,6 +16,7 @@ def periodogram(x, dt):
 
 
 def w_periodogram(x, dt):
+    """Windowed periodogram"""
     N = len(x)
     n = np.arange(0,N,1)
     # Hann window
@@ -25,19 +27,15 @@ def w_periodogram(x, dt):
     freq = np.fft.fftshift(np.fft.fftfreq(N, dt))
     return freq, spectrum
 
-# f1, f2 = 0.2, 0.4
-# N = 100
-# dt = 1
-# n = np.arange(0,N,dt)
-# data = np.cos(2*np.pi*f1*n) + np.cos(2*np.pi*f2*n)
-
-
 dt = 1
 freq, spectrum = periodogram(data, dt)
 freqw, wspectrum = w_periodogram(data, dt)
+
+# Find index corresponding to f = 0 
 idx = np.where(freq == 0)
 widx = np.where(freqw == 0)
 
+# Plot
 fig, ax = plt.subplots(3,1)
 ax[0].plot(data, color = 'black', linewidth = 2)
 ax[0].set_title('Original time series')
@@ -52,4 +50,6 @@ ax[2].set_title('Periodogram with Hann window')
 ax[2].set_xlabel('Frequency')
 ax[2].set_ylabel('dB')
 plt.tight_layout()
+plt.savefig('rapport/taskb.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
 plt.show()

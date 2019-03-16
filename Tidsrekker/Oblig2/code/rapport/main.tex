@@ -1,0 +1,413 @@
+\include{preamble}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage[section]{placeins}
+
+\begin{document}
+% --------------------------------------------------------------
+%                         FRONTPAGE
+% --------------------------------------------------------------
+{\fontfamily{cmr}\selectfont
+\title{ \normalsize \textsc{}
+		\\ [1.0cm] % How much upper margin
+		%\HRule{0.5pt} \\
+        \LARGE \textbf{\uppercase{Obligatorisk Oppgave 2}
+        \HRule{0.5pt} \\ [0.5cm]
+        STA-2003-Tidsrekker
+        %\HRule{2pt} \\ [0.5cm]
+        \\
+		\normalsize \today \vspace*{5\baselineskip}}
+		}
+
+        \date{}
+\author{
+		Martin Soria RÃ¸vang \\ 
+        Universitetet i TromsÃ¸ \\}
+
+% \begin{titlepage}
+\clearpage\maketitle
+\vspace{0.2\textheight}
+{\centering
+Inneholder \pageref{LastPage} \, sider, inkludert forside.\par
+}
+\thispagestyle{empty}
+% \end{titlepage}
+
+\newpage
+\tableofcontents
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+% \cite{alpaydin_2014}
+\newpage
+
+\section{Oppgave}
+\subsection{a}
+
+Har prosessen,
+\begin{equation}
+    x(t) = x_{1}(t) + x_{2}(t)
+    \label{starteq}
+\end{equation}
+
+,disse er \emph{ukorrelerte} og \emph{stasjon\ae re} prosesser. 
+
+Vi har Wiener-Khinchin theoremene,
+
+\begin{equation}
+    S_{xx}(f) = \mathcal{F}\{R_{xx}(\tau)\} = \int_{\infty}^{\infty}R_{xx}(\tau)e^{-i2\pi f\tau}\,d\tau
+\end{equation}
+\begin{equation}
+    R_{xx}(\tau) = \mathcal{F}^{-1}\{S_{xx}(f)\} = \int_{\infty}^{\infty}S_{xx}(f)e^{i2\pi f\tau}\,df
+\end{equation}
+
+Her er $\mathcal{F}$ Fourier transormasjon. Bruker at,
+
+\begin{equation}
+    R_{xx}(\tau) = E[x_{t+\tau }x_{t}]
+\end{equation}
+
+L\o ser vi denne med tanke på ligning (\ref{starteq}) får vi,
+
+\begin{equation}
+    R_{xx}(\tau) = E[(x_{1}(t+h) + x_{2}(t+h)  )(x_{1}(t) + x_{2}(t)) ]
+\end{equation}
+
+Som gir,
+
+\begin{equation}
+    R_{xx}(\tau) = E[x_{1}(t+h)x_{1}(t)] + E[x_{1}(t+h)x_{2}(t+h)] + E[x_{1}(t+h)x_{2}(t)] + E[x_{2}(t+h)x_{2}(t)]
+\end{equation}
+
+Siden prosessene er ukorrelerte vil man kunne separere forventingene, $E[x_{1}(t+h)]E[x_{2}(t+h)]$
+
+Dette gir da,
+
+\begin{equation}
+    R_{xx}(\tau) = E[x_{1}(t+h)x_{1}(t)] + E[x_{1}(t+h)]E[x_{2}(t+h)] + E[x_{1}(t+h)]E[x_{2}(t)] + E[x_{2}(t+h)x_{2}(t)]
+\end{equation}
+
+Dette kan separeres slik at,
+
+\begin{equation}
+    R_{xx}(\tau) = E[x_{1}(t+h)x_{1}(t)] + E[x_{1}(t+h)]E[x_{2}(t+h)] + E[x_{1}(t+h)]E[x_{2}(t)] + E[x_{2}(t+h)x_{2}(t)]
+\end{equation}
+
+
+Siden $R_{x_{1}x_{1}}(\tau) = E[x_{1}(t + \tau)x_{1}(t)]$ får vi,
+
+\begin{equation}
+    R_{xx}(\tau) = R_{x_{1}x_{1}}(\tau) + E[x_{1}(t+h)]E[x_{2}(t+h)] + E[x_{1}(t+h)]E[x_{2}(t)] + R_{x_{2}x_{2}}(\tau)
+\end{equation}
+
+Siden vi har summer kan vi delle integralet opp i sum,
+
+
+\begin{equation}
+    S_{xx}(f) = \underbrace{\int_{\infty}^{\infty}R_{x_{1}x_{1}}(\tau)e^{-i2\pi f\tau}\,d\tau}_{= S_{x_{1}x_{1}}(f)} + \underbrace{\int_{\infty}^{\infty}R_{x_{2}x_{2}}(\tau)e^{-i2\pi f\tau}\,d\tau}_{= S_{x_{2}x_{2}}(f)}
+\end{equation}
+
+
+
+\subsection{b}
+
+I figur(\ref{taskb}) ser vi tidsrekken i øverste vindu, periodogram, og periodogram med hann vindu.
+
+\begin{figure}[hbt!]
+{\centering
+    \includegraphics[width=0.70\textwidth]{taskb.pdf}
+    \caption{Beregnet periodogram av tidsrekken.}
+    \label{taskb}
+\par}
+\end{figure}
+
+
+Her ser man at hann vinduet gir en glattere kurve, og lar ikke frekvense lekker over like mye som i det vanlige periodogrammet. Frekvensene ser ut til å være 0.1 og 0.05.
+
+
+\subsection{c}
+
+Som nevnt i oppgave b så fjerner vinduet mer av lekasje i frekvensspekteret, grunnet at den har lavere sidelober enn den idelle w[k] = 1, men dette vil øke bredden på hovedloben slik at man får litt dårligere oppløsning. I figure(\ref{taskc}) har jeg ikke brukt dB skala slik at differansen er større mellom styrken på frekvensene. Her kan man tydelig se at vinduet hjelper med å se svakere periodisitetet i spectrumet.
+
+\begin{figure}[hbt!]
+    {\centering
+        \includegraphics[width=0.70\textwidth]{taskc.pdf}
+        \caption{Beregnet periodogram av tidsrekken uten dB skala.}
+        \label{taskc}
+    \par}
+    \end{figure}
+
+\subsection{d}
+
+Ved å implementere WOSA (Weighted/Welchs overlapped segment averaging) på tidsrekken fikk man resultatet vist i figur(\ref{taskd}).
+
+\begin{figure}[hbt!]
+    {\centering
+        \includegraphics[width=0.70\textwidth]{taskd.pdf}
+        \caption{WOSA med 50\% overlapp, N = 40}
+        \label{taskd}
+    \par}
+    \end{figure}
+
+Her ble hver av segment vektet som gir et kraftigere utslag der det var sterke periodisiteter i forhold til resten av spekteret. Her ser man at frekvensen $\approx 0.1$ er svært kraftig og $\approx 0.05$ viser seg også \,ganske kraftig i forhold til alle de andre. Man kan se at frekvensene er mye tydligere i WOSA enn i periodogrammet og hann vinduet i dB skala som vist i figur(\ref{taskb}).
+
+
+\clearpage
+\newpage
+\section{2}
+
+\subsection{a-b}
+
+Her plottet vi sol-dataen som vist i øverste vindu i figur(\ref{task2}).
+
+
+\begin{figure}[hbt!]
+    {\centering
+        \includegraphics[width=0.70\textwidth]{task2.pdf}
+        \caption{Soldata, WOSA med 50\% overlapp, N = 40}
+        \label{task2}
+    \par}
+    \end{figure}
+
+Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser man sterk DC og en frekvens på rundt 0.1, $f \approx 0.1$. Dette gir en periode på $T \approx 10$, noe som ser ut til å stemme hvis man teller antall topper som er $\approx 9$ per 100.
+
+
+% --------------------------------------------------------------
+%     Reference og appendix
+% --------------------------------------------------------------
+\newpage
+\section{Appendix}
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        import numpy as np 
+        import matplotlib.pyplot as plt
+        
+        
+        data = np.genfromtxt('tidsrekke_oblig2_oppg1.txt')
+        
+        
+        def periodogram(x, dt):
+            """Regular periodogram"""
+            N = len(x)
+            spectrum = np.abs(np.fft.fftshift(np.fft.fft(x))**2)
+            spectrum *= dt/ N
+            freq = np.fft.fftshift(np.fft.fftfreq(N, dt))
+        
+            return freq, spectrum
+        
+        
+        def w_periodogram(x, dt):
+            """Windowed periodogram"""
+            N = len(x)
+            n = np.arange(0,N,1)
+            # Hann window
+            window = (1/2)*(1 - np.cos(2*np.pi*n/(N-1)))
+            U = (1/N)*np.sum(window**2)
+            spectrum = np.abs(np.fft.fftshift(np.fft.fft(window*x))**2)
+            spectrum *= (dt/(N*U))
+            freq = np.fft.fftshift(np.fft.fftfreq(N, dt))
+            return freq, spectrum
+        
+        dt = 1
+        freq, spectrum = periodogram(data, dt)
+        freqw, wspectrum = w_periodogram(data, dt)
+        
+        # Find index corresponding to f = 0 
+        idx = np.where(freq == 0)
+        widx = np.where(freqw == 0)
+        
+        # Plot
+        fig, ax = plt.subplots(3,1)
+        ax[0].plot(data, color = 'black', linewidth = 2)
+        ax[0].set_title('Original time series')
+        ax[0].set_xlabel('x')
+        ax[0].set_ylabel('y')
+        ax[1].plot(freq, 10*np.log10(spectrum/spectrum[idx]),'--', color = 'black', linewidth = 1)
+        ax[1].set_title('Periodogram')
+        ax[1].set_xlabel('Frequency')
+        ax[1].set_ylabel('dB')
+        ax[2].plot(freqw, 10*np.log10(wspectrum/wspectrum[widx]),'--', color = 'black', linewidth = 1)
+        ax[2].set_title('Periodogram with Hann window')
+        ax[2].set_xlabel('Frequency')
+        ax[2].set_ylabel('dB')
+        plt.tight_layout()
+        plt.savefig('rapport/taskb.pdf', bbox_inches = 'tight',
+            pad_inches = 0)
+        plt.show()
+        
+    \end{lstlisting}
+\caption{Task 1B-C}
+\label{Task1B-Ccode}
+\end{figure}
+
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        import matplotlib.pyplot as plt 
+        import numpy as np 
+        
+        # Load file
+        data = np.genfromtxt('tidsrekke_oblig2_oppg1.txt')
+        
+        
+        def WOSA(x, M, dt = 1):
+            """Implementation of WOSA"""
+            n = np.arange(0, M, 1)
+            window = (1/2)*(1 - np.cos(2*np.pi*n/(M-1)))
+            U = (1/M)*np.sum(window**2)
+            spectrum = np.zeros(M)
+            n_windows = 2*int(len(x)/(M-1))
+            for i in range(n_windows):
+        
+                # Start with window 0-40
+                if i == 0:
+                    spectrum_temp = np.fft.fftshift(np.fft.fft(window*x[0:40]))
+                    plt.plot(x[0:40])
+                    t = np.arange(0, 40, 1)
+                    plt.plot(t, window)
+        
+        
+                # Start overlapping
+                else:
+                    spectrum_temp = np.fft.fftshift(np.fft.fft(window*x[(i*int(M/2)):(i+2)*int(M/2)]))
+                    plt.plot(x[0:(i+2)*int(M/2)])
+                    t = np.arange((i*int(M/2)), (i+2)*int(M/2), 1)
+                    plt.plot(t, window)
+                spectrum += (dt/(M*U))*np.abs(spectrum_temp)**2        
+            spectrum /= n_windows
+            plt.show()
+            freq = np.fft.fftshift(np.fft.fftfreq(M, dt))
+            print('Number of windows: %s'%n_windows)
+            return freq, spectrum
+        
+        M = 40
+        dt = 1
+        freq, spectrum = WOSA(data, M)
+        # Find index corresponding to f = 0 
+        idx = np.where(freq == 0)
+        
+        # Plot
+        fig, ax = plt.subplots(2,1)
+        ax[0].plot(data, linewidth = '3', color = 'black')
+        ax[0].set_title('Time series', fontsize = '20')
+        ax[0].set_ylabel('Value')
+        ax[0].set_xlabel('Time')
+        ax[1].plot(freq, 10*np.log10(spectrum/spectrum[idx]), '-.', linewidth = '1', color = 'black')
+        ax[1].set_title('WOSA, M = %s'%M, fontsize = '20')
+        ax[1].set_xlabel('Frequency')
+        ax[1].set_ylabel('dB power')
+        #ax[1].set_xlim([0,1/(2*dt)])
+        plt.tight_layout()
+        plt.savefig('rapport/taskd.pdf', bbox_inches = 'tight',
+            pad_inches = 0)
+        plt.show() 
+    \end{lstlisting}
+\caption{Task D}
+\label{TaskDcode}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        import os
+        import pandas as pd
+        import numpy as np 
+        import matplotlib.pyplot as plt
+        
+        filedir = os.path.dirname(__file__)
+        filename = 'SN_y_tot_V2.0.txt'
+        
+        file = os.path.join(filedir, filename)
+        
+        # load file
+        datatable = pd.read_csv(file,sep='\t',header=None,engine='python')
+        time = np.zeros(len(datatable))
+        sunspots = np.zeros(len(datatable))
+        
+        for i in range(len(datatable)):
+             time[i] = datatable.values[i,0][0:6]
+             sunspots[i] = datatable.values[i,0][8:13]
+        
+        
+        def WOSA(x, M, dt = 1):
+            """Implementation of WOSA"""
+            n = np.arange(0, M, 1)
+            window = (1/2)*(1 - np.cos(2*np.pi*n/(M-1)))
+            U = (1/M)*np.sum(window**2)
+            spectrum = np.zeros(M)
+            n_windows = 2*int(len(x)/(M-1))-1
+            x = np.pad(x, (0, M), 'constant')
+            for i in range(n_windows):
+                # Start with window 0-40
+                if i == 0:
+                    spectrum_temp = np.fft.fftshift(np.fft.fft(window*x[0:40]))
+                    plt.plot(x[0:40])
+                    t = np.arange(0, 40, 1)
+                    plt.plot(t, 200*window)
+                
+                # Start overlapping
+                else:
+                    spectrum_temp = np.fft.fftshift(np.fft.fft(window*x[(i*int(M/2)):(i+2)*int(M/2)]))
+                    plt.plot(x[0:(i+2)*int(M/2)])
+                    t = np.arange((i*int(M/2)), (i+2)*int(M/2), 1)
+                    plt.plot(t, 200*window)
+                spectrum += (dt/(M*U))*np.abs(spectrum_temp)**2   
+            spectrum /= n_windows
+            freq = np.fft.fftshift(np.fft.fftfreq(M, dt))
+            print('Number of windows: %s'%n_windows)
+            return freq, spectrum
+        
+        M = 40
+        dt = 1
+        freq, spectrum = WOSA(sunspots, M)
+        # Find index corresponding to f = 0 
+        idx = np.where(freq == 0)
+        
+        # plot
+        fig, ax = plt.subplots(2,1)
+        ax[0].plot(sunspots, linewidth = '3', color = 'black')
+        ax[0].set_title('Sunspots plot', fontsize = '20')
+        ax[0].set_ylabel('Sunspots')
+        ax[0].set_xlabel('Year')
+        ax[1].plot(freq, 10*np.log10(spectrum/spectrum[idx]), '-.', linewidth = '1', color = 'black')
+        ax[1].set_title('WOSA, M = %s'%M, fontsize = '20')
+        ax[1].set_xlabel('Frequency')
+        ax[1].set_ylabel('dB power')
+        #ax[1].set_xlim([0,1/(2*dt)])
+        plt.tight_layout()
+        plt.savefig('rapport/task2.pdf', bbox_inches = 'tight',
+            pad_inches = 0)
+        plt.show() 
+    \end{lstlisting}
+\caption{Task 2 code}
+\label{Task2code}
+\end{figure}
+
+
+
+\section{Referanser}
+\begingroup
+\renewcommand{\section}[2]{}%
+%\renewcommand{\chapter}[2]{}% for other classes
+\bibliographystyle{plainnat}
+\bibliography{bibl}
+\endgroup
+
+
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+
+
+
+
+
+\end{document}
+
+

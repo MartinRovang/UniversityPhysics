@@ -1,28 +1,28 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
 
-
+# Load file
 data = np.genfromtxt('tidsrekke_oblig2_oppg1.txt')
-
-# f1, f2 = 0.2, 0.4
-# N = 100
-# dt = 1
-# n = np.arange(0,N,dt)
-# data = np.cos(2*np.pi*f1*n) + np.cos(2*np.pi*f2*n)
 
 
 def WOSA(x, M, dt = 1):
+    """Implementation of WOSA"""
     n = np.arange(0, M, 1)
     window = (1/2)*(1 - np.cos(2*np.pi*n/(M-1)))
     U = (1/M)*np.sum(window**2)
     spectrum = np.zeros(M)
     n_windows = 2*int(len(x)/(M-1))
     for i in range(n_windows):
+
+        # Start with window 0-40
         if i == 0:
             spectrum_temp = np.fft.fftshift(np.fft.fft(window*x[0:40]))
             plt.plot(x[0:40])
             t = np.arange(0, 40, 1)
             plt.plot(t, window)
+
+
+        # Start overlapping
         else:
             spectrum_temp = np.fft.fftshift(np.fft.fft(window*x[(i*int(M/2)):(i+2)*int(M/2)]))
             plt.plot(x[0:(i+2)*int(M/2)])
@@ -38,9 +38,10 @@ def WOSA(x, M, dt = 1):
 M = 40
 dt = 1
 freq, spectrum = WOSA(data, M)
+# Find index corresponding to f = 0 
 idx = np.where(freq == 0)
 
-
+# Plot
 fig, ax = plt.subplots(2,1)
 ax[0].plot(data, linewidth = '3', color = 'black')
 ax[0].set_title('Time series', fontsize = '20')
@@ -52,4 +53,6 @@ ax[1].set_xlabel('Frequency')
 ax[1].set_ylabel('dB power')
 #ax[1].set_xlim([0,1/(2*dt)])
 plt.tight_layout()
+plt.savefig('rapport/taskd.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
 plt.show() 
