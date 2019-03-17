@@ -10,27 +10,9 @@ img_folder = os.path.join(game_folder, 'img')
 
 
 class Player1(pygame.sprite.Sprite):
-    """Setup for player1"""
+    """Class for player 1"""
     
     def __init__(self):
-        """
-        Initial setup for the player.\n
-        self.velx = 0\n
-        self.vely = 0\n
-        self.angle = 0\n
-        self.engine = 'off'\n
-        self.fuel = PLAYER_START_FUEL\n
-        self.points = 0\n
-        self.rocket1image = pygame.image.load(os.path.join(img_folder, 'rocket111.png')).convert_alpha()\n
-        self.rocket2image = pygame.image.load(os.path.join(img_folder, 'rocket112.png')).convert_alpha()\n
-        self.image = self.rocket1image\n
-        self.rect = self.image.get_rect()\n
-        self.rect.center = (WIDTH_SCREEN/4, HEIGHT_SCREEN/4)\n
-        self.fuelinfo_x = 10\n
-        self.fuelinfo_y = 50\n
-        self.pointsinfo_x = 10\n
-        self.pointsinfo_y = 100\n
-        """
         pygame.sprite.Sprite.__init__(self)
         self.velx = 0
         self.vely = 0
@@ -48,6 +30,11 @@ class Player1(pygame.sprite.Sprite):
         self.pointsinfo_x = 10
         self.pointsinfo_y = 100
 
+    def reset(self):
+        self.rect.center = (WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
+        self.fuel = PLAYER_START_FUEL
+        self.points -= 1
+    
 
     def controls(self, bullet_sprites):
         """
@@ -101,8 +88,8 @@ class Player1(pygame.sprite.Sprite):
         if self.engine == 'off':
             self.vely = GRAVITY
 
-        self.rect.x += self.velx/np.sqrt(self.velx**2 + self.vely**2)*SPEED
-        self.rect.y += self.vely/np.sqrt(self.velx**2 + self.vely**2)*SPEED + GRAVITY
+        self.rect.x += self.velx
+        self.rect.y += self.vely + GRAVITY
 
         for player in collide:
             barrel = collide[player][0]
@@ -119,31 +106,20 @@ class Player1(pygame.sprite.Sprite):
 
 
 class Player2(Player1):
+    """This is the class for the second player"""
     def __init__(self):
-        """
-        Initial setup for the player.\n
-        self.velx = 0\n
-        self.vely = 0\n
-        self.angle = 0\n
-        self.engine = 'off'\n
-        self.fuel = PLAYER_START_FUEL\n
-        self.points = 0\n
-        self.rocket1image = pygame.image.load(os.path.join(img_folder, 'rocket111.png')).convert_alpha()\n
-        self.rocket2image = pygame.image.load(os.path.join(img_folder, 'rocket112.png')).convert_alpha()\n
-        self.image = self.rocket1image\n
-        self.rect = self.image.get_rect()\n
-        self.rect.center = (WIDTH_SCREEN/4, HEIGHT_SCREEN/4)\n
-        self.fuelinfo_x = WIDTH_SCREEN-250\n
-        self.fuelinfo_y = 50\n
-        self.pointsinfo_x = WIDTH_SCREEN-250\n
-        self.pointsinfo_y = 100\n
-        """
         Player1.__init__(self)
         self.rect.center = (WIDTH_SCREEN - WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
         self.fuelinfo_x = WIDTH_SCREEN-250
         self.fuelinfo_y = 50
         self.pointsinfo_x = WIDTH_SCREEN-250
         self.pointsinfo_y = 100
+
+
+    def reset(self):
+        self.rect.center = (WIDTH_SCREEN - WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
+        self.fuel = PLAYER_START_FUEL
+        self.points -= 1
 
     def controls(self, bullet_sprites):
         """

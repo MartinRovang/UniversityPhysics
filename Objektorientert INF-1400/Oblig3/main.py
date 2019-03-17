@@ -21,14 +21,13 @@ class Game:
 
     def point_assigner_loss(self, group, player_sprites):
         """
-        Assigns loss points to the player if collision has happened and respawn them.
+        Assigns loss points to the player if collision/ or killed by enemy bullets has happened and respawn them.
         """
+        # Grab playersprite
         if group != {}:
             for player in group:
-                points = player.points
-                newplayer = type(player)()
-                newplayer.points = points - 1
-                player_sprites.add(newplayer)
+                player.reset()
+                player_sprites.add(player)
 
 
     def point_assigner_win(self, group, player_sprites):
@@ -107,13 +106,13 @@ class Game:
                 if player != collide_players_players[player][0]:
                     pygame.sprite.groupcollide(player_sprites, player_sprites ,1 , 1)
                     self.point_assigner_loss(collide_players_players, player_sprites)
-                    
-            # Assign negative points for wall collision and if hit by player bullets
-            self.point_assigner_loss(collide_wall, player_sprites)
-            self.point_assigner_loss(collide_players_bullets, player_sprites)
 
             # Assign Positive points to player which hit the other player
             self.point_assigner_win(collide_players_bullets, player_sprites)
+                    
+            # Assign negative points for wall collision and if hit by player bullets
+            self.point_assigner_loss(collide_players_bullets, player_sprites)
+            self.point_assigner_loss(collide_wall, player_sprites)
 
             # Update all the sprites
             player_sprites.update(collide, bullet_sprites)

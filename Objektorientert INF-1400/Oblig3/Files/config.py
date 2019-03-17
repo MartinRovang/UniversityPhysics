@@ -65,7 +65,7 @@ PLAYER_2_BOOST = 'UP'
 
 # WORLD SETTINGS
 #########################################
-GRAVITY = 0.5
+GRAVITY = 1
 FUEL_TIMER = 40
 
 
