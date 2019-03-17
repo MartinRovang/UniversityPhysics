@@ -42,7 +42,7 @@ Contains \pageref{LastPage} \, pages, including frontpage.\par
 
 % --------------------------------------------------------------
 %                         TODOS
-% Første oppgave
+% Fï¿½rste oppgave
 % --------------------------------------------------------------
 
 
@@ -396,7 +396,7 @@ For the gaussian noise image we use an adaptive filter defined as,
 Here $\hat{f}(x,y)$ is the filtered image, $g(x,y)$ is the noisy image, $\sigma^{2}_{\eta}$ is the variance of the noise, $\sigma_{S_{xy}}$ is the variance inside the kernel which is traversing the image, $\bar{z}_{S_{xy}}$ is the mean in of the kernel. Here we found the estimated variance of the noise by finding the variance in an sub image which taken to be the top part of the image which has mostly low frequency in the original image. The variance was found with the sample variance in equation(\ref{variance}).
 
 \begin{equation}
-    \hat{\sigma}^{2}_{\eta} = \sum_{0}^{N-1}\frac{(r - \bar{r})^{2}}{N-1}
+    \hat{\sigma}^{2}_{\eta} = \sum_{i = 0}^{N-1}\frac{(r_{i} - \bar{r})^{2}}{N-1}
     \label{variance}
 \end{equation}
 where r is the intensity value and $\bar{r}$ is the mean intensity value.
