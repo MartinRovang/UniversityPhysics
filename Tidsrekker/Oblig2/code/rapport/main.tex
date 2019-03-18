@@ -52,7 +52,7 @@ Har prosessen,
     \label{starteq}
 \end{equation}
 
-,disse er \emph{ukorrelerte} og \emph{stasjon\ae re} prosesser. 
+,disse er \emph{ukorrelerte} og \emph{stasjon\ae re} prosesser med forventning $E[x_{1}] = E[x_{2}] = 0$. 
 
 Vi har Wiener-Khinchin theoremene,
 
@@ -102,13 +102,18 @@ Siden $R_{x_{1}x_{1}}(\tau) = E[x_{1}(t + \tau)x_{1}(t)]$ får vi,
     R_{xx}(\tau) = R_{x_{1}x_{1}}(\tau) + E[x_{1}(t+h)]E[x_{2}(t+h)] + E[x_{1}(t+h)]E[x_{2}(t)] + R_{x_{2}x_{2}}(\tau)
 \end{equation}
 
+Vet at forventningen til prosessene er null, $E[x_{1}(t+h)]E[x_{2}(t+h)] = 0$ og $ E[x_{1}(t+h)]E[x_{2}(t)]$,
+
+\begin{equation}
+    R_{xx}(\tau) = R_{x_{1}x_{1}}(\tau) + R_{x_{2}x_{2}}(\tau)
+\end{equation}
+
 Siden vi har summer kan vi delle integralet opp i sum,
 
 
 \begin{equation}
     S_{xx}(f) = \underbrace{\int_{\infty}^{\infty}R_{x_{1}x_{1}}(\tau)e^{-i2\pi f\tau}\,d\tau}_{= S_{x_{1}x_{1}}(f)} + \underbrace{\int_{\infty}^{\infty}R_{x_{2}x_{2}}(\tau)e^{-i2\pi f\tau}\,d\tau}_{= S_{x_{2}x_{2}}(f)}
 \end{equation}
-
 
 
 \subsection{b}
