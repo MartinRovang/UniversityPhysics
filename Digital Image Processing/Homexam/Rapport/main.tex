@@ -199,7 +199,7 @@ We resize the image to 50\% of its original size, the result can be shown in fig
 
 \begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.60\textwidth]{resized.pdf}
+        \includegraphics[width=0.80\textwidth]{resized.pdf}
         \caption{Resized image to 50\% of its original size, we can clearly observe the aliasing in the high frequency areas of the image.}
         \label{resized}
     \par}
@@ -304,13 +304,13 @@ This function is in the frequency domain, D is the distance from the centered fr
     \label{gausshighp}
 \end{equation}
 
-To apply this filter we multiply it by the centered frequency domain representation of the image I(u,v).
+To apply this filter we multiply it by the centered frequency domain representation of the image I(u,v) and add the original, all in frequency domain as shown in equation(\ref{High-freq-emphfirst}). This is also called high-frequency emphasis filter, which also contains a constant to tune it, but here we used k = 1.
 
 \begin{equation}
-    G(x,y) =  (1 - H_{lp})I(u,v)
+    G(x,y) =  (1 + H_{hp})I(u,v)
+    \label{High-freq-emphfirst}
 \end{equation}
 
-This will yield a mask which contains the high frequencies. We then sum this on our original image to sharpen the edges.
 
 In the previous case we blurred the image PRIOR to resizing, this made the image look good and without aliasing. We have these images in figure(\ref{smooth2}).
 
@@ -326,12 +326,12 @@ If we blur the image after resizing and using Laplace sharping we get the images
 
 \begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.60\textwidth]{sharpened2.pdf}
-        \caption{Sharpened by using two different sharping techniques on image blurred after resizing. Here we can clearly see that we got aliasing again.}
+        \includegraphics[width=0.80\textwidth]{sharpened2.pdf}
+        \caption{Sharpened by using two different sharping techniques on image blurred after resizing. Here we can clearly see that aliasing is visible again.}
         \label{sharpened2}
     \par}
     \end{figure}
-In this case we can see that the aliasing is back, so here we can see how sharpening works counter to blurring.
+In this case we can see that the aliasing is back, so we see how sharpening works counter to blurring.
 
 
 \section{Part C}
@@ -379,7 +379,7 @@ For removing salt and pepper noise a median filter would be a good choice. With 
 
 \begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.72\textwidth]{Filtered_saltimage.pdf}
+        \includegraphics[width=1\textwidth]{Filtered_saltimage.pdf}
         \caption{F1 image filtered using median filter with a 3x3 kernel.}
         \label{salt}
     \par}
@@ -393,19 +393,25 @@ For the gaussian noise image we use an adaptive filter defined as,
     \label{adaptive}
 \end{equation}
 
-Here $\hat{f}(x,y)$ is the filtered image, $g(x,y)$ is the noisy image, $\sigma^{2}_{\eta}$ is the variance of the noise, $\sigma_{S_{xy}}$ is the variance inside the kernel which is traversing the image, $\bar{z}_{S_{xy}}$ is the mean in of the kernel. Here we found the estimated variance of the noise by finding the variance in an sub image which taken to be the top part of the image which has mostly low frequency in the original image. The variance was found with the sample variance in equation(\ref{variance}).
+Here $\hat{f}(x,y)$ is the filtered image, $g(x,y)$ is the noisy image, $\sigma^{2}_{\eta}$ is the variance of the noise, $\sigma_{S_{xy}}$ is the variance inside the kernel which is traversing the image, $\bar{z}_{S_{xy}}$ is the mean in of the kernel. Here we found the estimated variance of the noise by finding the variance in an sub image which taken to be the top part of the image which has mostly low frequency in the original image. The variance was found by using equation(\ref{variance}).
 
 \begin{equation}
-    \hat{\sigma}^{2}_{\eta} = \sum_{i = 0}^{N-1}\frac{(r_{i} - \bar{r})^{2}}{N-1}
+    \hat{\sigma}^{2}_{\eta} = \sum_{i = 0}^{N-1}\frac{(r_{i} - \bar{r})^{2}}{N-1}p_{s}(r_{i})
     \label{variance}
 \end{equation}
-where r is the intensity value and $\bar{r}$ is the mean intensity value.
+where r is the intensity value and $\bar{r}$ is the mean intensity value which is given by equation(\ref{mean}),
 
+\begin{equation}
+    \bar{r} = \sum_{i=0}^{L-1}r_{i}p_{s}(r_{i})
+    \label{mean}
+\end{equation}
+
+where L is the max intensity value, (8-bit yield $L = 256$) and $p_{s}(r_{i})$ is the probability estimates of the intensity values.
 
 \begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.72\textwidth]{gaussianfiltered.pdf}
-        \caption{Filtered gaussian noise image, here we applied the adaptive filter discussed above. }
+        \includegraphics[width=1\textwidth]{gaussianfiltered.pdf}
+        \caption{Filtered gaussian noise image, here we applied the adaptive filter discussed above with kernel 4x4 }
         \label{adaptivefig}
     \par}
     \end{figure}
@@ -458,9 +464,9 @@ Since both salt \& pepper noise and gaussian noise has high frequency using a ga
     \par}
     \end{figure}
 
+    Although we removed some of the noise we now have very smooth borders on the building, we could use a Butterworth filter instead of the gaussian to try and tweak with the right parameters to get sharper edges. The salt and pepper noise were easier to remove in spatial domain with the median filter as it kept the image sharp and clean. So in this case it might be more practical to remove the noise in spatial domain.
 
-
-    \begin{figure}[!htb]
+    \begin{figure}[H]
         {\centering
             \includegraphics[width=0.75\textwidth]{task4pepper.png}
             \caption{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.}
@@ -468,7 +474,6 @@ Since both salt \& pepper noise and gaussian noise has high frequency using a ga
         \par}
         \end{figure}
 
-Although we removed much noise we now have very smooth borders on the building, we could use a Butterworth filter instead of the gaussian to try and tweak with the right parameters to get sharper edges. The salt and pepper noise were easier to remove in spatial domain with the median filter as it kept the image sharp and clean.
 
 \subsection{5}
 
@@ -551,7 +556,7 @@ where $L = 256$ in this case.
 The sharpening is done by the high-frequency-emphasis filtering in equation(\ref{sharping2}),
 
 \begin{equation}
-    g(x,y) = \mathcal{F}^{-1}\left\lbrace[1 + kH_{HP}(u,v)]F(u,v) \right\lbrace
+    g(x,y) = \mathcal{F}^{-1}\left\lbrace[1 + kH_{HP}(u,v)]F(u,v) \right\rbrace
     \label{sharping2}
 \end{equation}
 
@@ -616,12 +621,10 @@ In figure(\ref{F5notch}) we see the dB scale frequency spectrum and the Butterwo
 
 
 
-
-
 \section{Part D}
 \subsection{1}
 
-
+The degradation space is not space invariant as the degradation has a radial dependency, this is the case because the degradation is caused by rotational motion, where its center is still and the further out in radial direction yield stronger circular degradation. If we would slice out some part of the image and find the degradation function in that area and then use it as filtering in some other part of the image, we would not necessary get a good result.
 
 
 

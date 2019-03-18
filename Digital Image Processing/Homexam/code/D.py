@@ -1,5 +1,6 @@
 
-import numpy as np 
+import numpy as np
+from numpy import linalg
 import matplotlib.pyplot as plt
 import os
 from PIL import Image
@@ -16,46 +17,67 @@ filename5 = 'starrySky.png'
 file = os.path.join(filedir, imagedir, filename5)
 
 
-file = plt.imread(file)
+image = plt.imread(file)
 # Transform to 0-255
-file = (file-np.min(file))/np.max(file-np.min(file))*255
-file = file.astype('uint8')
+image = (image-np.min(image))/np.max(image-np.min(image))*255
+image = image.astype('uint8')
+rows, cols = image.shape
+center = np.sqrt(((int(rows/2)**2)+((int(cols/2))**2)))
+polar_image = cv2.linearPolar(image,(rows/2, cols/2), center, cv2.WARP_FILL_OUTLIERS)
 
-
-
-
-def butterworth_hp(image, a, K):
-        """Butterworth high pass filter, sigma defines the radius around the centered frequency
-        and n defines the order.(how close to ideal you want)"""
-        row, col = image.shape
-        H = np.zeros((row, col))
-        for v in range(row):
-            for u in range(col):
-                top = np.sin(np.pi*a*u/col)
-                bot = a*np.sin(np.pi*u/col)
-                if u == 0:
-                    H[u,v] = 1
-                else:
-                    H[u,v] = top/bot
-
-        X = np.fft.fft2(image)
-        top = np.abs(H)**2
-        bot = (H*np.abs(H)**2 + K)
-        Y = (top/bot)*X
-        y = np.fft.ifft2(Y)
-        y = np.abs(y)
-        y = (y-np.min(y))/np.max(y-np.min(y))*255
-        y = y.astype('uint8')
-        return y
-
-
-file2 = butterworth_hp(file, 200, 2)
-
+polar_image = polar_image.astype('uint8')
 
 fig, ax = plt.subplots(1,2)
-ax[0].imshow(file, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
-ax[1].imshow(file2, cmap = 'gray', interpolation = 'none')
+
+
+ax[0].imshow(polar_image, cmap = 'gray')
+ax[1].imshow(image, cmap = 'gray')
 plt.show()
 
+
+
+def wiener_filter(image, a):
+        row, col = image.shape
+        H = np.zeros((row, col))
+        for y in range(row):
+            for x in range(col):
+                D = np.sqrt((y-int(rows/2))**2 + (x-int(cols/2))**2)
+                if (a*np.sin(np.pi*x/cols)) > 0.0002:
+                    if D > 0:
+                        H[y,x] = (np.sin(np.pi*x*a/cols)/(a*np.sin(np.pi*x/cols)))
+                    else:
+                        H[y,x] = 1
+                else:
+                    H[y,x] = 0.0002
+        X = np.fft.fftshift(np.fft.fft2(image))
+        Y = X/H
+        y = np.fft.ifft2(np.fft.fftshift(Y))
+        return X
+
+
+# def wiener_filter(image, sigma, n):
+#         """Butterworth high pass filter, sigma defines the radius around the centered frequency
+#         and n defines the order.(how close to ideal you want)"""
+#         row, col = image.shape
+#         H = np.zeros((row, col))
+#         for y in range(row):
+#             for x in range(col):
+#                 D = np.sqrt((y-int(row/2))**2 + (x-int(col/2))**2)
+#                 if D > 0:
+#                     H[y,x] = 1/(1+ (D/sigma)**(2*n))
+#                 else:
+#                     H[y,x] = 0
+#         X = np.fft.fftshift(np.fft.fft2(image))
+#         # sharp image
+#         Y = H*X
+#         Y = np.fft.fftshift(Y)
+#         y = np.fft.ifft2(Y)
+#         return np.abs(y)
+
+#im = wiener_filter(polar_image,5, 1)
+# im = wiener_filter(polar_image, 20)
+
+# plt.imshow(polar_image, cmap = 'gray')
+# plt.show()
 
 

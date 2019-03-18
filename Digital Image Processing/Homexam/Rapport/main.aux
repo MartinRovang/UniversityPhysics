@@ -42,7 +42,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Resized image to 50\% of its original size, we can clearly observe the aliasing in the high frequency areas of the image.\relax }}{6}{figure.caption.5}\protected@file@percent }
 \newlabel{resized}{{4}{6}{Resized image to 50\% of its original size, we can clearly observe the aliasing in the high frequency areas of the image.\relax }{figure.caption.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}4}{6}{subsection.2.4}\protected@file@percent }
-\newlabel{avaragefilter}{{7}{6}{4}{equation.2.7}{}}
+\newlabel{avaragefilter}{{7}{7}{4}{equation.2.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Smoothed the aliased image with different sizes of the averaging kernel. We can see here that the 10x10 kernel has strong blurring. The aliasing seems to go away as we blur the image.\relax }}{7}{figure.caption.9}\protected@file@percent }
 \newlabel{smooth}{{5}{7}{Smoothed the aliased image with different sizes of the averaging kernel. We can see here that the 10x10 kernel has strong blurring. The aliasing seems to go away as we blur the image.\relax }{figure.caption.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}5}{7}{subsection.2.5}\protected@file@percent }
@@ -51,10 +51,11 @@
 \newlabel{sharpened}{{6}{8}{Sharpened by using two different sharping techniques. Remark: Laplace sharping was done in spatial domain and gaussian high pass was done in frequency domain.\relax }{figure.caption.12}{}}
 \newlabel{gausslowp}{{11}{8}{5}{equation.2.11}{}}
 \newlabel{gausshighp}{{12}{9}{5}{equation.2.12}{}}
+\newlabel{High-freq-emphfirst}{{13}{9}{5}{equation.2.13}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Smoothed images on images blurred after resizing.\relax }}{9}{figure.caption.13}\protected@file@percent }
 \newlabel{smooth2}{{7}{9}{Smoothed images on images blurred after resizing.\relax }{figure.caption.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Sharpened by using two different sharping techniques on image blurred after resizing. Here we can clearly see that we got aliasing again.\relax }}{9}{figure.caption.14}\protected@file@percent }
-\newlabel{sharpened2}{{8}{9}{Sharpened by using two different sharping techniques on image blurred after resizing. Here we can clearly see that we got aliasing again.\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Sharpened by using two different sharping techniques on image blurred after resizing. Here we can clearly see that aliasing is visible again.\relax }}{9}{figure.caption.14}\protected@file@percent }
+\newlabel{sharpened2}{{8}{9}{Sharpened by using two different sharping techniques on image blurred after resizing. Here we can clearly see that aliasing is visible again.\relax }{figure.caption.14}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Part C}{10}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}1}{10}{subsection.3.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Image F1.png, F2.png, F3.png, F4.png, F5.png\relax }}{10}{figure.caption.15}\protected@file@percent }
@@ -63,55 +64,56 @@
 \newlabel{histogramnoise}{{10}{11}{Histogram of the images\relax }{figure.caption.16}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces First row show the frequency representation of the images in dB scale. If we do not use dB scale we get higher difference between the energy of the spectrum, but by zooming in we can clearly see the impulses from the periodic noise.\relax }}{11}{figure.caption.17}\protected@file@percent }
 \newlabel{fourierrep}{{11}{11}{First row show the frequency representation of the images in dB scale. If we do not use dB scale we get higher difference between the energy of the spectrum, but by zooming in we can clearly see the impulses from the periodic noise.\relax }{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}2}{11}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}2}{12}{subsection.3.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces F1 image filtered using median filter with a 3x3 kernel.\relax }}{12}{figure.caption.18}\protected@file@percent }
 \newlabel{salt}{{12}{12}{F1 image filtered using median filter with a 3x3 kernel.\relax }{figure.caption.18}{}}
 \newlabel{adaptive}{{14}{12}{2}{equation.3.14}{}}
 \newlabel{variance}{{15}{12}{2}{equation.3.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Filtered gaussian noise image, here we applied the adaptive filter discussed above. \relax }}{12}{figure.caption.19}\protected@file@percent }
-\newlabel{adaptivefig}{{13}{12}{Filtered gaussian noise image, here we applied the adaptive filter discussed above. \relax }{figure.caption.19}{}}
+\newlabel{mean}{{16}{12}{2}{equation.3.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Filtered gaussian noise image, here we applied the adaptive filter discussed above with kernel 4x4 \relax }}{13}{figure.caption.19}\protected@file@percent }
+\newlabel{adaptivefig}{{13}{13}{Filtered gaussian noise image, here we applied the adaptive filter discussed above with kernel 4x4 \relax }{figure.caption.19}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}3}{13}{subsection.3.3}\protected@file@percent }
-\newlabel{contconv}{{16}{13}{3}{equation.3.16}{}}
-\newlabel{discconv}{{17}{13}{3}{equation.3.17}{}}
+\newlabel{contconv}{{17}{14}{3}{equation.3.17}{}}
+\newlabel{discconv}{{18}{14}{3}{equation.3.18}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}4}{14}{subsection.3.4}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.\relax }}{14}{figure.caption.20}\protected@file@percent }
 \newlabel{task4gauss}{{14}{14}{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.\relax }{figure.caption.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.\relax }}{14}{figure.caption.21}\protected@file@percent }
-\newlabel{task4pepper}{{15}{14}{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.\relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.\relax }}{15}{figure.caption.21}\protected@file@percent }
+\newlabel{task4pepper}{{15}{15}{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.\relax }{figure.caption.21}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}5}{15}{subsection.3.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image. The impulses are at -0.05 and 0.05.\relax }}{15}{figure.caption.22}\protected@file@percent }
-\newlabel{simulatedperiod}{{16}{15}{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image. The impulses are at -0.05 and 0.05.\relax }{figure.caption.22}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.6}6}{15}{subsection.3.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.7}7}{15}{subsection.3.7}\protected@file@percent }
-\newlabel{notchiboy}{{18}{15}{7}{equation.3.18}{}}
+\newlabel{notchiboy}{{19}{15}{7}{equation.3.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image. The impulses are at -0.05 and 0.05.\relax }}{16}{figure.caption.22}\protected@file@percent }
+\newlabel{simulatedperiod}{{16}{16}{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image. The impulses are at -0.05 and 0.05.\relax }{figure.caption.22}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Left; Original image F5, Right; decibel frequency domain. The black arrows show 2 periodicities with high frequency\relax }}{16}{figure.caption.23}\protected@file@percent }
 \newlabel{F5period}{{17}{16}{Left; Original image F5, Right; decibel frequency domain. The black arrows show 2 periodicities with high frequency\relax }{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref  {notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref  {sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.\relax }}{16}{figure.caption.24}\protected@file@percent }
-\newlabel{C7F3}{{18}{16}{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref {notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref {sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.\relax }{figure.caption.24}{}}
-\newlabel{transform}{{19}{16}{7}{equation.3.19}{}}
-\newlabel{sharping2}{{20}{16}{7}{equation.3.20}{}}
+\newlabel{transform}{{20}{16}{7}{equation.3.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref  {notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref  {sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.\relax }}{17}{figure.caption.24}\protected@file@percent }
+\newlabel{C7F3}{{18}{17}{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref {notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref {sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.\relax }{figure.caption.24}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Left; frequency representation of image F5.png, Right; frequency representation of the Butterworth notch filter. Here we have vertical impulses since the periodic noise is in y-direction.\relax }}{17}{figure.caption.25}\protected@file@percent }
 \newlabel{C7F3freq}{{19}{17}{Left; frequency representation of image F5.png, Right; frequency representation of the Butterworth notch filter. Here we have vertical impulses since the periodic noise is in y-direction.\relax }{figure.caption.25}{}}
-\newlabel{buttyboi}{{21}{17}{7}{equation.3.21}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Part D}{17}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}1}{17}{subsection.4.1}\protected@file@percent }
-\bibstyle{plainnat}
-\bibdata{bibl}
-\bibcite{dip}{{1}{2018}{{Rafael C.~Gonzales}}{{}}}
-\bibcite{wiki}{{2}{2019}{{Wikipedia, the free encyclopedia}}{{}}}
+\newlabel{sharping2}{{21}{17}{7}{equation.3.21}{}}
+\newlabel{buttyboi}{{22}{17}{7}{equation.3.22}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref  {notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref  {sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$,$D_{0} = 8$.\relax }}{18}{figure.caption.26}\protected@file@percent }
 \newlabel{C7F4}{{20}{18}{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref {notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref {sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$,$D_{0} = 8$.\relax }{figure.caption.26}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Left; frequency representation of image F4.png, Right; frequency representation of the Butterworth notch filter. Here the impulses are in horizontal direction since the noise is periodic in x-direction.\relax }}{18}{figure.caption.27}\protected@file@percent }
 \newlabel{C7F4freq}{{21}{18}{Left; frequency representation of image F4.png, Right; frequency representation of the Butterworth notch filter. Here the impulses are in horizontal direction since the noise is periodic in x-direction.\relax }{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Appendix}{18}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Part A}{18}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}References}{18}{section.7}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref  {notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref  {sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.\relax }}{19}{figure.caption.28}\protected@file@percent }
 \newlabel{C7F5}{{22}{19}{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref {notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref {sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.\relax }{figure.caption.28}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Left; frequency representation of image F5.png, Right; frequency representation with the Butterworth notch reject filter applied.\relax }}{19}{figure.caption.29}\protected@file@percent }
 \newlabel{F5notch}{{23}{19}{Left; frequency representation of image F5.png, Right; frequency representation with the Butterworth notch reject filter applied.\relax }{figure.caption.29}{}}
-\newlabel{LastPage}{{}{19}{}{page.19}{}}
-\xdef\lastpage@lastpage{19}
-\xdef\lastpage@lastpageHy{19}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Part D}{20}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}1}{20}{subsection.4.1}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{bibl}
+\bibcite{dip}{{1}{2018}{{Rafael C.~Gonzales}}{{}}}
+\bibcite{wiki}{{2}{2019}{{Wikipedia, the free encyclopedia}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Appendix}{21}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Part A}{21}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}References}{21}{section.7}\protected@file@percent }
+\newlabel{LastPage}{{}{21}{}{page.21}{}}
+\xdef\lastpage@lastpage{21}
+\xdef\lastpage@lastpageHy{21}
 \providecommand\totalcount@set[2]{}
-\totalcount@set{page}{20}
+\totalcount@set{page}{22}

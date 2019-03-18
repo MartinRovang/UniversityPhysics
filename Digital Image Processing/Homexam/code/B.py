@@ -54,21 +54,21 @@ def smoothing(image, boxsize = 3):
 
 # Use these to smooth before resizing.
 
-# smooth1 = smoothing(image, boxsize = 3)
-# smooth2 = smoothing(image, boxsize = 5)
-# smooth3 = smoothing(image, boxsize = 10)
+smooth1 = smoothing(image, boxsize = 3)
+smooth2 = smoothing(image, boxsize = 5)
+smooth3 = smoothing(image, boxsize = 10)
 
-# smooth1 = resize_image(smooth1, int(col*0.5), int(row*0.5))
-# smooth2 = resize_image(smooth2, int(col*0.5), int(row*0.5))
-# smooth3 = resize_image(smooth3, int(col*0.5), int(row*0.5))
+smooth1 = resize_image(smooth1, int(col*0.5), int(row*0.5))
+smooth2 = resize_image(smooth2, int(col*0.5), int(row*0.5))
+smooth3 = resize_image(smooth3, int(col*0.5), int(row*0.5))
 
-imagerez1 = resize_image(image, int(col*0.5), int(row*0.5))
-imagerez2 = resize_image(image, int(col*0.5), int(row*0.5))
-imagerez3 = resize_image(image, int(col*0.5), int(row*0.5))
+# smooth1 = resize_image(image, int(col*0.5), int(row*0.5))
+# smooth2 = resize_image(image, int(col*0.5), int(row*0.5))
+# smooth3 = resize_image(image, int(col*0.5), int(row*0.5))
 
-smooth1 = smoothing(imagerez1, boxsize = 3)
-smooth2 = smoothing(imagerez2, boxsize = 5)
-smooth3 = smoothing(imagerez3, boxsize = 10)
+# smooth1 = smoothing(imagerez1, boxsize = 3)
+# smooth2 = smoothing(imagerez2, boxsize = 5)
+# smooth3 = smoothing(imagerez3, boxsize = 10)
 
 fig, ax = plt.subplots(1,3)
 ax[0].imshow(smooth1, cmap = 'gray', interpolation="none", vmin = 0, vmax = 255)
@@ -131,9 +131,9 @@ def gaussian_hp(image, sigma):
                 H[y,x] = np.exp(-D**2/(2*sigma**2))
         H_hp = (1-H)
         X = np.fft.fftshift(np.fft.fft2(image))
-        Y = np.fft.fftshift(X*H_hp)
+        Y = np.fft.fftshift((1+H_hp)*X)
         y = np.fft.ifft2(Y)
-        return y.real
+        return np.abs(y)
 
 sigma = 40
 
@@ -142,8 +142,8 @@ sigma = 40
 # sharpedimage2 = gaussian_hp(smooth1, sigma) + smooth1  # Adding highpass mask to blurred image to sharp it.
 
 
-sharpedimage = lapsharp(imagerez1)
-sharpedimage2 = gaussian_hp(imagerez1, sigma) + imagerez1  # Adding highpass mask to blurred image to sharp it.
+sharpedimage = lapsharp(smooth1)
+sharpedimage2 = gaussian_hp(smooth1, sigma)  # Adding highpass mask to blurred image to sharp it.
 
 fig, ax = plt.subplots(1,2)
 ax[0].imshow(sharpedimage, cmap = 'gray', vmin = 0, vmax = 255, interpolation="none")

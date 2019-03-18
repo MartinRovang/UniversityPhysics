@@ -45,8 +45,8 @@ F5 = F5.astype('uint8')
 
 def adaptive(image, boxsize = 5):
         """
-        Geometric filter\n
-            returns processed image.
+        Adptive filtering, found variance of noise by find variance of a slice in the top image.
+        Uses local var and local mean to set pixel value.
         """
         # Pad image
         image_padded = np.pad(image, (boxsize, boxsize) , mode = 'symmetric')

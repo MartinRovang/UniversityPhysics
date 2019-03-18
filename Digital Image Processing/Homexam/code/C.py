@@ -92,12 +92,12 @@ def medianfilter(image, boxsize = 3):
         Uses median filter, convolution in spatial domain\n
             returns processed image.
         """
-        image_padded = np.pad(image, (boxsize,boxsize) , mode = 'constant')
+        image_padded = np.pad(image, (boxsize,boxsize) , mode = 'symmetric')
         result = np.zeros(image.shape)
-        rows, cols = image_padded.shape
-        # Multiply by 2 because there is 2 time the new pad size in each dimension.
-        for row in range((rows-boxsize*2)):
-            for col in range((cols-boxsize*2)):
+        rows, cols = image.shape
+        # Traverse the image and apply filter.
+        for row in range(rows):
+            for col in range(cols):
                 result[row, col] = np.median(image_padded[row:row + boxsize,col:col + boxsize].flatten())
         return result
 
@@ -116,7 +116,7 @@ plt.savefig('Filtered_saltimage.pdf', bbox_inches = 'tight',
 plt.show()
 
 #%%
-def adaptive(image, boxsize = 5):
+def adaptive_filter(image, boxsize = 3):
         """
         Adptive filtering, found variance of noise by find variance of a slice in the top image.
         Uses local var and local mean to set pixel value.
@@ -125,18 +125,21 @@ def adaptive(image, boxsize = 5):
         image_padded = np.pad(image, (boxsize, boxsize) , mode = 'symmetric')
         result = np.zeros(image.shape)
         rows, cols = image_padded.shape
-
-        variance_noise = np.var(image[5,0:cols])
-        #print(variance_noise)
-
-        # Multiply by 2 because there is 2 time the new pad size in each dimension.
-        for row in range((rows-boxsize*2)):
-            for col in range((cols-boxsize*2)):
+        # Get histogram of strip in image
+        hist, bins = np.histogram(F2[0:100,:].flatten(),256)
+        r = np.array([x for x in range(256)])
+        rows, cols = image.shape
+        prob = hist/(rows*cols)
+        m = np.sum(r*prob)
+        variance_noise = np.sum((r-m)**2*prob)
+        # Traverse the image and apply filter.
+        for row in range(rows):
+            for col in range(cols):
 
                 local_var = np.var(image_padded[row:row + boxsize,col:col + boxsize])
                 local_mean = np.mean(image_padded[row:row + boxsize,col:col + boxsize])
                 kernel_placement = image_padded[row:row + boxsize,col:col + boxsize] 
-                current_val = image_padded[row+1,col+1]
+                current_val = image_padded[row,col]
                 if variance_noise > local_var:
                     result[row, col] = current_val - 1*(current_val - local_mean)
                 else:
@@ -145,7 +148,7 @@ def adaptive(image, boxsize = 5):
         return result.astype('uint8')
 
 # Filter image
-filteredimage = adaptive(F2, boxsize= 5)
+filteredimage = adaptive_filter(F2, boxsize= 4)
 
 # Plot
 fig, ax = plt.subplots(1,2)
