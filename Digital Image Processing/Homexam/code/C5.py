@@ -5,7 +5,7 @@ from PIL import Image
 import cv2
 from scipy.signal import convolve2d
 
-
+# Load images
 filedir = os.path.dirname(__file__)
 imagedir = 'images/'
 filename1 = 'F1.png'

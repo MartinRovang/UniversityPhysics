@@ -78,8 +78,9 @@ def butterworth_hp_sharp(image, sigma, n, k):
         return np.abs(y)
 
 
-
-mid = 300 # Centered frequency, since notch filter have origo in center we need this to subtract.
+# Centered frequency, since notch filter have origo in center we need this to subtract.
+mid = 300 
+# Notches to reject
 notches = np.array([[450-mid, 0], [330-mid, 0], [320-mid, 0], [315-mid, 0], [0, 450-mid], [0, 330-mid], [0, 320-mid], [0, 315-mid] ])
 
 # Use filters

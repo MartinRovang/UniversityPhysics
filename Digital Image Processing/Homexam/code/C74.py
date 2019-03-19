@@ -9,7 +9,7 @@ from scipy.signal import convolve2d
 
 
 
-
+# Load images
 filedir = os.path.dirname(__file__)
 imagedir = 'images/'
 filename5 = 'F5.png'
@@ -94,11 +94,14 @@ y = butterworth_hp_sharp(y, 8, 5, k = 1)
 y = (y-np.min(y))/np.max(y-np.min(y))*255
 y = y.astype('uint8')
 
+# Get size of filter
 N , M = H.shape
+
+# Find real frequencies
 HfreqN = np.fft.fftshift(np.fft.fftfreq(N, 1))
 HfreqM = np.fft.fftshift(np.fft.fftfreq(M, 1))
 
-
+# Plot
 fig, ax = plt.subplots(1,2)
 ax[0].imshow(F4, cmap = 'gray')
 ax[0].set_title('Original')
@@ -107,9 +110,10 @@ ax[1].set_title('Filtered image')
 plt.savefig('C7F4.pdf', bbox_inches = 'tight', pad_inches = 0)
 plt.show()
 
-
+# Decibel frequency spectrum of image F4
 Y = 10*np.log10(np.abs(np.fft.fftshift(np.fft.fft2(F4))))
 
+# Plot
 fig, ax = plt.subplots(1,2)
 ax[0].imshow(Y, cmap = plt.cm.BuPu_r, aspect='auto', extent=(HfreqN.min(),HfreqN.max(),HfreqM.min(),HfreqM.max()))
 ax[0].set_title('Frequency spectrum of F4')

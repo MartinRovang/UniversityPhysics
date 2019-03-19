@@ -22,8 +22,8 @@
 
         \date{}
 \author{
-		Martin Soria RÃ¸vang \\ 
-        Universitetet i TromsÃ¸ \\}
+		Martin Soria Røvang \\ 
+        Universitetet i Tromsø\\}
 
 % \begin{titlepage}
 \clearpage\maketitle
@@ -108,7 +108,7 @@ Vet at forventningen til prosessene er null, $E[x_{1}(t+h)]E[x_{2}(t+h)] = 0$ og
     R_{xx}(\tau) = R_{x_{1}x_{1}}(\tau) + R_{x_{2}x_{2}}(\tau)
 \end{equation}
 
-Siden vi har summer kan vi delle integralet opp i sum,
+Siden vi har summer kan vi dele integralet opp i sum,
 
 
 \begin{equation}
@@ -129,12 +129,27 @@ I figur(\ref{taskb}) ser vi tidsrekken i øverste vindu, periodogram, og periodog
 \end{figure}
 
 
-Her ser man at hann vinduet gir en glattere kurve, og lar ikke frekvense lekker over like mye som i det vanlige periodogrammet. Frekvensene ser ut til å være rundt 0.1 og 0.05.
+Her ser man at hann vinduet gir en glattere kurve, og lar ikke frekvense lekker over like mye som i det vanlige periodogrammet. Frekvensene ser ut til å være rundt 0.12 og 0.07.
 
 
 \subsection{c}
 
-Som nevnt i oppgave b så fjerner vinduet mer av lekasje i frekvensspekteret, grunnet at den har lavere sidelober enn den idelle w[k] = 1, men dette vil øke bredden på hovedloben slik at man får litt dårligere oppløsning. I figure(\ref{taskc}) har jeg ikke brukt dB skala slik at differansen er større mellom styrken på frekvensene. Her kan man tydelig se at vinduet hjelper med å se svakere periodisitetet i spectrumet.
+Som nevnt i oppgave b så fjerner vinduet mer av lekasjen i frekvensspekteret, fordi den har mindre sidelober enn den idelle w[k] = 1, men dette vil øke bredden på hovedloben slik at man får litt dårligere oppløsning. I figure(\ref{taskc}) har jeg ikke brukt dB skala slik at differansen er større mellom styrken på frekvensene. Her kan man tydelig se at vinduet hjelper med å se svakere periodisitetet i spectrumet. Periodogram ble laget ved bruk av Fourier transform som vist i ligning(\ref{Periodogram}).
+
+\begin{equation}
+    S(f) = \frac{1}{N}|\mathcal{F}\{x[n]\}|^{2}
+    \label{Periodogram}
+\end{equation}
+der $\mathcal{F}$ er DTFT, \emph{Discrete Time Fourier Transform} og N er antall datapunkter. Ved bruk av vindu har vi ligning(\ref{wPeriodogram}).
+
+\begin{equation}
+    S_{w}(f) = \frac{1}{NU}|\mathcal{F}\{w[n]x[n]\}|^{2}
+    \label{wPeriodogram}
+\end{equation}
+
+Her er $w[n]$ vinduet, i dette tilfelle er dette \emph{Hann window}. Vi bruker vindu for å minske spektral lekasje som kommer av at vi ikke kan ha en \emph{ekte} fourier transform som krever at signal vi har er uendelig langt. Derfor vil vi alltid ha en ende på signal som man antar er null. Dette betyr at vi bruker et ideelt vindu med lengde M(signal lengden) når vi tar Fourier transform. Når man ganger inn tids domenet så konvolverer man i frekvensdomenet, og siden det ideele vinduet har store sidelober medfører dette til at man får ut nærliggende frekvenser i hverandre og dermed gir spektral lekasje. Ved bruk av vindu som Hann vindu så kan man redusere dette siden de har smalere sidelober.
+
+
 
 \begin{figure}[hbt!]
     {\centering
@@ -146,7 +161,7 @@ Som nevnt i oppgave b så fjerner vinduet mer av lekasje i frekvensspekteret, gru
 
 \subsection{d}
 
-Ved å implementere WOSA (Weighted/Welchs overlapped segment averaging) på tidsrekken fikk man resultatet vist i figur(\ref{taskd}).
+Ved å implementere WOSA (Weighted/Welchs overlapped segment averaging) på tidsrekken fikk vi resultatet vist i figur(\ref{taskd}).
 
 \begin{figure}[hbt!]
     {\centering
@@ -156,7 +171,7 @@ Ved å implementere WOSA (Weighted/Welchs overlapped segment averaging) på tidsre
     \par}
     \end{figure}
 
-Her ble hver av segment vektet som gir et kraftigere utslag der det var sterke periodisiteter i forhold til resten av spekteret. Her ser man at frekvensen $\approx 0.1$ er svært kraftig og $\approx 0.05$ viser seg også \,ganske kraftig i forhold til alle de andre. Man kan se at frekvensene er mye tydligere i WOSA enn i periodogrammet og hann vinduet i dB skala som vist i figur(\ref{taskb}).
+Her ble hvert segment vektet som gir et kraftigere utslag der det er sterke periodisiteter i forhold til resten av spekteret. Her ser man at frekvensen på ca $f \approx 0.15$ er svært kraftig og $\approx 0.05$ viser seg også \,ganske kraftig i forhold til alle de andre. Man kan se at frekvensene er mye tydligere i WOSA enn i periodogrammet og hann vinduet i dB skala som vist i figur(\ref{taskb}). 
 
 
 \clearpage
@@ -182,7 +197,6 @@ Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser ma
 % --------------------------------------------------------------
 %     Reference og appendix
 % --------------------------------------------------------------
-\newpage
 \section{Appendix}
 
 \begin{figure}[H]
@@ -211,7 +225,7 @@ Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser ma
             # Hann window
             window = (1/2)*(1 - np.cos(2*np.pi*n/(N-1)))
             U = (1/N)*np.sum(window**2)
-            spectrum = np.abs(np.fft.fftshift(np.fft.fft(window*x))**2)
+            spectrum = np.abs(np.fft.fftshift(np.fft.fft(window*x)))**2
             spectrum *= (dt/(N*U))
             freq = np.fft.fftshift(np.fft.fftfreq(N, dt))
             return freq, spectrum
@@ -226,7 +240,7 @@ Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser ma
         
         # Plot
         fig, ax = plt.subplots(3,1)
-        ax[0].plot(data, color = 'black', linewidth = 2)
+        ax[0].plot(data, color = 'black', linewidth = 1)
         ax[0].set_title('Original time series')
         ax[0].set_xlabel('x')
         ax[0].set_ylabel('y')
@@ -238,6 +252,10 @@ Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser ma
         ax[2].set_title('Periodogram with Hann window')
         ax[2].set_xlabel('Frequency')
         ax[2].set_ylabel('dB')
+        ax[1].set_xticks([x for x in np.arange(-0.5,0.5,0.1)])
+        ax[2].set_xticks([x for x in np.arange(-0.5,0.5,0.1)])
+        ax[1].grid()
+        ax[2].grid()
         plt.tight_layout()
         plt.savefig('rapport/taskb.pdf', bbox_inches = 'tight',
             pad_inches = 0)
@@ -296,7 +314,7 @@ Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser ma
         
         # Plot
         fig, ax = plt.subplots(2,1)
-        ax[0].plot(data, linewidth = '3', color = 'black')
+        ax[0].plot(data, linewidth = '1', color = 'black')
         ax[0].set_title('Time series', fontsize = '20')
         ax[0].set_ylabel('Value')
         ax[0].set_xlabel('Time')
@@ -304,7 +322,8 @@ Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser ma
         ax[1].set_title('WOSA, M = %s'%M, fontsize = '20')
         ax[1].set_xlabel('Frequency')
         ax[1].set_ylabel('dB power')
-        #ax[1].set_xlim([0,1/(2*dt)])
+        ax[1].set_xticks([x for x in np.arange(-0.5,0.5,0.1)])
+        ax[1].grid()
         plt.tight_layout()
         plt.savefig('rapport/taskd.pdf', bbox_inches = 'tight',
             pad_inches = 0)
@@ -362,6 +381,8 @@ Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser ma
                     plt.plot(t, 200*window)
                 spectrum += (dt/(M*U))*np.abs(spectrum_temp)**2   
             spectrum /= n_windows
+            plt.show()
+            plt.close()
             freq = np.fft.fftshift(np.fft.fftfreq(M, dt))
             print('Number of windows: %s'%n_windows)
             return freq, spectrum
@@ -382,7 +403,8 @@ Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser ma
         ax[1].set_title('WOSA, M = %s'%M, fontsize = '20')
         ax[1].set_xlabel('Frequency')
         ax[1].set_ylabel('dB power')
-        #ax[1].set_xlim([0,1/(2*dt)])
+        ax[1].set_xticks([x for x in np.arange(-0.5,0.5,0.1)])
+        ax[1].grid()
         plt.tight_layout()
         plt.savefig('rapport/task2.pdf', bbox_inches = 'tight',
             pad_inches = 0)

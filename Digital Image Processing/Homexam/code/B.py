@@ -11,6 +11,7 @@ imagedir = 'images/'
 filename = 'Fig_part_B.tif'
 file = os.path.join(filedir, imagedir, filename)
 
+# Read image into array
 image = plt.imread(file)
 
 def resize_image(image, newN, newM):
@@ -27,10 +28,12 @@ def resize_image(image, newN, newM):
     return resize
 
 
-
+# Get image size
 row, col = image.shape
+# Resize image 50%
 imagerez = resize_image(image, int(col*0.5), int(row*0.5))
 
+# Plotting
 fig, ax = plt.subplots(1,2)
 ax[0].imshow(imagerez, cmap = 'gray', interpolation="none")
 ax[0].set_title('Resized 50%')
@@ -145,6 +148,8 @@ sigma = 40
 sharpedimage = lapsharp(smooth1)
 sharpedimage2 = gaussian_hp(smooth1, sigma)  # Adding highpass mask to blurred image to sharp it.
 
+
+# Plotting
 fig, ax = plt.subplots(1,2)
 ax[0].imshow(sharpedimage, cmap = 'gray', vmin = 0, vmax = 255, interpolation="none")
 ax[0].set_title('Sharpened, Laplace kernel')

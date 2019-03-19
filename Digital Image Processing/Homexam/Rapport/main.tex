@@ -153,7 +153,7 @@ The bit plane which represents the most significant bits are the one with most d
     \end{equation}
 
 
-
+We could also replace 255 with $L-1$ for more general case.
 
 
 \section{Part B}
@@ -418,6 +418,17 @@ where L is the max intensity value, (8-bit yield $L = 256$) and $p_{s}(r_{i})$ i
 
 It looks better, but we could probably do better with some other technique. If we look at the histogram in figure(\ref{histogramnoise}) we might suspect that we have salt \& pepper + gaussian noise.
 
+Since its suspected that there might be salt \& pepper + gaussian noise we also have the alpha trimmed mean filtered image shown in figure(\ref{alphatrimmed}),
+
+\begin{figure}[!htb]
+    {\centering
+        \includegraphics[width=1\textwidth]{alphatrimmed.pdf}
+        \caption{Alpha trimmed with kernel 3x3, d = 2. This image looks almost the same as the other adaptive filter, but slightly sharper}.
+        \label{alphatrimmed}
+    \par}
+    \end{figure}
+
+    Alpha trimming is done by removing the $d/2$ of the first and last the intensities that has been ranked from lowest to highest inside the kernel. Then we take the mean of the rest and assign this new value to our new image which will be our filtered version.
 
 \subsection{3}
 
@@ -458,7 +469,7 @@ Since both salt \& pepper noise and gaussian noise has high frequency using a ga
 
 \begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.75\textwidth]{task4gauss.png}
+        \includegraphics[width=0.85\textwidth]{task4gauss.png}
         \caption{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.}
         \label{task4gauss}
     \par}
@@ -530,7 +541,7 @@ Removing the noise in all the images below was done with this filter (with cutof
 \begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.80\textwidth]{C7F3.pdf}
-        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref{notchiboy}) with $D_{0} = 1$ and $n = 3$.  We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.}
+        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref{notchiboy}) with $D_{0} = 1$ and $n = 3$.  We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$. Here we might need to reconsider the order of our filter as we have some ringing effect in the image. This is caused by have wobbles in our filter.}
         \label{C7F3}
     \par}
     \end{figure}
@@ -579,7 +590,7 @@ Image F4.png is almost the same noise, but shifted by $90\degree$, so here we fl
 \begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.85\textwidth]{C7F4.pdf}
-        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref{notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$,$D_{0} = 8$.}
+        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref{notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$,$D_{0} = 8$.Here we might need to reconsider the order of our filter as we have some ringing effect in the image. This is caused by have wobbles in our filter.}
         \label{C7F4}
     \par}
     \end{figure}
@@ -599,7 +610,7 @@ Removing the noise in image F5 was done by using a Butterworth notch filter (wit
 \begin{figure}[!htb]
     {\centering
         \includegraphics[width=0.80\textwidth]{C7F5.pdf}
-        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref{notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.}
+        \caption{Left; Original image, Right; Filtered image, here we managed to remove almost all the noise. For removing the noise we used equation(\ref{notchiboy}) with $D_{0} = 1$ and $n = 3$. We have also sharpened using equation(\ref{sharping2}) with $k = 1$ and in our high pass Butterworth $n = 5$, $D_{0} = 8$.Here we might need to reconsider the order of our filter as we have some ringing effect in the image. This is caused by have wobbles in our filter.}
         \label{C7F5}
     \par}
     \end{figure}
@@ -624,7 +635,7 @@ In figure(\ref{F5notch}) we see the dB scale frequency spectrum and the Butterwo
 \section{Part D}
 \subsection{1}
 
-The degradation space is not space invariant as the degradation has a radial dependency, this is the case because the degradation is caused by rotational motion, where its center is still and the further out in radial direction yield stronger circular degradation. If we would slice out some part of the image and find the degradation function in that area and then use it as filtering in some other part of the image, we would not necessary get a good result.
+The degradation space is not space invariant as the degradation has a radial dependency, this is the case because the degradation is caused by rotational motion, where its center is still and the further out in radial direction yield stronger circular degradation. If we would slice out some part of the image and find the degradation function in that area and then generalize it for the whole image we would not necessary get a good result.
 
 
 

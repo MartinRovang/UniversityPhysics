@@ -31,19 +31,10 @@ F4 = plt.imread(file4)
 F5 = plt.imread(file5)
 
 # Transform to 0-255
-F1 = (F1-np.min(F1))/np.max(F1-np.min(F1))*255
 F2 = (F2-np.min(F2))/np.max(F2-np.min(F2))*255
-F3 = (F3-np.min(F3))/np.max(F3-np.min(F3))*255
-F4 = (F4-np.min(F4))/np.max(F4-np.min(F4))*255
-F5 = (F5-np.min(F5))/np.max(F5-np.min(F5))*255
-F1 = F1.astype('uint8')
 F2 = F2.astype('uint8')
-F3 = F3.astype('uint8')
-F4 = F4.astype('uint8')
-F5 = F5.astype('uint8')
 
-
-def adaptive(image, boxsize = 5):
+def alpha_trimmed_mean(image, d, boxsize = 3):
         """
         Adptive filtering, found variance of noise by find variance of a slice in the top image.
         Uses local var and local mean to set pixel value.
@@ -53,40 +44,33 @@ def adaptive(image, boxsize = 5):
         result = np.zeros(image.shape)
         rows, cols = image_padded.shape
 
-
-        hist, bins = np.histogram(F2.flatten(),256)
-
+        # Find bins
+        hist, bins = np.histogram(F2.flatten(), 256)
+        
+        # Intensities
         r = np.array([x for x in range(256)])
-
+        # Get size
         rows,cols = image.shape
-        prob = hist/(rows*cols)
-
-        m = np.sum(r*prob)
-        variance_noise = np.sum((r-m)**2*prob)
-
-
-        #variance_noise = np.var(image[5,0:cols])
-        #print(variance_noise)
 
         # Multiply by 2 because there is 2 time the new pad size in each dimension.
-        for row in range((rows-boxsize*2)):
-            for col in range((cols-boxsize*2)):
-
-                local_var = np.var(image_padded[row:row + boxsize,col:col + boxsize])
-                local_mean = np.mean(image_padded[row:row + boxsize,col:col + boxsize])
-                kernel_placement = image_padded[row:row + boxsize,col:col + boxsize] 
-                current_val = image_padded[row,col]
-                if variance_noise > local_var:
-                    result[row, col] = current_val - 1*(current_val - local_mean)
-                else:
-                    result[row, col] = current_val - (variance_noise/local_var)*(current_val - local_mean)
-        
+        for row in range((rows)):
+            for col in range((cols)):
+                sorted_vals = sorted(image_padded[row:row + boxsize,col:col + boxsize].flatten(), reverse = True)
+                sorted_len = len(sorted_vals)
+                sorted_vals_cut = sorted_vals[int(d/2): int(sorted_len-d/2)]
+                result[row, col] = np.sum(sorted_vals_cut)//(sorted_len - d)
         return result.astype('uint8')
 
-image = adaptive(F2, boxsize= 3)
+# Run filter on image F2
+image = alpha_trimmed_mean(F2, d = 2, boxsize= 3)
 
+# Plot
 fig, ax = plt.subplots(1,2)
-
-ax[0].imshow(F2, cmap = 'gray', vmin = 0, vmax= 255)
-ax[1].imshow(image, cmap = 'gray', vmin = 0, vmax= 255)
+ax[0].imshow(F2, cmap = 'gray', interpolation = 'none', vmin = 0, vmax= 255)
+ax[0].set_title('Original')
+ax[1].imshow(image, cmap = 'gray', interpolation = 'none', vmin = 0, vmax= 255)
+ax[1].set_title('Alpha trimmed filtered')
+plt.tight_layout()
+plt.savefig('alphatrimmed.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
 plt.show()

@@ -25,59 +25,57 @@ rows, cols = image.shape
 center = np.sqrt(((int(rows/2)**2)+((int(cols/2))**2)))
 polar_image = cv2.linearPolar(image,(rows/2, cols/2), center, cv2.WARP_FILL_OUTLIERS)
 
-polar_image = polar_image.astype('uint8')
+polar_image = polar_image.astype('uint8').T
+
+
+def wiener_filter(image, a, K):
+        rows, cols = image.shape
+        H = np.zeros((rows, cols))
+        for y in range(0, rows):
+            for x in range(0, cols):
+                D = np.sqrt((y-int(rows/2))**2 + (x-int(cols/2))**2)
+                if x == 0:
+                    H[y,x] = 1
+                else:
+                    H[y,x] = (np.sin(np.pi*x*a/cols)/(a*np.sin(np.pi*x/cols)))
+                    #H[y,x] = np.abs((1/(np.pi*x*a))*np.sin(np.pi*x*a)*np.exp(-1j*np.pi*x*a))
+        X = np.fft.fft2(image)
+        top = np.abs(H)**2
+        bot = H*(np.abs(H)**2+K)
+        Y = (top/bot)*X
+        for y in range(0, rows):
+            for x in range(0, cols):
+                D = np.sqrt((y-int(rows/2))**2 + (x-int(cols/2))**2)
+                if D < 55:
+                    pass
+                else:
+                    Y[y,x] = 0
+        y = np.fft.ifft2(Y)
+        return np.abs(y)
+
+im = wiener_filter(polar_image, (1/8)*cols, 1)
+
 
 fig, ax = plt.subplots(1,2)
-
-
 ax[0].imshow(polar_image, cmap = 'gray')
-ax[1].imshow(image, cmap = 'gray')
+ax[1].imshow(im, cmap = 'gray')
 plt.show()
 
 
+# from skimage import color, data, restoration
+# rows, cols = image.shape
+# H = np.zeros((rows, cols))
+# a = (1/8)*cols
+# for y in range(0, rows):
+#     for x in range(0, cols):
+#         #D = np.sqrt((y-int(rows/2))**2 + (x-int(cols/2))**2)
+#         if x == 0:
+#             H[y,x] = 1
+#         else:
+#             H[y,x] = (np.sin(np.pi*x*a/cols)/(a*np.sin(np.pi*x/cols)))
+# deconvolved_img = restoration.wiener(image, H, 10)
 
-def wiener_filter(image, a):
-        row, col = image.shape
-        H = np.zeros((row, col))
-        for y in range(row):
-            for x in range(col):
-                D = np.sqrt((y-int(rows/2))**2 + (x-int(cols/2))**2)
-                if (a*np.sin(np.pi*x/cols)) > 0.0002:
-                    if D > 0:
-                        H[y,x] = (np.sin(np.pi*x*a/cols)/(a*np.sin(np.pi*x/cols)))
-                    else:
-                        H[y,x] = 1
-                else:
-                    H[y,x] = 0.0002
-        X = np.fft.fftshift(np.fft.fft2(image))
-        Y = X/H
-        y = np.fft.ifft2(np.fft.fftshift(Y))
-        return X
-
-
-# def wiener_filter(image, sigma, n):
-#         """Butterworth high pass filter, sigma defines the radius around the centered frequency
-#         and n defines the order.(how close to ideal you want)"""
-#         row, col = image.shape
-#         H = np.zeros((row, col))
-#         for y in range(row):
-#             for x in range(col):
-#                 D = np.sqrt((y-int(row/2))**2 + (x-int(col/2))**2)
-#                 if D > 0:
-#                     H[y,x] = 1/(1+ (D/sigma)**(2*n))
-#                 else:
-#                     H[y,x] = 0
-#         X = np.fft.fftshift(np.fft.fft2(image))
-#         # sharp image
-#         Y = H*X
-#         Y = np.fft.fftshift(Y)
-#         y = np.fft.ifft2(Y)
-#         return np.abs(y)
-
-#im = wiener_filter(polar_image,5, 1)
-# im = wiener_filter(polar_image, 20)
-
-# plt.imshow(polar_image, cmap = 'gray')
+# fig, ax = plt.subplots(1,2)
+# ax[0].imshow(polar_image, cmap = 'gray')
+# ax[1].imshow(deconvolved_img, cmap = 'gray')
 # plt.show()
-
-

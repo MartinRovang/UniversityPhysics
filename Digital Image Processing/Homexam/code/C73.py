@@ -74,14 +74,15 @@ def butterworth_hp_sharp(image, sigma, n, k):
                 else:
                     H[y,x] = 0
         X = np.fft.fftshift(np.fft.fft2(image))
-        # sharp image
+        # sharp image (High frequency emphasis filtering)
         Y = (1+k*H)*X
         Y = np.fft.fftshift(Y)
         y = np.fft.ifft2(Y)
         return np.abs(y)
 
-
-mid = 300 # Centered frequency, since notch filter have origo in center we need this to subtract.
+# Centered frequency, since notch filter have origo in center we need this to subtract.
+mid = 300
+# Notches to reject
 notches = np.array([[0, 330-mid]])
 
 
@@ -98,7 +99,7 @@ N , M = H.shape
 HfreqN = np.fft.fftshift(np.fft.fftfreq(N, 1))
 HfreqM = np.fft.fftshift(np.fft.fftfreq(M, 1))
 
-
+# Plot
 fig, ax = plt.subplots(1,2)
 ax[0].imshow(F3, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[0].set_title('Original')
@@ -108,9 +109,11 @@ plt.savefig('C7F3.pdf', bbox_inches = 'tight',
     pad_inches = 0)
 plt.show()
 
-
+# Decibel frequency spectrum of image F3
 Y = 10*np.log10(np.abs(np.fft.fftshift(np.fft.fft2(F3))))
 
+
+# Plot
 fig, ax = plt.subplots(1,2)
 ax[0].imshow(Y, cmap = plt.cm.BuPu_r, aspect='auto', extent=(HfreqN.min(),HfreqN.max(),HfreqM.min(),HfreqM.max()))
 ax[0].set_title('Frequency spectrum of F3')

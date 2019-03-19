@@ -42,6 +42,7 @@ F3 = F3.astype('uint8')
 F4 = F4.astype('uint8')
 F5 = F5.astype('uint8')
 
+# Make histogram
 fig, ax = plt.subplots(1,2)
 ax[0].hist(F1.flatten(), bins = 256)
 ax[0].set_title('Histogram F1')
@@ -90,7 +91,7 @@ plt.show()
 def medianfilter(image, boxsize = 3):
         """
         Uses median filter, convolution in spatial domain\n
-            returns processed image.
+        returns processed image.
         """
         image_padded = np.pad(image, (boxsize,boxsize) , mode = 'symmetric')
         result = np.zeros(image.shape)
@@ -104,7 +105,7 @@ def medianfilter(image, boxsize = 3):
 # Filter image
 filteredsalt = medianfilter(F1)
 
-
+# Plot
 fig, ax = plt.subplots(1,2)
 ax[0].imshow(F1, cmap = 'gray', vmin = 0, vmax = 255, interpolation="none")
 ax[1].imshow(filteredsalt, cmap = 'gray', vmin = 0, vmax = 255, interpolation="none")
@@ -127,28 +128,34 @@ def adaptive_filter(image, boxsize = 3):
         rows, cols = image_padded.shape
         # Get histogram of strip in image
         hist, bins = np.histogram(F2[0:100,:].flatten(),256)
+        # Intensities
         r = np.array([x for x in range(256)])
+        # Get size
         rows, cols = image.shape
+        # Get probabilites
         prob = hist/(rows*cols)
+        # Get mean
         m = np.sum(r*prob)
+        # Get variance estimate of noise
         variance_noise = np.sum((r-m)**2*prob)
+        
         # Traverse the image and apply filter.
         for row in range(rows):
             for col in range(cols):
-
                 local_var = np.var(image_padded[row:row + boxsize,col:col + boxsize])
                 local_mean = np.mean(image_padded[row:row + boxsize,col:col + boxsize])
                 kernel_placement = image_padded[row:row + boxsize,col:col + boxsize] 
                 current_val = image_padded[row,col]
                 if variance_noise > local_var:
                     result[row, col] = current_val - 1*(current_val - local_mean)
+                
                 else:
                     result[row, col] = current_val - (variance_noise/local_var)*(current_val - local_mean)
         
         return result.astype('uint8')
 
-# Filter image
-filteredimage = adaptive_filter(F2, boxsize= 4)
+# Run filter on image F2
+filteredimage = adaptive_filter(F2, boxsize= 3)
 
 # Plot
 fig, ax = plt.subplots(1,2)

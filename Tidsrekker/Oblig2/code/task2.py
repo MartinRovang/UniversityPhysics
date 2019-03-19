@@ -42,6 +42,8 @@ def WOSA(x, M, dt = 1):
             plt.plot(t, 200*window)
         spectrum += (dt/(M*U))*np.abs(spectrum_temp)**2   
     spectrum /= n_windows
+    plt.show()
+    plt.close()
     freq = np.fft.fftshift(np.fft.fftfreq(M, dt))
     print('Number of windows: %s'%n_windows)
     return freq, spectrum
@@ -54,7 +56,7 @@ idx = np.where(freq == 0)
 
 # plot
 fig, ax = plt.subplots(2,1)
-ax[0].plot(sunspots, linewidth = '3', color = 'black')
+ax[0].plot(sunspots, linewidth = '1', color = 'black')
 ax[0].set_title('Sunspots plot', fontsize = '20')
 ax[0].set_ylabel('Sunspots')
 ax[0].set_xlabel('Year')
@@ -62,7 +64,8 @@ ax[1].plot(freq, 10*np.log10(spectrum/spectrum[idx]), '-.', linewidth = '1', col
 ax[1].set_title('WOSA, M = %s'%M, fontsize = '20')
 ax[1].set_xlabel('Frequency')
 ax[1].set_ylabel('dB power')
-#ax[1].set_xlim([0,1/(2*dt)])
+ax[1].set_xticks([x for x in np.arange(-0.5,0.5,0.1)])
+ax[1].grid()
 plt.tight_layout()
 plt.savefig('rapport/task2.pdf', bbox_inches = 'tight',
     pad_inches = 0)
