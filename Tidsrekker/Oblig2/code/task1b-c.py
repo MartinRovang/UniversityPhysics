@@ -7,6 +7,7 @@ data = np.genfromtxt('tidsrekke_oblig2_oppg1.txt')
 
 def periodogram(x, dt):
     """Regular periodogram"""
+    #x = np.pad(x, (0,200), 'constant')
     N = len(x)
     spectrum = np.abs(np.fft.fftshift(np.fft.fft(x))**2)
     spectrum *= dt/ N
@@ -17,6 +18,7 @@ def periodogram(x, dt):
 
 def w_periodogram(x, dt):
     """Windowed periodogram"""
+    #x = np.pad(x, (0,200), 'constant')
     N = len(x)
     n = np.arange(0,N,1)
     # Hann window

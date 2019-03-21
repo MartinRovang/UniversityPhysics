@@ -13,69 +13,72 @@ from scipy.signal import convolve2d
 filedir = os.path.dirname(__file__)
 imagedir = 'images/'
 filename5 = 'starrySky.png'
-#filename5 = 'teststars.jpg'
 file = os.path.join(filedir, imagedir, filename5)
 
-
+# Transpose
 image = plt.imread(file)
 # Transform to 0-255
 image = (image-np.min(image))/np.max(image-np.min(image))*255
 image = image.astype('uint8')
 rows, cols = image.shape
-center = np.sqrt(((int(rows/2)**2)+((int(cols/2))**2)))
-polar_image = cv2.linearPolar(image,(rows/2, cols/2), center, cv2.WARP_FILL_OUTLIERS)
+radius = np.sqrt((rows/2-25)**2 +(cols/2-25)**2)
+polar_image = cv2.linearPolar(image, (int(rows/2), int(cols/2)), radius, (cv2.WARP_FILL_OUTLIERS+cv2.INTER_LINEAR))
 
+# Flip image with transpose
 polar_image = polar_image.astype('uint8').T
 
 
 def wiener_filter(image, a, K):
-        rows, cols = image.shape
-        H = np.zeros((rows, cols))
-        for y in range(0, rows):
-            for x in range(0, cols):
-                D = np.sqrt((y-int(rows/2))**2 + (x-int(cols/2))**2)
-                if x == 0:
-                    H[y,x] = 1
-                else:
-                    H[y,x] = (np.sin(np.pi*x*a/cols)/(a*np.sin(np.pi*x/cols)))
-                    #H[y,x] = np.abs((1/(np.pi*x*a))*np.sin(np.pi*x*a)*np.exp(-1j*np.pi*x*a))
-        X = np.fft.fft2(image)
-        top = np.abs(H)**2
-        bot = H*(np.abs(H)**2+K)
-        Y = (top/bot)*X
-        for y in range(0, rows):
-            for x in range(0, cols):
-                D = np.sqrt((y-int(rows/2))**2 + (x-int(cols/2))**2)
-                if D < 55:
-                    pass
-                else:
-                    Y[y,x] = 0
-        y = np.fft.ifft2(Y)
-        return np.abs(y)
+    """Wiener filter, a = displacement, K = Inverse signal to noise ratio. """
+    rows, cols = image.shape
+    H = np.zeros((rows, cols))
+    for v in range(int(-rows/2), int(rows/2)):
+        for u in range(int(-cols/2), int(cols/2)):
+            if u == 0:
+                H[v+int(rows/2),u+int(cols/2)] = 1
+            else:
+                H[v+int(rows/2),u+int(cols/2)] = (1/a)*(np.sin(np.pi*u*a/cols)/(np.sin(np.pi*u/cols)))
 
-im = wiener_filter(polar_image, (1/8)*cols, 1)
+    # H.H^*
+    H_abs = (H*np.conj(H))
+    X = np.fft.fftshift(np.fft.fft2(image))
+    top = H_abs
+    bot = H*(H_abs + K)
+    G = (top/bot)*X
+    y = np.fft.ifft2(G)
+
+    # Return image
+    return np.abs(y)
 
 
-fig, ax = plt.subplots(1,2)
-ax[0].imshow(polar_image, cmap = 'gray')
-ax[1].imshow(im, cmap = 'gray')
+# Apply filter and then taking it to the second power to remove some noise.
+im = wiener_filter(polar_image, a = (1/8)*cols, K =0.001)**2
+
+# Return image to cartesian coordinates.
+im2 = cv2.linearPolar(im.T, (int(rows/2), int(cols/2)), radius, (cv2.WARP_INVERSE_MAP + cv2.INTER_LINEAR))
+
+
+# Plot
+fig, ax = plt.subplots(1,1)
+ax.imshow(image, cmap = 'gray')
+ax.set_title('Original')
+plt.tight_layout()
+plt.savefig('carttopol_trans_back1.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
 plt.show()
 
+fig, ax = plt.subplots(1,1)
+ax.imshow(im, cmap = 'gray')
+ax.set_title('Wiener filtered')
+plt.tight_layout()
+plt.savefig('carttopol_trans_back2.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
+plt.show()
 
-# from skimage import color, data, restoration
-# rows, cols = image.shape
-# H = np.zeros((rows, cols))
-# a = (1/8)*cols
-# for y in range(0, rows):
-#     for x in range(0, cols):
-#         #D = np.sqrt((y-int(rows/2))**2 + (x-int(cols/2))**2)
-#         if x == 0:
-#             H[y,x] = 1
-#         else:
-#             H[y,x] = (np.sin(np.pi*x*a/cols)/(a*np.sin(np.pi*x/cols)))
-# deconvolved_img = restoration.wiener(image, H, 10)
-
-# fig, ax = plt.subplots(1,2)
-# ax[0].imshow(polar_image, cmap = 'gray')
-# ax[1].imshow(deconvolved_img, cmap = 'gray')
-# plt.show()
+fig, ax = plt.subplots(1,1)
+ax.imshow(im2, cmap = 'gray')
+ax.set_title('Transformed back to cartesian.')
+plt.tight_layout()
+plt.savefig('carttopol_trans_back3.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
+plt.show()

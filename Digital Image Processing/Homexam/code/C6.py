@@ -1,3 +1,8 @@
+
+"""
+TASK C6
+"""
+
 import numpy as np 
 import matplotlib.pyplot as plt
 import os
@@ -18,8 +23,9 @@ F5 = plt.imread(file5)
 F5 *= 255
 F5 = F5.astype('uint8')
 
-# Fourier transform
+# Fourier transform image
 spectrum = np.fft.fftshift(np.fft.fft2(F5))
+# dB scale
 spectrum1 = 10*np.log10(np.abs(spectrum))
 
 # get shape

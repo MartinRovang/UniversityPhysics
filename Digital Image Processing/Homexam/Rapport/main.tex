@@ -230,7 +230,7 @@ where h is the average filter defined as in equation(\ref{avaragefilter}) and i(
 \end{equation}
 \end{figure}
 
-when convolving we are applying the filter in the spatial domain, since this is an averaging filter/moving averaging(as it traverses the image), we essentially apply a lowpass filter. Lowpass filter will only allow the low frequency components of the image to go through. This means that the image will not have rapid changing intensities(more smudged out/smooth). This is clearly visible in figure(\ref{smooth}). This will decrease the effect of aliasing. In fact this is how many of the anti-aliasing setting in video games work.[\cite{wiki}]
+when convolving we are applying the filter in the spatial domain, since this is an averaging filter/moving averaging(as it traverses the image), we essentially apply a lowpass filter. Lowpass filter will only allow the low frequency components of the image to go through. This means that the image will not have rapid changing intensities(more smudged out/smooth). This is clearly visible in figure(\ref{smooth}, this will decrease the effect of aliasing.
 When applying a filter we want to zero pad our image, in the case of convolving in spatial domain we would have problems fitting the kernel on the edges of the image. In our case the the convolve method from scipy module in python does this.
 
 \begin{figure}[!htb]
@@ -294,7 +294,7 @@ In this figure we can see that it has more defined edges. The gaussian high pass
 The gaussian high pass filter uses the gaussian function (which is a lowpass filter),
 
 \begin{equation}
-    H_{lp}(u,v) = e^{D^2/2\sigma^2}
+    H_{lp}(u,v) = e^{-D^2/2\sigma^2}
     \label{gausslowp}
 \end{equation}
 This function is in the frequency domain, D is the distance from the centered frequency and $\sigma$ is the radius parameter. To get the high pass filter we need to subtract it from one.
@@ -469,7 +469,7 @@ Since both salt \& pepper noise and gaussian noise has high frequency using a ga
 
 \begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.85\textwidth]{task4gauss.png}
+        \includegraphics[width=0.95\textwidth]{task4gauss.png}
         \caption{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.}
         \label{task4gauss}
     \par}
@@ -484,6 +484,19 @@ Since both salt \& pepper noise and gaussian noise has high frequency using a ga
             \label{task4pepper}
         \par}
         \end{figure}
+
+In figure(\ref{gausf-dom}) we see the frequency domain representation of the gaussian lowpass. Here we see that around the center we have values larger then zero, and outside we have zero. This will suppress all the high frequencies and let the low frequency pass through.
+
+
+\begin{figure}[H]
+    {\centering
+        \includegraphics[width=0.45\textwidth]{gausf-dom.pdf}
+        \caption{Frequency domain representation of the gaussian lowpass filter with cutoff = 40.}
+        \label{gausf-dom}
+    \par}
+    \end{figure}
+
+
 
 
 \subsection{5}
@@ -638,6 +651,82 @@ In figure(\ref{F5notch}) we see the dB scale frequency spectrum and the Butterwo
 The degradation space is not space invariant as the degradation has a radial dependency, this is the case because the degradation is caused by rotational motion, where its center is still and the further out in radial direction yield stronger circular degradation. If we would slice out some part of the image and find the degradation function in that area and then generalize it for the whole image we would not necessary get a good result.
 
 
+\subsection{2}
+
+Since this image has rotational motion blur, and therefore the degradation space is variant, we would want to transform the image to polar form so that we have constant change in one direction. In this image we know that we have a rotation of $\theta = \frac{\pi}{4}$ since the image has been taken with 3 hours exposure time. Since a full rotation is 24 hours we will have rotated 3/24 of a full cycle which is 1/8 so $\theta = \frac{2\pi}{8} = \frac{\pi}{4}$. Changing coordinate system to polar is shown in figure(\ref{changingsystem}).
+
+
+\begin{figure}[!htb]
+    {\centering
+        \includegraphics[width=0.85\textwidth]{carttopol.pdf}
+        \caption{The original image transformed to polar coordinates. We can observe that all the stars have same length in $\theta$ direction.}
+        \label{changingsystem}
+    \par}
+    \end{figure}
+The polar coordinate system is now spatial invariant and we can now start filtering.
+
+The filter we will be using is the wiener filter as shown in equation(\ref{wiener}),
+
+\begin{equation}
+    \hat{F}(u,v) = \left[\frac{1}{H(u,v)}\frac{|H(u,v)|^{2}}{|H(u,v)|^{2} + K}\right]G(u,v)
+    \label{wiener}
+\end{equation}
+
+Here $\hat{F}(u,v)$ is the filtered image, $H(u,v)$ is the degradation function which in this case is the motion blur in x-direction given by equation(\ref{motionblur}), K is the inverse signal to noise ratio constant, this parameter we usually don't know se we have to tune it what works best. Signal to noise ratio is the ratio of how strong our signal is compared to the noise. If this ratio is high we have strong signal, but if it is very low we have lost a lot of the signal information to noise.
+
+\begin{equation}
+    H(u,v) =     \begin{dcases}
+        1\, , if \,u = 0\\
+        \frac{1}{a}\frac{\sin(\pi a u/M)}{\sin(\pi u /M)}\, , if \, u \neq 0\\
+    \end{dcases}
+    \label{motionblur}
+\end{equation}
+
+In equation(\ref{motionblur}) a is the number of pixels the image has been displaced. 
+
+
+\subsection{3}
+
+
+After we applied the Wiener filter in polar coordinates we got the results shown in figure(\ref{changingsystem2}) and figure(\ref{changingsystem3}). At the first attempt we used \emph{u} and \emph{v} to go from $0-M$, but then we got some complications because the function we have in equation(\ref{motionblur}) is as shown in figure(\ref{sincc}), this function is symmetric around zero. The sinc function will flip if you traverse to far in either direction, so by going from $-M/2$ to $M/2$ we fixed the problem we had. The \emph{K} value was chosen because we had a lot of noise in our image (high noise to signal ratio), but we had to try different values as the real value was not known.
+
+
+\begin{figure}[H]
+    {\centering
+        \includegraphics[width=0.5\textwidth]{sinc.png}
+        \caption{A sinc function.}
+        \label{sincc}
+    \par}
+    \end{figure}
+
+    \begin{figure}[H]
+        {\centering
+            \includegraphics[width=0.5\textwidth]{sincprob.png}
+            \caption{A sinc function which gets flipped as we traverse the axis.}
+            \label{sinccprob}
+        \par}
+        \end{figure}
+
+
+\begin{figure}[H]
+    {\centering
+        \includegraphics[width=0.8\textwidth]{carttopol_trans_back2.pdf}
+        \caption{Applied Wiener filter with $K = 0.001$ and $a = (1/8)\cdot M$, where M is the number of pixels in x-direction, in this case $M = 512$. The values have been squared so that we decrease the intensity of the noise.}
+        \label{changingsystem2}
+    \par}
+    \end{figure}
+    
+\begin{figure}[H]
+    {\centering
+        \includegraphics[width=0.8\textwidth]{carttopol_trans_back3.pdf}
+        \caption{Changed figure(\ref{changingsystem2}) back to cartesian coordinates, we can now observe the night sky without the pesky earth ruining it for us.}
+        \label{changingsystem3}
+    \par}
+    \end{figure}
+    
+
+
+
 
 
 
@@ -645,14 +734,366 @@ The degradation space is not space invariant as the degradation has a radial dep
 %     Reference og appendix
 % --------------------------------------------------------------
 \newpage
+\clearpage
 \section{Appendix}
+For more indepth code see extra files.
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        import numpy as np 
+        import matplotlib.pyplot as plt
+        import os
+        from PIL import Image
+        import cv2
+        from scipy.signal import convolve2d
+    \end{lstlisting}
+\caption{Imports}
+\label{Imports}
+\end{figure}
+
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        def gaussian_lp(image, sigma):
+        """Gaussian low pass filter, sigma defines the radius around the centered frequency(cutoff)"""
+        row, col = image.shape
+        H = np.zeros((row, col))
+        for y in range(row):
+            for x in range(col):
+                D = np.sqrt((y-int(row/2))**2 + (x-int(col/2))**2)
+                H[y,x] = np.exp(-D**2/(2*sigma**2))
+        X = np.fft.fftshift(np.fft.fft2(image))
+        Y = np.fft.fftshift(X*H)
+        y = np.fft.ifft2(Y)
+        return np.abs(y), H
+
+# Fourier, shift absolute value and decibel 
+Y2 = 10*np.log10(np.abs(np.fft.fftshift(np.fft.fft2(F4))))
+
+# Get frequencies sampling 1
+N2 , M2 = Y2.shape
+Y2freqN = np.fft.fftshift(np.fft.fftfreq(N2, 1))
+Y2freqM = np.fft.fftshift(np.fft.fftfreq(M2, 1))
+# Fourier transform image
+spectrum = np.fft.fftshift(np.fft.fft2(F5))
+# dB scale
+spectrum1 = 10*np.log10(np.abs(spectrum))
+
+# get shape
+N , M = spectrum1.shape
+# Find right frequency, sampling rate 1
+HfreqN = np.fft.fftshift(np.fft.fftfreq(N, 1))
+HfreqM = np.fft.fftshift(np.fft.fftfreq(M, 1))
+    \end{lstlisting}
+\caption{TASK C.4-C.5-C.6}
+\label{TASK C.4-C.5-C.6}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        def resize_image(image, newN, newM):
+        """Resizing by taking only the second pixel (50% resizing)"""
+        resize = np.zeros((newM, newN))
+        row, col = resize.shape
+        try:
+            for j in range(col):
+                for i in range(row):
+                    resize[i, j] = image[i*2, j*2]
+        except:
+            pass
+    
+        return resize
+
+        row, col = image.shape
+        # Resize image 50%
+        imagerez = resize_image(image, int(col*0.5), int(row*0.5))
+
+
+        def smoothing(image, boxsize = 3):
+        """
+        Avarage smoothing of 2D array
+        boxsize -> size of boxkernal filter
+        returns filtered 2D array
+        """
+        boxkernal = np.ones((boxsize, boxsize))/(boxsize**2)
+        result = convolve2d(image, boxkernal, mode = 'same')
+        return result.astype('uint8')
+
+
+        def lapsharp(image, maskret = False):
+        """
+        img -> 2D array
+        maskret = True -> returns result and mask
+        maskret = False -> returns result
+        """
+        #padded_image = np.pad(img, (1, 1), mode = 'symmetric')
+        # lap is linear therefore;
+        # lap f(x,y) = f(x + 1, y) + f(x - 1, y) + f(x, y + 1) + f(x, y - 1) - 4f(x,y)...
+        #--------------------
+        c = -1 # Depends on kernel
+        # make zero kernal
+        lapmask = np.zeros((3, 3))
+        
+        # add values to kernel
+        lapmask[0,0] = 1
+        lapmask[0,1] = 1
+        lapmask[0,2] = 1
+
+        lapmask[1,0] = 1
+        lapmask[1,1] = -8
+        lapmask[1,2] = 1
+
+        lapmask[2,0] = 1
+        lapmask[2,1] = 1
+        lapmask[2,2] = 1
+        #--------------------
+        mask = convolve2d(image, lapmask, mode = 'same')
+        result = image + c*mask
+
+        # Map values to 0-255
+        g1 = image - np.min(image)
+        g = g1/np.max(g1) *255
+        g = g.astype('uint8')
+
+        if maskret == True:
+            return g, mask
+        else:
+            return g.astype('uint8')
+
+
+            def gaussian_hp(image, sigma):
+        """Gaussian high pass filter sigma defines the radius around the centered frequency"""
+        row, col = image.shape
+        H = np.zeros((row, col))
+        for y in range(row):
+            for x in range(col):
+                D = np.sqrt((y-int(row/2))**2 + (x-int(col/2))**2)
+                H[y,x] = np.exp(-D**2/(2*sigma**2))
+        H_hp = (1-H)
+        X = np.fft.fftshift(np.fft.fft2(image))
+        Y = np.fft.fftshift((1+H_hp)*X)
+        y = np.fft.ifft2(Y)
+        return np.abs(y)
+
+    \end{lstlisting}
+\caption{TASK B}
+\label{TASK B}
+\end{figure}
 
 
 
-\section{Part A}
+
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        # Make histogram
+        fig, ax = plt.subplots(1,2)
+        ax[0].hist(F1.flatten(), bins = 256)
+        ax[0].set_title('Histogram F1')
+        
+        ax[1].hist(F2.flatten(), bins = 256)
+        ax[1].set_title('Histogram F2')
+        
+        plt.savefig('noisehist.pdf')
+        plt.tight_layout()
+        plt.show()
+
+
+        def medianfilter(image, boxsize = 3):
+        """
+        Uses median filter, convolution in spatial domain\n
+        returns processed image.
+        """
+        image_padded = np.pad(image, (boxsize,boxsize) , mode = 'symmetric')
+        result = np.zeros(image.shape)
+        rows, cols = image.shape
+        # Traverse the image and apply filter.
+        for row in range(rows):
+            for col in range(cols):
+                result[row, col] = np.median(image_padded[row:row + boxsize,col:col + boxsize].flatten())
+        return result
+
+
+        def adaptive_filter(image, boxsize = 3):
+        """
+        Adptive filtering, found variance of noise by find variance of a slice in the top image.
+        Uses local var and local mean to set pixel value.
+        """
+        # Pad image
+        image_padded = np.pad(image, (boxsize, boxsize) , mode = 'symmetric')
+        result = np.zeros(image.shape)
+        rows, cols = image_padded.shape
+        # Get histogram of strip in image
+        hist, bins = np.histogram(F2[0:100,:].flatten(),256)
+        # Intensities
+        r = np.array([x for x in range(256)])
+        # Get size
+        rows, cols = image.shape
+        # Get probabilites
+        prob = hist/(rows*cols)
+        # Get mean
+        m = np.sum(r*prob)
+        # Get variance estimate of noise
+        variance_noise = np.sum((r-m)**2*prob)
+        
+        # Traverse the image and apply filter.
+        for row in range(rows):
+            for col in range(cols):
+                local_var = np.var(image_padded[row:row + boxsize,col:col + boxsize])
+                local_mean = np.mean(image_padded[row:row + boxsize,col:col + boxsize])
+                kernel_placement = image_padded[row:row + boxsize,col:col + boxsize] 
+                current_val = image_padded[row,col]
+                if variance_noise > local_var:
+                    result[row, col] = current_val - 1*(current_val - local_mean)
+                
+                else:
+                    result[row, col] = current_val - (variance_noise/local_var)*(current_val - local_mean)
+        
+        return result.astype('uint8')
+    \end{lstlisting}
+\caption{TASK C}
+\label{TASK C}
+\end{figure}
 
 
 
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        def butter_notch_filter(image, sigma, notches, n):
+        """Butterworth notch reject, sigma defines the radius around the notch frequency
+        and n defines the order.(how close to ideal you want)"""
+        row, col = image.shape
+        res = np.ones((row, col))
+        for h in notches:
+            H = np.zeros((row, col))
+            for y in range(row):
+                for x in range(col):
+                    Dp = np.sqrt((y-int(row/2)-h[1])**2 + (x-int(col/2)-h[0])**2)
+                    Dn = np.sqrt((y-int(row/2)+h[1])**2 + (x-int(col/2)+h[0])**2)
+                    if Dp > 0 and Dn > 0:
+                        H[y,x] = (1/(1+ (sigma/Dp)**n))*(1/(1+ (sigma/Dn)**n))
+                    else:
+                        H[y,x] = 0
+            res *= H
+        H = res
+        X = np.fft.fftshift(np.fft.fft2(image))
+        Y = np.fft.fftshift(X*H)
+        y = np.fft.ifft2(Y)
+        return np.abs(y), H
+
+def butterworth_hp_sharp(image, sigma, n, k):
+        """Butterworth high pass filter, sigma defines the radius around the centered frequency
+        and n defines the order.(how close to ideal you want)"""
+        row, col = image.shape
+        H = np.zeros((row, col))
+        for y in range(row):
+            for x in range(col):
+                D = np.sqrt((y-int(row/2))**2 + (x-int(col/2))**2)
+                if D > 0:
+                    H[y,x] = 1/(1+ (sigma/D)**(2*n))
+                else:
+                    H[y,x] = 0
+        X = np.fft.fftshift(np.fft.fft2(image))
+        # sharp image (High frequency emphasis filtering)
+        Y = (1+k*H)*X
+        Y = np.fft.fftshift(Y)
+        y = np.fft.ifft2(Y)
+        return np.abs(y)
+
+    \end{lstlisting}
+\caption{TASK C7.1}
+\label{TASK C7.1}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        # Centered frequency, since notch filter have origo in center we need this to subtract.
+        mid = 300 
+        notches = np.array([[330-mid, 0]])
+        
+        # Use filters
+        y, H = butter_notch_filter(F4, 1, notches, 3)
+        y = butterworth_hp_sharp(y, 8, 5, k = 1)
+        
+        # Convert back to 255 after masking
+        y = (y-np.min(y))/np.max(y-np.min(y))*255
+        y = y.astype('uint8')
+        
+    \end{lstlisting}
+\caption{TASK C7.2}
+\label{TASK C7.2}
+\end{figure}
+
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        # Centered frequency, since notch filter have origo in center we need this to subtract.
+        mid = 300 
+        # Notches to reject
+        notches = np.array([[450-mid, 0], [330-mid, 0], [320-mid, 0], [315-mid, 0], [0, 450-mid], [0, 330-mid], [0, 320-mid], [0, 315-mid] ])
+        
+        # Use filters
+        y, H = butter_notch_filter(F5, 1, notches, 3)
+        y = butterworth_hp_sharp(y, 8, 5, k = 1)
+    \end{lstlisting}
+\caption{TASK C7.3}
+\label{TASK C7.3}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \begin{lstlisting}
+        # Transpose
+        image = plt.imread(file)
+        # Transform to 0-255
+        image = (image-np.min(image))/np.max(image-np.min(image))*255
+        image = image.astype('uint8')
+        rows, cols = image.shape
+        radius = np.sqrt((rows/2-25)**2 +(cols/2-25)**2)
+        polar_image = cv2.linearPolar(image, (int(rows/2), int(cols/2)), radius, (cv2.WARP_FILL_OUTLIERS+cv2.INTER_LINEAR))
+        
+        # Flip image with transpose
+        polar_image = polar_image.astype('uint8').T
+        
+        
+        def wiener_filter(image, a, K):
+            """Wiener filter, a = displacement, K = Inverse signal to noise ratio. """
+            rows, cols = image.shape
+            H = np.zeros((rows, cols))
+            for v in range(int(-rows/2), int(rows/2)):
+                for u in range(int(-cols/2), int(cols/2)):
+                    if u == 0:
+                        H[v+int(rows/2),u+int(cols/2)] = 1
+                    else:
+                        H[v+int(rows/2),u+int(cols/2)] = (1/a)*(np.sin(np.pi*u*a/cols)/(np.sin(np.pi*u/cols)))
+        
+            # H.H^*
+            H_abs = (H*np.conj(H))
+            X = np.fft.fftshift(np.fft.fft2(image))
+            top = H_abs
+            bot = H*(H_abs + K)
+            G = (top/bot)*X
+            y = np.fft.ifft2(G)
+        
+            # Return image
+            return np.abs(y)
+        
+        
+        # Apply filter and then taking it to the second power to remove some noise.
+        im = wiener_filter(polar_image, a = (1/8)*cols, K =0.001)**2
+        
+        # Return image to cartesian coordinates.
+        im2 = cv2.linearPolar(im.T, (int(rows/2), int(cols/2)), radius, (cv2.WARP_INVERSE_MAP + cv2.INTER_LINEAR))
+        
+    \end{lstlisting}
+\caption{TASK D}
+\label{TASK D}
+\end{figure}
 
 
 

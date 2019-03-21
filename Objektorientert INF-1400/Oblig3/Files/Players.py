@@ -31,9 +31,14 @@ class Player1(pygame.sprite.Sprite):
         self.pointsinfo_y = 100
 
     def reset(self):
-        self.rect.center = (WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
-        self.fuel = PLAYER_START_FUEL
+        """Reset player stats and withdraw points"""
         self.points -= 1
+        self.velx = 0
+        self.vely = 0
+        self.angle = 0
+        self.engine = 'off'
+        self.fuel = PLAYER_START_FUEL
+        self.rect.center = (WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
     
 
     def controls(self, bullet_sprites):
@@ -55,8 +60,8 @@ class Player1(pygame.sprite.Sprite):
         if keys[eval(f'pygame.K_{PLAYER_1_BOOST}')]:
             if self.fuel > 0:
                 self.engine = 'on'
-                self.vely = -np.sin(self.angle*np.pi/180 + np.pi/2)*SPEED
-                self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
+                self.vely = -np.sin(self.angle*np.pi/180 + np.pi/2)*ENGINETHRUST
+                self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*ENGINETHRUST
                 self.fuel -= 0.1
                 return True
             else:
@@ -86,10 +91,9 @@ class Player1(pygame.sprite.Sprite):
         self.image_direction()
         controls = self.controls(bullet_sprites)
         if self.engine == 'off':
-            self.vely = GRAVITY
-
+            self.vely += (1/2)*GRAVITY**2
         self.rect.x += self.velx
-        self.rect.y += self.vely + GRAVITY
+        self.rect.y += self.vely
 
         for player in collide:
             barrel = collide[player][0]
@@ -117,9 +121,14 @@ class Player2(Player1):
 
 
     def reset(self):
-        self.rect.center = (WIDTH_SCREEN - WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
-        self.fuel = PLAYER_START_FUEL
+        """Reset player stats and withdraw points"""
         self.points -= 1
+        self.velx = 0
+        self.vely = 0
+        self.angle = 0
+        self.engine = 'off'
+        self.fuel = PLAYER_START_FUEL
+        self.rect.center = (WIDTH_SCREEN - WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
 
     def controls(self, bullet_sprites):
         """
@@ -140,8 +149,8 @@ class Player2(Player1):
         if keys[eval(f'pygame.K_{PLAYER_2_BOOST}')]:
             if self.fuel > 0:
                 self.engine = 'on'
-                self.vely = -np.sin(self.angle*np.pi/180 + np.pi/2)*SPEED
-                self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*SPEED
+                self.vely = -np.sin(self.angle*np.pi/180 + np.pi/2)*ENGINETHRUST
+                self.velx = np.cos(self.angle*np.pi/180 + np.pi/2)*ENGINETHRUST
                 self.fuel -= 0.1
                 return True
             else:

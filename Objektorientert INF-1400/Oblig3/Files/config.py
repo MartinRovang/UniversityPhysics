@@ -45,7 +45,7 @@ win_text = pygame.font.SysFont('Comic Sans MS', 30)
 
 # PLAYER GENERAL SETTINGS
 ##########################################
-SPEED = 5
+ENGINETHRUST = 3
 PLAYER_START_FUEL = 100
 
 # PLAYER1 SETTINGS
@@ -65,7 +65,7 @@ PLAYER_2_BOOST = 'UP'
 
 # WORLD SETTINGS
 #########################################
-GRAVITY = 1
+GRAVITY = 0.5
 FUEL_TIMER = 40
 
 

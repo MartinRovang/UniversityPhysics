@@ -20,6 +20,7 @@
 \contentsline {subsection}{\numberline {3.7}7}{17}{subsection.3.7}% 
 \contentsline {section}{\numberline {4}Part D}{21}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}1}{21}{subsection.4.1}% 
-\contentsline {section}{\numberline {5}Appendix}{22}{section.5}% 
-\contentsline {section}{\numberline {6}Part A}{22}{section.6}% 
-\contentsline {section}{\numberline {7}References}{22}{section.7}% 
+\contentsline {subsection}{\numberline {4.2}2}{21}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}3}{22}{subsection.4.3}% 
+\contentsline {section}{\numberline {5}Appendix}{25}{section.5}% 
+\contentsline {section}{\numberline {6}References}{30}{section.6}% 

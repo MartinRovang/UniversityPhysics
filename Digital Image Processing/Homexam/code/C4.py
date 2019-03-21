@@ -1,4 +1,13 @@
 #%%
+
+
+"""
+TASK C4
+
+"""
+
+
+
 import numpy as np 
 import matplotlib.pyplot as plt
 import os
@@ -55,12 +64,24 @@ def gaussian_lp(image, sigma):
         X = np.fft.fftshift(np.fft.fft2(image))
         Y = np.fft.fftshift(X*H)
         y = np.fft.ifft2(Y)
-        return np.abs(y)
+        return np.abs(y), H
 
 # Cutoff
 sigma = 40
 # Lowpass image F1
-image = gaussian_lp(F1, sigma)
+image, H = gaussian_lp(F1, sigma)
+
+
+# Plot gaussian lowpass
+fig, ax = plt.subplots(1,1)
+ax.imshow(H, cmap = 'gray')
+ax.set_title('Gaussian lowpass in f-domain $\sigma$ = %s' %sigma)
+plt.savefig('gausf-dom.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
+plt.show()
+plt.show()
+
+
 
 # Plot
 fig, ax = plt.subplots(1,2)
@@ -68,10 +89,13 @@ ax[0].imshow(F1, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[0].set_title('Original F1')
 ax[1].imshow(image, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[1].set_title('Gaussian lowpass, $\sigma$ = %s'%sigma)
+plt.tight_layout()
+plt.savefig('C41.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
 plt.show()
 
 # Lowpass image F2
-image = gaussian_lp(F2, sigma)
+image, H = gaussian_lp(F2, sigma)
 
 # Plot
 fig, ax = plt.subplots(1,2)
@@ -79,6 +103,9 @@ ax[0].imshow(F2, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[0].set_title('Original F2')
 ax[1].imshow(image, cmap = 'gray', interpolation = 'none', vmin = 0, vmax = 255)
 ax[1].set_title('Gaussian lowpass, $\sigma$ = %s'%sigma)
+plt.tight_layout()
+plt.savefig('C42.pdf', bbox_inches = 'tight',
+    pad_inches = 0)
 plt.show()
 
 
