@@ -79,6 +79,6 @@ fig, ax = plt.subplots(1,1)
 ax.imshow(im2, cmap = 'gray')
 ax.set_title('Transformed back to cartesian.')
 plt.tight_layout()
-plt.savefig('carttopol_trans_back3.pdf', bbox_inches = 'tight',
+plt.savefig('carttopol_trans_back_original.pdf', bbox_inches = 'tight',
     pad_inches = 0)
 plt.show()
