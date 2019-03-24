@@ -380,7 +380,7 @@ For removing salt and pepper noise a median filter would be a good choice. With 
 \begin{figure}[!htb]
     {\centering
         \includegraphics[width=1\textwidth]{Filtered_saltimage.pdf}
-        \caption{F1 image filtered using median filter with a 3x3 kernel.}
+        \caption{F1(salt \& pepper) image filtered using median filter with a 3x3 kernel.}
         \label{salt}
     \par}
     \end{figure}
@@ -469,7 +469,7 @@ Since both salt \& pepper noise and gaussian noise has high frequency using a ga
 
 \begin{figure}[!htb]
     {\centering
-        \includegraphics[width=0.95\textwidth]{task4gauss.png}
+        \includegraphics[width=0.95\textwidth]{C42.pdf}
         \caption{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.}
         \label{task4gauss}
     \par}
@@ -479,7 +479,7 @@ Since both salt \& pepper noise and gaussian noise has high frequency using a ga
 
     \begin{figure}[H]
         {\centering
-            \includegraphics[width=0.75\textwidth]{task4pepper.png}
+            \includegraphics[width=0.95\textwidth]{C41.pdf}
             \caption{Original image to the left and frequency representation on the left. We can observe the two conjugated impulse representing the periodic component in the image.}
             \label{task4pepper}
         \par}
@@ -711,7 +711,7 @@ After we applied the Wiener filter in polar coordinates we got the results shown
 \begin{figure}[H]
     {\centering
         \includegraphics[width=0.8\textwidth]{carttopol_trans_back2.pdf}
-        \caption{Applied Wiener filter with $K = 0.001$ and $a = (1/8)\cdot M$, where M is the number of pixels in x-direction, in this case $M = 512$. The values have been squared so that we decrease the intensity of the noise.}
+        \caption{Applied Wiener filter with $K = 0.001$ and $a = (1/8)\cdot M$, where M is the number of pixels in x-direction, in this case $M = 512$. The values have been squared so that we decrease the intensity of the noise(the noise has low power).}
         \label{changingsystem2}
     \par}
     \end{figure}
@@ -743,7 +743,7 @@ After we applied the Wiener filter in polar coordinates we got the results shown
 \newpage
 \clearpage
 \section{Appendix}
-For more indepth code see extra files.
+For more in-depth code see extra files.
 
 \begin{figure}[H]
     \begin{lstlisting}

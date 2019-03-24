@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  22 MAR 2019 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  24 MAR 2019 12:57
 entering extended mode
 **"c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex"
 ("c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex"
@@ -1563,39 +1563,43 @@ Package pdftex.def Info: alphatrimmed.pdf  used on input line 425.
 
 pdfTeX warning: pdflatex (file c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/alphatrimmed.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] [14]
-<task4gauss.png, id=662, 417.05812pt x 234.8775pt>
-File: task4gauss.png Graphic file (type png)
-<use task4gauss.png>
-Package pdftex.def Info: task4gauss.png  used on input line 472.
-(pdftex.def)             Requested size: 430.31812pt x 242.36018pt.
-<task4pepper.png, id=663, 523.20468pt x 271.0125pt>
-File: task4pepper.png Graphic file (type png)
-<use task4pepper.png>
-Package pdftex.def Info: task4pepper.png  used on input line 482.
-(pdftex.def)             Requested size: 339.72592pt x 175.97821pt.
- [15 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/task4gauss.png>]
-<gausf-dom.pdf, id=673, 303.08327pt x 299.90431pt>
+<C42.pdf, id=662, 440.99329pt x 212.0438pt>
+File: C42.pdf Graphic file (type pdf)
+<use C42.pdf>
+Package pdftex.def Info: C42.pdf  used on input line 472.
+(pdftex.def)             Requested size: 430.31812pt x 206.92143pt.
+<C41.pdf, id=663, 440.99329pt x 212.0438pt>
+File: C41.pdf Graphic file (type pdf)
+<use C41.pdf>
+Package pdftex.def Info: C41.pdf  used on input line 482.
+(pdftex.def)             Requested size: 430.31812pt x 206.92143pt.
+ [15 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C42.pdf>]
+<gausf-dom.pdf, id=711, 303.08327pt x 299.90431pt>
 File: gausf-dom.pdf Graphic file (type pdf)
 <use gausf-dom.pdf>
 Package pdftex.def Info: gausf-dom.pdf  used on input line 493.
 (pdftex.def)             Requested size: 203.83417pt x 201.69905pt.
-<simulatedperiod.png, id=675, 1142.01656pt x 624.83438pt>
+<simulatedperiod.png, id=713, 1142.01656pt x 624.83438pt>
 File: simulatedperiod.png Graphic file (type png)
 <use simulatedperiod.png>
 Package pdftex.def Info: simulatedperiod.png  used on input line 509.
 (pdftex.def)             Requested size: 339.72592pt x 185.86908pt.
-<superpositionfreq.png, id=677, 1169.87062pt x 647.41875pt>
+ [16 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C41.pdf> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/gausf-dom.pdf
+
+pdfTeX warning: pdflatex (file c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/gausf-dom.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<superpositionfreq.png, id=795, 1169.87062pt x 647.41875pt>
 File: superpositionfreq.png Graphic file (type png)
 <use superpositionfreq.png>
 Package pdftex.def Info: superpositionfreq.png  used on input line 526.
 (pdftex.def)             Requested size: 339.72592pt x 188.00346pt.
- [16 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/task4pepper.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/gausf-dom.pdf>] [17 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/simulatedperiod.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/superpositionfreq.png>]
-<C7F3.pdf, id=733, 394.34573pt x 194.85211pt>
+ [17 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/simulatedperiod.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/superpositionfreq.png>]
+<C7F3.pdf, id=809, 394.34573pt x 194.85211pt>
 File: C7F3.pdf Graphic file (type pdf)
 <use C7F3.pdf>
 Package pdftex.def Info: C7F3.pdf  used on input line 556.
 (pdftex.def)             Requested size: 362.37569pt x 179.05501pt.
-<C7F3freq.pdf, id=738, 405.25163pt x 299.02603pt>
+<C7F3freq.pdf, id=814, 405.25163pt x 299.02603pt>
 File: C7F3freq.pdf Graphic file (type pdf)
 <use C7F3freq.pdf>
 Package pdftex.def Info: C7F3freq.pdf  used on input line 566.
@@ -1604,23 +1608,23 @@ Package pdftex.def Info: C7F3freq.pdf  used on input line 566.
 
 pdfTeX warning: pdflatex (file c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C7F3freq.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<C7F4.pdf, id=820, 394.34573pt x 194.85211pt>
+<C7F4.pdf, id=896, 394.34573pt x 194.85211pt>
 File: C7F4.pdf Graphic file (type pdf)
 <use C7F4.pdf>
 Package pdftex.def Info: C7F4.pdf  used on input line 605.
 (pdftex.def)             Requested size: 385.02547pt x 190.24612pt.
-<C7F4freq.pdf, id=825, 405.25163pt x 299.02603pt>
+<C7F4freq.pdf, id=901, 405.25163pt x 299.02603pt>
 File: C7F4freq.pdf Graphic file (type pdf)
 <use C7F4freq.pdf>
 Package pdftex.def Info: C7F4freq.pdf  used on input line 613.
 (pdftex.def)             Requested size: 294.42636pt x 217.24686pt.
-<C7F5.pdf, id=828, 440.99329pt x 211.16551pt>
+<C7F5.pdf, id=904, 440.99329pt x 211.16551pt>
 File: C7F5.pdf Graphic file (type pdf)
 <use C7F5.pdf>
 Package pdftex.def Info: C7F5.pdf  used on input line 625.
 (pdftex.def)             Requested size: 362.37569pt x 173.52737pt.
  [19 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C7F4.pdf>]
-<removed_per_noise_freq.pdf, id=876, 445.18347pt x 325.29216pt>
+<removed_per_noise_freq.pdf, id=952, 445.18347pt x 325.29216pt>
 File: removed_per_noise_freq.pdf Graphic file (type pdf)
 <use removed_per_noise_freq.pdf>
 Package pdftex.def Info: removed_per_noise_freq.pdf  used on input line 639.
@@ -1629,36 +1633,36 @@ Package pdftex.def Info: removed_per_noise_freq.pdf  used on input line 639.
 
 pdfTeX warning: pdflatex (file c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/C7F5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<carttopol.pdf, id=951, 443.79442pt x 218.30246pt>
+<carttopol.pdf, id=1027, 443.79442pt x 218.30246pt>
 File: carttopol.pdf Graphic file (type pdf)
 <use carttopol.pdf>
 Package pdftex.def Info: carttopol.pdf  used on input line 661.
 (pdftex.def)             Requested size: 430.31812pt x 211.6765pt.
  [21 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/removed_per_noise_freq.pdf>]
-<sinc.png, id=1008, 270.25969pt x 176.15813pt>
+<sinc.png, id=1084, 270.25969pt x 176.15813pt>
 File: sinc.png Graphic file (type png)
 <use sinc.png>
 Package pdftex.def Info: sinc.png  used on input line 696.
 (pdftex.def)             Requested size: 226.48395pt x 147.62775pt.
  [22 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/carttopol.pdf>]
-<sincprob.png, id=1048, 511.9125pt x 308.65312pt>
+<sincprob.png, id=1124, 511.9125pt x 308.65312pt>
 File: sincprob.png Graphic file (type png)
 <use sincprob.png>
 Package pdftex.def Info: sincprob.png  used on input line 704.
 (pdftex.def)             Requested size: 226.48395pt x 136.55663pt.
-<carttopol_trans_back2.pdf, id=1049, 323.0651pt x 325.29216pt>
+<carttopol_trans_back2.pdf, id=1125, 323.0651pt x 325.29216pt>
 File: carttopol_trans_back2.pdf Graphic file (type pdf)
 <use carttopol_trans_back2.pdf>
 Package pdftex.def Info: carttopol_trans_back2.pdf  used on input line 713.
 (pdftex.def)             Requested size: 362.37569pt x 364.87567pt.
  [23 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/sinc.png> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/sincprob.png>]
-<carttopol_trans_back3.pdf, id=1058, 323.0651pt x 325.29216pt>
+<carttopol_trans_back3.pdf, id=1134, 323.0651pt x 325.29216pt>
 File: carttopol_trans_back3.pdf Graphic file (type pdf)
 <use carttopol_trans_back3.pdf>
 Package pdftex.def Info: carttopol_trans_back3.pdf  used on input line 721.
 (pdftex.def)             Requested size: 362.37569pt x 364.87567pt.
  [24 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/carttopol_trans_back2.pdf>]
-<carttopol_trans_back_original.pdf, id=1090, 323.0651pt x 325.29216pt>
+<carttopol_trans_back_original.pdf, id=1166, 323.0651pt x 325.29216pt>
 File: carttopol_trans_back_original.pdf Graphic file (type pdf)
 <use carttopol_trans_back_original.pdf>
 Package pdftex.def Info: carttopol_trans_back_original.pdf  used on input line 730.
@@ -1693,16 +1697,16 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1141.
 ### bottom level 
 Here is how much of TeX's memory you used:
  39144 strings out of 492946
- 768150 string characters out of 3124490
+ 768123 string characters out of 3124490
  1877782 words of memory out of 3000000
  41901 multiletter control sequences out of 15000+200000
  626834 words of font info for 149 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,12n,103p,1061b,1486s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ts1.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0800.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mcl.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
-Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.pdf" (32 pages, 8163114 bytes).
+Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Digital Image Processing\Homexam\Rapport\main.pdf" (32 pages, 9181834 bytes).
 PDF statistics:
- 1976 PDF objects out of 2073 (max. 8388607)
+ 2052 PDF objects out of 2073 (max. 8388607)
  437 named destinations out of 1000 (max. 500000)
  24609 words of extra memory for PDF output out of 24883 (max. 10000000)
 
