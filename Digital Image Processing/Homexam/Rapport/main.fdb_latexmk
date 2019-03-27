@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex main"] 1553428658 "main.aux" "main.bbl" "main" 1553428672
+["bibtex main"] 1553688885 "main.aux" "main.bbl" "main" 1553688903
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "bibl.bib" 1552383842 1420 2e0d6d5bbb0e036890fb3cd1538dfd74 ""
-  "main.aux" 1553428671 22234 6ced793b08bf7a0178a4d3ec0086ec2a ""
+  "main.aux" 1553688901 22234 6ced793b08bf7a0178a4d3ec0086ec2a ""
   (generated)
   "main.blg"
   "main.bbl"
-["makeindex main.idx"] 1553184868 "main.idx" "main.ind" "main" 1553428672
-  "main.idx" 1553428666 0 d41d8cd98f00b204e9800998ecf8427e ""
+["makeindex main.idx"] 1553688869 "main.idx" "main.ind" "main" 1553688903
+  "main.idx" 1553688894 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "main.ind"
   "main.ilg"
-["pdflatex"] 1553428659 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.pdf" "main" 1553428672
+["pdflatex"] 1553688886 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.pdf" "main" 1553688903
   "C41.pdf" 1553428479 516817 64845999bb12b0ffff08612051e7bcbe ""
   "C42.pdf" 1553428487 773013 606ca5be0665a76a213b1884459634a6 ""
   "C7F3.pdf" 1552659378 506976 d91f68ffaebf00661f02804958cad4d0 ""
@@ -281,8 +281,8 @@
   "Filtered_saltimage.pdf" 1552897365 538464 75511e229215e0182a31230bdfad28b4 ""
   "alphatrimmed.pdf" 1552994540 966805 2f937953ed15da684f0a1124c3999730 ""
   "bits.png" 1552338342 31732 a52a0520e6bf0d581b25edc1fda14647 ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.aux" 1553428671 22234 6ced793b08bf7a0178a4d3ec0086ec2a ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex" 1553428643 51850 9cadd61dbf4c86c12a9075192a8e859b ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.aux" 1553688901 22234 6ced793b08bf7a0178a4d3ec0086ec2a ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.tex" 1553688849 53070 d1ee8db65baf34c7a97f2f26c5d8101c ""
   "carttopol.pdf" 1553080803 113548 6fd31e5df15a724f3637c4455760dbfc ""
   "carttopol_trans_back2.pdf" 1553180867 18354 482d8929c153b521fa7447f25471f63f ""
   "carttopol_trans_back3.pdf" 1553180870 24144 60167c3b31748c0f7c5d9f25a6e96d39 ""
@@ -293,12 +293,12 @@
   "fourierrep.png" 1552402069 268723 8f6a650e290e0e4a7432a850103ee70a ""
   "gausf-dom.pdf" 1553083518 22192 6899b53f80d619b681b58d83f4132752 ""
   "gaussianfiltered.pdf" 1552897974 914050 4c371a359a51561ccd9b01040a565134 ""
-  "main.aux" 1553428671 22234 6ced793b08bf7a0178a4d3ec0086ec2a ""
-  "main.bbl" 1553428658 450 38e276488869d5942717dd4373f60702 "bibtex main"
-  "main.ind" 1553184869 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1553428671 1295 97763e787d6ac25d8b6544c41bf19bda ""
-  "main.tex" 1553428643 51850 9cadd61dbf4c86c12a9075192a8e859b ""
-  "main.toc" 1553428671 1784 62b192195f6762a6d8b7ea59b9bcee7a ""
+  "main.aux" 1553688901 22234 6ced793b08bf7a0178a4d3ec0086ec2a ""
+  "main.bbl" 1553688886 450 38e276488869d5942717dd4373f60702 "bibtex main"
+  "main.ind" 1553688870 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.out" 1553688901 1295 97763e787d6ac25d8b6544c41bf19bda ""
+  "main.tex" 1553688849 53070 d1ee8db65baf34c7a97f2f26c5d8101c ""
+  "main.toc" 1553688901 1784 62b192195f6762a6d8b7ea59b9bcee7a ""
   "noisehist.pdf" 1552400475 21941 29c31fbe85fed60c84c43325b5c0f906 ""
   "preamble.tex" 1552332460 3869 89f63c3b47c69c2e6d5f0e828831771b ""
   "removed_per_noise_freq.pdf" 1552647601 62954 e76f14d0e6bffa24c21f2c3ea2e0ca4c ""
@@ -312,12 +312,12 @@
   "smoothing.pdf" 1552576565 132490 5f59a24383adfb5954517096d492e4fe ""
   "superpositionfreq.png" 1552511070 802660 60173ba77a43d05fe25b833963306fd5 ""
   (generated)
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.log"
+  "main.toc"
+  "main.pdf"
   "main.idx"
-  "main.log"
   "preamble.aux"
   "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.pdf"
-  "main.pdf"
-  "main.toc"
   "main.aux"
+  "main.log"
   "main.out"
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Digital Image Processing/Homexam/Rapport/main.log"

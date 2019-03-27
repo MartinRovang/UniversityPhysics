@@ -1,8 +1,27 @@
 
+"""
+
+ ███▄ ▄███▓ ▄▄▄     ▓██   ██▓ ██░ ██ ▓█████  ███▄ ▄███▓
+▓██▒▀█▀ ██▒▒████▄    ▒██  ██▒▓██░ ██▒▓█   ▀ ▓██▒▀█▀ ██▒
+▓██    ▓██░▒██  ▀█▄   ▒██ ██░▒██▀▀██░▒███   ▓██    ▓██░
+▒██    ▒██ ░██▄▄▄▄██  ░ ▐██▓░░▓█ ░██ ▒▓█  ▄ ▒██    ▒██ 
+▒██▒   ░██▒ ▓█   ▓██▒ ░ ██▒▓░░▓█▒░██▓░▒████▒▒██▒   ░██▒
+░ ▒░   ░  ░ ▒▒   ▓▒█░  ██▒▒▒  ▒ ░░▒░▒░░ ▒░ ░░ ▒░   ░  ░
+░  ░      ░  ▒   ▒▒ ░▓██ ░▒░  ▒ ░▒░ ░ ░ ░  ░░  ░      ░
+░      ░     ░   ▒   ▒ ▒ ░░   ░  ░░ ░   ░   ░      ░   
+       ░         ░  ░░ ░      ░  ░  ░   ░  ░       ░   
+                     ░ ░                               
+
+This is the main file of the project.
+Contains Game structure and gameloop, and starts the game.
+Made by Martin Soria Røvang for mandatory assignment INF-1400, University of Tromsø
+"""
+
+
 import pygame
 import numpy as np
 from Files.config import *
-from Files import Player1, Player2, FuelBarrel, Wall
+from Files import Player1, Player2, FuelBarrel, Wall, timer, Profiler
 import os
 import time
 
@@ -17,19 +36,19 @@ class Game:
 
 
     def background(self, Background):
+        """Assigning background in game canvas"""
         SCREEN.blit(Background, (0, 0))
 
     def point_assigner_loss(self, group, player_sprites):
         """
-        Assigns loss points to the player if collision/ or killed by enemy bullets has happened and respawn them.
+        Assigns loss points to the player if collision/ or killed by enemy bullets and then respawn them.
         """
         # Grab playersprite
         if group != {}:
             for player in group:
                 player.reset()
                 player_sprites.add(player)
-
-
+                
     def point_assigner_win(self, group, player_sprites):
         """
         Assigns win points to the player if player collide with bullet.
@@ -37,6 +56,7 @@ class Game:
         if group != {}:
             for player in player_sprites:
                 player.points += 1
+
 
     def gameloop(self):
         """The game loop"""
@@ -78,6 +98,8 @@ class Game:
             #Checks for events and if pressed the X in the corner the program will quit
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
+                    # Show logged functions, see Diagnostics/timing.py
+                    Profiler.showprofile()
                     exit()
             
             # Lock fps

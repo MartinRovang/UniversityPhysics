@@ -1,13 +1,17 @@
-#################################################
-#
-#
-#       CONFIG FILE FOR MAYHEM-CLONE
-#            MANDATORY ASSIGNMENT 3
-#             MARTIN SORIA RØVANG
-#
-##################################################
+"""
+ ▄████▄   ▒█████   ███▄    █   █████▒██▓  ▄████      █████▒██▓ ██▓    ▓█████ 
+▒██▀ ▀█  ▒██▒  ██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██▒ ▀█▒   ▓██   ▒▓██▒▓██▒    ▓█   ▀ 
+▒▓█    ▄ ▒██░  ██▒▓██  ▀█ ██▒▒████ ░▒██▒▒██░▄▄▄░   ▒████ ░▒██▒▒██░    ▒███   
+▒▓▓▄ ▄██▒▒██   ██░▓██▒  ▐▌██▒░▓█▒  ░░██░░▓█  ██▓   ░▓█▒  ░░██░▒██░    ▒▓█  ▄ 
+▒ ▓███▀ ░░ ████▓▒░▒██░   ▓██░░▒█░   ░██░░▒▓███▀▒   ░▒█░   ░██░░██████▒░▒████▒
+░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒  ▒ ░   ░▓   ░▒   ▒     ▒ ░   ░▓  ░ ▒░▓  ░░░ ▒░ ░
+  ░  ▒     ░ ▒ ▒░ ░ ░░   ░ ▒░ ░      ▒ ░  ░   ░     ░      ▒ ░░ ░ ▒  ░ ░ ░  ░
+░        ░ ░ ░ ▒     ░   ░ ░  ░ ░    ▒ ░░ ░   ░     ░ ░    ▒ ░  ░ ░      ░   
+░ ░          ░ ░           ░         ░        ░            ░      ░  ░   ░  ░
+░                                                                            
 
-
+Contains the config file, here you can do changes to the game by altering the values.
+"""
 
 
 
@@ -32,7 +36,7 @@ FPS = 60
 # SCREEN
 #######################################
 # Set gamescreen size
-WIDTH_SCREEN = 1582
+WIDTH_SCREEN = 1582 # Because i have chosen a background i would recommend not to change the width or height of the screen.
 HEIGHT_SCREEN = 654
 SCREENSIZE = (WIDTH_SCREEN, HEIGHT_SCREEN)
 SCREEN = pygame.display.set_mode(SCREENSIZE)
@@ -46,7 +50,7 @@ win_text = pygame.font.SysFont('Comic Sans MS', 30)
 # PLAYER GENERAL SETTINGS
 ##########################################
 ENGINETHRUST = 3
-PLAYER_START_FUEL = 100
+PLAYER_START_FUEL = 120
 
 # PLAYER1 SETTINGS
 ##########################################
@@ -71,19 +75,12 @@ FUEL_TIMER = 40
 
 # FUEL SETTINGS
 #########################################
-FUEL_AMOUNT = 100
+FUEL_AMOUNT = 120
 
 # BULLET SETTINGS
 #########################################
 BULLET_SPEED = 20
 
-# # PLATFORM SETTINGS
-# ##########################################
-# PLATFORM_SPEED = 600
-# PLATFORM_START_POS_X = 200
-# PLATFORM_START_POS_Y = 700
-# PLATFORM_WIDTH = 100
-# PLATFORM_HEIGHT = 15
-# ANGLE_MAGNITUDE = 5
+
 
 

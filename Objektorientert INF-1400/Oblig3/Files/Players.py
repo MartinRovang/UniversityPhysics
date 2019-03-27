@@ -1,6 +1,25 @@
+
+
+"""
+ ██▓███   ██▓    ▄▄▄     ▓██   ██▓▓█████  ██▀███      ▄████▄   ██▓    ▄▄▄        ██████   ██████ 
+▓██░  ██▒▓██▒   ▒████▄    ▒██  ██▒▓█   ▀ ▓██ ▒ ██▒   ▒██▀ ▀█  ▓██▒   ▒████▄    ▒██    ▒ ▒██    ▒ 
+▓██░ ██▓▒▒██░   ▒██  ▀█▄   ▒██ ██░▒███   ▓██ ░▄█ ▒   ▒▓█    ▄ ▒██░   ▒██  ▀█▄  ░ ▓██▄   ░ ▓██▄   
+▒██▄█▓▒ ▒▒██░   ░██▄▄▄▄██  ░ ▐██▓░▒▓█  ▄ ▒██▀▀█▄     ▒▓▓▄ ▄██▒▒██░   ░██▄▄▄▄██   ▒   ██▒  ▒   ██▒
+▒██▒ ░  ░░██████▒▓█   ▓██▒ ░ ██▒▓░░▒████▒░██▓ ▒██▒   ▒ ▓███▀ ░░██████▒▓█   ▓██▒▒██████▒▒▒██████▒▒
+▒▓▒░ ░  ░░ ▒░▓  ░▒▒   ▓▒█░  ██▒▒▒ ░░ ▒░ ░░ ▒▓ ░▒▓░   ░ ░▒ ▒  ░░ ▒░▓  ░▒▒   ▓▒█░▒ ▒▓▒ ▒ ░▒ ▒▓▒ ▒ ░
+░▒ ░     ░ ░ ▒  ░ ▒   ▒▒ ░▓██ ░▒░  ░ ░  ░  ░▒ ░ ▒░     ░  ▒   ░ ░ ▒  ░ ▒   ▒▒ ░░ ░▒  ░ ░░ ░▒  ░ ░
+░░         ░ ░    ░   ▒   ▒ ▒ ░░     ░     ░░   ░    ░          ░ ░    ░   ▒   ░  ░  ░  ░  ░  ░  
+             ░  ░     ░  ░░ ░        ░  ░   ░        ░ ░          ░  ░     ░  ░      ░        ░  
+                          ░ ░                        ░                                                            
+This is the player class file, contains the player structure, and how to handle controls.
+"""
+
+
+
 import pygame
 from Files.config import *
 from Files.Bullets import Bullets
+from Files.Diagnostics.timing import Profiler
 import numpy as np
 import os
 
@@ -23,7 +42,7 @@ class Player1(pygame.sprite.Sprite):
         self.rocket1image = pygame.image.load(os.path.join(img_folder, 'rocket111.png')).convert_alpha()
         self.rocket2image = pygame.image.load(os.path.join(img_folder, 'rocket112.png')).convert_alpha()
         self.image = self.rocket1image
-        self.rect = self.image.get_rect()
+        self.rect = self.image.get_rect() # Returns a new rectangle covering the entire surface. This rectangle will always start at 0, 0 with a width. and height the same size as the image.
         self.rect.center = (WIDTH_SCREEN/4, HEIGHT_SCREEN/4)
         self.fuelinfo_x = 10
         self.fuelinfo_y = 50
@@ -68,7 +87,6 @@ class Player1(pygame.sprite.Sprite):
                 self.engine = 'off'
         else:
             self.engine = 'off'
-
 
     def image_direction(self):
         """

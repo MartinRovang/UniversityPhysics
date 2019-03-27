@@ -957,6 +957,35 @@ HfreqM = np.fft.fftshift(np.fft.fftfreq(M, 1))
                         result[row, col] = current_val - (variance_noise/local_var)*(current_val - local_mean)
             
             return result.astype('uint8')
+
+            def alpha_trimmed_mean(image, d, boxsize = 3):
+            """
+            Alpha trimmed mean filter.
+            """
+            # Pad image
+            image_padded = np.pad(image, (boxsize, boxsize) , mode = 'symmetric')
+            result = np.zeros(image.shape)
+            rows, cols = image_padded.shape
+    
+            # Find bins
+            hist, bins = np.histogram(F2.flatten(), 256)
+            
+            # Intensities
+            r = np.array([x for x in range(256)])
+            # Get size
+            rows,cols = image.shape
+    
+            # Multiply by 2 because there is 2 time the new pad size in each dimension.
+            for row in range((rows)):
+                for col in range((cols)):
+                    sorted_vals = sorted(image_padded[row:row + boxsize,col:col + boxsize].flatten(), reverse = True)
+                    sorted_len = len(sorted_vals)
+                    sorted_vals_cut = sorted_vals[int(d/2): int(sorted_len-d/2)]
+                    result[row, col] = np.sum(sorted_vals_cut)//(sorted_len - d)
+            return result.astype('uint8')
+    
+    # Run filter on image F2
+    image = alpha_trimmed_mean(F2, d = 2, boxsize= 3)
     \end{lstlisting}
 \caption{TASK C}
 \label{TASK C}

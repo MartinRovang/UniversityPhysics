@@ -1,3 +1,20 @@
+
+"""
+ ▄▄▄▄    █    ██  ██▓     ██▓    ▓█████▄▄▄█████▓    ▄████▄   ██▓    ▄▄▄        ██████   ██████ 
+▓█████▄  ██  ▓██▒▓██▒    ▓██▒    ▓█   ▀▓  ██▒ ▓▒   ▒██▀ ▀█  ▓██▒   ▒████▄    ▒██    ▒ ▒██    ▒ 
+▒██▒ ▄██▓██  ▒██░▒██░    ▒██░    ▒███  ▒ ▓██░ ▒░   ▒▓█    ▄ ▒██░   ▒██  ▀█▄  ░ ▓██▄   ░ ▓██▄   
+▒██░█▀  ▓▓█  ░██░▒██░    ▒██░    ▒▓█  ▄░ ▓██▓ ░    ▒▓▓▄ ▄██▒▒██░   ░██▄▄▄▄██   ▒   ██▒  ▒   ██▒
+░▓█  ▀█▓▒▒█████▓ ░██████▒░██████▒░▒████▒ ▒██▒ ░    ▒ ▓███▀ ░░██████▒▓█   ▓██▒▒██████▒▒▒██████▒▒
+░▒▓███▀▒░▒▓▒ ▒ ▒ ░ ▒░▓  ░░ ▒░▓  ░░░ ▒░ ░ ▒ ░░      ░ ░▒ ▒  ░░ ▒░▓  ░▒▒   ▓▒█░▒ ▒▓▒ ▒ ░▒ ▒▓▒ ▒ ░
+▒░▒   ░ ░░▒░ ░ ░ ░ ░ ▒  ░░ ░ ▒  ░ ░ ░  ░   ░         ░  ▒   ░ ░ ▒  ░ ▒   ▒▒ ░░ ░▒  ░ ░░ ░▒  ░ ░
+ ░    ░  ░░░ ░ ░   ░ ░     ░ ░      ░    ░         ░          ░ ░    ░   ▒   ░  ░  ░  ░  ░  ░  
+ ░         ░         ░  ░    ░  ░   ░  ░           ░ ░          ░  ░     ░  ░      ░        ░  
+      ░                                            ░                                          
+
+This is the bullets class file, handles how the bullet should handle.
+"""
+
+
 import pygame
 from Files.config import *
 import numpy as np
@@ -18,12 +35,11 @@ class Bullets(pygame.sprite.Sprite):
         """
         Initiates the bullet\n
         player -> pygame sprite.   
-            """
+        """
         pygame.sprite.Sprite.__init__(self)
 
         self.velx = np.cos(player.angle*np.pi/180 + np.pi/2)
         self.vely = -np.sin(player.angle*np.pi/180 + np.pi/2)
-        self.fuel_amount = FUEL_AMOUNT
         self.image = pygame.image.load(os.path.join(img_folder, 'bullet.png')).convert_alpha()
         self.image = pygame.transform.rotate(self.image, player.angle - 90)
         self.rect = self.image.get_rect()
