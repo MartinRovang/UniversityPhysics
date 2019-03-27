@@ -14,5 +14,8 @@
 \contentsline {section}{\numberline {8}Part II}{9}{section.8}% 
 \contentsline {subsection}{\numberline {8.1}1}{9}{subsection.8.1}% 
 \contentsline {subsection}{\numberline {8.2}2}{9}{subsection.8.2}% 
-\contentsline {section}{\numberline {9}Appendix}{10}{section.9}% 
-\contentsline {section}{\numberline {10}Referanser}{10}{section.10}% 
+\contentsline {subsection}{\numberline {8.3}3}{9}{subsection.8.3}% 
+\contentsline {subsection}{\numberline {8.4}4}{9}{subsection.8.4}% 
+\contentsline {subsection}{\numberline {8.5}5}{10}{subsection.8.5}% 
+\contentsline {section}{\numberline {9}Appendix}{11}{section.9}% 
+\contentsline {section}{\numberline {10}Referanser}{11}{section.10}% 

@@ -232,7 +232,32 @@ I denne kodesnippeten over er et eksempel på fabrikk/bil metaforet.
 
 \subsection{2}
 
+Arv(Inheritance) er at man kan $"$kopiere$"$ en annen klasse, og derfra endre på akuratt de funksjonene/atributtene man ønsker, dette kan brukes hvis man for eksempel skal ha en ny klasse som er ganske lik en annen, men man må endre litt på hvordan en/flere funksjon(er) fungerer. Syntaksen for dette er vist i figur(\ref{arv}).
 
+\begin{figure}[hbt!]
+    \begin{lstlisting}
+    class Child(Parent):
+        ....
+    \end{lstlisting}
+\caption{Child arver fra Parent}
+\label{arv}
+\end{figure}
+
+
+\subsection{3}
+
+
+\emph{Is-a} relasjon kommer fra det å arve fra en klasse, og \emph{has-a} kommer fra det å arve fra flere klasser, slik at man arver funksjoner fra både Parent1 og Parent2. Dette blir analogt til at et barn har øyne fra far og nese fra mor. [(p.20-23)\cite{Dustyphil}]
+
+
+\subsection{4}
+
+\emph{Encapsulation} er det å gjemme implementasjon bak grensesnittet i programmet ditt, i python kan man ikke blokkere noen ute av deler av koden(utenom å kompilere til .exe eller annet.) så derfor har det blitt laget en konvensjon der man bruker \emph{\_.} før en funksjon/klasse/variabel som betyr at dette er \emph{privat} og dermed ikke bør endres. Dette kan brukes hvis hvis disse har systemkritiske funksjoner som kan ødelegge programmet hvis disse endres på.
+
+\subsection{5}
+
+Polymorfisme er det at man har noe som endrer seg basert på hva det skal gjøre. Hvis vi for eksempel har en klasse som er en gjenstand, og denne gjenstanden skal ha muligheten til å kun bevege seg diagonalt. Da vil man har en metode som heter \emph{move}. Videre vil man at en gjenstand også skal kunne bevege seg, men denne ganger kun i en retning. Herfra kan man arve fra den første klassen og endre på move funksjonen slik at objekter fra dette kun beveger seg i en retning.
+Her har man da polymorfisme fordi nå kan man f.eks kalle move på objektene uten å tenke over hva de er for noe også vil de bevege seg med forskjellige regler, dette er også kalt \emph{duck typing}, fra $"$\emph{if it walks like a duck or swims like a duck, it's a duck}.$"$[(p.22-23)\cite{Dustyphil}].
 
 
 

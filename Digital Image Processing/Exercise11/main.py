@@ -6,26 +6,26 @@ from PIL import Image
 
 
 
-gauss_image = plt.imread('Fig0508(a)(circuit-board-pepper-prob-pt1).tif')
-pepper_image = plt.imread('Fig0507(b)(ckt-board-gauss-var-400).tif')
+pepper_image = plt.imread('Fig0508(a)(circuit-board-pepper-prob-pt1).tif')
+gauss_image = plt.imread('Fig0507(b)(ckt-board-gauss-var-400).tif')
 
 
 def geometric_mean(image, kernelsize):
     rows, cols = image.shape
     result = np.zeros(image.shape)
-    image = np.pad(image, (int(kernelsize//2), int(kernelsize//2)), 'symmetric')
-    for y in range(rows):
-        for x in range(cols):
-            current_placement = image[y:y+kernelsize, x:x+kernelsize].flatten()
-            result[y,x] = np.prod(current_placement)**(1/(kernelsize**2))
+    image = np.pad(image, (0, int(kernelsize//2)), 'symmetric')
+    for y in range(0, rows):
+        for x in range(0, cols):
+            current_placement = image[y:y+kernelsize, x:x+kernelsize]
+            result[y,x] = (np.prod(current_placement))**(1/(kernelsize**2))
+    
     return result
-
 
 
 def harmonic_mean(image, kernelsize):
     result = np.zeros(image.shape)
     rows, cols = image.shape
-    image = np.pad(image, (int(kernelsize//2), int(kernelsize//2)), 'symmetric')
+    image = np.pad(image, (0, int(kernelsize//2)), 'symmetric')
     for y in range(rows):
         for x in range(cols):
             current_placement = image[y:y+kernelsize, x:x+kernelsize].flatten()
@@ -48,22 +48,17 @@ def plot_image(image1, image2):
     plt.show()
 
 
-
-geomfiltered = geometric_mean(gauss_image, 3)
-harmonyfiltered = harmonic_mean(gauss_image, 3)
-
-
 def alpha_trimmed_mean(image, d, boxsize = 3):
         """
         Alpha trimmed mean filter.
         """
         # Pad image
-        image_padded = np.pad(image, (boxsize, boxsize) , mode = 'symmetric')
+        image_padded = np.pad(image, (0, boxsize) , mode = 'symmetric')
         result = np.zeros(image.shape)
         rows, cols = image_padded.shape
 
         # Find bins
-        hist, bins = np.histogram(F2.flatten(), 256)
+        hist, bins = np.histogram(image.flatten(), 256)
         
         # Intensities
         r = np.array([x for x in range(256)])
@@ -80,4 +75,13 @@ def alpha_trimmed_mean(image, d, boxsize = 3):
         return result.astype('uint8')
 
 
-image = alpha_trimmed_mean(gauss_image, d = 2, boxsize= 3)
+
+geomfiltered_gauss = geometric_mean(gauss_image, 2)
+harmonyfiltered_gauss = harmonic_mean(gauss_image, 3)
+alpha_gauss = alpha_trimmed_mean(gauss_image, d = 2, boxsize= 3)
+
+
+
+geomfiltered_pepper = geometric_mean(pepper_image, 3)
+harmonyfiltered_pepper = harmonic_mean(pepper_image, 3)
+alpha_pepper = alpha_trimmed_mean(pepper_image, d = 12, boxsize= 4)
