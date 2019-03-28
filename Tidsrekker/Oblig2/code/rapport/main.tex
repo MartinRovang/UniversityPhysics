@@ -118,18 +118,18 @@ Siden vi har summer kan vi dele integralet opp i sum,
 
 \subsection{b}
 
-I figur(\ref{taskb}) ser vi tidsrekken i øverste vindu, periodogram, og periodogram med hann vindu.
+I figur(\ref{taskb}) har vi plot av tidsrekken, periodogrammet og tilslutt periodogram med hann vindu.
 
 \begin{figure}[hbt!]
 {\centering
     \includegraphics[width=0.70\textwidth]{taskb.pdf}
-    \caption{Beregnet periodogram av tidsrekken.}
+    \caption{Beregnet periodogram av tidsrekken. Man kan se at vindu vil hjelpe med å gi mer tydlig seperasjon mellom frekvensene, hvis man ser på rundt frekvens 0.3-0.4 kan man tydlig se stor forskjell. Vindu er svært hjelpsomt hvis man har kraftig signal med et underliggende svakt signal man vil oppdage.}
     \label{taskb}
 \par}
 \end{figure}
 
 
-Her ser man at hann vinduet gir en glattere kurve, og lar ikke frekvense lekker over like mye som i det vanlige periodogrammet. Frekvensene ser ut til å være rundt 0.12 og 0.07.
+Her ser man at hann vinduet gir en glattere kurve, og lar ikke frekvensene lekke over til de andre frekvensene like mye som i det vanlige periodogrammet. Frekvensene ser ut til å være $f =  0.12$ og $f = 0.07$.
 
 
 \subsection{c}
@@ -147,7 +147,7 @@ der $\mathcal{F}$ er DTFT, \emph{Discrete Time Fourier Transform} og N er antall
     \label{wPeriodogram}
 \end{equation}
 
-Her er $w[n]$ vinduet og U er normaliseringskonstant for å fjerne energien som blir lagt til prosessen fra vinduet, i dette tilfelle er w[n] \emph{Hann window}. Vi bruker vindu for å minske spektral lekasje som kommer av at vi ikke kan ha en \emph{ekte} fourier transform som krever at signal vi har er uendelig langt. Derfor vil vi alltid ha en ende på signal som man antar er null. Dette betyr at vi bruker et ideelt vindu med lengde M(signal lengden) når vi tar Fourier transform. Når man ganger inn tids domenet så konvolverer man i frekvensdomenet, og siden det ideele vinduet har store sidelober medfører dette til at man får ut nærliggende frekvenser i hverandre og dermed gir spektral lekasje. Ved bruk av vindu som Hann vindu så kan man redusere dette siden de har smalere sidelober.
+Her er $w[n]$ vinduet og U er normaliseringskonstant for å fjerne energien som blir lagt til prosessen fra vinduet, i dette tilfelle er w[n] \emph{Hann window}. Vi bruker vindu for å minske spektral lekasje som kommer av at vi ikke kan ha en \emph{ekte} fourier transform som krever at signal vi har er uendelig langt. Derfor vil vi alltid ha en ende på signal som man antar er null. Dette betyr at vi bruker et ideelt vindu med lengde M(signal lengden) når vi tar Fourier transform. Når man ganger inn tidsdomenet så konvolverer man i frekvensdomenet, og siden det ideele vinduet har store sidelober medfører dette til at man får ut nærliggende frekvenser i hverandre og dermed gir spektrallekasje. Ved bruk av vindu som Hann vindu så kan man redusere dette siden de har smalere sidelober.
 
 
 
@@ -171,7 +171,7 @@ Ved å implementere WOSA (Weighted/Welchs overlapped segment averaging) på tidsre
     \par}
     \end{figure}
 
-Her ble hvert segment vektet som gir et kraftigere utslag der det er sterke periodisiteter i forhold til resten av spekteret. Her ser man at frekvensen på ca $f \approx 0.15$ og $\approx 0.05$ er ganske kraftige i forhold til alle de andre. Man kan se at frekvensene er mye tydligere i WOSA enn i periodogrammet og hann vinduet i dB-skala som vist i figur(\ref{taskb}). 
+Her ble hvert segment vektet som gir et kraftigere utslag der det er sterke periodisiteter i forhold til resten av spekteret. Her ser man at frekvensene på $f = 0.12$ og $f = 0.1$ er ganske kraftige i forhold til alle de andre. Man kan også se at frekvensene er mye tydligere i WOSA enn i periodogrammet og hann vinduet i dB-skala som vist i figur(\ref{taskb}). 
 
 
 \clearpage
@@ -186,12 +186,12 @@ Her plottet vi sol-dataen som vist i øverste vindu i figur(\ref{task2}).
 \begin{figure}[hbt!]
     {\centering
         \includegraphics[width=0.70\textwidth]{task2.pdf}
-        \caption{Soldata, WOSA med 50\% overlapp, N = 40}
+        \caption{Soldata, WOSA med 50\% overlapp, N = 40. Ser ut som man har en kraftig periode på 10 år.}
         \label{task2}
     \par}
     \end{figure}
 
-Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser man sterk DC($f=0$) og en frekvens på rundt 0.1, $f \approx 0.1$. Dette gir en periode på $T \approx 10$, noe som ser ut til å stemme hvis man teller antall topper som er $\approx 10$ per 100.
+Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser man sterk DC($f=0$) og en frekvens på rundt 0.1, $f \approx 0.1$. Dette gir en periode på $T \approx 10$, noe som ser ut til å stemme hvis man teller antall topper som er $\approx 10$ per 100, altså periode på ti år.
 
 
 % --------------------------------------------------------------
@@ -207,6 +207,19 @@ Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser ma
         
         data = np.genfromtxt('tidsrekke_oblig2_oppg1.txt')
         
+        def find_freqs(spectrum, freq, freqs = 5):
+            """Find the frequency with highest power"""
+            frequencies = []
+            # Slice away double side
+            spectrum = spectrum[int(len(spectrum)/2):len(spectrum)]
+            freq = freq[int(len(freq)/2):len(freq)]
+            # Find the most powerfull frequencies
+            for i in range(freqs):
+                idx = np.argmax(spectrum)
+                frequencies.append(freq[idx])
+                spectrum = np.delete(spectrum,idx)
+         return frequencies
+
         
         def periodogram(x, dt):
             """Regular periodogram"""

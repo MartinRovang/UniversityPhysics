@@ -5,6 +5,23 @@ import matplotlib.pyplot as plt
 data = np.genfromtxt('tidsrekke_oblig2_oppg1.txt')
 
 
+def find_freqs(spectrum, freq, freqs = 5):
+    """Find the frequency with highest power"""
+    frequencies = []
+    # Slice away double side
+    spectrum = spectrum[int(len(spectrum)/2):len(spectrum)]
+    freq = freq[int(len(freq)/2):len(freq)]
+    # Find the most powerfull frequencies
+    for i in range(freqs):
+        idx = np.argmax(spectrum)
+        frequencies.append(freq[idx])
+        spectrum = np.delete(spectrum,idx)
+    return frequencies
+
+
+
+
+
 def periodogram(x, dt):
     """Regular periodogram"""
     #x = np.pad(x, (0,200), 'constant')
@@ -32,6 +49,11 @@ def w_periodogram(x, dt):
 dt = 1
 freq, spectrum = periodogram(data, dt)
 freqw, wspectrum = w_periodogram(data, dt)
+
+# Find the most powerfull frequencies in decending order
+print(find_freqs(spectrum, freq))
+print(find_freqs(wspectrum, freqw))
+
 
 # Find index corresponding to f = 0 
 idx = np.where(freq == 0)

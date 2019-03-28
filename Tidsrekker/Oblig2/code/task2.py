@@ -18,6 +18,7 @@ for i in range(len(datatable)):
      sunspots[i] = datatable.values[i,0][8:13]
 
 
+
 def WOSA(x, M, dt = 1):
     """Implementation of WOSA"""
     n = np.arange(0, M, 1)
@@ -51,6 +52,7 @@ def WOSA(x, M, dt = 1):
 M = 40
 dt = 1
 freq, spectrum = WOSA(sunspots, M)
+
 # Find index corresponding to f = 0 
 idx = np.where(freq == 0)
 
@@ -62,7 +64,7 @@ ax[0].set_ylabel('Sunspots')
 ax[0].set_xlabel('Year')
 ax[1].plot(freq, 10*np.log10(spectrum/spectrum[idx]), '-.', linewidth = '1', color = 'black')
 ax[1].set_title('WOSA, M = %s'%M, fontsize = '20')
-ax[1].set_xlabel('Frequency')
+ax[1].set_xlabel('Frequency(Year)')
 ax[1].set_ylabel('dB power')
 ax[1].set_xticks([x for x in np.arange(-0.5,0.5,0.1)])
 ax[1].grid()

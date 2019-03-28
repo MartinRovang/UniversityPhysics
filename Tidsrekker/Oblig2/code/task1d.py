@@ -5,6 +5,19 @@ import numpy as np
 data = np.genfromtxt('tidsrekke_oblig2_oppg1.txt')
 
 
+def find_freqs(spectrum, freq, freqs = 5):
+    """Find the frequency with highest power"""
+    frequencies = []
+    # Slice away double side
+    spectrum = spectrum[int(len(spectrum)/2):len(spectrum)]
+    freq = freq[int(len(freq)/2):len(freq)]
+    # Find the most powerfull frequencies
+    for i in range(freqs):
+        idx = np.argmax(spectrum)
+        frequencies.append(freq[idx])
+        spectrum = np.delete(spectrum,idx)
+    return frequencies
+
 def WOSA(x, M, dt = 1):
     """Implementation of WOSA"""
     n = np.arange(0, M, 1)
@@ -38,6 +51,9 @@ def WOSA(x, M, dt = 1):
 M = 40
 dt = 1
 freq, spectrum = WOSA(data, M)
+
+print(find_freqs(spectrum, freq, freqs = 5))
+
 # Find index corresponding to f = 0 
 idx = np.where(freq == 0)
 

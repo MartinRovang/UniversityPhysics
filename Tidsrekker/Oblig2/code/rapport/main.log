@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  22 MAR 2019 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  28 MAR 2019 10:25
 entering extended mode
 **c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.tex
 (c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.tex
@@ -1412,7 +1412,7 @@ LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
 [7
 
  <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/task2.pdf>] [8]
-Overfull \vbox (40.31491pt too high) has occurred while \output is active []
+Overfull \vbox (163.81471pt too high) has occurred while \output is active []
 
  [9] [10]
 Overfull \vbox (119.79198pt too high) has occurred while \output is active []
@@ -1424,35 +1424,35 @@ Package natbib Warning: Empty `thebibliography' environment on input line 8.
 ) 
 AED: lastpage setting LastPage
 [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 451.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 451.
  (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\code\rapport\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 451.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 451.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 59220A1B6315C3AB5C1383D1199C8BD3;427.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 451.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 11 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38697 strings out of 492946
- 764127 string characters out of 3124490
- 2064019 words of memory out of 3000000
- 41705 multiletter control sequences out of 15000+200000
- 620099 words of font info for 123 fonts, out of 3000000 for 9000
+ 38718 strings out of 492946
+ 764416 string characters out of 3124490
+ 2065019 words of memory out of 3000000
+ 41711 multiletter control sequences out of 15000+200000
+ 620220 words of font info for 124 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,11n,103p,1049b,1512s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0800.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mcl.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
-Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\code\rapport\main.pdf (12 pages, 320973 bytes).
+Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig2\code\rapport\main.pdf (12 pages, 327011 bytes).
 PDF statistics:
- 908 PDF objects out of 1000 (max. 8388607)
- 240 named destinations out of 1000 (max. 500000)
+ 930 PDF objects out of 1000 (max. 8388607)
+ 253 named destinations out of 1000 (max. 500000)
  21753 words of extra memory for PDF output out of 24883 (max. 10000000)
 
