@@ -36,7 +36,6 @@ def arma1(p, q, phi, theta, N):
     plt.show()
 
 
-
 def ar1(phi, N):
     x = np.zeros(N)
     white = np.random.normal(0,1,N)
@@ -58,6 +57,8 @@ cmort = np.genfromtxt('cmort.txt', delimiter= '\t')[1:,1]
 rec = np.genfromtxt('rec.txt', delimiter= '\t')[1:,1]
 cmort = pd.DataFrame(np.diff(np.log(cmort), 1))
 rec = pd.DataFrame(np.diff(np.log(rec), 1))
+
+
 
 
 

@@ -52,7 +52,7 @@ def wiener_filter(image, a, K):
 
 
 # Apply filter and then taking it to the second power to remove some noise.
-im = wiener_filter(polar_image, a = (1/8)*cols, K =0.001)**2
+im = wiener_filter(polar_image, a = (1/8)*cols, K =0.01)**2
 
 # Return image to cartesian coordinates.
 im2 = cv2.linearPolar(im.T, (int(rows/2), int(cols/2)), radius, (cv2.WARP_INVERSE_MAP + cv2.INTER_LINEAR))
@@ -74,6 +74,7 @@ plt.tight_layout()
 plt.savefig('carttopol_trans_back2.pdf', bbox_inches = 'tight',
     pad_inches = 0)
 plt.show()
+
 
 fig, ax = plt.subplots(1,1)
 ax.imshow(im2, cmap = 'gray')

@@ -1,11 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>  // for strtol
- 
 
-int main(int argc, char *argv[]){
-
-   //printf(argv[1]);
-   int number = strtol(argv[1],NULL, 10);
-   return number;
-
+int our_function(int num_numbers, int *numbers) {
+    int i;
+    int sum = 0;
+    for (i = 0; i < num_numbers; i++) {
+        sum += numbers[i];
+    }
+    return sum;
 }

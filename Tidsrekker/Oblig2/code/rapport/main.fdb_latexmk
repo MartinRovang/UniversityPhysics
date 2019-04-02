@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex main"] 1553765026 "main.aux" "main.bbl" "main" 1553765139
+["bibtex main"] 1553872930 "main.aux" "main.bbl" "main" 1553873011
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "bibl.bib" 1550415938 1418 48d34f8759365520d3720371e800a06a ""
-  "main.aux" 1553765129 4377 66ca91065ec517f0d90888c4d3e13ad1 ""
+  "main.aux" 1553873010 4381 add9d619701aec1191c801c29f240105 ""
   (generated)
   "main.blg"
   "main.bbl"
-["makeindex main.idx"] 1552746056 "main.idx" "main.ind" "main" 1553765139
-  "main.idx" 1553765127 0 d41d8cd98f00b204e9800998ecf8427e ""
+["makeindex main.idx"] 1552746056 "main.idx" "main.ind" "main" 1553873011
+  "main.idx" 1553873009 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "main.ilg"
   "main.ind"
-["pdflatex"] 1553765122 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.pdf" "main" 1553765139
+["pdflatex"] 1553873004 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.pdf" "main" 1553873011
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecit0800.pk" 1550501527 19160 165ce1b0a6e5778d3d2d0e3699ff9115 ""
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb1000.pk" 1550501447 23092 1cd886f958d5de742d5a85b1badd5ebf ""
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb1728.pk" 1550501449 44992 e9dfb22892e6109c7bffc1404cda5791 ""
@@ -262,26 +262,26 @@
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty" 1419270738 5114 9c1069474ff71dbc47d5006555e352d3 ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.aux" 1553765129 4377 66ca91065ec517f0d90888c4d3e13ad1 ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.tex" 1553765109 16435 d3f34b8b93b38b1b7396bc7b42a1db70 ""
-  "main.aux" 1553765129 4377 66ca91065ec517f0d90888c4d3e13ad1 ""
-  "main.bbl" 1553765027 283 de5ffaf5b665b622658d80bed97ba2a5 "bibtex main"
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.aux" 1553873010 4381 add9d619701aec1191c801c29f240105 ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.tex" 1553873003 16437 2f9caab739e04ae53ee417b64a0b960c ""
+  "main.aux" 1553873010 4381 add9d619701aec1191c801c29f240105 ""
+  "main.bbl" 1553872931 283 de5ffaf5b665b622658d80bed97ba2a5 "bibtex main"
   "main.ind" 1552746056 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1553765129 427 4e3c5bb0d60f60a900c0718173d73255 ""
-  "main.tex" 1553765109 16435 d3f34b8b93b38b1b7396bc7b42a1db70 ""
-  "main.toc" 1553765129 628 36c87297cbad5e475135b9c80ea6eea5 ""
+  "main.out" 1553873010 427 4e3c5bb0d60f60a900c0718173d73255 ""
+  "main.tex" 1553873003 16437 2f9caab739e04ae53ee417b64a0b960c ""
+  "main.toc" 1553873010 628 36c87297cbad5e475135b9c80ea6eea5 ""
   "preamble.tex" 1552985113 3873 9fa5c233f9c1f9c568bb6197a866ded2 ""
   "task2.pdf" 1553764954 17887 cb8132a170e30e94c688f70dcee33708 ""
   "taskb.pdf" 1553763509 17318 95b7edd8b7c36ec4d61569d6ce9a1603 ""
   "taskc.pdf" 1552743266 15844 13f28a93823814452b64da5612d42174 ""
   "taskd.pdf" 1553764810 16558 199050ca75e46b429918b2b7ac289ef4 ""
   (generated)
-  "main.idx"
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.pdf"
+  "main.out"
+  "main.toc"
   "main.aux"
   "preamble.aux"
   "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.log"
+  "main.idx"
   "main.log"
-  "main.out"
-  "main.toc"
   "main.pdf"
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig2/code/rapport/main.pdf"

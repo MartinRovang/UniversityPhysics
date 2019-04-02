@@ -44,7 +44,20 @@ Inneholder \pageref{LastPage} \, sider, inkludert forside.\par
 
 \section{Introduksjon}
 
-dawdw
+
+    \begin{lstlisting}
+        @timer
+        def point_assigner_loss(self, group, player_sprites):
+            """
+            Assigns loss points to the player if collision/ or killed by enemy bullets and then respawn them.
+            """
+            # Grab playersprite
+            if group != {}:
+                for player in group:
+                    player.reset()
+                    player_sprites.add(player)
+    \end{lstlisting}
+
 
 
 

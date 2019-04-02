@@ -47,13 +47,13 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \definecolor{skyblue}{rgb}{0.950, 1, 1}
+\definecolor{columbiablue}{rgb}{0.61, 0.87, 1.0}
+\definecolor{darkjunglegreen}{rgb}{0.1, 0.14, 0.13}
+\definecolor{babypink}{rgb}{0.96, 0.76, 0.76}
+\definecolor{cerisepink}{rgb}{0.93, 0.23, 0.51}
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
     basicstyle=\footnotesize,
     breakatwhitespace=false,         
     breaklines=true,                 
@@ -65,19 +65,24 @@
     showstringspaces=false,
     showtabs=false,                  
     tabsize=2,
-    frame=single,
+    frame=shadowbox,
+    framexleftmargin=5mm,
+    rulesepcolor=\color{skyblue},
+    % \lstset{framexleftmargin=5mm, frame=shadowbox, rulesepcolor=\color{blue}}
     %keywordstyle=\color{blue},
     language=Python,
-    backgroundcolor = \color{skyblue}
 }
  
 \lstset{style=mystyle}
 \lstset{
-    basicstyle=\footnotesize\ttfamily,
-  identifierstyle=\bfseries\color{green!40!black},
-  commentstyle=\itshape\color{purple!40!black},
-  keywordstyle=\color{blue},
+  basicstyle=\footnotesize\ttfamily,
+  identifierstyle=\bfseries\color{blue},
+  commentstyle=\itshape\color{darkjunglegreen},
+  keywordstyle=\color{cerisepink},
   stringstyle=\color{orange},
+  backgroundcolor = \color{skyblue},
+  emph={self, cls},
+  emphstyle={\color{red}},
 }
 
 \newcommand{\N}{\mathbb{N}}

@@ -169,19 +169,19 @@ Drivstoff-fat oppstår i et tilfeldig område på spillskjermen hvert 40 sekund. Di
 
     \section{Diskusjon}
 
-    Bruk av pygame sin sprite-klasse gjorde det enklere å håndtere forskjellige spill relaterte problemer som kollisjon. Her var gruppe oppdatering og tegning/draw, og fjerning av objekter allerede implementert. Ett problem som kan oppstå her er at man kan glemme at alle disse funksjonene kan bli ganske krevende da det underliggende i funksjonene er for løkker, og annet som kan være svært systemkrevende. FPS(frames per second) var ikke så bra under testing av spillet så her kunne man prøvd å optimalisere mer. Når man skyter så lager man veldig mange kuler. Dette er fordi at det ikke har blitt lagt inn noen restriksjon på hvor mange kuler som skal komme ut når man bruker skyteknappen, og derfor vil programmet bare skyte av så mange kuler den klarer(ved 60 fps vil det være 60 kuler i sekundet, så her kunne man optimalisert mer)
+    Bruk av pygame sin sprite-klasse gjorde det enklere å håndtere forskjellige spill relaterte problemer som kollisjon. Her var gruppe oppdatering og tegning/draw, og fjerning av objekter allerede implementert. Ett problem som kan oppstå her er at man kan glemme at alle disse funksjonene kan bli ganske krevende da det underliggende i funksjonene er for løkker, og annet som kan være svært systemkrevende. FPS(frames per second) var ikke så bra under testing av spillet så her kunne man prøvd å optimalisere mer. Når man skyter så lager man veldig mange kuler. Dette er fordi at det ikke har blitt lagt inn noen restriksjon på hvor mange kuler som skal komme ut når man bruker skyteknappen, og derfor vil programmet bare skyte av så mange kuler den klarer(ved 60 fps vil det være 60 kuler i sekundet, så her kunne man optimalisert mer). Laget en dekorator-mønster for å gjøre det enklere med feilsøking/optimalisering. Her ble det brukt den innebygde time modulen for å finne hvor lang tid det tok å kjøre en funksjon, denne tiden ble summet opp for hver gang denne ble kjørt slik at man finner den kumulative summen. Antall funksjonskall ble også tatt vare på. Hvis man så avslutta programmet ville man se den kumulative summen av tid og antall funksjonskall for de(n) gitte funksjonen(e).
 
-    %# TODO: Patterns
+  
 
 
     \section{Evaluering}
 
-    Programmet kjørte ganske tregt, og derfor kunne det ha vært bedre optimalisert. Tar man en titt på figur(\ref{profilings}) kan man se at \emph{Player.update} bruker en kumulativ sum på 2.1 sekunder og 8100 kall. Antall kall kan man egentlig ikke gjøre så mye med siden spillet er avhengig av en kjapp oppdatering av verdiene til spillerene, men her kunne man prøvd å optimalisere hvordan update funksjonen fungerer, og eventuell se om det er noen plasser man kunne ha lagt inn generatorer for å spare minne.
+    Programmet kjørte ganske tregt, og derfor kunne det ha vært bedre optimalisert. Tar man en titt på figur(\ref{profilings}) kan man se at \emph{Player.update} bruker en kumulativ sum på 2.1 sekunder og 8100 kall. Antall kall kan man egentlig ikke gjøre så mye med siden spillet er avhengig av en kjapp oppdatering av verdiene til spillerene, men her kunne man prøvd å optimalisere hvordan update funksjonen fungerer, og eventuell se om det er noen plasser man kunne ha lagt inn generatorer for å spare minne. Hvis man ser litt lengre opp ser man at bakgrunnen brukte veldig mye tid på kun 4051 kall. Dette ble optimalisert ved hjelp av eget diagnostikkverktøy forklart under.
 
     \begin{figure}[hbt!]
     {\centering
         \includegraphics[width=1\textwidth]{profiling.png}
-        \caption{Profil av programmet, her kan man se de hvor lang tid de forskjellige funksjonene brukte og antall kall det var til dem. Her har det blitt brukt \emph{cProfiler} sammen med visualiseringsbiblioteket \emph{snakeviz}}
+        \caption{Profil av programmet, her kan man se de hvor lang tid de forskjellige funksjonene brukte og antall kall det var til dem. Her har det blitt brukt \emph{cProfiler} sammen med visualiseringsbiblioteket \emph{snakeviz}}. Pilene peker på antall kall of kumulativ sum for Player.update() metoden.
         \label{profilings}
     \par}
     \end{figure}
@@ -193,18 +193,40 @@ Drivstoff-fat oppstår i et tilfeldig område på spillskjermen hvert 40 sekund. Di
         @timer 
         def somefunction():
             .....
+
+
+>> Cumsum/Calls: {'point_assigner_win': [0.0004951953887939453, 377], 'point_assigner_loss': [0.002472400665283203, 754]}
         \end{lstlisting}
-    \caption{Hvordan dekoratoren ble brukt i koden.}
+    \caption{Hvordan dekoratoren ble brukt i koden, og resultat of utskrift gitt at to funksjoner var dekorert.}
     \label{Kode1}
     \end{figure}
 
 Et problem her var at alle funksjonene kjørte i $"$evig tid$"$ fordi det er løkke som må kjøre så lenge man spiller, slik at her var det også implementert en metode som printer ut resultatet, denne må man legge inn sammen med \emph{if} testen som tok av seg å lukke vinduet.
 
+Dette verktøyet brukte jeg for å optimalisere $"$Background$"$ funksjonen. Før optimalisering fikk man resultatet vist i figur(\ref{Kode2}), 
+
+\begin{figure}[hbt!]
+    \begin{lstlisting}
+        Cumsum/Calls: {'background': [19.079365253448486, 1163]}
+    \end{lstlisting}
+\caption{Før optimalisering}
+\label{Kode2}
+\end{figure}
+og etter optimalisering fikk man resultatet vist i figur(\ref{Kode3})
+
+\begin{figure}[hbt!]
+    \begin{lstlisting}
+        Cumsum/Calls: {'background': [1.6295523643493652, 1471]}
+    \end{lstlisting}
+\caption{Etter optimalisering}
+\label{Kode3}
+\end{figure}
+
+Dette ble gjort ved å legge til .convert() etter at man lastet inn bilde med pygame.load(), dette vil formatere pikselene til bilde til å ha samme format som flaten.\footnote{\url{http://www.pygame.org/docs/ref/surface.html\#pygame.Surface.convert}}
 
     \section{Konklusjon}
 
-    I dette prosjektet ble en klone av spillet \emph{Mayhem} laget med hensyn på objekt-orientert programmering og ved hjelp av arv fra pygame sin sprite klasse kunne man enkelt oppdatere, tegne og sjekke for kollisjon mellom alle objekter man hadde laget. Den største utfordringen er å få spillet optimalisert nok til at det var behagelig å spille, noe som ikke har blitt gjort her og dermed kan man forvente lav fps(frame per second). cProfiler ble brukt til å se hvilke funksjoner som var krevende, men dette var noe vanskelig å bruke da det var mye tredjeparts moduler/funskjoner(pygame, sprites etc).
-
+    I dette prosjektet ble en klone av spillet \emph{Mayhem} laget med hensyn på objekt-orientert programmering og ved hjelp av arv fra pygame sin sprite klasse kunne man enkelt oppdatere, tegne og sjekke for kollisjon mellom alle objekter man hadde laget. Den største utfordringen er å få spillet optimalisert nok til at det var behagelig å spille, noe som ikke har blitt gjort her og dermed kan man forvente lav fps(frame per second). cProfiler ble brukt til å se hvilke funksjoner som var krevende, men dette var noe vanskelig å bruke da det var mye tredjeparts moduler/funskjoner(pygame, sprites etc), men fant ut tilslutt ved hjelp av selvlaget diagnostikkverktøy at pygame sin load metode var veldig krevende og at det hjalp veldig å legge til .convert() på bildet.
 
 \clearpage
 \newpage

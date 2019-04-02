@@ -410,11 +410,21 @@ INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.toc
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.toc
 OUTPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.toc
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0800.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt0800.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
+INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecit0800.tfm
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.bbl
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.bbl
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.aux
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.out
 INPUT c:\Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.out
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecit0800.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecit0800.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
+INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
 INPUT C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\tex-gyre\q-ec.enc
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk

@@ -28,16 +28,17 @@ import time
 
 class Game:
     """
-    Starts the game when instancing.
+    Starts the game if it is instanced.
     """
     def __init__(self):
-        """Starts the gameloop when initiated."""
+        """Starts the gameloop when initiatialized."""
         self.gameloop()
 
 
     def background(self, Background):
         """Assigning background in game canvas"""
         SCREEN.blit(Background, (0, 0))
+        #SCREEN.fill((0,0,0))
 
     def point_assigner_loss(self, group, player_sprites):
         """
@@ -48,7 +49,7 @@ class Game:
             for player in group:
                 player.reset()
                 player_sprites.add(player)
-                
+
     def point_assigner_win(self, group, player_sprites):
         """
         Assigns win points to the player if player collide with bullet.
@@ -59,12 +60,12 @@ class Game:
 
 
     def gameloop(self):
-        """The game loop"""
+        """The game loop, runs all the necessary functions for the game to function"""
 
         #Game folder
         game_folder = os.path.dirname(__file__)
         img_folder = os.path.join(game_folder, 'img')
-        Background = pygame.image.load(os.path.join('Files', img_folder, 'background.jpg'))
+        Background = pygame.image.load(os.path.join('Files', img_folder, 'background.jpg')).convert()
 
         # Clock/Timers
         clock = pygame.time.Clock() # Initiate clock object                
@@ -113,9 +114,6 @@ class Game:
                 fuel_sprites.add(FuelBarrel())
 
 
-            # Set background
-            self.background(Background)
-
             # Check for collisions between sprites.
             collide = pygame.sprite.groupcollide(player_sprites, fuel_sprites, 0 , 1)
             collide_wall = pygame.sprite.groupcollide(player_sprites, wall_sprites, 1 , 0)
@@ -135,6 +133,10 @@ class Game:
             # Assign negative points for wall collision and if hit by player bullets
             self.point_assigner_loss(collide_players_bullets, player_sprites)
             self.point_assigner_loss(collide_wall, player_sprites)
+
+
+            # Set background
+            self.background(Background)
 
             # Update all the sprites
             player_sprites.update(collide, bullet_sprites)

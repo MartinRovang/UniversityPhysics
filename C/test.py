@@ -1,13 +1,2 @@
-import subprocess
- 
-cmd = "test.c"
-print ("Hey this is Python Script Running\n")
-subprocess.call(["gcc",cmd]) #For Compiling
-
-
-
-somevalue = "100"
-
-a = subprocess.call("test %s"%somevalue)
-print(a)
-
+import sum
+print(sum.our_function([1,2,-3,4,-5,6]))

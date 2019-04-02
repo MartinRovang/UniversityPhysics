@@ -11,7 +11,7 @@
    ░     ░        ░  ░      ░          ░     ░ ░        ░            ░  ░ ░            ░  
  ░                                                                      ░                 
 
-Diagnostic file for timing functions.
+Diagnostic file with decorator pattern for timing functions.
 
 """
 
