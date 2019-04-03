@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
-from statsmodels.tsa.stattools import acf
-from statsmodels.tsa.stattools import pacf
+from statsmodels.tsa.stattools import acf, pacf, ccf
+from statsmodels.tsa.arima_process import arma2ma, arma2ar
 import pandas as pd
 
 
@@ -57,9 +57,6 @@ cmort = np.genfromtxt('cmort.txt', delimiter= '\t')[1:,1]
 rec = np.genfromtxt('rec.txt', delimiter= '\t')[1:,1]
 cmort = pd.DataFrame(np.diff(np.log(cmort), 1))
 rec = pd.DataFrame(np.diff(np.log(rec), 1))
-
-
-
 
 
 

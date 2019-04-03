@@ -1,0 +1,93 @@
+\include{preamble}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{amsmath}
+
+
+\begin{document}
+% --------------------------------------------------------------
+%                         FRONTPAGE
+% --------------------------------------------------------------
+{\fontfamily{cmr}\selectfont
+\title{ \normalsize \textsc{}
+		\\ [1.0cm] % How much upper margin
+		%\HRule{0.5pt} \\
+        \LARGE \textbf{\uppercase{Oppgavesett 1}
+        \HRule{0.5pt} \\ [0.5cm]
+        INF-1049 \\ Beregningsorientert programmering
+        %\HRule{2pt} \\ [0.5cm]
+        \\
+		\vspace*{5\baselineskip}}
+		}
+
+    %    \date{}
+\author{Universitetet i Tromsø \\}
+
+% \begin{titlepage}
+\clearpage\maketitle
+\vspace{0.2\textheight}
+{\centering
+Inneholder \pageref{LastPage} \, sider, inkludert forside.\par
+}
+\thispagestyle{empty}
+% \end{titlepage}
+
+% \newpage
+% \tableofcontents
+\newpage
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+\section{Introduksjon}
+I disse oppgavene vil du lære å bruke \emph{for løkker} og hvordan disse kan bli brukt til å beregne fotosyntesen til en fugl.
+
+
+
+\section{For løkker}
+
+\begin{equation}
+    y = \sum_{i = 0}^{\infty} = x_{i}
+\end{equation}
+
+    \begin{lstlisting}
+        def testfunksjon(x):
+            for i in range(N):
+                for j in range(M):
+                    ...
+    \end{lstlisting}
+
+
+
+
+\section{Feilsøking}
+
+Her feilsøkes det veldig mye.
+
+% --------------------------------------------------------------
+%     Reference og appendix
+% --------------------------------------------------------------
+\newpage
+\section{Appendix}
+\section{Referanser}
+\begingroup
+\renewcommand{\section}[2]{}%
+%\renewcommand{\chapter}[2]{}% for other classes
+\bibliographystyle{plainnat}
+\bibliography{bibl}
+\endgroup
+
+
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+
+
+
+
+
+\end{document}
+
+
