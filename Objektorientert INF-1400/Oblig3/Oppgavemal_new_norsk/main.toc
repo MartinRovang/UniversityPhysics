@@ -5,11 +5,11 @@
 \contentsline {subsection}{\numberline {3.1}Game}{3}{subsection.3.1}% 
 \contentsline {subsection}{\numberline {3.2}Player1 og Player2}{3}{subsection.3.2}% 
 \contentsline {subsection}{\numberline {3.3}Bullets}{5}{subsection.3.3}% 
-\contentsline {subsection}{\numberline {3.4}Walls}{5}{subsection.3.4}% 
+\contentsline {subsection}{\numberline {3.4}Walls}{6}{subsection.3.4}% 
 \contentsline {subsection}{\numberline {3.5}Fuel}{6}{subsection.3.5}% 
 \contentsline {section}{\numberline {4}Implementasjon}{7}{section.4}% 
 \contentsline {section}{\numberline {5}Diskusjon}{7}{section.5}% 
-\contentsline {section}{\numberline {6}Evaluering}{7}{section.6}% 
+\contentsline {section}{\numberline {6}Evaluering}{8}{section.6}% 
 \contentsline {section}{\numberline {7}Konklusjon}{9}{section.7}% 
 \contentsline {section}{\numberline {8}Part II}{10}{section.8}% 
 \contentsline {subsection}{\numberline {8.1}1}{10}{subsection.8.1}% 

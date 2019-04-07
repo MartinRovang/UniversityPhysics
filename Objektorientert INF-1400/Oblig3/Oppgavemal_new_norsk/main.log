@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  2 APR 2019 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  7 APR 2019 15:43
 entering extended mode
 **"c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.tex"
 ("c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.tex"
@@ -1155,7 +1155,11 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 Writing index file main.idx
 ) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/was\gensymb.sty"
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\Oblig3\Oppgavemal_new_norsk\main.aux")
+) ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\Oblig3\Oppgavemal_new_norsk\main.aux"
+
+LaTeX Warning: Label `hastighet' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -1407,26 +1411,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-<kuler.jpg, id=219, 142.28156pt x 186.6975pt>
+<kuler.jpg, id=220, 142.28156pt x 186.6975pt>
 File: kuler.jpg Graphic file (type jpg)
 <use kuler.jpg>
-Package pdftex.def Info: kuler.jpg  used on input line 119.
+Package pdftex.def Info: kuler.jpg  used on input line 131.
 (pdftex.def)             Requested size: 113.24197pt x 148.60042pt.
-<vegg.jpg, id=220, 121.95563pt x 194.97844pt>
+[5 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/kuler.jpg>]
+<vegg.jpg, id=237, 121.95563pt x 194.97844pt>
 File: vegg.jpg Graphic file (type jpg)
 <use vegg.jpg>
-Package pdftex.def Info: vegg.jpg  used on input line 132.
+Package pdftex.def Info: vegg.jpg  used on input line 144.
 (pdftex.def)             Requested size: 113.24197pt x 181.0484pt.
-[5 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/kuler.jpg>]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 144.
+(Font)              scaled to size 7.35999pt on input line 156.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 144.
+(Font)              scaled to size 6.25598pt on input line 156.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 144.
+(Font)              scaled to size 7.35999pt on input line 156.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 144.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 144.
+(Font)              scaled to size 6.25598pt on input line 156.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 156.
  ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1434,61 +1438,66 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<fuel.jpg, id=238, 67.0003pt x 59.47218pt>
+<fuel.jpg, id=241, 67.0003pt x 59.47218pt>
 File: fuel.jpg Graphic file (type jpg)
 <use fuel.jpg>
-Package pdftex.def Info: fuel.jpg  used on input line 149.
+Package pdftex.def Info: fuel.jpg  used on input line 161.
 (pdftex.def)             Requested size: 113.24197pt x 100.51785pt.
- [6 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/vegg.jpg> <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/fuel.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 158--166
+ [6 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/vegg.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 170--178
 
  []
 
-<profiling.png, id=252, 1059.96pt x 411.78844pt>
+[7 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/fuel.jpg>]
+<profiling.png, id=264, 1059.96pt x 411.78844pt>
 File: profiling.png Graphic file (type png)
 <use profiling.png>
-Package pdftex.def Info: profiling.png  used on input line 183.
+Package pdftex.def Info: profiling.png  used on input line 195.
 (pdftex.def)             Requested size: 452.9679pt x 175.97855pt.
 
-LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 193.
 
-[7] [8 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/profiling.png>] [9] [10
+LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
+(Font)              using `T1/cmtt/m/n' instead on input line 205.
+
+[8 <c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/profiling.png>] [9] [10
 
 ] [11] ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\Oblig3\Oppgavemal_new_norsk\main.bbl") 
 AED: lastpage setting LastPage
 [12
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 315.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 315.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 327.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 327.
  ("c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\Oblig3\Oppgavemal_new_norsk\main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 315.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 315.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 327.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 327.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DB1F74867DBACA9671D22E4C259D4CDF;1017.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 315.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 327.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 11 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38620 strings out of 492946
- 763462 string characters out of 3124490
+ 38632 strings out of 492946
+ 763660 string characters out of 3124490
  1204770 words of memory out of 3000000
- 41773 multiletter control sequences out of 15000+200000
- 664044 words of font info for 158 fonts, out of 3000000 for 9000
+ 41781 multiletter control sequences out of 15000+200000
+ 676759 words of font info for 162 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,12n,103p,1413b,1483s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkri.pfb>
-Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\Oblig3\Oppgavemal_new_norsk\main.pdf" (12 pages, 534724 bytes).
+ 67i,12n,103p,1446b,1483s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkri.pfb>
+Output written on "c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Objektorientert INF-1400\Oblig3\Oppgavemal_new_norsk\main.pdf" (12 pages, 537401 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
- 31584 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 675 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
+ 35168 words of extra memory for PDF output out of 35830 (max. 10000000)
 

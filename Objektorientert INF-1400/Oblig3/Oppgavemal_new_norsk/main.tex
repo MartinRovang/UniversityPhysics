@@ -44,7 +44,7 @@ Inneholder \pageref{LastPage} \, sider, inkludert forside.\par
 
 \section{Introduksjon}
 
-I denne oppgaven ble en klone av spillet \emph{Mayhem} laget. Dette er et multiplayer-spill som består av to romskip som skal skyte på hverandre og passe på at de har nok fuel for å motså gravitasjonen. Spillerne vil miste poeng når romskipet blir skutt ned eller kræsjer, og man får poeng når de skyter ned motstanderen sitt romskip.
+I denne oppgaven ble en klone av spillet \emph{Mayhem} laget. Dette er et multiplayer-spill som består av to romskip som skal skyte på hverandre og passe på at de har nok drivstoff til å motstå gravitasjonen. Spillerne vil miste poeng hvis romskipet blir skutt ned eller kræsjer, og man får poeng hivs de skyter ned motstanderen sitt romskip.
 
 
 \section{Teknisk bakgrunn}
@@ -63,18 +63,18 @@ I denne oppgaven ble en klone av spillet \emph{Mayhem} laget. Dette er et multip
 \begin{figure}[hbt!]
 {\centering
     \includegraphics[width=0.90\textwidth]{out/um/um.pdf}
-    \caption{UML diagram av prosjektet, nesten alle klassene arver fra pygame sin sprite klasse for å kunne bruke spritegroups, dette vil gjøre det enkle å avgjøre kollisjoner.}
+    \caption{UML diagram av prosjektet, nesten alle klassene arver fra pygame sin spriteklasse for å kunne bruke \emph{spritegroups}, dette vil gjøre det enklere å avgjøre kollisjoner.}
     \label{UML}
 \par}
 \end{figure}
 
 
 \subsection{Game}
-Klassen \emph{Game} er klassen som er \emph{hjernen} i programmet. Denne kobler sammen alle de andre klassene og funksjonene slik at vi får en logikk i spillet. Denne klassen vil ta for seg poeng fordeling til spillerne ved å endre \emph{self.points} attributten til spillerne. Self.points brukes som variabelnavn i pygame sin tekst til skjerm funksjon slik at man til enhver tid kan se poengene til spillerne. Det er i denne klassen \emph{gameloop} metoden er, denne metoden vil kjøre løkken som oppdaterer objektene(spillerne, kuler osv.) og tegner dem ut på skjermen. I denne prosessen brukes pygame sin spritegroup.update og .draw funksjoner. Disse oppdaterer og tegner alle objektene som har blitt lagt inn i spritegruppen(liste). 
+Klassen \emph{Game} er klassen som er \emph{hjernen} i programmet. Denne kobler sammen alle de andre klassene og funksjonene slik at vi får en logikk i spillet. Denne klassen vil ta for seg poeng fordeling ved å endre \emph{self.points} attributten til spillerne. Self.points brukes som variabelnavn i pygame sin tekst til skjerm funksjon slik at man til enhver tid kan se poengene til spillerne. Det er i denne klassen \emph{gameloop} metoden er, denne metoden vil kjøre løkken som oppdaterer objektene(spillerne, kuler osv.) og tegner dem ut på skjermen. I denne prosessen brukes pygame sin spritegroup.update og .draw funksjoner. Disse oppdaterer og tegner alle objektene som har blitt lagt inn i spritegruppen(liste). 
 
 \subsection{Player1 og Player2}
 
-Spiller 1 og spiller 2 klassene er delt i to, spiller 2 arver fra spiller 1 fordi de er nesten helt like, men bruker andre knapper for å styre romskipet og annen plasseringer av poeng/drivstoff informasjon. I denne klassen initialiseres bildene som romskipet skal ha med pygame sin load metode \emph{pygame.image.load}. Dette er to forskjellige bilder som viser romskipet med motor av og på, disse er vist i figur(\ref{skips}). Som man kan se på bildene så er ikke romskipet firkantet, dette vil medføre til litt rar kollisjon da pygame bruker rectangulær hitbox. 
+Vi har to klasser for spillerne, Player1 og Player2. Spiller 2 arver fra spiller 1 fordi de er nesten helt like, men bruker andre knapper for å styre romskipet, og har forsjellige plasseringer av poeng/drivstoff informasjon. I denne klassen initialiseres bildene som romskipet skal ha med pygame sin load metode \emph{pygame.image.load}. Dette er to forskjellige bilder som viser romskipet med motor av og på, disse er vist i figur(\ref{skips}). Som man kan se på bildene så er ikke romskipet rektangulært, dette vil medføre til litt rar kollisjon da vi bruker rektangulær kollisjons-boks(hitbox). 
 
 \begin{figure}[hbt!]
 {\centering
@@ -87,22 +87,34 @@ Spiller 1 og spiller 2 klassene er delt i to, spiller 2 arver fra spiller 1 ford
 
 Spillerklassen har en metode som resetter startverdiene og legger til et minuspoeng, denne blir brukt hver gang et romskip blir skutt ned eller om man kræsjer. \\
 
-Kontrollering av romskipene blir gjort fra \emph{controls} metoden ved hjelp av pygames sin \emph{get\_pressed} metode, den henter ut knappene som blir trykket på. Dette ble så brukt til å sjekke om knappene som er valgt til å skyte, fly osv er i bruk. Ved bruk av \emph{eval} funksjonen kan man lage en variabel for knappene som skal brukes, slik at dette kunne endres i \emph{config.py} filen. \\
+Kontrollering av romskipene blir gjort fra \emph{controls} metoden ved hjelp av pygames sin \emph{get\_pressed} metode, den henter ut knappene som blir trykket på. Dette ble så brukt til å sjekke om knappene som er valgt til å skyte, fly og akselerere blir brukt. Ved bruk av \emph{eval} funksjonen kan man lage en variabel for knappene som skal brukes, slik at dette kunne endres i \emph{config.py} filen. \\
 
 Rotasjon av skipet ble gjort ved bruk av pygame sin \emph{pygame.transform.rotate} metode, den tar inn en vinkelverdi som blir gitt fra \emph{controls} metoden. \\ 
 
-Hastigheten til romskipet blir endret når man bruker motoren, hvis motoren er av vil gravitasjonen dra skipet i y-retning, og hvis motoren er på vil gravitasjonen skru av og en fart vil bli lagt til i x og y-retning basert på hvilken vinkel romskipet er i. Dette blir styrt med en sinus og cosinus funksjon, med vinkelen som argument, dette vil skje kun hvis man har nok drivstoff så her er det også en \emph{if} test. Hastigheten er gitt matematisk i ligning(\ref{hastighet}).
+Hvis motoren er av vil gravitasjonen dra skipet i y-retning, og hvis motoren er på vil gravitasjonen skru av og en fart vil bli lagt til i x- og y-retning basert på hvilken vinkel romskipet er i. Dette blir styrt med en sinus- og cosinus-funksjon, med vinkelen som argument. Dette vil skje kun hvis man har nok drivstoff så her er det også en \emph{if} test. Hastigheten er gitt matematisk i ligning(\ref{hastighet}).
 
 \begin{equation}
     \vect{v}(x,y) = 
   \begin{cases}
-    (0, \frac{1}{2}g^{2})\Delta t ,\,\textit{engine off} \\
+    (0, g)\Delta t ,\,\textit{engine off} \\
     (cos(\theta), -sin(\theta))\alpha,\,\textit{engine on}
   \end{cases}
   \label{hastighet}
 \end{equation}
 
-Her er g gravitasjonen, $\alpha$ er en konstant(hvor stor hastighet), $\theta $ er vinkelen på romskipet og $\Delta t$ er FPS, slik at hvis man har 60 fps vil dette skje 60 ganger i sekunder $\Delta t = 60*sekunder$. Når motoren er på har det blitt valgt å fjerne akselerasjonen (tidsavhengigheten) for å gjøre det lettere å spille.\\
+Her er g gravitasjonen, $\alpha$ er en konstant(hvor stor hastighet), $\theta $ er vinkelen på romskipet og $\Delta t$ er FPS, slik at hvis man har 60 fps vil dette skje 60 ganger i sekunder $\Delta t = 60*sekunder$. Når motoren er på har det blitt valgt å fjerne akselerasjonen (tidsavhengigheten) for å gjøre det lettere å styre romskipet, dette ble gjort ved å sette hastigheten lik og ikke summe på som vi gjør med gravitasjonen.\\
+
+\begin{figure}
+\begin{equation}
+    \vect{a}(x,y) = 
+  \begin{cases}
+    (0, g) ,\,\textit{engine off} \\
+    (0, 0)\alpha,\,\textit{engine on}
+  \end{cases}
+\end{equation}
+\label{hastighet}
+\caption{Akselerasjonen til romskipene}
+\end{figure}
 
 Player2 klassen er så og si den samme, men med annen andre knapper for å kontrollere romskipet og annen posisjon for drivstoff og poeng informasjon, der player1 har informasjonen i venstre topphjørne og player2 har det i høyre topphjørne.
 
@@ -112,7 +124,7 @@ Player2 klassen er så og si den samme, men med annen andre knapper for å kontrol
 
 \subsection{Bullets}
 
-Kulene skal komme ut i samme vinkel som romskipet, derfor har vinkelen til romskipet blitt brukt som argument i en cosinus og sinus funksjon i hastigheten til kulene. Når en spiller skyter ut kulene legges det en kule sprite i en spritegroup. Dette blir brukt sammen med sprite.groupcollide funksjonen til pygame for å teste kollisjon mellom vegger og spillere. Denne funksjonen vil returnere en dictionary med sprites som kolliderer, og deretter fjerne de fra sprite group listen hvis man har lagt inn dette som argument. Denne return dictionarien vil bli brukt til å tildele eller fjerne poeng til spillerne. Kulene ser som vist i figur(\ref{Kuler}).
+Kulene skal komme ut i samme vinkel som romskipet, derfor har vinkelen til romskipet blitt brukt som argument i en cosinus- og sinus-funksjon i hastigheten til kulene. Når en spiller skyter ut kulene legges det en kule sprite i en spritegroup. Dette blir brukt sammen med sprite.groupcollide funksjonen til pygame for å teste kollisjon mellom vegger og spillere. Denne funksjonen vil returnere en dictionary med sprites som kolliderer, og deretter fjerne de fra sprite group-listen, hvis man har lagt inn dette som argument. Denne return dictionarien blir brukt til å tildele eller fjerne poeng til spillerne. Kulene ser som vist i figur(\ref{Kuler}).
 
 \begin{figure}[hbt!]
 {\centering
@@ -125,7 +137,7 @@ Kulene skal komme ut i samme vinkel som romskipet, derfor har vinkelen til romsk
 
 \subsection{Walls}
 
-Veggene i spillet er også sprites som har blitt lagt inn i spritegroups slik at at man kan teste for kollisjon mellom vegg, spillere og kuler. Her skal ingen av veggene forsvinne etter en kollisjon, derfor legges dette inn som argument i spritecollide funksjonen til pygame at både kuler og romskip skal bli fjernet, men ikke veggene. 
+Veggene i spillet er også sprites som har blitt lagt inn i spritegroups slik at at man kan teste for kollisjon mellom vegg, spillere og kuler. Her skal ingen av veggene forsvinne etter en kollisjon, derfor legges dette inn som argument i spritecollide-funksjonen til pygame at både kuler og romskip skal bli fjernet, men ikke veggene. 
 
 \begin{figure}[hbt!]
     {\centering
@@ -141,7 +153,7 @@ Veggene i spillet er også sprites som har blitt lagt inn i spritegroups slik at 
 
 \subsection{Fuel}
 
-Drivstoff-fat oppstår i et tilfeldig område på spillskjermen hvert 40 sekund. Disse vil fylle romskipene helt opp, og vil derfor forhindre romskipet fra å kræsje i veggen pågrunn av gravitasjon. Her ble \emph{time} modul fra python sine innebygde moduler brukt for å finne tiden. \emph{time.time()} vil gi antall sekunder siden denne funksjonen ble kalt\footnote{On Windows, this function returns wall-clock seconds elapsed since the first call to this function, as a floating point number,\url{https://docs.python.org/3/library/time.html}}, ved å derfor differnansen mellom to slike kall kan man få tiden det har tatt (slutt-start). Dette ble brukt ved å første kalle time.time() og deretter ha en ny midlertidig variabel som har samme verdi som time.time() + 40, herfra blir det testa om time.time() har større verdi en denne, når denne endelig får større verdi så legges det ut et drivstoff-fat på et tilfeldig sted og deretter legges det til dette tidsintervallet på den midlertidige variabelen også testes alt på nytt. I figur(\ref{fuel}) kan man se et fat med drivstoff ute på spillskjermen.
+Drivstoff-fat oppstår i et tilfeldig område på spillskjermen hvert 40 sekund(dette kan endres i \emph{config.py}). Disse vil fylle på drivstoff, og vil da hindre romskipet fra å kræsje i veggen pågrunn av gravitasjon(hvis motoren blir brukt da selfølgelig). Her ble \emph{time} modul fra python sine innebygde moduler brukt for å finne tiden(for når et fat skulle bli lagt ut). \emph{time.time()} vil gi antall sekunder siden denne funksjonen ble kalt på\footnote{On Windows, this function returns wall-clock seconds elapsed since the first call to this function, as a floating point number,\url{https://docs.python.org/3/library/time.html}}, ved å derfor ta differnansen mellom to slike kall kan man få tiden det har tatt (slutt-start). Dette ble brukt ved å først kalle time.time(), og deretter ha en ny midlertidig variabel som har samme verdi som time.time() + 40. Herfra blir det testa om time.time() har større verdi en denne, når denne endelig får større verdi så legges det ut et drivstoff-fat på et tilfeldig sted og deretter legges det til dette tidsintervallet på den midlertidige variabelen også testes alt på nytt. I figur(\ref{fuel}) kan man se et fat med drivstoff ute på spillskjermen.
 
 
 \begin{figure}[hbt!]
@@ -169,7 +181,7 @@ Drivstoff-fat oppstår i et tilfeldig område på spillskjermen hvert 40 sekund. Di
 
     \section{Diskusjon}
 
-    Bruk av pygame sin sprite-klasse gjorde det enklere å håndtere forskjellige spill relaterte problemer som kollisjon. Her var gruppe oppdatering og tegning/draw, og fjerning av objekter allerede implementert. Ett problem som kan oppstå her er at man kan glemme at alle disse funksjonene kan bli ganske krevende da det underliggende i funksjonene er for løkker, og annet som kan være svært systemkrevende. FPS(frames per second) var ikke så bra under testing av spillet så her kunne man prøvd å optimalisere mer. Når man skyter så lager man veldig mange kuler. Dette er fordi at det ikke har blitt lagt inn noen restriksjon på hvor mange kuler som skal komme ut når man bruker skyteknappen, og derfor vil programmet bare skyte av så mange kuler den klarer(ved 60 fps vil det være 60 kuler i sekundet, så her kunne man optimalisert mer). Laget en dekorator-mønster for å gjøre det enklere med feilsøking/optimalisering. Her ble det brukt den innebygde time modulen for å finne hvor lang tid det tok å kjøre en funksjon, denne tiden ble summet opp for hver gang denne ble kjørt slik at man finner den kumulative summen. Antall funksjonskall ble også tatt vare på. Hvis man så avslutta programmet ville man se den kumulative summen av tid og antall funksjonskall for de(n) gitte funksjonen(e).
+    Bruk av pygame sin sprite-klasse gjorde det enklere å håndtere forskjellige spill relaterte problemer som kollisjon. Her var gruppe oppdatering og tegning/draw, og fjerning av objekter allerede implementert. Ett problem som kan oppstå her er at man kan glemme at alle disse funksjonene kan bli ganske krevende da det underliggende i funksjonene er for løkker, og annet som kan være svært systemkrevende. FPS(frames per second) var ikke så bra under testing av spillet så her kunne man prøvd å optimalisere mer. Når man skyter så lager man veldig mange kuler. Dette er fordi at det ikke har blitt lagt inn noen restriksjon på hvor mange kuler som skal komme ut når man bruker skyteknappen, og derfor vil programmet bare skyte av så mange kuler den klarer(ved 60 fps vil det være 60 kuler i sekundet, så her kunne man optimalisert mer med tanke på dette). Laget også en dekorator-mønster for å gjøre det enklere med feilsøking/optimalisering. Her ble det brukt den innebygde time modulen for å finne hvor lang tid det tok å kjøre en funksjon, denne tiden ble summet opp for hver gang denne ble kjørt slik at man finner den kumulative summen. Antall funksjonskall ble også tatt vare på. Hvis man så avslutta programmet ville man se den kumulative summen av tid og antall funksjonskall for de(n) gitte funksjonen(e).
 
   
 
@@ -186,7 +198,7 @@ Drivstoff-fat oppstår i et tilfeldig område på spillskjermen hvert 40 sekund. Di
     \par}
     \end{figure}
 
-    Det ble også laget en egen profilerings dekorator slik at man kunne teste en eller flere funksjoner. Dette ble gjort ved bruk av timer modulen, og ved å lage en $"$sandwhich$"$ med funksjonen som ble testa i midten av to time.time() funksjonskall. Med dette kunne jeg dekorere funksjoner jeg ville sjekke kumulativ sum av tid og antall kall på, slik som vist i figur(\ref{Kode1}).
+    Det ble også laget en egen profilerings-dekorator slik at man kunne teste en eller flere funksjoner. Dette ble gjort ved bruk av timer modulen, og ved å lage en $"$sandwhich$"$ med funksjonen som ble testa i midten av to time.time() funksjonskall. Med dette kunne jeg dekorere funksjoner jeg ville sjekke kumulativ sum av tid og antall kall på, slik som vist i figur(\ref{Kode1}).
 
     \begin{figure}[hbt!]
         \begin{lstlisting}
@@ -218,7 +230,7 @@ og etter optimalisering fikk man resultatet vist i figur(\ref{Kode3})
     \begin{lstlisting}
         Cumsum/Calls: {'background': [1.6295523643493652, 1471]}
     \end{lstlisting}
-\caption{Etter optimalisering}
+\caption{Etter optimalisering. Her har vi optimalisert betydelig, da vi har kumulativ tid på 1.62 sekunder med flere funksjons-kall enn før optimalisering.}
 \label{Kode3}
 \end{figure}
 
@@ -226,14 +238,14 @@ Dette ble gjort ved å legge til .convert() etter at man lastet inn bilde med pyg
 
     \section{Konklusjon}
 
-    I dette prosjektet ble en klone av spillet \emph{Mayhem} laget med hensyn på objekt-orientert programmering og ved hjelp av arv fra pygame sin sprite klasse kunne man enkelt oppdatere, tegne og sjekke for kollisjon mellom alle objekter man hadde laget. Den største utfordringen er å få spillet optimalisert nok til at det var behagelig å spille, noe som ikke har blitt gjort her og dermed kan man forvente lav fps(frame per second). cProfiler ble brukt til å se hvilke funksjoner som var krevende, men dette var noe vanskelig å bruke da det var mye tredjeparts moduler/funskjoner(pygame, sprites etc), men fant ut tilslutt ved hjelp av selvlaget diagnostikkverktøy at pygame sin load metode var veldig krevende og at det hjalp veldig å legge til .convert() på bildet.
+    I dette prosjektet ble en klone av spillet \emph{Mayhem} laget med hensyn på objekt-orientert programmering. Ved hjelp av arv fra pygame sin sprite-klasse kunne man enkelt oppdatere, tegne og sjekke for kollisjon mellom alle objekter man hadde laget. Den største utfordringen er å få spillet optimalisert nok til at det var behagelig å spille, noe som ikke har blitt gjort her og dermed kan man forvente lav fps(frame per second). cProfiler ble brukt til å se hvilke funksjoner som var krevende, men dette var noe vanskelig å bruke da det var mange tredjeparts-moduler/funskjoner(pygame, sprites etc), men noe optimaliserings-problemet ble løst med eget diagnostikk-verktøy diskutert i rapporten.
 
 \clearpage
 \newpage
 \section{Part II}
 \subsection{1}
 
-En klasse er en slags blåprint for å lage objekter (fabrikk som lager biler). Objekter er bilene og fabrikkene er klassene.
+En klasse er en slags blåprint for å lage objekter, dette kan ses på som en fabrikk som lager biler, der objekter er bilene og fabrikkene er klassene.
 
     \begin{lstlisting}
 class fabrikk:

@@ -109,7 +109,7 @@ class Player1(pygame.sprite.Sprite):
         self.image_direction()
         controls = self.controls(bullet_sprites)
         if self.engine == 'off':
-            self.vely += (1/2)*GRAVITY**2
+            self.vely += GRAVITY
         self.rect.x += self.velx
         self.rect.y += self.vely
 

@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex main"] 1554212233 "main.aux" "main.bbl" "main" 1554212409
+["bibtex main"] 1554647420 "main.aux" "main.bbl" "main" 1554648232
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "bibl.bib" 1553696659 1435 1b2c066fe8c224da3ad28b239816d7b4 ""
-  "main.aux" 1554212408 6883 cf377e2def683e3f0e3d79c5cdb63c1c ""
+  "main.aux" 1554648231 7424 4e58836be22c10b6e2c68cb9b18c0a0e ""
   (generated)
-  "main.blg"
   "main.bbl"
-["makeindex main.idx"] 1554212228 "main.idx" "main.ind" "main" 1554212409
-  "main.idx" 1554212407 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main.blg"
+["makeindex main.idx"] 1554647359 "main.idx" "main.ind" "main" 1554648232
+  "main.idx" 1554648230 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
-  "main.ilg"
   "main.ind"
-["pdflatex"] 1554212405 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.pdf" "main" 1554212409
+  "main.ilg"
+["pdflatex"] 1554648226 "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.tex" "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.pdf" "main" 1554648232
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb1000.pk" 1550501447 23092 1cd886f958d5de742d5a85b1badd5ebf ""
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb1728.pk" 1550501449 44992 e9dfb22892e6109c7bffc1404cda5791 ""
   "C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1000.pk" 1550501445 23808 2477b16e5fcfc4f94895f062858ad2da ""
@@ -278,16 +278,16 @@
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty" 1419270738 5114 9c1069474ff71dbc47d5006555e352d3 ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.aux" 1554212408 6883 cf377e2def683e3f0e3d79c5cdb63c1c ""
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.tex" 1554212403 18040 111f9a925d06102d518d3a43f545fa6b ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.aux" 1554648231 7424 4e58836be22c10b6e2c68cb9b18c0a0e ""
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.tex" 1554648225 18579 8c4ad067a51688f6bc4246cb244193ac ""
   "fuel.jpg" 1553600844 2623 4c8632d401fd1fbe23002591a7fdda75 ""
   "kuler.jpg" 1553600844 13125 fbbb14fc6067aa636fd3b516727226d3 ""
-  "main.aux" 1554212408 6883 cf377e2def683e3f0e3d79c5cdb63c1c ""
-  "main.bbl" 1554212234 463 cab232a4c8d4f0e5c7e10c254c2a6a69 "bibtex main"
-  "main.ind" 1554212228 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1554212408 1017 796878d733d368ada61792d4df655d17 ""
-  "main.tex" 1554212403 18040 111f9a925d06102d518d3a43f545fa6b ""
-  "main.toc" 1554212408 1437 bbf92949de64c798aef41688e8fc3d38 ""
+  "main.aux" 1554648231 7424 4e58836be22c10b6e2c68cb9b18c0a0e ""
+  "main.bbl" 1554647421 463 cab232a4c8d4f0e5c7e10c254c2a6a69 "bibtex main"
+  "main.ind" 1554647359 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.out" 1554648231 1017 796878d733d368ada61792d4df655d17 ""
+  "main.tex" 1554648225 18579 8c4ad067a51688f6bc4246cb244193ac ""
+  "main.toc" 1554648231 1437 237bf4bc6edb6a8e27e8328352a89e1e ""
   "out/um/um.pdf" 1553505083 177364 6aa96f21f8fb918ee0a8029e92648013 ""
   "preamble.tex" 1554115308 4131 2a1b573207ef448b030b8d809777c5d5 ""
   "profiling.png" 1553682476 39121 cc8f9ed23c838f87198ac1756b44df77 ""
@@ -296,11 +296,11 @@
   "vegg.jpg" 1553600844 6036 5f7297c82a0b56a9a9536238245cd4f1 ""
   (generated)
   "preamble.aux"
-  "main.pdf"
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.log"
-  "main.toc"
-  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.pdf"
   "main.log"
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.log"
   "main.idx"
-  "main.out"
+  "c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Objektorientert INF-1400/Oblig3/Oppgavemal_new_norsk/main.pdf"
   "main.aux"
+  "main.pdf"
+  "main.toc"
+  "main.out"
