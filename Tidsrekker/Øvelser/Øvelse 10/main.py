@@ -27,7 +27,7 @@ def arma1(p, q, phi, theta, N):
     # Plot
     fig, ax = plt.subplots(1,3)
     ax[0].plot(x)
-    ax[0].set_title('ARMA(%s,%s), $\\phi = %s,\\theta = %s$'%(p,q,phi,theta))
+    ax[0].set_title('ARMA(%s,%s), $\\phi = %s,\\theta = %s$'%(p ,q, phi, theta))
     ax[1].stem(acf(x, nlags = 10))
     ax[1].set_title('SAMPLE ACF')
     ax[2].stem(rho)

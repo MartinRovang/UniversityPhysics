@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 cap = cv2.VideoCapture('heartbeat.wmv')
-fgbg = cv2.createBackgroundSubtractorMOG2(varThreshold=35, detectShadows=False)
+fgbg = cv2.createBackgroundSubtractorMOG2(varThreshold=60, detectShadows=False)
 
 x_len = 60
 y_range = [0, 150]
@@ -44,7 +44,7 @@ while True:
     cv2.imshow('Masked', fgmask)
 
     average = (np.average(fgmask))
-    print(average)
+    #print(average)
 
 
     plt.pause(.0001)

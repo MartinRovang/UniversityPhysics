@@ -37,7 +37,7 @@ def AR1(a, phi, n, M):
 
 
 
-x, BLP, error = AR1(1.1, 0.9, 100, 40)
+x, BLP, error = AR1(1.1, 0.90, 100, 40)
 x_list = np.arange(len(x)-1, len(x) + len(BLP)-1, 1)
 
 
