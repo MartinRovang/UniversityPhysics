@@ -11,14 +11,14 @@ image = plt.imread('Fig1016(a)(building_original).tif')
 
 
 def marr_hild_part12(image, sigma):
-    # distance larger then 3sigma from the mean are small to be ignored
+    # distance larger then 3sigma(99.8%?) from the mean are small to be ignored
     # But we need smallest ODD so we +1
 
     # Normalize image
     image.setflags(write=1)
-    #image = image/255
+    image = image/255
 
-    kernelsize = 6*sigma-1
+    kernelsize = 6*sigma+1
     kernel = np.zeros((kernelsize, kernelsize))
 
     # laplacian of gaussian
@@ -29,20 +29,17 @@ def marr_hild_part12(image, sigma):
             kernel[y,x] = (((y-mid)**2 + (x-mid)**2 - 2*sigma**2)/(sigma**4))*exp
     # use the negative version (flips the mexican hat)
     kernel *= -1
-
     mask = convolve2d(image, kernel, 'same')
 
+    # Kernel needs to sum to zero.
     return mask, kernel
 
 
-
-
-
-
-Z, kernel = marr_hild_part12(image, 4)
+Z, kernel = marr_hild_part12(image, 1)
 
 plt.imshow(Z, cmap = 'gray')
 plt.show()
+
 
 
 plt.imshow(kernel, cmap = 'gray')

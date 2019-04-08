@@ -3,11 +3,11 @@ import cv2
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
-cap = cv2.VideoCapture('VIDEOHERE.wmv')
+cap = cv2.VideoCapture('heartbeat.wmv')
 fgbg = cv2.createBackgroundSubtractorMOG2(varThreshold=35, detectShadows=False)
 
 x_len = 60
-y_range = [-2, 15]
+y_range = [0, 150]
 
 plt.ion()
 fig = plt.figure()
@@ -30,10 +30,15 @@ def animate(i, ys):
 
 ani = animation.FuncAnimation(fig, animate, fargs=(ys,), interval=60, blit=False)
 
+
+upper_left = (324, 184)
+bottom_right = (404, 236)
+
 while True:
     ret, frame = cap.read()
-
     fgmask = fgbg.apply(frame)
+
+    fgmask = fgmask[upper_left[1] : bottom_right[1], upper_left[0] : bottom_right[0]]
 
     cv2.imshow('Original', frame)
     cv2.imshow('Masked', fgmask)
