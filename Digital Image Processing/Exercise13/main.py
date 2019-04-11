@@ -14,7 +14,7 @@ def segment(z, a, C, D0):
     #result = np.zeros((rows,cols))
     for i in range(rows):
         for j in range(cols):
-            D = np.sqrt(((z[i,j]-a).T@np.linalg.inv(C)@(z[i,j]-a)))
+            D = np.sqrt((z[i,j]-a).T@np.linalg.inv(C)@(z[i,j]-a))
             if D <= D0:
                 result[i,j] = z[i,j]
                 #result[i,j] = 1
@@ -23,42 +23,35 @@ def segment(z, a, C, D0):
 
 
 # Subregion a = y1, b = y2, c = x1, d = x2
-a, b, c, d = 288, 324, 128, 167
+x1, x2, y1, y2 = 209, 297, 75, 186
 
-subregion = strawberry[a:b, c:d]
+subregion = strawberry[x1:x2, y1:y2]
 
 R_mean = np.mean(subregion[:,:,0])
 G_mean = np.mean(subregion[:,:,1])
 B_mean = np.mean(subregion[:,:,2])
 
 a_mean = np.array([R_mean, G_mean, B_mean])
-
-# C = np.array([[5,0,0],
-#             [0,15,0],
-#             [0,0,5]])
-# Range
-D0 = 20
+D0 = 5
 
 
 
-R_flat = subregion[:,:,0].flatten()/255
-G_flat = subregion[:,:,0].flatten()/255
-B_flat = subregion[:,:,0].flatten()/255
+R_flat = subregion[:,:,0].flatten()
+G_flat = subregion[:,:,1].flatten()
+B_flat = subregion[:,:,2].flatten()
 
 X = np.vstack((R_flat,G_flat,B_flat))
-
-C = np.cov(X)*255
-C[0,1] = 0; C[0,2] = 0; C[1,0] = 0
-C[1,2] = 0; C[2,0] = 0; C[2,1] = 0
-
+C = np.cov(X)
+# C[0,1] = 0; C[0,2] = 0; C[1,0] = 0
+# C[1,2] = 0; C[2,0] = 0; C[2,1] = 0
 
 result = segment(strawberry, a_mean, C, D0)
 
 strawberry.setflags(write=1)
-strawberry[a:a+2,c:d] = 0
-strawberry[b:b+2,c:d] = 0
-strawberry[a:b+2,c:c+2] = 0
-strawberry[a:b+2,d:d+2] = 0
+strawberry[x1:x1+2,y1:y2] = 0
+strawberry[x2:x2+2,y1:y2] = 0
+strawberry[x1:x2+2,y1:y1+2] = 0
+strawberry[x1:x2+2,y2:y2+2] = 0
 
 
 
