@@ -1,0 +1,128 @@
+\include{preamble}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+\begin{document}
+% --------------------------------------------------------------
+%                         FRONTPAGE
+% --------------------------------------------------------------
+% {\fontfamily{cmr}\selectfont
+% \title{ \normalsize \textsc{}
+% 		\\ [1.0cm] % How much upper margin
+% 		%\HRule{0.5pt} \\
+%         \LARGE \textbf{\uppercase{Obligatorisk Oppgave 3\\ Del II}
+%         \HRule{0.5pt} \\ [0.5cm]
+%         INF-1400-Objekt-Orientert programmering
+%         %\HRule{2pt} \\ [0.5cm]
+%         \\
+% 		\normalsize \today \vspace*{5\baselineskip}}
+% 		}
+
+%         \date{}
+% \author{
+% 		Martin Soria Røvang \\ 
+%         Universitetet i Tromsø \\}
+
+% % \begin{titlepage}
+% \clearpage\maketitle
+% \vspace{0.2\textheight}
+% {\centering
+% Inneholder \pageref{LastPage} \, sider, inkludert forside.\par
+% }
+% \thispagestyle{empty}
+% % \end{titlepage}
+
+% % \newpage
+% % \tableofcontents
+% \newpage
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+
+\section{Part II}
+\subsection{1}
+
+En klasse er en slags blåprint for å lage objekter, dette kan ses på som en fabrikk som lager biler, der objekter er bilene og fabrikkene er klassene.
+
+    \begin{lstlisting}
+class fabrikk:
+        def __init__(self, wheelsize, color, motor):
+            wheel.self = wheelsize
+            color.self = color
+            motor.self = motor
+        def functions_that_does_stuff(self):
+            ...
+
+Bil1 = (50, 'green', 'RollsRoyce100X')
+    \end{lstlisting}
+
+I denne kodesnippeten over er et eksempel på fabrikk/bil metaforet.
+
+
+
+
+\subsection{2}
+
+Arv(Inheritance) er at man $"$kopierer$"$ en annen klasse, og derfra endre på akuratt de funksjonene/atributtene man ønsker. Dette kan brukes hvis man for eksempel skal ha en ny klasse som er ganske lik en annen, men man må endre litt på hvordan en/flere funksjon(er) fungerer. Syntaksen for dette er vist i figur(\ref{arv}).
+
+\begin{figure}[hbt!]
+    \begin{lstlisting}
+    class Child(Parent):
+        ....
+    \end{lstlisting}
+\caption{Child arver fra Parent}
+\label{arv}
+\end{figure}
+
+
+\subsection{3}
+
+
+\emph{Is-a} relasjon er det komme fra en klasse f.eks hvis man lager et objekt fra en klasse som heter \emph{hund} så vil det objektet ha en \emph{is a dog} relasjon. \emph{has-a} relasjon er hva noe har, for eksempel ved bruk av hund-eksempelet så kan hunden f.eks ha en funksjon som heter \emph{walk} så vil klassen \emph{hund} ha \emph{has-a} relasjon med walk funkjonen, det samme vil gjelde objektene som blir laget fra denne klassen.
+
+
+\subsection{4}
+
+\emph{Encapsulation} er det å gjemme implementasjon bak grensesnittet i programmet ditt, i python kan man ikke blokkere noen ute av deler av koden(utenom å kompilere til .exe eller annet.) så derfor har det blitt laget en konvensjon der man bruker \emph{\_.} før en funksjon/klasse/variabel som betyr at dette er \emph{privat} og dermed ikke bør endres. Dette kan brukes hvis hvis disse har systemkritiske funksjoner som kan ødelegge programmet hvis disse endres på.
+
+\subsection{5}
+
+Polymorfisme er det at man har noe som endrer seg basert på hva det skal gjøre. Hvis vi for eksempel har en klasse som er en gjenstand, og denne gjenstanden skal ha muligheten til å kun bevege seg diagonalt. Da vil man har en metode som heter \emph{move}. Videre vil man at en gjenstand også skal kunne bevege seg, men denne ganger kun i en retning. Herfra kan man arve fra den første klassen og endre på move funksjonen slik at objekter fra dette kun beveger seg i en retning.
+Her har man da polymorfisme fordi nå kan man f.eks kalle move på objektene uten å tenke over hva de er for noe også vil de bevege seg med forskjellige regler, et eksempel på polymorfisme er \emph{duck typing}, også kjent som $"$\emph{if it walks like a duck or swims like a duck, it's a duck}. I precoden har det blitt brukt vector2 fra pygame, her er det mest sannsynelig polymorfisme. I koden har vi polimorfisme mange steder. Ett eksempel er der vi har update-funksjon eller draw funksjon. Her bruker jeg kun en funksjon og det samme skjer (blir tegnet ut på skjermen) uansett hva slags objekt det er (kule/romskip/vegg osv.)
+
+
+
+
+
+
+% % --------------------------------------------------------------
+% %     Reference og appendix
+% % --------------------------------------------------------------
+% \clearpage
+% \newpage
+% \section{Appendix}
+% \section{Referanser}
+% \begingroup
+% \renewcommand{\section}[2]{}%
+% %\renewcommand{\chapter}[2]{}% for other classes
+% \bibliographystyle{plainnat}
+% \bibliography{bibl}
+% \endgroup
+
+
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+
+
+
+
+
+\end{document}
+
+
