@@ -8,7 +8,7 @@ from scipy.signal import convolve2d
 from mpl_toolkits.mplot3d import axes3d
 
 
-image = plt.imread('Fig1016(a)(building_original).tif')
+image = np.array(plt.imread('Fig1016(a)(building_original).tif'))
 
 
 
@@ -18,7 +18,7 @@ def marr_hild(image, sigma):
     # But we need smallest ODD so we +1
 
     # Normalize image
-    image.setflags(write=1)
+    # image.setflags(write=1)
     image = image/255
     size = int(2*(np.ceil(3*sigma))+1)
 
@@ -36,7 +36,7 @@ def marr_hild(image, sigma):
     kernel -= np.mean(kernel)
     print(np.sum(kernel))
     print(kernel.shape)
-    kern_size = kernel.shape[0]
+    #kern_size = kernel.shape[0]
 
     mask = convolve2d(image, kernel, 'same')
 
@@ -72,7 +72,7 @@ def marr_hild(image, sigma):
 
 
 
-sigma = 8
+sigma = 6
 Z, kernel, result = marr_hild(image, sigma)
 
 fig, ax = plt.subplots(1, 2)

@@ -7,8 +7,7 @@ from mpl_toolkits.mplot3d import axes3d
 
 
 #image = plt.imread('Fig1016(a)(building_original).tif')
-image = plt.imread('blaklokke.jpg')
-image.setflags(write=1)
+image = np.array(plt.imread('blaklokke.jpg'))
 
 
 def otsu_glob(image):

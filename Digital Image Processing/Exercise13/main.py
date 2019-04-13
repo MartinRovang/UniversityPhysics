@@ -4,16 +4,17 @@ import os
 from PIL import Image
 
 
-strawberry = plt.imread('Fig0631(a)(strawberries_coffee_full_color).tif')
-#strawberry = plt.imread('Fig0628(b)(jupiter-Io-closeup).tif')
+strawberry = np.array(plt.imread('Fig0631(a)(strawberries_coffee_full_color).tif'))
+#strawberry = np.array(plt.imread('Fig0628(b)(jupiter-Io-closeup).tif'))
 
 
 def segment(z, a, C, D0):
-    rows, cols, lols = z.shape
+    rows, cols, *k = z.shape
     result = np.zeros(z.shape)
     #result = np.zeros((rows,cols))
     for i in range(rows):
         for j in range(cols):
+            # Mahomtis distance
             D = np.sqrt((z[i,j]-a).T@np.linalg.inv(C)@(z[i,j]-a))
             if D <= D0:
                 result[i,j] = z[i,j]
@@ -47,7 +48,7 @@ C = np.cov(X)
 
 result = segment(strawberry, a_mean, C, D0)
 
-strawberry.setflags(write=1)
+
 strawberry[x1:x1+2,y1:y2] = 0
 strawberry[x2:x2+2,y1:y2] = 0
 strawberry[x1:x2+2,y1:y1+2] = 0
