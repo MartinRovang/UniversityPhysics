@@ -22,8 +22,8 @@
 
         \date{}
 \author{
-		Martin Soria Røvang \\ 
-        Universitetet i Tromsø\\}
+		Martin Soria RÃ¸vang \\ 
+        Universitetet i TromsÃ¸\\}
 
 % \begin{titlepage}
 \clearpage\maketitle
@@ -69,7 +69,7 @@ Her er $\mathcal{F}$ Fourier transormasjon. Bruker at,
     R_{xx}(\tau) = E[x_{t+\tau }x_{t}]
 \end{equation}
 
-L\o ser vi denne med tanke på ligning (\ref{starteq}) får vi,
+L\o ser vi denne med tanke pï¿½ ligning (\ref{starteq}) fï¿½r vi,
 
 \begin{equation}
     R_{xx}(\tau) = E[(x_{1}(t+h) + x_{2}(t+h)  )(x_{1}(t) + x_{2}(t)) ]
@@ -96,7 +96,7 @@ Dette kan separeres slik at,
 \end{equation}
 
 
-Siden $R_{x_{1}x_{1}}(\tau) = E[x_{1}(t + \tau)x_{1}(t)]$ får vi,
+Siden $R_{x_{1}x_{1}}(\tau) = E[x_{1}(t + \tau)x_{1}(t)]$ fï¿½r vi,
 
 \begin{equation}
     R_{xx}(\tau) = R_{x_{1}x_{1}}(\tau) + E[x_{1}(t+h)]E[x_{2}(t+h)] + E[x_{1}(t+h)]E[x_{2}(t)] + R_{x_{2}x_{2}}(\tau)
@@ -123,18 +123,18 @@ I figur(\ref{taskb}) har vi plot av tidsrekken, periodogrammet og tilslutt perio
 \begin{figure}[hbt!]
 {\centering
     \includegraphics[width=0.70\textwidth]{taskb.pdf}
-    \caption{Beregnet periodogram av tidsrekken. Man kan se at vindu vil hjelpe med å gi mer tydelig seperasjon mellom frekvensene, hvis man ser på rundt frekvens 0.3-0.4 kan man tydelig se stor forskjell. Vindu er svært hjelpsomt hvis man har kraftig signal med et underliggende svakt signal man vil oppdage.}
+    \caption{Beregnet periodogram av tidsrekken. Man kan se at vindu vil hjelpe med ï¿½ gi mer tydelig seperasjon mellom frekvensene, hvis man ser pï¿½ rundt frekvens 0.3-0.4 kan man tydelig se stor forskjell. Vindu er svï¿½rt hjelpsomt hvis man har kraftig signal med et underliggende svakt signal man vil oppdage.}
     \label{taskb}
 \par}
 \end{figure}
 
 
-Her ser man at hann vinduet gir en glattere kurve, og lar ikke frekvensene lekke over til de andre frekvensene like mye som i det vanlige periodogrammet. Frekvensene ser ut til å være $f =  0.12$ og $f = 0.07$.
+Her ser man at hann vinduet gir en glattere kurve, og lar ikke frekvensene lekke over til de andre frekvensene like mye som i det vanlige periodogrammet. Frekvensene ser ut til ï¿½ vï¿½re $f =  0.12$ og $f = 0.07$.
 
 
 \subsection{c}
 
-Som nevnt i oppgave b så fjerner vinduet mer av lekasjen i frekvensspekteret, fordi den har mindre sidelober enn den idelle w[k] = 1, men dette vil øke bredden på hovedloben slik at man får litt dårligere oppløsning. I figure(\ref{taskc}) har jeg ikke brukt dB skala slik at differansen er større mellom styrken på frekvensene. Her kan man tydelig se at vinduet hjelper med å se svakere periodisitetet i spectrumet. Periodogram ble laget ved bruk av Fourier transform som vist i ligning(\ref{Periodogram}).
+Som nevnt i oppgave b sï¿½ fjerner vinduet mer av lekasjen i frekvensspekteret, fordi den har mindre sidelober enn den idelle w[k] = 1, men dette vil ï¿½ke bredden pï¿½ hovedloben slik at man fï¿½r litt dï¿½rligere opplï¿½sning. I figure(\ref{taskc}) har jeg ikke brukt dB skala slik at differansen er stï¿½rre mellom styrken pï¿½ frekvensene. Her kan man tydelig se at vinduet hjelper med ï¿½ se svakere periodisitetet i spectrumet. Periodogram ble laget ved bruk av Fourier transform som vist i ligning(\ref{Periodogram}).
 
 \begin{equation}
     S(f) = \frac{1}{N}|\mathcal{F}\{x[n]\}|^{2}
@@ -147,7 +147,7 @@ der $\mathcal{F}$ er DTFT, \emph{Discrete Time Fourier Transform} og N er antall
     \label{wPeriodogram}
 \end{equation}
 
-Her er $w[n]$ vinduet og U er normaliseringskonstant for å fjerne energien som blir lagt til prosessen fra vinduet, i dette tilfelle er w[n] \emph{Hann window}. Vi bruker vindu for å minske spektral lekasje som kommer av at vi ikke kan ha en \emph{ekte} fourier transform som krever at signal vi har er uendelig langt. Derfor vil vi alltid ha en ende på signal som man antar er null. Dette betyr at vi bruker et ideelt vindu med lengde M(signal lengden) når vi tar Fourier transform. Når man ganger inn tidsdomenet så konvolverer man i frekvensdomenet, og siden det ideele vinduet har store sidelober medfører dette til at man får ut nærliggende frekvenser i hverandre og dermed gir spektrallekasje. Ved bruk av vindu som Hann vindu så kan man redusere dette siden de har smalere sidelober.
+Her er $w[n]$ vinduet og U er normaliseringskonstant for ï¿½ fjerne energien som blir lagt til prosessen fra vinduet, i dette tilfelle er w[n] \emph{Hann window}. Vi bruker vindu for ï¿½ minske spektral lekasje som kommer av at vi ikke kan ha en \emph{ekte} fourier transform som krever at signal vi har er uendelig langt. Derfor vil vi alltid ha en ende pï¿½ signal som man antar er null. Dette betyr at vi bruker et ideelt vindu med lengde M(signal lengden) nï¿½r vi tar Fourier transform. Nï¿½r man ganger inn tidsdomenet sï¿½ konvolverer man i frekvensdomenet, og siden det ideele vinduet har store sidelober medfï¿½rer dette til at man fï¿½r ut nï¿½rliggende frekvenser i hverandre og dermed gir spektrallekasje. Ved bruk av vindu som Hann vindu sï¿½ kan man redusere dette siden de har smalere sidelober.
 
 
 
@@ -161,7 +161,7 @@ Her er $w[n]$ vinduet og U er normaliseringskonstant for å fjerne energien som b
 
 \subsection{d}
 
-Ved å implementere WOSA (Weighted/Welchs overlapped segment averaging) på tidsrekken fikk vi resultatet vist i figur(\ref{taskd}).
+Ved ï¿½ implementere WOSA (Weighted/Welchs overlapped segment averaging) pï¿½ tidsrekken fikk vi resultatet vist i figur(\ref{taskd}).
 
 \begin{figure}[hbt!]
     {\centering
@@ -171,7 +171,7 @@ Ved å implementere WOSA (Weighted/Welchs overlapped segment averaging) på tidsre
     \par}
     \end{figure}
 
-Her ble hvert segment vektet som gir et kraftigere utslag der det er sterke periodisiteter i forhold til resten av spekteret. Her ser man at frekvensene på $f = 0.12$ og $f = 0.1$ er ganske kraftige i forhold til alle de andre. Man kan også se at frekvensene er mye tydeligere i WOSA enn i periodogrammet og hann vinduet i dB-skala som vist i figur(\ref{taskb}). 
+Her ble hvert segment vektet som gir et kraftigere utslag der det er sterke periodisiteter i forhold til resten av spekteret. Her ser man at frekvensene pï¿½ $f = 0.12$ og $f = 0.1$ er ganske kraftige i forhold til alle de andre. Man kan ogsï¿½ se at frekvensene er mye tydeligere i WOSA enn i periodogrammet og hann vinduet i dB-skala som vist i figur(\ref{taskb}). 
 
 
 \clearpage
@@ -180,18 +180,18 @@ Her ble hvert segment vektet som gir et kraftigere utslag der det er sterke peri
 
 \subsection{a-b}
 
-Her plottet vi sol-dataen som vist i øverste vindu i figur(\ref{task2}).
+Her plottet vi sol-dataen som vist i ï¿½verste vindu i figur(\ref{task2}).
 
 
 \begin{figure}[hbt!]
     {\centering
         \includegraphics[width=0.70\textwidth]{task2.pdf}
-        \caption{Soldata, WOSA med 50\% overlapp, N = 40. Ser ut som man har en kraftig periode på 10 år.}
+        \caption{Soldata, WOSA med 50\% overlapp, N = 40. Ser ut som man har en kraftig periode pï¿½ 10 ï¿½r.}
         \label{task2}
     \par}
     \end{figure}
 
-Her ble det brukt WOSA med 50\% overlapp og vindu-størrelse $N = 40$. Her ser man sterk DC($f=0$) og en frekvens på rundt 0.1, $f \approx 0.1$. Dette gir en periode på $T \approx 10$, noe som ser ut til å stemme hvis man teller antall topper som er $\approx 10$ per 100, altså periode på ti år.
+Her ble det brukt WOSA med 50\% overlapp og vindu-stï¿½rrelse $N = 40$. Her ser man sterk DC($f=0$) og en frekvens pï¿½ rundt 0.1, $f \approx 0.1$. Dette gir en periode pï¿½ $T \approx 10$, noe som ser ut til ï¿½ stemme hvis man teller antall topper som er $\approx 10$ per 100, altsï¿½ periode pï¿½ ti ï¿½r.
 
 
 % --------------------------------------------------------------

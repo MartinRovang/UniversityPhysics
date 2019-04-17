@@ -25,20 +25,21 @@ def marr_hild(image, sigma):
     x, y = np.meshgrid(np.linspace(-size/2, size/2, size), np.linspace(-size/2, size/2, size))
     # x = x.astype('int')
     # y = y.astype('int')
-    kernel = np.abs((x**2 + y**2 -2*sigma**2)/(sigma**4)*np.exp(-(x**2 + y**2) / (2*sigma**2)))
-    # lap = np.array([[1, 1, 1],
-    #                [1, -8, 1],
-    #                [1, 1, 1]])
+    normal = 1 / (2.0 * np.pi * sigma**2)
+    kernel = (x**2 + y**2 -2*sigma**2)/(sigma**4)*np.exp(-(x**2 + y**2) / (2*sigma**2))*normal
+    lap = np.array([[1, 1, 1],
+                   [1, -8, 1],
+                   [1, 1, 1]])
 
     
-    # kernel = convolve2d(G, lap, 'same')
+    #kernel = convolve2d(kernel, lap, 'same')
 
-    kernel -= np.mean(kernel)
+    #kernel -= np.mean(kernel)
     print(np.sum(kernel))
     print(kernel.shape)
     #kern_size = kernel.shape[0]
 
-    mask = convolve2d(image, kernel, 'same')
+    mask = convolve2d(image, kernel, 'same', boundary='symm')
 
     print(np.unique(mask))
 
@@ -49,6 +50,9 @@ def marr_hild(image, sigma):
 
     # 4% of maximum value
     T = np.max(mask)*0.04
+
+    # mask[mask < 0] = 0
+    # mask[mask > 0] = 1
 
     # # Use 3x3 kernel check
     for row in range(1, rows-1):
@@ -72,7 +76,7 @@ def marr_hild(image, sigma):
 
 
 
-sigma = 6
+sigma = 4
 Z, kernel, result = marr_hild(image, sigma)
 
 fig, ax = plt.subplots(1, 2)

@@ -6,15 +6,16 @@ from scipy.signal import convolve2d
 from mpl_toolkits.mplot3d import axes3d
 
 
-#image = plt.imread('Fig1016(a)(building_original).tif')
-image = np.array(plt.imread('blaklokke.jpg'))
+image = np.array(plt.imread('Fig1016(a)(building_original).tif'))
+#image = np.array(plt.imread('blaklokke.jpg'))
+
+
 
 
 def otsu_glob(image):
     image2 = np.copy(image)
-    N = len(image.flatten())
-    hist, bins = np.histogram(image.flatten(), bins = 256, range = [0, 255])
-    p = hist/N
+    hist, bins = np.histogram(image.flatten(), bins = np.max(image2), density = True)
+    p = hist
     cum_mean = []
     mean_glob = 0
     var_glob = 0
@@ -25,8 +26,7 @@ def otsu_glob(image):
 
     # Cumsum probability
     cum_P = np.cumsum(p)
-    print(cum_P)
-    
+
     for k in range(len(p)):
         # cum_P.append(np.sum(p[:k]))
         cum_mean_value += k*p[k]

@@ -6,23 +6,27 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 import statsmodels as sm
+plt.style.use('fivethirtyeight')
+
+# plt.rcParams['font.family'] = 'serif'
+# plt.rcParams['font.serif'] = 'Ubuntu'
+# plt.rcParams['font.monospace'] = 'Ubuntu Mono'
+# plt.rcParams['font.size'] = 10
+# plt.rcParams['axes.labelsize'] = 10
+# plt.rcParams['axes.labelweight'] = 'bold'
+# plt.rcParams['xtick.labelsize'] = 8
+# plt.rcParams['ytick.labelsize'] = 8
+# plt.rcParams['legend.fontsize'] = 10
+# plt.rcParams['figure.titlesize'] = 12
+plt.rcParams['axes.facecolor']='white'
+plt.rcParams['savefig.facecolor']='white'
+plt.rcParams['axes.grid']='off'
 
 # Load data
 rec = pd.read_csv('data/rec.txt', delimiter='\t')
 rec_df = pd.DataFrame(rec)
 time = np.copy(rec_df['year'])
 X = np.copy(rec_df['recruitment'])
-
-
-def periodogram(x, dt = 1):
-    """Regular periodogram"""
-    #x = np.pad(x, (0,200), 'constant')
-    N = len(x)
-    spectrum = np.abs(np.fft.fftshift(np.fft.fft(x))**2)
-    spectrum *= dt/ N
-    freq = np.fft.fftshift(np.fft.fftfreq(N, dt))
-
-    return freq[int(N/2):], spectrum[int(N/2):]
 
 
 def w_periodogram(x, dt = 1):
@@ -45,18 +49,20 @@ def w_periodogram(x, dt = 1):
 freq, periodogram_X = w_periodogram(X)
 
 
-# # Plot data
-# fig, ax = plt.subplots(2,1)
-# ax[0].plot(time, X, color = 'black')
-# ax[0].set_title('Recruitment series')
-# ax[0].set_xlabel('Year')
-# ax[0].set_ylabel('Recruitment')
-# ax[1].plot(freq[2:]*12, periodogram_X[2:], color = 'black')
-# ax[1].set_title('Periodogram(hann windowed)')
-# ax[1].set_xlabel('Frequency $\Delta f =$ year')
-# ax[1].set_ylabel('Power')
-# ax[1].set_xticks([x for x in np.arange(0, 6.5, 1/2)])
-# plt.show()
+# Plot data
+fig, ax = plt.subplots(2,1)
+ax[0].plot(time, X, color = 'black', linewidth = '1')
+ax[0].set_title('Recruitment series')
+ax[0].set_xlabel('Year')
+ax[0].set_ylabel('Recruitment')
+ax[1].plot(freq[2:]*12, periodogram_X[2:], color = 'black', linewidth = '1')
+ax[1].set_title('Periodogram(hann windowed)')
+ax[1].set_xlabel('Frequency $f = $ 1/year')
+ax[1].set_ylabel('Power')
+ax[1].set_xticks([x for x in np.arange(0, 6.5, 1/2)])
+plt.tight_layout()
+plt.savefig('rapport/task_a.pdf')
+plt.show()
 
 
 # b)Trekk fra midlere sesongvariasjoner for  ̊a gjøre tidsrekka stasjonær, og plott dataene.Den resulterende tidsrekka skal brukes i alle de neste oppgavene.
@@ -72,28 +78,42 @@ def remove_season(x):
     X = x - repC[:len(x)]
     return X
 
-
+# Make stationary
 X_remseason = remove_season(X)
+
+plt.plot(time, X_remseason, color = 'black', linewidth = '1')
+plt.title('Recruitment series.')
+plt.tight_layout()
+plt.savefig('rapport/task_b.pdf')
+plt.show()
 
 # c)Plott estimert ACF og PACF.
 
+# make whitenoise Confidens intervall
 wt_line = 2*np.tile(1/np.sqrt(len(X_remseason)), 41)
 
-fig, ax = plt.subplots(3,1)
-ax[0].plot(X_remseason)
-ax[1].stem(acf(X_remseason))
-ax[1].plot(wt_line, '--', color = 'red'); ax[1].plot(-wt_line, '--', color = 'red')
-ax[2].stem(pacf(X_remseason))
-ax[2].plot(wt_line, '--', color = 'red'); ax[2].plot(-wt_line, '--', color = 'red')
+fig, ax = plt.subplots(2,1)
+# ax[0].plot(time, X_remseason)
+# ax[0].set_title('Stasjonare tidsserien')
+ax[0].stem(acf(X_remseason))
+ax[0].set_title('ACF')
+ax[0].plot(wt_line, '--', color = 'red', linewidth = 1); ax[0].plot(-wt_line, '--', color = 'red', linewidth = 1)
+ax[1].stem(pacf(X_remseason))
+ax[1].set_title('PACF')
+ax[1].plot(wt_line, '--', color = 'red', linewidth = 1); ax[1].plot(-wt_line, '--', color = 'red', linewidth = 1)
+plt.tight_layout()
+plt.savefig('rapport/task_c.pdf')
 plt.show()
 
 
 # d)Basert p ̊a plottene i forrige deloppgave, hvilken orden p og q vil du bruke i en ARMA-modell for disse dataene?
 
-
+# Create model.
 model = sm.tsa.arima_model.ARIMA(X_remseason, order=(2, 0, 0))
 model_fit = model.fit()
-#print(model_fit.summary())
+
+# Print result
+print(model_fit.summary())
 
 
 
@@ -102,17 +122,23 @@ model_fit = model.fit()
 
 
 # a)Plott estimert ACF og PACF for residualene.
+
+# Get residuals
 res = model_fit.resid
 
-# fig, ax = plt.subplots(3,1)
-# ax[0].plot(res)
-# ax[1].stem(acf(res))
-# ax[1].plot(wt_line, '--', color = 'red'); ax[1].plot(-wt_line, '--', color = 'red')
-# ax[2].stem(pacf(res))
-# ax[2].plot(wt_line, '--', color = 'red'); ax[2].plot(-wt_line, '--', color = 'red')
-# plt.show()
+fig, ax = plt.subplots(3,1)
+ax[0].plot(res, color = 'black', linewidth = '1')
+ax[0].set_title('Residuals')
+ax[1].stem(acf(res))
+ax[1].plot(wt_line, '--', color = 'red', linewidth = 1); ax[1].plot(-wt_line, '--', color = 'red', linewidth = 1)
+ax[1].set_title('ACF')
+ax[2].stem(pacf(res))
+ax[2].plot(wt_line, '--', color = 'red', linewidth = 1); ax[2].plot(-wt_line, '--', color = 'red', linewidth = 1)
+ax[2].set_title('PACF')
+plt.tight_layout()
+plt.savefig('rapport/task_2a.pdf')
+plt.show()
 
-# Siden alle verdiene ligger under standarnormalfordelt  
 
 
 # Oppgave 3
@@ -121,24 +147,26 @@ res = model_fit.resid
 # a) Basert p ̊a valgt modell: Lever plot av 1,2,...M-stegs BLP der du velgerM≥10.Som en sjekk p ̊a at man har f ̊att det til: m-stegs BLP g ̊ar mot forventningμn ̊arm→∞.
 # b) Plott 95% konfidensintervall for prediksjonen.
 
-year = 5
+year = 1
 M = 12*year # 12*2 months (2 years)
 forecast, stderr, conf_int = model_fit.forecast(steps = M)
 # gir ut forecast, std, (1-alpha)% konfidensintervall. Default: 95% konfidensintervall
 
 
-sliced_time = time[100:]
-sliced_X = X_remseason[100:]
+sliced_time = time
+sliced_X = X_remseason
 time_forecast = np.linspace(sliced_time[-1], sliced_time[-1] + M/12, M)
 
-
-fig, ax = plt.subplots(figsize = [12,6])
-ax.plot(sliced_time, sliced_X, color = 'black', label = 'Recruitment series')
-ax.plot(time_forecast, forecast, '-o', mfc='none', color = 'red', linewidth = '1', label = 'Prediction' )
-ax.fill_between(time_forecast, conf_int[:,0], conf_int[:,1], facecolor = (0, 0, 1, 0.2), label = '95% CI')
-ax.set_xticks([x for x in np.arange(sliced_time[0], sliced_time[-1]+ M/12, 3)])
-plt.legend(loc = 'best')
-plt.show()
+# plt.figure(figsize = [15,8])
+# plt.plot(sliced_time, sliced_X, color = 'black', label = 'Recruitment series')
+# plt.plot(time_forecast, forecast, '-o', mfc='none', color = 'red', linewidth = '1', label = 'Prediction' )
+# plt.fill_between(time_forecast, conf_int[:,0], conf_int[:,1], facecolor = (0.5, 0.5, 0.5, 0.2), label = '95% CI')
+# plt.xticks([x for x in np.arange(sliced_time[0], sliced_time[-1]+ M/12, 3)])
+# plt.legend(loc = 'best')
+# plt.title('Prediksjon m = %s'%M)
+# plt.tight_layout()
+# plt.savefig('rapport/task_3.pdf')
+# plt.show()
 
 
 

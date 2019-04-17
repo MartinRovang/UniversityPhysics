@@ -4,14 +4,15 @@
 %     GITHUB: github.com/martinrovang
 % --------------------------------------------------------------
 
-
+% !TEX encoding = UTF-8 Unicode
 \documentclass[10pt]{article}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{float}
-\usepackage[norsk]{babel}
+\usepackage[english, norsk]{babel}
 \usepackage[utf8]{inputenc}
-\UseRawInputEncoding
+% \UseRawInputEncoding
 \usepackage[table]{xcolor}
+\usepackage[T1]{fontenc}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{listings}
@@ -42,6 +43,10 @@
 \setcounter{secnumdepth}{5}
 \newcommand{\vect}[1]{\boldsymbol{#1}}
 
+% \DeclareUnicodeCharacter{C5}{\aa}
+% \DeclareUnicodeCharacter{C6}{\ae}
+% \DeclareUnicodeCharacter{D8}{\oo}
+
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -68,7 +73,8 @@
     frame=single,
     %keywordstyle=\color{blue},
     language=Python,
-    backgroundcolor = \color{skyblue}
+    backgroundcolor = \color{skyblue},
+    inputencoding=utf8
 }
  
 \lstset{style=mystyle}
@@ -106,7 +112,7 @@
 % --------------------------------------------------------------
 \fancyhf{}
 \pagestyle{fancy}
-\rhead{Martin Soria Røvang}
+\rhead{Martin Soria RÃ¸vang}
 \lhead{STA-2003-Tidsrekker}
 \rfoot{Side \thepage \, av \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.3pt}
