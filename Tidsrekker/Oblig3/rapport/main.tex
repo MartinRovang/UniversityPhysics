@@ -1,7 +1,7 @@
 \include{preamble}
-\usepackage{amssymb}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage[section]{placeins}
 
 
@@ -50,11 +50,11 @@ Inneholder \pageref{LastPage} \, sider, inkludert forside.\par
 Ved bruk av en vektet periodogram vist i ligning(\ref{vektet periodogram}) kan vi se på energien til tidsrekken. Denne viser at vi har kraftig periode rundt $f = 0.5$ år og på $f = 1$ år, derfor kan man se at det er sesongvariasjoner i tidsrekken.
 
 \begin{equation}
-    S_{xx}(f) = \frac{dt}{NU}\bigg |\mathcal{F}\bigg\{w[n]\cdot x[n]\bigg\}\bigg |^{2}
+    S_{xx}(f) = \frac{dt}{NU}\bigg |\mathfrak{F}\bigg\{w[n]\cdot x[n]\bigg\}\bigg |^{2}
     \label{vektet periodogram}
 \end{equation}
 
-Her er $S_{xx}$ kraften på frekvenskomponentene, dt er tidssteget (i dette tilfelle dt = 1), $\mathcal{F}$ er Fouriertransformasjonen, $w[n]$ er vinduet (brukt hann vindu) og $x[n]$ er tidsrekken. Resultatet er i figur(\ref{task_a}).
+Her er $S_{xx}$ kraften på frekvenskomponentene, dt er tidssteget (i dette tilfelle dt = 1), $\mathfrak{F}$ er Fouriertransformasjonen, $w[n]$ er vinduet (brukt hann vindu) og $x[n]$ er tidsrekken. Resultatet er i figur(\ref{task_a}).
 
 \begin{figure}[hbt!]
 {\centering
@@ -104,11 +104,18 @@ N er lengden på tidsserien.[p. 31 \cite{Timeseries}]
 Ved bruk av statsmodels-pakken i python kan vi simulere en ARMA-modell med gitte parametere, i figur(\ref{Armacoefs}) ser vi en resultatet fra en ARMA(2,0) modell. Fra utskriften fikk vi modellen gitt i ligning()
 
 \begin{equation}
-\hat{x}_{n} = \alpha + \phi_{1}\hat{x}_{n-1} + \phi_{2}\hat{x}_{n-2} + \hat{w}_{n}
+\hat{x}_{n} = \alpha + \phi_{1}\hat{x}_{n-1} + \phi_{2}\hat{x}_{n-2} + \hat{w}_{t}
 \end{equation}
 
 der $\alpha = -0.7019$, $\phi_{1} = 1.2483$ og $\phi_{2} = -0.3313$
-Her har det blitt brukt en \emph{hatt} på tidsrekken for å vise at det er et estimat. Fra utskriften har vi att $\sigma_{w} = 8.564$, dette er den estimerte variansen på den hvite støyen slik at den hvite støyen har fordelingen $N \thicksim (0, 8.564)$.
+Her har det blitt brukt en \emph{hatt} på tidsrekken for å vise at det er et estimat. Fra utskriften i figur(\ref{Armacoefs}) har vi at $\sigma_{w} = 9.452$, dette er den estimerte variansen på den hvite støyen slik man har fordelingen $N \thicksim (0, \sigma_{w}^{2})$. Dette kan brukes til å finne \emph{Mean-square prediction error} som er gitt ved ligning(\ref{mean-square-predictor-error}),
+
+\begin{equation}
+    P^{n}_{n + m} = E\bigg[\sigma_{w}^{2}\sum_{j = 0}^{m-1}\psi_{j}^{2}\bigg]
+    \label{mean-square-predictor-error}
+\end{equation}
+
+der $\psi$ er vektene gitt fra modellen slik at $\phi(z)\psi(z) = \theta(z)$. Her er $\psi(z)$ og $\theta(z)$ de karakteristiske ligningene til AR og MA modellen og $\psi(z)$ er vektene gitt ved $\psi(z) = (1 + \psi_{1}z + \psi_{2}z^2 + \cdots + \psi_{j}z^{j}+\cdots)$
 
 \begin{figure}[hbt!]
     \begin{lstlisting}
@@ -162,12 +169,12 @@ Ved å trekke ifra modellen(uten det hvite støyleddet) på den orginale tidsser
 \section{Oppgave 3}
 \subsection{a-b)}
 
-Prediksjon har blitt gjort med statsmodels sin ARMA-predict funksjon i python. Resultatet med 12 steg prediksjon er vist i figure(\ref{task_3}). Feilen konvergerer veldig fort til variansen av tidsrekken $\sigma_{x}$ som vist i figur(\ref{task_33}), grunnen til dette er fordi feilen er avhengig av forrige feil, dette gjør at prediksjonen blir veldig fort dårlig. Man kan også observere at prediksjonen konvergerer mot gjennomsnittet av tidsrekken.
+Prediksjon har blitt gjort med statsmodels sin ARMA-predict funksjon i python. Resultatet med 12 steg prediksjon er vist i figure(\ref{task_3}). Feilen konvergerer veldig fort til variansen av tidsrekken $\sigma_{x}$ som vist i figur(\ref{task_33}). Man kan også observere at prediksjonen konvergerer mot gjennomsnittet av tidsrekken.
 
 
 \begin{figure}[hbt!]
     {\centering
-        \includegraphics[width=0.80\textwidth]{task_3.pdf}
+        \includegraphics[width=0.80\textwidth]{task_33.pdf}
         \caption{Prediksjon med M = 12 måneder.}
         \label{task_3}
     \par}
@@ -175,7 +182,7 @@ Prediksjon har blitt gjort med statsmodels sin ARMA-predict funksjon i python. R
 
     \begin{figure}[hbt!]
         {\centering
-            \includegraphics[width=0.80\textwidth]{task_33.pdf}
+            \includegraphics[width=0.80\textwidth]{task_3.pdf}
             \caption{Prediksjon med M = 60 måneder. Her kan man se at feilen konvergerer mot variansen til tidsserien når man bruker høy m.}
             \label{task_33}
         \par}

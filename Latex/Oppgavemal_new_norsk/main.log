@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.15)  1 APR 2019 11:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.13)  18 APR 2019 15:29
 entering extended mode
-**c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal_new_norsk/main.tex
-(c:/Users/foxxravin/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal_new_norsk/main.tex
+**c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal_new_norsk/main.tex
+(c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Latex/Oppgavemal_new_norsk/main.tex
 LaTeX2e <2018-12-01>
 \@input{preamble.aux}
 \openout2 = `preamble.aux'.
 
-(c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\preamble.tex ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+(c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\preamble.tex ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
 File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -22,21 +22,21 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks14
 \ex@=\dimen103
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count88
@@ -76,7 +76,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \mathdisplay@stack=\toks18
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks19
 \thm@bodyfont=\toks20
@@ -87,32 +87,32 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@postskip=\skip47
 \thm@headsep=\skip48
 \dth@everypar=\toks24
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count100
 \float@exts=\toks25
 \float@box=\box29
 \@float@everytoks=\toks26
 \@floatcapt=\box30
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colortbl.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colortbl.sty"
 Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen112
 \ar@mcellbox=\box31
@@ -135,47 +135,47 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
-Package: babel 2018/11/13 3.27 The Babel package
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def"
-File: switch.def 2018/11/13 3.27 Babel switching mechanism
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2019/04/03 3.29 The Babel package
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def"
+File: switch.def 2019/04/03 3.29 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-norsk\norsk.ldf"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-norsk\norsk.ldf"
 Language: norsk 2012/08/06 v2.0i Norsk support from the babel system
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
-File: babel.def 2018/11/13 3.27 Babel common definitions
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2019/04/03 3.29 Babel common definitions
 \babel@savecnt=\count102
 \U@D=\dimen114
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
 \bbl@dirlevel=\count103
 )
 Package babel Info: Making " an active character on input line 113.
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks29
 \inpenc@posthook=\toks30
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks31
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \Gin@req@height=\dimen115
 \Gin@req@width=\dimen116
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.sty"
 \lst@mode=\count104
 \lst@gtempboxa=\box33
 \lst@token=\toks32
@@ -188,37 +188,37 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 \lst@newlines=\count108
 \lst@lineno=\count109
 \lst@maxwidth=\dimen120
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 \c@lstnumber=\count110
 \lst@skipnumbers=\count111
 \lst@framebox=\box34
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.cfg"
-File: listings.cfg 2018/09/02 1.7 listings configuration
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.cfg"
+File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
-Package: listings 2018/09/02 1.7 (Carsten Heinz)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/natbib\natbib.sty"
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip52
 \bibsep=\skip53
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count112
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/imakeidx\imakeidx.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/imakeidx\imakeidx.sty"
 Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchronous mode
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.sty"
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex"
 \XKV@toks=\toks33
 \XKV@tempa@toks=\toks34
 )
 \XKV@depth=\count113
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluatex.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.sty"
 Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \c@tracingmulticols=\count114
 \mult@box=\box35
@@ -266,11 +266,11 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \mult@nat@firstbox=\box59
 \colbreak@box=\box60
 \mc@col@check@num=\count122
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvtex.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
@@ -286,10 +286,10 @@ Package ifvtex Info: VTeX not detected.
 \Gm@layouthoffset=\dimen136
 \Gm@layoutvoffset=\dimen137
 \Gm@dimlist=\toks35
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/preprint\fullpage.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/preprint\fullpage.sty"
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip56
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@headwidth=\skip57
 \f@nch@O@elh=\skip58
@@ -300,20 +300,20 @@ Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@O@erf=\skip63
 \f@nch@O@olf=\skip64
 \f@nch@O@orf=\skip65
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lastpage\lastpage.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lastpage\lastpage.sty"
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen138
 \WF@size=\dimen139
 \c@WF@wrappedlines=\count126
 \WF@box=\box61
 \WF@everypar=\toks36
 Package: wrapfig 2003/01/31  v 3.6
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.sty"
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty"
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.sty"
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen140
@@ -332,9 +332,9 @@ Package caption Info: wrapfig package is loaded.
 )
 \c@subfigure=\count129
 \c@subtable=\count130
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspace.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen147
 \lightrulewidth=\dimen148
@@ -353,19 +353,25 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@thisruleclass=\count133
 \@lastruleclass=\count134
 \@thisrulewidth=\dimen159
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fourier.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fourier.sty"
 Package: fourier 2005/01/01 1.4 fourier-GUTenberg package
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Now handling font encoding FML ...
+... no UTF-8 mapping file for font encoding FML
+Now handling font encoding FMS ...
+... no UTF-8 mapping file for font encoding FMS
+Now handling font encoding FMX ...
+... no UTF-8 mapping file for font encoding FMX
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.sty"
 Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -379,9 +385,83 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.def"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-)
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+))
 LaTeX Info: Redefining \oldstylenums on input line 334.
 Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
 Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
@@ -444,7 +524,7 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fourier-orns.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fourier-orns.sty"
 Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
 )
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
@@ -567,41 +647,42 @@ LaTeX Font Info:    Redeclaring math accent \hat on input line 254.
 LaTeX Font Info:    Redeclaring math accent \dot on input line 255.
 LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
 \symUfutm=\mathgroup7
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtype.sty"
-Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtype.sty"
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 \MT@toks=\toks37
 \MT@count=\count135
-LaTeX Info: Redefining \textls on input line 793.
+LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen160
-LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
 \MT@listname@count=\count136
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtype-pdftex.def"
-File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
-LaTeX Info: Redefining \lsstyle on input line 913.
-LaTeX Info: Redefining \lslig on input line 913.
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtype-pdftex.def"
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
 \MT@outer@space=\skip66
 )
 Package microtype Info: Loading configuration file microtype.cfg.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtype.cfg"
-File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtype.cfg"
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.sty" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty"
-Package: expl3 2019-01-28 L3 programming layer (loader) 
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3-code.tex"
-Package: expl3 2019-01-28 L3 programming layer (code)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.sty" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty"
+Package: expl3 2019-04-06 L3 programming layer (loader) 
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3-code.tex"
+Package: expl3 2019-04-06 L3 programming layer (code)
 \c_max_int=\count137
 \l_tmpa_int=\count138
 \l_tmpb_int=\count139
 \g_tmpa_int=\count140
 \g_tmpb_int=\count141
 \g__kernel_prg_map_int=\count142
-\c_log_iow=\count143
-\l_iow_line_count_int=\count144
-\l__iow_line_target_int=\count145
-\l__iow_one_indent_int=\count146
-\l__iow_indent_int=\count147
+\c__ior_term_ior=\count143
+\c_log_iow=\count144
+\l_iow_line_count_int=\count145
+\l__iow_line_target_int=\count146
+\l__iow_one_indent_int=\count147
+\l__iow_indent_int=\count148
 \c_zero_dim=\dimen161
 \c_max_dim=\dimen162
 \l_tmpa_dim=\dimen163
@@ -620,78 +701,78 @@ Package: expl3 2019-01-28 L3 programming layer (code)
 \l_tmpb_muskip=\muskip15
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
-\l_keys_choice_int=\count148
-\l__intarray_loop_int=\count149
+\l_keys_choice_int=\count149
+\l__intarray_loop_int=\count150
 \c__intarray_sp_dim=\dimen167
-\g__intarray_font_int=\count150
-\c__fp_leading_shift_int=\count151
-\c__fp_middle_shift_int=\count152
-\c__fp_trailing_shift_int=\count153
-\c__fp_big_leading_shift_int=\count154
-\c__fp_big_middle_shift_int=\count155
-\c__fp_big_trailing_shift_int=\count156
-\c__fp_Bigg_leading_shift_int=\count157
-\c__fp_Bigg_middle_shift_int=\count158
-\c__fp_Bigg_trailing_shift_int=\count159
-\c__kernel_randint_max_int=\count160
-\g__fp_array_int=\count161
-\l__fp_array_loop_int=\count162
-\l__sort_length_int=\count163
-\l__sort_min_int=\count164
-\l__sort_top_int=\count165
-\l__sort_max_int=\count166
-\l__sort_true_max_int=\count167
-\l__sort_block_int=\count168
-\l__sort_begin_int=\count169
-\l__sort_end_int=\count170
-\l__sort_A_int=\count171
-\l__sort_B_int=\count172
-\l__sort_C_int=\count173
-\l__tl_analysis_normal_int=\count174
-\l__tl_analysis_index_int=\count175
-\l__tl_analysis_nesting_int=\count176
-\l__tl_analysis_type_int=\count177
-\l__regex_internal_a_int=\count178
-\l__regex_internal_b_int=\count179
-\l__regex_internal_c_int=\count180
-\l__regex_balance_int=\count181
-\l__regex_group_level_int=\count182
-\l__regex_mode_int=\count183
-\c__regex_cs_in_class_mode_int=\count184
-\c__regex_cs_mode_int=\count185
-\l__regex_catcodes_int=\count186
-\l__regex_default_catcodes_int=\count187
-\c__regex_catcode_D_int=\count188
-\c__regex_catcode_S_int=\count189
-\c__regex_catcode_L_int=\count190
-\c__regex_catcode_O_int=\count191
-\c__regex_catcode_A_int=\count192
-\c__regex_all_catcodes_int=\count193
-\l__regex_show_lines_int=\count194
-\l__regex_min_state_int=\count195
-\l__regex_max_state_int=\count196
-\l__regex_left_state_int=\count197
-\l__regex_right_state_int=\count198
-\l__regex_capturing_group_int=\count199
-\l__regex_min_pos_int=\count266
-\l__regex_max_pos_int=\count267
-\l__regex_curr_pos_int=\count268
-\l__regex_start_pos_int=\count269
-\l__regex_success_pos_int=\count270
-\l__regex_curr_char_int=\count271
-\l__regex_curr_catcode_int=\count272
-\l__regex_last_char_int=\count273
-\l__regex_case_changed_char_int=\count274
-\l__regex_curr_state_int=\count275
-\l__regex_step_int=\count276
-\l__regex_min_active_int=\count277
-\l__regex_max_active_int=\count278
-\l__regex_replacement_csnames_int=\count279
-\l__regex_match_count_int=\count280
-\l__regex_min_submatch_int=\count281
-\l__regex_submatch_int=\count282
-\l__regex_zeroth_submatch_int=\count283
-\g__regex_trace_regex_int=\count284
+\g__intarray_font_int=\count151
+\c__fp_leading_shift_int=\count152
+\c__fp_middle_shift_int=\count153
+\c__fp_trailing_shift_int=\count154
+\c__fp_big_leading_shift_int=\count155
+\c__fp_big_middle_shift_int=\count156
+\c__fp_big_trailing_shift_int=\count157
+\c__fp_Bigg_leading_shift_int=\count158
+\c__fp_Bigg_middle_shift_int=\count159
+\c__fp_Bigg_trailing_shift_int=\count160
+\c__kernel_randint_max_int=\count161
+\g__fp_array_int=\count162
+\l__fp_array_loop_int=\count163
+\l__sort_length_int=\count164
+\l__sort_min_int=\count165
+\l__sort_top_int=\count166
+\l__sort_max_int=\count167
+\l__sort_true_max_int=\count168
+\l__sort_block_int=\count169
+\l__sort_begin_int=\count170
+\l__sort_end_int=\count171
+\l__sort_A_int=\count172
+\l__sort_B_int=\count173
+\l__sort_C_int=\count174
+\l__tl_analysis_normal_int=\count175
+\l__tl_analysis_index_int=\count176
+\l__tl_analysis_nesting_int=\count177
+\l__tl_analysis_type_int=\count178
+\l__regex_internal_a_int=\count179
+\l__regex_internal_b_int=\count180
+\l__regex_internal_c_int=\count181
+\l__regex_balance_int=\count182
+\l__regex_group_level_int=\count183
+\l__regex_mode_int=\count184
+\c__regex_cs_in_class_mode_int=\count185
+\c__regex_cs_mode_int=\count186
+\l__regex_catcodes_int=\count187
+\l__regex_default_catcodes_int=\count188
+\c__regex_catcode_D_int=\count189
+\c__regex_catcode_S_int=\count190
+\c__regex_catcode_L_int=\count191
+\c__regex_catcode_O_int=\count192
+\c__regex_catcode_A_int=\count193
+\c__regex_all_catcodes_int=\count194
+\l__regex_show_lines_int=\count195
+\l__regex_min_state_int=\count196
+\l__regex_max_state_int=\count197
+\l__regex_left_state_int=\count198
+\l__regex_right_state_int=\count199
+\l__regex_capturing_group_int=\count266
+\l__regex_min_pos_int=\count267
+\l__regex_max_pos_int=\count268
+\l__regex_curr_pos_int=\count269
+\l__regex_start_pos_int=\count270
+\l__regex_success_pos_int=\count271
+\l__regex_curr_char_int=\count272
+\l__regex_curr_catcode_int=\count273
+\l__regex_last_char_int=\count274
+\l__regex_case_changed_char_int=\count275
+\l__regex_curr_state_int=\count276
+\l__regex_step_int=\count277
+\l__regex_min_active_int=\count278
+\l__regex_max_active_int=\count279
+\l__regex_replacement_csnames_int=\count280
+\l__regex_match_count_int=\count281
+\l__regex_min_submatch_int=\count282
+\l__regex_submatch_int=\count283
+\l__regex_zeroth_submatch_int=\count284
+\g__regex_trace_regex_int=\count285
 \c_empty_box=\box62
 \l_tmpa_box=\box63
 \l_tmpb_box=\box64
@@ -721,54 +802,54 @@ Package: expl3 2019-01-28 L3 programming layer (code)
 \l_tmpb_coffin=\box73
 \g_tmpa_coffin=\box74
 \g_tmpb_coffin=\box75
+\l__coffin_bounding_shift_dim=\dimen183
+\l__coffin_left_corner_dim=\dimen184
+\l__coffin_right_corner_dim=\dimen185
+\l__coffin_bottom_corner_dim=\dimen186
+\l__coffin_top_corner_dim=\dimen187
+\l__coffin_scaled_total_height_dim=\dimen188
+\l__coffin_scaled_width_dim=\dimen189
 \c__coffin_empty_coffin=\box76
 \l__coffin_display_coffin=\box77
 \l__coffin_display_coord_coffin=\box78
 \l__coffin_display_pole_coffin=\box79
-\l__coffin_display_offset_dim=\dimen183
-\l__coffin_display_x_dim=\dimen184
-\l__coffin_display_y_dim=\dimen185
+\l__coffin_display_offset_dim=\dimen190
+\l__coffin_display_x_dim=\dimen191
+\l__coffin_display_y_dim=\dimen192
 \g__file_internal_ior=\read1
-\l__coffin_bounding_shift_dim=\dimen186
-\l__coffin_left_corner_dim=\dimen187
-\l__coffin_right_corner_dim=\dimen188
-\l__coffin_bottom_corner_dim=\dimen189
-\l__coffin_top_corner_dim=\dimen190
-\l__coffin_scaled_total_height_dim=\dimen191
-\l__coffin_scaled_width_dim=\dimen192
-\l__seq_internal_a_int=\count285
-\l__seq_internal_b_int=\count286
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\l3pdfmode.def"
-File: l3pdfmode.def 2019-01-28 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count287
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse.sty"
-Package: xparse 2018-10-17 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count288
-\g__xparse_grabber_int=\count289
-\l__xparse_m_args_int=\count290
-\l__xparse_mandatory_args_int=\count291
-\l__xparse_v_nesting_int=\count292
+\l__seq_internal_a_int=\count286
+\l__seq_internal_b_int=\count287
+\c__deprecation_minus_one=\count288
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\l3pdfmode.def"
+File: l3pdfmode.def 2019-04-06 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count289
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse.sty"
+Package: xparse 2019-03-05 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count290
+\g__xparse_grabber_int=\count291
+\l__xparse_m_args_int=\count292
+\l__xparse_v_nesting_int=\count293
 )
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.ltd.tex"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.ltd.tex"
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tex-gyre\tgbonum.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tex-gyre\tgbonum.sty"
 Package: tgbonum 2009/09/27 v1.2 TeX Gyre Bonum as default roman family
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-)))) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
+)))) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-hyperref.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-generic.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -799,17 +880,19 @@ Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen193
-\Hy@linkcounter=\count293
-\Hy@pagecounter=\count294
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+\Hy@linkcounter=\count294
+\Hy@pagecounter=\count295
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count295
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg"
+\Hy@SavedSpaceFactor=\count296
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4519.
@@ -819,10 +902,10 @@ Package hyperref Info: Plain pages OFF on input line 4534.
 Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count296
+\c@Hy@tempcnt=\count297
 LaTeX Info: Redefining \url on input line 5125.
 \XeTeXLinkMargin=\dimen194
-\Fld@menulength=\count297
+\Fld@menulength=\count298
 \Field@Width=\dimen195
 \Fld@charsize=\dimen196
 Package hyperref Info: Hyper figures OFF on input line 6380.
@@ -834,40 +917,40 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6405.
 Package hyperref Info: PDF/A mode OFF on input line 6410.
 LaTeX Info: Redefining \ref on input line 6450.
 LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count298
-\c@Item=\count299
-\c@Hfootnote=\count300
+\Hy@abspage=\count299
+\c@Item=\count300
+\c@Hfootnote=\count301
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count301
-\c@bookmark@seq@number=\count302
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfilecheck.sty"
+\Fld@listcount=\count302
+\c@bookmark@seq@number=\count303
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip73
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcolorbox.sty"
-Package: tcolorbox 2018/12/07 version 4.15 text color boxes
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcolorbox.sty"
+Package: tcolorbox 2019/03/02 version 4.20 text color boxes
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
 \pgfutil@everybye=\toks38
 \pgfutil@tempdima=\dimen197
 \pgfutil@tempdimb=\dimen198
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.tex")) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.tex")) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def"
 \pgfutil@abb=\box80
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfrcs.code.tex" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf.revision.tex")
-Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfrcs.code.tex" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf.revision.tex")
+Package: pgfrcs 2019/04/04 v3.1.2 (3.1.2)
 ))
-Package: pgf 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfcore.sty" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgfsys.sty" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys.code.tex"
-Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"
+Package: pgf 2019/04/04 v3.1.2 (3.1.2)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfcore.sty" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgfsys.sty" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys.code.tex"
+Package: pgfsys 2019/04/04 v3.1.2 (3.1.2)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"
 \pgfkeys@pathtoks=\toks39
 \pgfkeys@temptoks=\toks40
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks41
 ))
 \pgf@x=\dimen199
@@ -880,41 +963,41 @@ Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
 \pgf@yc=\dimen262
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count303
-\c@pgf@countb=\count304
-\c@pgf@countc=\count305
-\c@pgf@countd=\count306
+\c@pgf@counta=\count304
+\c@pgf@countb=\count305
+\c@pgf@countc=\count306
+\c@pgf@countd=\count307
 \t@pgf@toka=\toks42
 \t@pgf@tokb=\toks43
 \t@pgf@tokc=\toks44
-\pgf@sys@id@count=\count307
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg"
-File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
+\pgf@sys@id@count=\count308
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg"
+File: pgf.cfg 2019/04/04 v3.1.2 (3.1.2)
 )
 Driver file for pgf: pgfsys-pdftex.def
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
-File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def"
-File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
-))) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex"
-File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfsyssoftpath@smallbuffer@items=\count308
-\pgfsyssoftpath@bigbuffer@items=\count309
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex"
-File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcore.code.tex"
-Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex") ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2019/04/04 v3.1.2 (3.1.2)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2019/04/04 v3.1.2 (3.1.2)
+))) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgfsyssoftpath@smallbuffer@items=\count309
+\pgfsyssoftpath@bigbuffer@items=\count310
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcore.code.tex"
+Package: pgfcore 2019/04/04 v3.1.2 (3.1.2)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex") ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex"
 \pgfmath@dimen=\dimen263
-\pgfmath@count=\count310
+\pgfmath@count=\count311
 \pgfmath@box=\box81
 \pgfmath@toks=\toks45
 \pgfmath@stack@operand=\toks46
 \pgfmath@stack@operation=\toks47
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex") ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex") ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.random.code.tex") ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex") ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.tex") ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.tex") ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex") ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex"))) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count311
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
-File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex") ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex") ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.random.code.tex") ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex") ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.tex") ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.tex") ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex") ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex"))) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count312
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgf@picminx=\dimen264
 \pgf@picmaxx=\dimen265
 \pgf@picminy=\dimen266
@@ -930,113 +1013,114 @@ File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@zx=\dimen276
 \pgf@zy=\dimen277
 LaTeX Font Info:    Try loading font information for T1+qbk on input line 926.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tex-gyre\t1qbk.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tex-gyre\t1qbk.fd"
 File: t1qbk.fd 2009/09/25 v1.2 font definition file for T1/qbk
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex"
-File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgf@path@lastx=\dimen278
 \pgf@path@lasty=\dimen279
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex"
-File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgf@shorten@end@additional=\dimen280
 \pgf@shorten@start@additional=\dimen281
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex"
-File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgfpic=\box82
 \pgf@hbox=\box83
 \pgf@layerbox@main=\box84
-\pgf@picture@serial@count=\count312
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex"
-File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@picture@serial@count=\count313
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgflinewidth=\dimen282
-)
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex"
-File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgf@pt@x=\dimen283
 \pgf@pt@y=\dimen284
 \pgf@pt@temp=\dimen285
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
-File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex"
-File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex"
-File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex"
-File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2019/04/04 v3.1.2 (3.1.2)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2019/04/04 v3.1.2 (3.1.2)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2019/04/04 v3.1.2 (3.1.2)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgfarrowsep=\dimen286
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
-File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgf@max=\dimen287
-\pgf@sys@shading@range@num=\count313
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
-File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex"
-File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@sys@shading@range@num=\count314
+\pgf@shadingcount=\count315
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2019/04/04 v3.1.2 (3.1.2)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgfexternal@startupbox=\box85
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex"
-File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex"
-File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex"
-File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
-File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
-))) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.tex"
-File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2019/04/04 v3.1.2 (3.1.2)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2019/04/04 v3.1.2 (3.1.2)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2019/04/04 v3.1.2 (3.1.2)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2019/04/04 v3.1.2 (3.1.2)
+))) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgfnodeparttextbox=\box86
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
-File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty"
-Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2019/04/04 v3.1.2 (3.1.2)
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2019/04/04 v3.1.2 (3.1.2)
 \pgf@nodesepstart=\dimen288
 \pgf@nodesepend=\dimen289
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty"
-Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2019/04/04 v3.1.2 (3.1.2)
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks48
 \verbatim@line=\toks49
 \verbatim@in@stream=\read3
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/environ\environ.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/environ\environ.sty"
 Package: environ 2014/05/04 v0.3 A new way to define environments
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\trimspaces.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\trimspaces.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count314
+\etb@tempcnta=\count316
 )
 \tcb@titlebox=\box87
 \tcb@upperbox=\box88
 \tcb@lowerbox=\box89
 \tcb@phantombox=\box90
-\c@tcbbreakpart=\count315
-\c@tcblayer=\count316
-\tcolorbox@number=\count317
+\c@tcbbreakpart=\count317
+\c@tcblayer=\count318
+\tcolorbox@number=\count319
 \tcb@temp=\box91
 \tcb@temp=\box92
 \tcb@temp=\box93
 \tcb@temp=\box94
 \tcb@out=\write4
 \tcb@record@out=\write5
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbraster.code.tex"
-Library (tcolorbox): 'tcbraster.code.tex' version '4.15'
-\c@tcbrastercolumn=\count318
-\c@tcbrasterrow=\count319
-\c@tcbraster=\count320
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskins.code.tex"
-Library (tcolorbox): 'tcbskins.code.tex' version '4.15'
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgffor.sty" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfkeys.sty" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex")) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.sty" ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgffor.code.tex"
-Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbraster.code.tex"
+Library (tcolorbox): 'tcbraster.code.tex' version '4.20'
+\c@tcbrastercolumn=\count320
+\c@tcbrasterrow=\count321
+\c@tcbraster=\count322
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskins.code.tex"
+Library (tcolorbox): 'tcbskins.code.tex' version '4.20'
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgffor.sty" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfkeys.sty" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex")) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.sty" ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgffor.code.tex"
+Package: pgffor 2019/04/04 v3.1.2 (3.1.2)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")
 \pgffor@iter=\dimen290
 \pgffor@skip=\dimen291
 \pgffor@stack=\toks50
 \pgffor@toks=\toks51
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
-Package: tikz 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex"
-File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@plot@mark@count=\count321
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
+Package: tikz 2019/04/04 v3.1.2 (3.1.2)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgf@plot@mark@count=\count323
 \pgfplotmarksize=\dimen292
 )
 \tikz@lastx=\dimen293
@@ -1049,91 +1133,91 @@ File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \tikz@figbox@bg=\box96
 \tikz@tempbox=\box97
 \tikz@tempbox@bg=\box98
-\tikztreelevel=\count322
-\tikznumberofchildren=\count323
-\tikznumberofcurrentchild=\count324
-\tikz@fig@count=\count325
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
-File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfmatrixcurrentrow=\count326
-\pgfmatrixcurrentcolumn=\count327
-\pgf@matrix@numberofcolumns=\count328
+\tikztreelevel=\count324
+\tikznumberofchildren=\count325
+\tikznumberofcurrentchild=\count326
+\tikz@fig@count=\count327
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgfmatrixcurrentrow=\count328
+\pgfmatrixcurrentcolumn=\count329
+\pgf@matrix@numberofcolumns=\count330
 )
-\tikz@expandcount=\count329
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
-File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\tikz@expandcount=\count331
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2019/04/04 v3.1.2 (3.1.2)
 )))
 \tcb@waterbox=\box99
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex"
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.15'
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbbreakable.code.tex"
-Library (tcolorbox): 'tcbbreakable.code.tex' version '4.15'
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex"
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.20'
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbbreakable.code.tex"
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.20'
 \tcb@testbox=\box100
 \tcb@totalupperbox=\box101
 \tcb@totallowerbox=\box102
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbhooks.code.tex"
-Library (tcolorbox): 'tcbhooks.code.tex' version '4.15'
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbtheorems.code.tex"
-Library (tcolorbox): 'tcbtheorems.code.tex' version '4.15'
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbfitting.code.tex"
-Library (tcolorbox): 'tcbfitting.code.tex' version '4.15'
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbhooks.code.tex"
+Library (tcolorbox): 'tcbhooks.code.tex' version '4.20'
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbtheorems.code.tex"
+Library (tcolorbox): 'tcbtheorems.code.tex' version '4.20'
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbfitting.code.tex"
+Library (tcolorbox): 'tcbfitting.code.tex' version '4.20'
 \tcbfitdim=\dimen299
 \tcb@lowerfitdim=\dimen300
 \tcb@upperfitdim=\dimen301
-\tcb@cur@hbadness=\count330
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbxparse.code.tex"
-Library (tcolorbox): 'tcbxparse.code.tex' version '4.15'
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistingsutf8.code.tex"
-Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.15'
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\listingsutf8.sty"
+\tcb@cur@hbadness=\count332
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbxparse.code.tex"
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.20'
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistingsutf8.code.tex"
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.20'
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\listingsutf8.sty"
 Package: listingsutf8 2016/05/16 v1.3 Allow UTF-8 in listings input (HO)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\stringenc.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\stringenc.sty"
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO)
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistings.code.tex"
-Library (tcolorbox): 'tcblistings.code.tex' version '4.15'
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistingscore.code.tex"
-Library (tcolorbox): 'tcblistingscore.code.tex' version '4.15'
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbprocessing.code.tex"
-Library (tcolorbox): 'tcbprocessing.code.tex' version '4.15'
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\shellesc.sty"
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistings.code.tex"
+Library (tcolorbox): 'tcblistings.code.tex' version '4.20'
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcblistingscore.code.tex"
+Library (tcolorbox): 'tcblistingscore.code.tex' version '4.20'
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbprocessing.code.tex"
+Library (tcolorbox): 'tcbprocessing.code.tex' version '4.20'
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\shellesc.sty"
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 69.
 ))
-\c@tcblisting=\count331
-))) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbexternal.code.tex"
-Library (tcolorbox): 'tcbexternal.code.tex' version '4.15'
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbmagazine.code.tex"
-Library (tcolorbox): 'tcbmagazine.code.tex' version '4.15'
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbvignette.code.tex"
-Library (tcolorbox): 'tcbvignette.code.tex' version '4.15'
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfadings.code.tex"
-File: tikzlibraryfadings.code.tex 2019/02/02 v3.1.1 (3.1.1)
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryfadings.code.tex"
-File: pgflibraryfadings.code.tex 2019/02/02 v3.1.1 (3.1.1)
-))) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbposter.code.tex"
-Library (tcolorbox): 'tcbposter.code.tex' version '4.15'
-)) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mathtools.sty"
+\c@tcblisting=\count333
+))) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbexternal.code.tex"
+Library (tcolorbox): 'tcbexternal.code.tex' version '4.20'
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbmagazine.code.tex"
+Library (tcolorbox): 'tcbmagazine.code.tex' version '4.20'
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbvignette.code.tex"
+Library (tcolorbox): 'tcbvignette.code.tex' version '4.20'
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfadings.code.tex"
+File: tikzlibraryfadings.code.tex 2019/04/04 v3.1.2 (3.1.2)
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryfadings.code.tex"
+File: pgflibraryfadings.code.tex 2019/04/04 v3.1.2 (3.1.2)
+))) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tcolorbox\tcbposter.code.tex"
+Library (tcolorbox): 'tcbposter.code.tex' version '4.20'
+)) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mathtools.sty"
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count332
-\calc@Bcount=\count333
+\calc@Acount=\count334
+\calc@Bcount=\count335
 \calc@Adimen=\dimen302
 \calc@Bdimen=\dimen303
 \calc@Askip=\skip74
 \calc@Bskip=\skip75
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count334
+\calc@Ccount=\count336
 \calc@Cskip=\skip76
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.sty"
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count335
+\g_MT_multlinerow_int=\count337
 \l_MT_multwidth_dim=\dimen304
 \origjot=\skip77
 \l_MT_shortvdotswithinadjustabove_dim=\dimen305
@@ -1142,20 +1226,20 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen308
 \l_MT_above_shortintertext_sep=\dimen309
 \l_MT_below_shortintertext_sep=\dimen310
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\totalcount.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\totalcount.sty"
 Package: totalcount 2018/01/21 v1.0a Total values of counters (AR)
-\c@totalcount@page=\count336
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
-File: lstlang1.sty 2018/09/02 1.7 listings language file
+\c@totalcount@page=\count338
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 \main@idxfile=\write6
 \openout6 = `main.idx'.
 
 
 Writing index file main.idx
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/was\gensymb.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/was\gensymb.sty"
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.aux)
+) (c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -1172,46 +1256,46 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 7.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 7.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmlfutm.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 7.
 LaTeX Font Info:    Try loading font information for FMS+futm on input line 7.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmsfutm.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmsfutm.fd"
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 7.
 LaTeX Font Info:    Try loading font information for FMX+futm on input line 7.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmxfutm.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmxfutm.fd"
 File: fmxfutm.fd futm-extension
 )
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 7.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pdf.mkii"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count337
+\scratchcounter=\count339
 \scratchdimen=\dimen311
 \scratchbox=\box103
-\nofMPsegments=\count338
-\nofMParguments=\count339
+\nofMPsegments=\count340
+\nofMParguments=\count341
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count340
+\MPscratchCnt=\count342
 \MPscratchDim=\dimen312
-\MPnumerator=\count341
-\makeMPintoPDFobject=\count342
+\MPnumerator=\count343
+\makeMPintoPDFobject=\count344
 \everyMPtoPDFconversion=\toks53
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
@@ -1219,7 +1303,7 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@lstlisting=\count343
+\c@lstlisting=\count345
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1277,17 +1361,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 \AtBeginShipoutBox=\box104
 Package hyperref Info: Link coloring OFF on input line 7.
-("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
+("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count344
+\c@section@level=\count346
 )
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
 LaTeX Info: Redefining \nameref on input line 7.
- (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.out) (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.out)
+ (c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.out) (c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
@@ -1302,11 +1386,11 @@ Package gensymb Info: Using text companion symbols for \degree, \celsius and \pe
 LaTeX Info: Redefining \ohm on input line 7.
 Package gensymb Info: Using \textohm for \ohm on input line 7.
 Package gensymb Info: Using \textmu for \micro on input line 7.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-cmr.cfg"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 LaTeX Font Info:    Try loading font information for T1+futs on input line 30.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\t1futs.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\t1futs.fd"
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1314,7 +1398,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for FML+futmi on input line 30.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmlfutmi.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fourier\fmlfutmi.fd"
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -1324,15 +1408,15 @@ LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 (Font)              scaled to size 6.43999pt on input line 30.
 LaTeX Font Info:    Try loading font information for U+msa on input line 30.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msa.cfg"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 30.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msb.cfg"
+) ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
@@ -1342,7 +1426,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.43999pt on input line 30.
 LaTeX Font Info:    Try loading font information for TS1+qbk on input line 30.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tex-gyre\ts1qbk.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tex-gyre\ts1qbk.fd"
 File: ts1qbk.fd 2009/09/25 v1.2 font definition file for TS1/qbk
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1354,20 +1438,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 
-{C:/Users/foxxravin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.toc)
+{C:/Users/MartinR/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.toc)
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 12.07004pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
-
-[2]
+ [2]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 48.
- ("C:\Users\foxxravin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
+ ("C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1379,7 +1456,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
 (Font)              using `T1/cmtt/m/n' instead on input line 49.
 
-[3] (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.bbl
+[3] (c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
@@ -1388,7 +1465,7 @@ AED: lastpage setting LastPage
 [4]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
- (c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.aux)
+ (c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -1404,15 +1481,15 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
 ### simple group (level 1) entered at line 11 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38287 strings out of 492946
- 757999 string characters out of 3124490
- 1220770 words of memory out of 3000000
- 41549 multiletter control sequences out of 15000+200000
+ 38959 strings out of 492902
+ 765658 string characters out of 3122872
+ 1220780 words of memory out of 3000000
+ 42228 multiletter control sequences out of 15000+200000
  575185 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,11n,103p,1045b,1382s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0800.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk>{C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\foxxravin\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/foxxravin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
-Output written on c:/Users\foxxravin\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.pdf (4 pages, 119037 bytes).
+ 67i,11n,103p,1043b,1380s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0800.pk> <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk>{C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc} <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb>
+Output written on c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_norsk\main.pdf (4 pages, 119316 bytes).
 PDF statistics:
  270 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 500000)

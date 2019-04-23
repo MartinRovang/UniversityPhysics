@@ -157,16 +157,13 @@ sliced_time = time
 sliced_X = X_remseason
 time_forecast = np.linspace(sliced_time[-1], sliced_time[-1] + M/12, M)
 
-# plt.figure(figsize = [15,8])
-# plt.plot(sliced_time, sliced_X, color = 'black', label = 'Recruitment series')
-# plt.plot(time_forecast, forecast, '-o', mfc='none', color = 'red', linewidth = '1', label = 'Prediction' )
-# plt.fill_between(time_forecast, conf_int[:,0], conf_int[:,1], facecolor = (0.5, 0.5, 0.5, 0.2), label = '95% CI')
-# plt.xticks([x for x in np.arange(sliced_time[0], sliced_time[-1]+ M/12, 3)])
-# plt.legend(loc = 'best')
-# plt.title('Prediksjon m = %s'%M)
-# plt.tight_layout()
-# plt.savefig('rapport/task_3.pdf')
-# plt.show()
-
-
-
+plt.figure(figsize = [15,8])
+plt.plot(sliced_time, sliced_X, color = 'black', label = 'Recruitment series')
+plt.plot(time_forecast, forecast, '-o', mfc='none', color = 'red', linewidth = '1', label = 'Prediction' )
+plt.fill_between(time_forecast, conf_int[:,0], conf_int[:,1], facecolor = (0.5, 0.5, 0.5, 0.2), label = '95% CI')
+plt.xticks([x for x in np.arange(sliced_time[0], sliced_time[-1]+ M/12, 3)])
+plt.legend(loc = 'best')
+plt.title('Prediksjon m = %s'%M)
+plt.tight_layout()
+plt.savefig('rapport/task_33.pdf')
+plt.show()

@@ -6,15 +6,15 @@ from scipy.signal import convolve2d
 from mpl_toolkits.mplot3d import axes3d
 
 
-image = np.array(plt.imread('Fig1016(a)(building_original).tif'))
-#image = np.array(plt.imread('blaklokke.jpg'))
+#image = np.array(plt.imread('Fig1016(a)(building_original).tif'))
+image = np.array(plt.imread('blaklokke.jpg'))
 
 
 
 
 def otsu_glob(image):
     image2 = np.copy(image)
-    hist, bins = np.histogram(image.flatten(), bins = np.max(image2), density = True)
+    hist, bins = np.histogram(image.flatten(), bins = 256, range = [0, 256], density = True)
     p = hist
     cum_mean = []
     mean_glob = 0
@@ -63,7 +63,7 @@ def otsu_glob(image):
 
     print('Seperability measure: %s'%nu_sep_measure)
 
-    plt.hist(image2.flatten(), bins= 256, range = [0, 255], label = 'Image histogram', color = 'black')
+    plt.hist(image2.flatten(), bins= 256, range = [0, 256], label = 'Image histogram', color = 'black')
     plt.axvline(best_val_k, color='k', linestyle='dashed', linewidth=1, label = 'best histogram segmentation')
     plt.legend(loc = 'best')
     plt.show()

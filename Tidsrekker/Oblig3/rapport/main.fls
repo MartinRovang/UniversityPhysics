@@ -450,6 +450,13 @@ INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gy
 OUTPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\main.toc
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm10.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-euf.cfg
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-euf.cfg
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm7.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm7.tfm
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_a.pdf
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_a.pdf
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_a.pdf
@@ -488,6 +495,7 @@ INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.f
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt0800.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt0900.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\euler\eufm10.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\public\fourier\futsy.vf
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-ms.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mcl.tfm
@@ -495,14 +503,14 @@ INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapp
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_2a.pdf
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_2a.pdf
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_2a.pdf
-INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_3.pdf
-INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_3.pdf
-INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_3.pdf
-INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_3.pdf
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_33.pdf
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_33.pdf
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_33.pdf
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_33.pdf
+INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_3.pdf
+INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_3.pdf
+INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_3.pdf
+INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\task_3.pdf
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecit0800.tfm
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\main.bbl
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\main.bbl
@@ -525,8 +533,8 @@ INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1000.pk
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1728.pk
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1728.pk
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mcl.pfb
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mcl.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\euler\eufm10.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\euler\eufm10.pfb
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mex.pfb
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mex.pfb
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\fourier\fourier-mlit.pfb
