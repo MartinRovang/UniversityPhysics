@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex main"] 1555671555 "main.aux" "main.bbl" "main" 1555686674
+["bibtex main"] 1556119961 "main.aux" "main.bbl" "main" 1556120043
   "C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "bibl.bib" 1555409910 1513 fda00c6d72ec4c41d3021e84823222d6 ""
-  "main.aux" 1555686673 6043 438218c328f2694dc9e0136be0cbbe83 "pdflatex"
+  "main.aux" 1556119967 6180 dd39d1e4581224979c6a0e935cd30b9f "pdflatex"
   (generated)
-  "main.bbl"
   "main.blg"
-["makeindex main.idx"] 1555671551 "main.idx" "main.ind" "main" 1555686674
-  "main.idx" 1555686672 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.bbl"
+["makeindex main.idx"] 1556111835 "main.idx" "main.ind" "main" 1556120043
+  "main.idx" 1556119965 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
-  "main.ilg"
   "main.ind"
-["pdflatex"] 1555686668 "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.tex" "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.pdf" "main" 1555686674
+  "main.ilg"
+["pdflatex"] 1556119962 "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.tex" "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.pdf" "main" 1556120043
   "C:/Users/MartinR/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecit0800.pk" 1555404027 19160 59348cf9965b5788611858a7ea991b25 ""
   "C:/Users/MartinR/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb1000.pk" 1555402252 23092 e920d13b73e1dfa385c63477c6f6a752 ""
   "C:/Users/MartinR/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/ecrb1728.pk" 1555402253 44992 813eff493184ccf14db57b1b8dd52153 ""
@@ -271,14 +271,14 @@
   "C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty" 1044406800 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty" 1419274338 5114 9c1069474ff71dbc47d5006555e352d3 ""
-  "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.aux" 1555686673 6043 438218c328f2694dc9e0136be0cbbe83 ""
-  "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.tex" 1555686667 15035 1b3dc68e22bf0737c08e6f2489e00b05 ""
-  "main.aux" 1555686673 6043 438218c328f2694dc9e0136be0cbbe83 "pdflatex"
-  "main.bbl" 1555671555 466 9bd827b9f93ea30da4fd76ac08811721 "bibtex main"
-  "main.ind" 1555671551 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.out" 1555686673 549 cf7a269816e1960b226160d97cb32474 "pdflatex"
-  "main.tex" 1555686667 15035 1b3dc68e22bf0737c08e6f2489e00b05 ""
-  "main.toc" 1555686673 782 5ed0e3e504e8f62297058ab0cab57441 "pdflatex"
+  "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.aux" 1556119967 6180 dd39d1e4581224979c6a0e935cd30b9f ""
+  "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.tex" 1556120041 15099 49af6089f6e03c80c3e01d8a02c48e68 ""
+  "main.aux" 1556119967 6180 dd39d1e4581224979c6a0e935cd30b9f "pdflatex"
+  "main.bbl" 1556119961 466 9bd827b9f93ea30da4fd76ac08811721 "bibtex main"
+  "main.ind" 1556111835 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.out" 1556119967 549 cf7a269816e1960b226160d97cb32474 "pdflatex"
+  "main.tex" 1556120041 15099 49af6089f6e03c80c3e01d8a02c48e68 ""
+  "main.toc" 1556119967 782 782e2a1b695d2c24e61b182a6220c518 "pdflatex"
   "preamble.tex" 1555671302 4114 8a83d8978626941ace1abd9812908ec0 ""
   "task_2a.pdf" 1555686660 17515 d9b47240152dbb66dcfcb633a7cb35bc ""
   "task_3.pdf" 1555686636 21367 92a93a4ef495305ce3a753d9b2efed53 ""
@@ -287,12 +287,12 @@
   "task_b.pdf" 1555686657 14779 cad97d523fcd50e37b545c51a147e1d6 ""
   "task_c.pdf" 1555686658 9769 4507682895475e658f928b3b49116e91 ""
   (generated)
-  "preamble.aux"
-  "main.pdf"
-  "main.log"
-  "main.out"
-  "main.idx"
-  "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.pdf"
   "main.toc"
   "main.aux"
+  "preamble.aux"
+  "main.log"
+  "main.pdf"
   "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.log"
+  "main.out"
+  "c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.pdf"
+  "main.idx"

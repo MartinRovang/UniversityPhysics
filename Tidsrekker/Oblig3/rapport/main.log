@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.13)  19 APR 2019 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.13)  24 APR 2019 17:32
 entering extended mode
 **c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.tex
 (c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/main.tex
@@ -1504,17 +1504,17 @@ LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
 (Font)              using `T1/cmtt/m/n' instead on input line 122.
 
 [4 <c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/task_b.pdf>] [5 <c:/Users/MartinR/Documents/GitHub/UniversityPhysics/Tidsrekker/Oblig3/rapport/task_c.pdf>]
-<task_2a.pdf, id=289, 462.52798pt x 346.89601pt>
+<task_2a.pdf, id=288, 462.52798pt x 346.89601pt>
 File: task_2a.pdf Graphic file (type pdf)
 <use task_2a.pdf>
 Package pdftex.def Info: task_2a.pdf  used on input line 158.
 (pdftex.def)             Requested size: 317.07614pt x 237.81818pt.
-<task_33.pdf, id=292, 1084.05pt x 578.16pt>
+<task_33.pdf, id=291, 1084.05pt x 578.16pt>
 File: task_33.pdf Graphic file (type pdf)
 <use task_33.pdf>
 Package pdftex.def Info: task_33.pdf  used on input line 177.
 (pdftex.def)             Requested size: 362.37569pt x 193.26355pt.
-<task_3.pdf, id=293, 1084.05pt x 578.16pt>
+<task_3.pdf, id=292, 1084.05pt x 578.16pt>
 File: task_3.pdf Graphic file (type pdf)
 <use task_3.pdf>
 Package pdftex.def Info: task_3.pdf  used on input line 185.
@@ -1555,9 +1555,9 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  67i,11n,103p,1042b,1420s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0800.pk> <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk>{C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc}{C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1000.pk> <C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrb1728.pk><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkb.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkr.pfb><C:/Users/MartinR/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/tex-gyre/qbkri.pfb>
-Output written on c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\main.pdf (11 pages, 386661 bytes).
+Output written on c:/Users\MartinR\Documents\GitHub\UniversityPhysics\Tidsrekker\Oblig3\rapport\main.pdf (11 pages, 387134 bytes).
 PDF statistics:
- 928 PDF objects out of 1000 (max. 8388607)
+ 929 PDF objects out of 1000 (max. 8388607)
  227 named destinations out of 1000 (max. 500000)
  24339 words of extra memory for PDF output out of 24883 (max. 10000000)
 

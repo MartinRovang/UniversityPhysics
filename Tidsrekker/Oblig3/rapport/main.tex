@@ -108,7 +108,7 @@ Ved bruk av statsmodels-pakken i python kan vi simulere en ARMA-modell med gitte
 \end{equation}
 
 der $\alpha = -0.7019$, $\phi_{1} = 1.2483$ og $\phi_{2} = -0.3313$
-Her har det blitt brukt en \emph{hatt} på tidsrekken for å vise at det er et estimat. Fra utskriften i figur(\ref{Armacoefs}) har vi at $\sigma_{w} = 9.452$, dette er den estimerte variansen på den hvite støyen slik man har fordelingen $N \thicksim (0, \sigma_{w}^{2})$. Dette kan brukes til å finne \emph{Mean-square prediction error} som er gitt ved ligning(\ref{mean-square-predictor-error}),
+Her har det blitt brukt en \emph{hatt} på tidsrekken for å vise at det er et estimat. Fra utskriften i figur(\ref{Armacoefs}) har vi at $\sigma_{w} = 8.653$, dette er den estimerte variansen på den hvite støyen slik man har fordelingen $N \thicksim (0, \sigma_{w}^{2})$. Dette kan brukes til å finne \emph{Mean-square prediction error} som er gitt ved ligning(\ref{mean-square-predictor-error}),
 
 \begin{equation}
     P^{n}_{n + m} = E\bigg[\sigma_{w}^{2}\sum_{j = 0}^{m-1}\psi_{j}^{2}\bigg]
@@ -142,7 +142,7 @@ der $\psi$ er vektene gitt fra modellen slik at $\phi(z)\psi(z) = \theta(z)$. He
         AR.2            2.6120           +0.0000j            2.6120            0.0000
         -----------------------------------------------------------------------------
     \end{lstlisting}
-\caption{Utskrift av ARMA-model resultat gitt fra statsmodels-pakken. \url{https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima\_model.ARMA.html}}
+\caption{Utskrift av ARMA-model resultat gitt fra statsmodels-pakken. Merk her at det har blitt brukt MLE for å estimere parametere. \url{https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima\_model.ARMA.html}}
 \label{Armacoefs}
 \end{figure}
 
