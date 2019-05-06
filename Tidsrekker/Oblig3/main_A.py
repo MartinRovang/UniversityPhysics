@@ -6,18 +6,18 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 import statsmodels as sm
-plt.style.use('fivethirtyeight')
+plt.style.use('ggplot')
 
-# plt.rcParams['font.family'] = 'serif'
-# plt.rcParams['font.serif'] = 'Ubuntu'
-# plt.rcParams['font.monospace'] = 'Ubuntu Mono'
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.serif'] = 'Ubuntu'
+plt.rcParams['font.monospace'] = 'Ubuntu Mono'
 # plt.rcParams['font.size'] = 10
 # plt.rcParams['axes.labelsize'] = 10
 # plt.rcParams['axes.labelweight'] = 'bold'
-# plt.rcParams['xtick.labelsize'] = 8
-# plt.rcParams['ytick.labelsize'] = 8
+# plt.rcParams['xtick.labelsize'] = 20
+# plt.rcParams['ytick.labelsize'] = 20
 # plt.rcParams['legend.fontsize'] = 10
-# plt.rcParams['figure.titlesize'] = 12
+# plt.rcParams['figure.titlesize'] = 15
 plt.rcParams['axes.facecolor']='white'
 plt.rcParams['savefig.facecolor']='white'
 plt.rcParams['axes.grid']='off'
@@ -62,8 +62,8 @@ ax[1].set_ylabel('Power')
 ax[1].set_xticks([x for x in np.arange(0, 6.5, 1/2)])
 plt.tight_layout()
 plt.savefig('rapport/task_a.pdf')
-plt.show()
-
+#plt.show()
+plt.close()
 
 # b)Trekk fra midlere sesongvariasjoner for  ̊a gjøre tidsrekka stasjonær, og plott dataene.Den resulterende tidsrekka skal brukes i alle de neste oppgavene.
 
@@ -81,11 +81,15 @@ def remove_season(x):
 # Make stationary
 X_remseason = remove_season(X)
 
+plt.figure(figsize = (15,7))
 plt.plot(time, X_remseason, color = 'black', linewidth = '1')
-plt.title('Recruitment series.')
+plt.title('Recruitment series.', fontsize = '30')
+plt.xticks(fontsize = '15')
+plt.yticks(fontsize = '15')
 plt.tight_layout()
 plt.savefig('rapport/task_b.pdf')
-plt.show()
+#plt.show()
+plt.close()
 
 # c)Plott estimert ACF og PACF.
 
@@ -97,14 +101,14 @@ fig, ax = plt.subplots(2,1)
 # ax[0].set_title('Stasjonare tidsserien')
 ax[0].stem(acf(X_remseason))
 ax[0].set_title('ACF')
-ax[0].plot(wt_line, '--', color = 'red', linewidth = 1); ax[0].plot(-wt_line, '--', color = 'red', linewidth = 1)
+ax[0].plot(wt_line, '--', color = 'blue', linewidth = 1); ax[0].plot(-wt_line, '--', color = 'blue', linewidth = 1)
 ax[1].stem(pacf(X_remseason))
 ax[1].set_title('PACF')
-ax[1].plot(wt_line, '--', color = 'red', linewidth = 1); ax[1].plot(-wt_line, '--', color = 'red', linewidth = 1)
+ax[1].plot(wt_line, '--', color = 'blue', linewidth = 1); ax[1].plot(-wt_line, '--', color = 'blue', linewidth = 1)
 plt.tight_layout()
 plt.savefig('rapport/task_c.pdf')
-plt.show()
-
+#plt.show()
+plt.close()
 
 # d)Basert p ̊a plottene i forrige deloppgave, hvilken orden p og q vil du bruke i en ARMA-modell for disse dataene?
 
@@ -126,18 +130,27 @@ print(model_fit.summary())
 # Get residuals
 res = model_fit.resid
 
-fig, ax = plt.subplots(3,1)
+fig, ax = plt.subplots(4, 1)
 ax[0].plot(res, color = 'black', linewidth = '1')
 ax[0].set_title('Residuals')
 ax[1].stem(acf(res))
-ax[1].plot(wt_line, '--', color = 'red', linewidth = 1); ax[1].plot(-wt_line, '--', color = 'red', linewidth = 1)
+ax[1].plot(wt_line, '--', color = 'blue', linewidth = 1); ax[1].plot(-wt_line, '--', color = 'blue', linewidth = 1)
 ax[1].set_title('ACF')
 ax[2].stem(pacf(res))
-ax[2].plot(wt_line, '--', color = 'red', linewidth = 1); ax[2].plot(-wt_line, '--', color = 'red', linewidth = 1)
+ax[2].plot(wt_line, '--', color = 'blue', linewidth = 1); ax[2].plot(-wt_line, '--', color = 'blue', linewidth = 1)
 ax[2].set_title('PACF')
 plt.tight_layout()
 plt.savefig('rapport/task_2a.pdf')
+#plt.show()
+plt.close()
+
+
+plt.hist(res, bins = 50, color = 'black')
+plt.title('Residuals distribution')
+plt.tight_layout()
+plt.savefig('rapport/task_2ahist.pdf')
 plt.show()
+
 
 
 
@@ -157,13 +170,17 @@ sliced_time = time
 sliced_X = X_remseason
 time_forecast = np.linspace(sliced_time[-1], sliced_time[-1] + M/12, M)
 
+tot_time = np.linspace(sliced_time[0], time_forecast[-1], len(X_remseason)+len(forecast))
+
 plt.figure(figsize = [15,8])
 plt.plot(sliced_time, sliced_X, color = 'black', label = 'Recruitment series')
 plt.plot(time_forecast, forecast, '-o', mfc='none', color = 'red', linewidth = '1', label = 'Prediction' )
+plt.plot(tot_time, np.tile(np.mean(X_remseason), reps = len(X_remseason)+len(forecast)), color = 'green', label = 'mean')
 plt.fill_between(time_forecast, conf_int[:,0], conf_int[:,1], facecolor = (0.5, 0.5, 0.5, 0.2), label = '95% CI')
 plt.xticks([x for x in np.arange(sliced_time[0], sliced_time[-1]+ M/12, 3)])
 plt.legend(loc = 'best')
 plt.title('Prediksjon m = %s'%M)
 plt.tight_layout()
 plt.savefig('rapport/task_33.pdf')
-plt.show()
+#plt.show()
+plt.close()

@@ -4,55 +4,59 @@ import os
 from PIL import Image
 from scipy.signal import convolve2d
 
+image1 = plt.imread('lighthouse.jpg')
+image2 = plt.imread('tint_target.jpg')
+N = 3
 
-image1 = plt.imread('gray.jpeg')
-image2 = plt.imread('lighthouse.jpg')[:,:,0]
+def equalize(image, specfied_image, N):
+    result_finished = image.copy()
+    for j in range(N):
+        imagenow = np.copy(image)[:,:,j]
+        specfied_imagenow = np.copy(specfied_image)[:,:,j]
 
+        hist, bins = np.histogram(imagenow.flatten(), bins = 256, density = True)
+        spec_hist, bins_ = np.histogram(specfied_imagenow.flatten(), bins = 256, density = True)
 
-def equalize(image, specfied_image):
-    hist, bins = np.histogram(image.flatten(), bins = 256, range = [0, 256], density = True)
-    P = np.cumsum(hist)
-    spec_hist, bins_ = np.histogram(specfied_image.flatten(), bins = 256, range = [0, 256], density = True)
-    spec_P = np.cumsum(spec_hist)
+        s = hist.cumsum()
+        s = (255 * s / s[-1]).astype(np.uint8)
 
-    s = np.ceil(255*P)
-    G = np.ceil(255*spec_P)
-    G_mapped = []
-    s, G = s.astype('uint8'), G.astype('uint8')
-
-    for i in range(0, 256):
-        idx = np.abs(G - s[i]).argmin()
-        G_mapped.append(G[idx])
-
-    result = np.zeros(image.shape)
-    for i in range(0, 256):
-        idx = np.where(image == i)
-        result[idx] = G_mapped[i]
-        print('%s --> %s'%(s[i], G_mapped[i]))
-    
-    plt.plot(s, label = 's')
-    plt.plot(G, label = 'G')
-    plt.legend()
-    plt.show()
-
-    return result
+        G = spec_hist.cumsum()
+        G = (255 * G / G[-1]).astype(np.uint8)
 
 
+        result1 = np.interp(imagenow.flatten(), bins_[:-1], s)
+        result2 = np.interp(result1, G , bins_[:-1])
 
-result = equalize(image1, image2)
+
+        result_finished[:,:,j] = result2.reshape((imagenow.shape[0], imagenow.shape[1]))
+        
+        plt.plot(s, label = 's')
+        plt.plot(G, label = 'G')
+        plt.legend()
+        plt.show()
+
+    return result_finished
 
 
 
+result = equalize(image1, image2, N)
+
+colors = ['red','green','blue']
 fig, ax = plt.subplots(3,1)
-ax[0].hist(image1.flatten(), bins = 256, range = [0, 256], color = 'black')
-ax[1].hist(image2.flatten(), bins = 256, range = [0, 256], color = 'black')
-ax[2].hist(result.flatten(), bins = 256, range = [0, 256], color = 'black')
+for i in range(N):
+    ax[0].hist(image1[:,:,i].flatten(), bins = 256, range = [0, 256], color = colors[i])
+    ax[1].hist(image2[:,:,i].flatten(), bins = 256, range = [0, 256], color = colors[i])
+    ax[2].hist(result[:,:,i].flatten(), bins = 256, range = [0, 256], color = colors[i])
 plt.tight_layout()
 plt.show()
 
 fig, ax = plt.subplots(1,3)
-ax[0].imshow(image1, cmap = 'gray')
-ax[1].imshow(image2, cmap = 'gray')
-ax[2].imshow(result, cmap = 'gray')
+ax[0].imshow(image1)
+ax[1].imshow(image2)
+ax[2].imshow(result)
 plt.tight_layout()
 plt.show()
+
+
+
+

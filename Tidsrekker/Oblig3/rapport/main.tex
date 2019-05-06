@@ -47,19 +47,19 @@ Inneholder \pageref{LastPage} \, sider, inkludert forside.\par
 \section{Oppgave}
 \subsection{a)}
 
-Ved bruk av en vektet periodogram vist i ligning(\ref{vektet periodogram}) kan vi se på energien til tidsrekken. Denne viser at vi har kraftig periode rundt $f = 0.5$ år og på $f = 1$ år, derfor kan man se at det er sesongvariasjoner i tidsrekken.
+Ved bruk av en vektet periodogram vist i ligning(\ref{vektet periodogram}) kan vi se på energien/tid til tidsrekken. Denne viser at vi har kraftig periode rundt $f = 0.5/år$ og på $f = 1/år$(periode på ett år $T = 1 år$), derfor kan man se at det er sesongvariasjoner i tidsrekken.
 
 \begin{equation}
-    S_{xx}(f) = \frac{dt}{NU}\bigg |\mathfrak{F}\bigg\{w[n]\cdot x[n]\bigg\}\bigg |^{2}
+    S_{xx}(f) = \frac{\Delta t}{NU}\bigg |\mathfrak{F}\bigg\{w[n]\cdot x[n]\bigg\}\bigg |^{2}
     \label{vektet periodogram}
 \end{equation}
 
-Her er $S_{xx}$ kraften på frekvenskomponentene, dt er tidssteget (i dette tilfelle dt = 1), $\mathfrak{F}$ er Fouriertransformasjonen, $w[n]$ er vinduet (brukt hann vindu) og $x[n]$ er tidsrekken. Resultatet er i figur(\ref{task_a}).
+Her er $S_{xx}$ kraften på frekvenskomponentene, $\Delta t$ er tidssteget (i dette tilfelle $\Delta t = 1$), $\mathfrak{F}$ er Fouriertransformasjonen, $w[n]$ er vinduet (brukt hann vindu) og $x[n]$ er tidsrekken. Resultatet er i figur(\ref{task_a}).
 
 \begin{figure}[hbt!]
 {\centering
     \includegraphics[width=0.70\textwidth]{task_a.pdf}
-    \caption{Tidsrekken plottet med vektet periodogram. Her kan man se forskjellige periodisiteter rundt f = 0.5 år og en på f = 1 år. Frekvensaksen har blitt ganget med [12 måneder/år] for å få enhet 1/år.}
+    \caption{Tidsrekken plottet med vektet periodogram. Her kan man se forskjellige periodisiteter rundt f = 0.5/år og en på f = 1/år. Frekvensaksen har blitt ganget med [12 måneder/år] for å få enhet 1/år.}
     \label{task_a}
 \par}
 \end{figure}
@@ -67,12 +67,12 @@ Her er $S_{xx}$ kraften på frekvenskomponentene, dt er tidssteget (i dette tilf
 
 \subsection{b)}
 
-Her trekker vi fra midlere sesongvariasjoner for å gjøre tidsrekken stasjonær. Resultatet er plottet i figur(\ref{task_b}).
+Her trekker vi fra midlere sesongvariasjoner for å gjøre tidsrekken stasjonær. Resultatet er plottet i figur(\ref{task_b}). Dette ble gjort ved å trekke fra gjennomsnittet i hver måned fra alle månede igjennom hele datasettet.
 
 \begin{figure}[hbt!]
     {\centering
-        \includegraphics[width=0.70\textwidth]{task_b.pdf}
-        \caption{Trukket fra midlere sesongvariasjoner for å gjøre tidsrekken stasjonær.}
+        \includegraphics[width=0.90\textwidth]{task_b.pdf}
+        \caption{Trukket fra midlere sesongvariasjoner slik at tidsrekken blir stasjonær.}
         \label{task_b}
     \par}
     \end{figure}
@@ -80,7 +80,7 @@ Her trekker vi fra midlere sesongvariasjoner for å gjøre tidsrekken stasjonær
 
 \subsection{c-d)}
 
-Vi har plott av ACF og PACF i figur(\ref{task_c}). Her kan man observere at ACF plottet har den karakteristiske AR() modellen der det konvergerer mot null når $h \rightarrow 0$, men denne gir ingen indikasjon på orden av AR. I PACF ser man at det er en korrelasjon ved $h = 1$ og $h = 2$, resten ser ut til å være hvit støy da dette ligger under 95\% konfidensinterval gitt i ligning(\ref{whitenoiseCI}). Pågrunn av den klare indikatoren på korrelasjon ved $h = 1$ og $h = 2$ kan vi si at vi har en AR(2) eller ARMA(2, 0) prosess. 
+Vi har plott av ACF og PACF i figur(\ref{task_c}). Her kan man observere at ACF-plottet har den karakteristiske AR() modellen der det konvergerer mot null når $h \rightarrow 0$, men denne gir ingen indikasjon på orden av AR. I PACF ser man at det er en korrelasjon ved $h = 1$ og $h = 2$, resten ser ut til å være hvit støy da dette ligger under 95\% konfidensinterval gitt i ligning(\ref{whitenoiseCI}). På grunn av den klare indikasjonen på korrelasjon ved $h = 1$ og $h = 2$ kan vi si at vi har en AR(2) eller ARMA(2, 0) prosess. 
 
 \begin{equation}
     \sigma_{w} = \frac{2}{\sqrt{N}}
@@ -101,14 +101,15 @@ N er lengden på tidsserien.[p. 31 \cite{Timeseries}]
 
 
 \subsection{e)}
-Ved bruk av statsmodels-pakken i python kan vi simulere en ARMA-modell med gitte parametere, i figur(\ref{Armacoefs}) ser vi en resultatet fra en ARMA(2,0) modell. Fra utskriften fikk vi modellen gitt i ligning()
+Ved bruk av statsmodels-pakken i python kan vi simulere en ARMA-modell med gitte parametere, i figur(\ref{Armacoefs}) ser vi en resultatet fra en ARMA(2,0) modell. Fra utskriften fikk vi modellen gitt i ligning(\ref{predictoreq}).
 
 \begin{equation}
-\hat{x}_{n} = \alpha + \phi_{1}\hat{x}_{n-1} + \phi_{2}\hat{x}_{n-2} + \hat{w}_{t}
+\hat{x}_{n} = \hat{\alpha} + \phi_{1}\hat{x}_{n-1} + \phi_{2}\hat{x}_{n-2}
+\label{predictoreq}
 \end{equation}
 
-der $\alpha = -0.7019$, $\phi_{1} = 1.2483$ og $\phi_{2} = -0.3313$
-Her har det blitt brukt en \emph{hatt} på tidsrekken for å vise at det er et estimat. Fra utskriften i figur(\ref{Armacoefs}) har vi at $\sigma_{w} = 8.653$, dette er den estimerte variansen på den hvite støyen slik man har fordelingen $N \thicksim (0, \sigma_{w}^{2})$. Dette kan brukes til å finne \emph{Mean-square prediction error} som er gitt ved ligning(\ref{mean-square-predictor-error}),
+der $\hat{\alpha}_{(4.777)} = -0.7019$, $\phi_{1(0.044)} = 1.2483$ og $\phi_{2(0.044)} = -0.3313$. Verdiene gitt i parantes er standardfeilen i parameterene. Ser man på alpha (konstant assosiert med forventningen) kan denne feilen føre til at vi egentlig kan ha en forventing som er positiv.
+Her har det blitt brukt en \emph{hatt} på tidsrekken for å vise at det er et estimat. Fra utskriften i figur(\ref{Armacoefs}) har vi at $\sigma_{w} = 8.653$, dette er den estimerte variansen på den hvite støyen slik man har fordelingen $N \thicksim (0, \sigma_{w}^{2})$. Dette kan brukes til å finne \emph{mean-square prediction error} som er gitt ved ligning(\ref{mean-square-predictor-error}),
 
 \begin{equation}
     P^{n}_{n + m} = E\bigg[\sigma_{w}^{2}\sum_{j = 0}^{m-1}\psi_{j}^{2}\bigg]
@@ -142,7 +143,7 @@ der $\psi$ er vektene gitt fra modellen slik at $\phi(z)\psi(z) = \theta(z)$. He
         AR.2            2.6120           +0.0000j            2.6120            0.0000
         -----------------------------------------------------------------------------
     \end{lstlisting}
-\caption{Utskrift av ARMA-model resultat gitt fra statsmodels-pakken. Merk her at det har blitt brukt MLE for å estimere parametere. \url{https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima\_model.ARMA.html}}
+\caption{Utskrift av ARMA-model resultat gitt fra statsmodels-pakken. Merk her at det har blitt brukt css-MLE for å estimere parametere.(conditional sum of squares - most ikelihood estimator.) \url{https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima\_model.ARMA.html}}
 \label{Armacoefs}
 \end{figure}
 
@@ -155,16 +156,22 @@ Ved å trekke ifra modellen(uten det hvite støyleddet) på den orginale tidsser
 
 \begin{figure}[hbt!]
     {\centering
-        \includegraphics[width=0.70\textwidth]{task_2a.pdf}
-        \caption{Plot av ACF og PACF av residualene.}
+        \includegraphics[width=0.90\textwidth]{task_2a.pdf}
+        \caption{Plot av ACF og PACF av residualene. Her er det ingen korrelasjon og kan dermed anta hvit støy.}
         \label{task_2a}
     \par}
     \end{figure}
 
+I figur(\ref{task_2ahist}) er det plottet et histogram av resiudalene. Histogrammet kan avsløre fordelingen til dataen, som i dette tilfelle viser at det nesten er normalfordelt.
 
 
-
-
+    \begin{figure}[hbt!]
+        {\centering
+            \includegraphics[width=0.70\textwidth]{task_2ahist.pdf}
+            \caption{Ved bruk av histogram kan man se fordelingen til dataen. Her kan man se at residualene ligner på en normalfordeling.}
+            \label{task_2ahist}
+        \par}
+        \end{figure}
 
 \section{Oppgave 3}
 \subsection{a-b)}
@@ -183,7 +190,7 @@ Prediksjon har blitt gjort med statsmodels sin ARMA-predict funksjon i python. R
     \begin{figure}[hbt!]
         {\centering
             \includegraphics[width=0.80\textwidth]{task_3.pdf}
-            \caption{Prediksjon med M = 60 måneder. Her kan man se at feilen konvergerer mot variansen til tidsserien når man bruker høy m.}
+            \caption{Prediksjon med M = 60 måneder. Her kan man se at feilen konvergerer mot variansen til tidsserien når man bruker høy \emph{m}, og prediksjonen går mot gjennomsnittet (grønn linje).}
             \label{task_33}
         \par}
         \end{figure}
@@ -363,33 +370,34 @@ Prediksjon har blitt gjort med statsmodels sin ARMA-predict funksjon i python. R
 
 \begin{figure}[hbt!]
     \begin{lstlisting}
-        # Oppgave 3
-
-
-        # Task A
-        
-        year = 5
+        # Set time parameters
+        year = 1
         M = 12*year # 12*2 months (2 years)
+
+        # Get forecast
         forecast, stderr, conf_int = model_fit.forecast(steps = M)
-        # Default: 95% konfidensintervall
+        # gir ut forecast, std, (1-alpha)% konfidensintervall. Default: 95% konfidensintervall
         
         
+        # Get time arrays
         sliced_time = time
         sliced_X = X_remseason
         time_forecast = np.linspace(sliced_time[-1], sliced_time[-1] + M/12, M)
-        
+        tot_time = np.linspace(sliced_time[0], time_forecast[-1], len(X_remseason)+len(forecast))
+
         # Plot
         plt.figure(figsize = [15,8])
         plt.plot(sliced_time, sliced_X, color = 'black', label = 'Recruitment series')
         plt.plot(time_forecast, forecast, '-o', mfc='none', color = 'red', linewidth = '1', label = 'Prediction' )
-        plt.fill_between(time_forecast, conf_int[:,0], conf_int[:,1], facecolor = (0, 0, 1, 0.2), label = '95% CI')
+        plt.plot(tot_time, np.tile(np.mean(X_remseason), reps = len(X_remseason)+len(forecast)), color = 'green', label = 'mean')
+        plt.fill_between(time_forecast, conf_int[:,0], conf_int[:,1], facecolor = (0.5, 0.5, 0.5, 0.2), label = '95% CI')
         plt.xticks([x for x in np.arange(sliced_time[0], sliced_time[-1]+ M/12, 3)])
         plt.legend(loc = 'best')
         plt.title('Prediksjon m = %s'%M)
         plt.tight_layout()
         plt.savefig('rapport/task_33.pdf')
-        plt.show()
-        
+        #plt.show()
+        plt.close()
     \end{lstlisting}
 \caption{Task 3}
 \label{Kode5}

@@ -3,10 +3,10 @@
 \contentsline {subsection}{\numberline {1.1}a)}{3}{subsection.1.1}% 
 \contentsline {subsection}{\numberline {1.2}b)}{3}{subsection.1.2}% 
 \contentsline {subsection}{\numberline {1.3}c-d)}{3}{subsection.1.3}% 
-\contentsline {subsection}{\numberline {1.4}e)}{4}{subsection.1.4}% 
+\contentsline {subsection}{\numberline {1.4}e)}{5}{subsection.1.4}% 
 \contentsline {section}{\numberline {2}Oppgave 2}{6}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}a-b)}{6}{subsection.2.1}% 
-\contentsline {section}{\numberline {3}Oppgave 3}{6}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}a-b)}{6}{subsection.3.1}% 
-\contentsline {section}{\numberline {4}Appendix}{8}{section.4}% 
-\contentsline {section}{\numberline {5}Referanser}{11}{section.5}% 
+\contentsline {section}{\numberline {3}Oppgave 3}{7}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}a-b)}{7}{subsection.3.1}% 
+\contentsline {section}{\numberline {4}Appendix}{9}{section.4}% 
+\contentsline {section}{\numberline {5}Referanser}{13}{section.5}% 
