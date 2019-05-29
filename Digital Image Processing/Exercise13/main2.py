@@ -66,7 +66,7 @@ def marr_hild(image, sigma):
             diagdown2 = mask[row-1, col-1]
             diagup2 = mask[row+1, col+1]
 
-            if ((np.sign(left) != np.sign(right)) and ( np.sign(up) != np.sign(down))) or ((np.sign(diagdown1) != np.sign(diagup1)) and (np.sign(diagdown2) != np.sign(diagup2))):
+            if ((np.sign(left) != np.sign(right)) or ( np.sign(up) != np.sign(down))) or ((np.sign(diagdown1) != np.sign(diagup1)) or (np.sign(diagdown2) != np.sign(diagup2))):
                 if np.abs(left-right) > T or np.abs(up-down) > T or np.abs(diagdown1-diagup1) > T or np.abs(diagdown2-diagup2) > T:
                     result[row, col] = 1
 

@@ -9,6 +9,28 @@ from mpl_toolkits.mplot3d import axes3d
 #image = np.array(plt.imread('Fig1016(a)(building_original).tif'))
 image = np.array(plt.imread('blaklokke.jpg'))
 
+def smooth_image(image, N = 5):
+    kernel = np.ones((N,N))
+    kernel[3,3] = 2
+    kernel *= (1/(N**2+1))
+    result = np.zeros(image.shape, dtype = 'int')
+    red = image[:,:,0]
+    green = image[:,:,1]
+    blue = image[:,:,2]
+    red = convolve2d(red, kernel, 'same')
+    green = convolve2d(green, kernel, 'same')
+    blue = convolve2d(blue, kernel, 'same')
+
+    result[:,:,0] = red
+    result[:,:,1] = green
+    result[:,:,2] = blue
+
+    return result
+
+image = smooth_image(image)
+print(image)
+plt.imshow(image)
+plt.show()
 
 
 

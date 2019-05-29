@@ -100,20 +100,6 @@ INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1000.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fourier.sty
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fourier.sty
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\textcomp.sty
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\textcomp.sty
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.def
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.def
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fourier-orns.sty
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fourier-orns.sty
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtype.sty
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtype.sty
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtype-pdftex.def
@@ -316,6 +302,10 @@ INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mhs
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\totalcount.sty
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\totalcount.sty
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\beton\beton.sty
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\beton\beton.sty
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\helvet.sty
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\helvet.sty
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 OUTPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.idx
@@ -324,14 +314,9 @@ INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\gensymb.s
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.aux
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.aux
 OUTPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.aux
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ccfonts\t1ccr.fd
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ccfonts\t1ccr.fd
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ecc\eorm10.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
@@ -356,22 +341,18 @@ INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\e
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrb1728.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrb1000.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1200.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\t1futs.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\t1futs.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmii.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmii.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmii.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futsy.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futsy.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futsy.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
@@ -386,52 +367,21 @@ INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tex-gyre\ts1qbk.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tex-gyre\ts1qbk.fd
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ecc\eorm10.tfm
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.toc
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.toc
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futr8t.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmii.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmii.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmii.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futsy.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futsy.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futsy.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-mex.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\futmi.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\fourier\fourier-bb.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ts1-qbkr.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 OUTPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.toc
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkr.tfm
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qbkb.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ecc\eorm10.tfm
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\ecc\eorm10.tfm
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.bbl
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.bbl
 INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecti1000.tfm
@@ -440,7 +390,12 @@ INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_e
 INPUT c:\Users\MartinR\Documents\GitHub\UniversityPhysics\Latex\Oppgavemal_new_english\main.out
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\tex-gyre\q-ec.enc
+INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\ecc\dpi720\eorm10.pk
+INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\ecc\dpi720\eorm10.pk
+INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\ecc\dpi864\eorm10.pk
+INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\ecc\dpi864\eorm10.pk
+INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\ecc\dpi600\eorm10.pk
+INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\ecc\dpi600\eorm10.pk
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
@@ -449,7 +404,13 @@ INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1000.pk
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1728.pk
 INPUT C:\Users\MartinR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrb1728.pk
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qbkb.pfb
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qbkb.pfb
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qbkr.pfb
-INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qbkr.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Users\MartinR\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
